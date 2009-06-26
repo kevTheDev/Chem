@@ -14,6 +14,7 @@
 
 @synthesize firstNode;
 @synthesize secondNode;
+@synthesize nodes;
 
 int touchX;
 int touchY;
@@ -25,15 +26,22 @@ int touchHeight;
 char* screenState = "start";
 
 - (id)initWithFrame:(CGRect)frame {
+	
+	
+	
+	
     if (self = [super initWithFrame:frame]) {
         // Initialization code
-		//firstNode = [Node alloc];
     }
+	
+		
     return self;
 }
 
 
 - (void)drawRect:(CGRect)rect {
+		
+	
     // Drawing code
 	[[UIColor whiteColor] setFill]; 
 	UIRectFill(rect);
@@ -43,8 +51,15 @@ char* screenState = "start";
 	
 	char* text = "";
 	
+	
 	if(screenState == "start") {
 		text = "Touch the screen to create the first root node...";
+		NSMutableArray *tempArray = [[NSMutableArray alloc] initWithCapacity:10];
+		
+		NSLog(@"INIT NODES");
+		[self setNodes:tempArray];
+		
+		screenState = "init";
 	}
 	else if(screenState == "firstNode") {
 		text = "Touch the screen again to form an edge...";
@@ -65,8 +80,18 @@ char* screenState = "start";
 	
     CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
 	
-    [self drawNode:firstNode];
-	[self drawNode:secondNode];
+    //[self drawNode:firstNode];
+	//[self drawNode:secondNode];
+	
+	
+	
+	for (Node *node in [self nodes])
+	{
+		// do things here
+		//NSLog("@XCOORD: %f", [node xCoord]);
+		NSLog(@"NODE ");
+		[self drawNode:node];
+	}
 
 }
 
@@ -83,21 +108,18 @@ char* screenState = "start";
 	
 	Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
 	
+
 	
-	if(screenState == "firstNode") {
-		screenState == "secondNode";
-		[self setSecondNode:node];
-	}
-	else {
-    	screenState = "firstNode";
-		[self setFirstNode:node];
-	}
+	[[self nodes] addObject:node];
 	
+
+	NSLog(@"NUmber of nodes: %d", [[self nodes] count]);
+	
+
 	
 	
 	[self setNeedsDisplay];
-	
-	//[firstNode release];
+
 	
 	return;
 }
@@ -110,26 +132,8 @@ char* screenState = "start";
 	
 }
 
--(CGPathRef) pathInRect:(CGRect)rect { 
-	CGMutablePathRef path = CGPathCreateMutable(); 
-	CGFloat radius = CGRectGetHeight(rect) / 2.0f; 
-	CGPathMoveToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect)); 
-	CGPathAddLineToPoint(path, NULL, CGRectGetMaxX(rect) - radius, 
-						 CGRectGetMinY(rect)); 
-	CGPathAddArc(path, NULL, CGRectGetMaxX(rect) - radius, 
-				 CGRectGetMinY(rect) + radius, 
-				 radius, -M_PI, M_PI, NO); 
-	CGPathAddLineToPoint(path, NULL, CGRectGetMinX(rect), CGRectGetMaxY(rect)); 
-	CGPathCloseSubpath(path); 
-	CGPathRef imutablePath = CGPathCreateCopy(path); 
-	CGPathRelease(path); 
-	return imutablePath; 
-} 
-
-
-
 - (void)dealloc {
-	[firstNode release];
+	[nodes release];
     [super dealloc];
 }
 

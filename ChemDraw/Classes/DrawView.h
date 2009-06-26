@@ -12,9 +12,13 @@
 @interface DrawView : UIView {
 	Node *firstNode;
 	Node *secondNode;
+	
+	NSMutableArray *nodes;
 }
 
 - (void) drawNode:(Node *)node;
+
+@property (nonatomic, retain) NSMutableArray *nodes;
 
 @property (nonatomic, retain) Node *firstNode;
 @property (nonatomic, retain) Node *secondNode;

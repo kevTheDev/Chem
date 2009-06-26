@@ -271,7 +271,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
+									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -296,7 +296,7 @@
 							<real>266</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>76 86 1308 792 0 0 1440 878 </string>
+						<string>11 86 1308 792 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -326,18 +326,18 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE2092BA0FF4FD81001FECDA</string>
+										<string>DE2093190FF505F7001FECDA</string>
 										<key>history</key>
 										<array>
 											<string>DE20912B0FF4E806001FECDA</string>
 											<string>DE2091570FF4E9C2001FECDA</string>
 											<string>DE2091580FF4E9C2001FECDA</string>
 											<string>DE20916E0FF4E9E7001FECDA</string>
-											<string>DE2092280FF4F7CC001FECDA</string>
 											<string>DE20926B0FF4FA4A001FECDA</string>
 											<string>DE20926C0FF4FA4A001FECDA</string>
-											<string>DE2092B60FF4FD81001FECDA</string>
-											<string>DE2092B70FF4FD81001FECDA</string>
+											<string>DE2092C80FF50040001FECDA</string>
+											<string>DE2092CE0FF5005F001FECDA</string>
+											<string>DE2092FD0FF502D3001FECDA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -418,6 +418,11 @@
 											<string>DE2092AF0FF4FC8F001FECDA</string>
 											<string>DE2092B80FF4FD81001FECDA</string>
 											<string>DE2092B90FF4FD81001FECDA</string>
+											<string>DE2092BE0FF4FF70001FECDA</string>
+											<string>DE2092BF0FF4FF70001FECDA</string>
+											<string>DE2092C90FF50040001FECDA</string>
+											<string>DE2092CA0FF50040001FECDA</string>
+											<string>DE2092D00FF5005F001FECDA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -431,7 +436,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1020, 573}}</string>
 								<key>RubberWindowFrame</key>
-								<string>76 86 1308 792 0 0 1440 878 </string>
+								<string>11 86 1308 792 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -451,7 +456,7 @@
 								<key>Frame</key>
 								<string>{{0, 578}, {1020, 173}}</string>
 								<key>RubberWindowFrame</key>
-								<string>76 86 1308 792 0 0 1440 878 </string>
+								<string>11 86 1308 792 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -619,7 +624,7 @@
 		<string>/Users/kev/apps/iphone/Chem/ChemDraw/ChemDraw.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>76 86 1308 792 0 0 1440 878 </string>
+	<string>11 86 1308 792 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
