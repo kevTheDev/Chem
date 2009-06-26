@@ -1,0 +1,192 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {959, 541}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 489}";
+		};
+	};
+	1D3623250D0F684500981E51 /* ChemDrawAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {959, 541}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 627}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* ChemDraw */ = {
+		activeExec = 0;
+		executables = (
+			DE2091210FF4E7F0001FECDA /* ChemDraw */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* ChemDrawViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {913, 415}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 245}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {959, 840}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 827}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = DE2091210FF4E7F0001FECDA /* ChemDraw */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* ChemDraw */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* ChemDraw */,
+		);
+		codeSenseManager = DE20913F0FF4E806001FECDA /* Code sense */;
+		executables = (
+			DE2091210FF4E7F0001FECDA /* ChemDraw */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					735,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 267708400;
+			PBXWorkspaceStateSaveDate = 267708400;
+		};
+		perUserProjectItems = {
+			DE20912B0FF4E806001FECDA /* PBXTextBookmark */ = DE20912B0FF4E806001FECDA /* PBXTextBookmark */;
+			DE20912C0FF4E806001FECDA /* PBXTextBookmark */ = DE20912C0FF4E806001FECDA /* PBXTextBookmark */;
+			DE20912D0FF4E806001FECDA /* PBXTextBookmark */ = DE20912D0FF4E806001FECDA /* PBXTextBookmark */;
+			DE20912E0FF4E806001FECDA /* PBXTextBookmark */ = DE20912E0FF4E806001FECDA /* PBXTextBookmark */;
+			DE20912F0FF4E806001FECDA /* PBXTextBookmark */ = DE20912F0FF4E806001FECDA /* PBXTextBookmark */;
+			DE2091300FF4E806001FECDA /* PBXTextBookmark */ = DE2091300FF4E806001FECDA /* PBXTextBookmark */;
+			DE2091310FF4E806001FECDA /* PBXTextBookmark */ = DE2091310FF4E806001FECDA /* PBXTextBookmark */;
+		};
+		sourceControlManager = DE20913E0FF4E806001FECDA /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	DE2091210FF4E7F0001FECDA /* ChemDraw */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = ChemDraw;
+		sourceDirectories = (
+		);
+	};
+	DE20912B0FF4E806001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ChemDrawViewController.h */;
+		name = "ChemDrawViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 245;
+		vrLoc = 0;
+	};
+	DE20912C0FF4E806001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */;
+		name = "ChemDrawViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 675;
+		vrLoc = 0;
+	};
+	DE20912D0FF4E806001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */;
+		name = "ChemDrawAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 489;
+		vrLoc = 0;
+	};
+	DE20912E0FF4E806001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */;
+		name = "ChemDrawAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 489;
+		vrLoc = 0;
+	};
+	DE20912F0FF4E806001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ChemDrawViewController.h */;
+		name = "ChemDrawViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 245;
+		vrLoc = 0;
+	};
+	DE2091300FF4E806001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */;
+		name = "ChemDrawViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 675;
+		vrLoc = 0;
+	};
+	DE2091310FF4E806001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */;
+		name = "ChemDrawAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 489;
+		vrLoc = 0;
+	};
+	DE20913E0FF4E806001FECDA /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	DE20913F0FF4E806001FECDA /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
