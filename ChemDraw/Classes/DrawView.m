@@ -39,6 +39,9 @@ char* screenState = "start";
 	if(screenState == "start") {
 		text = "Touch the screen to create the first root node...";
 	}
+	else if(screenState == "firstNode") {
+		text = "Touch the screen again to form an edge...";
+	}
 	else {
 		NSLog(@"Invalid screen state");
 	}

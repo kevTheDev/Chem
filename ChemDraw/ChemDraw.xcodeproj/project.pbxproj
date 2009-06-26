@@ -16,6 +16,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* ChemDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */; };
 		DE2091440FF4E840001FECDA /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091430FF4E840001FECDA /* DrawView.m */; };
+		DE2091FF0FF4F578001FECDA /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE2091420FF4E840001FECDA /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		DE2091430FF4E840001FECDA /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		DE2091FD0FF4F578001FECDA /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		DE2091FE0FF4F578001FECDA /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 				28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */,
 				DE2091420FF4E840001FECDA /* DrawView.h */,
 				DE2091430FF4E840001FECDA /* DrawView.m */,
+				DE2091FD0FF4F578001FECDA /* Node.h */,
+				DE2091FE0FF4F578001FECDA /* Node.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				1D3623260D0F684500981E51 /* ChemDrawAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* ChemDrawViewController.m in Sources */,
 				DE2091440FF4E840001FECDA /* DrawView.m in Sources */,
+				DE2091FF0FF4F578001FECDA /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

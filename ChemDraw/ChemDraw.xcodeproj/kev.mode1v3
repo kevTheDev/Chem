@@ -271,7 +271,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
+									<integer>8</integer>
+									<integer>1</integer>
+									<integer>0</integer>
+								</array>
+								<array>
+									<integer>9</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -296,7 +301,7 @@
 							<real>266</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>75 86 1308 792 0 0 1440 878 </string>
+						<string>76 86 1308 792 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -314,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DrawView.m</string>
+								<string>Node.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DrawView.m</string>
+										<string>Node.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE2091F70FF4F435001FECDA</string>
+										<string>DE2092210FF4F6A8001FECDA</string>
 										<key>history</key>
 										<array>
 											<string>DE20912B0FF4E806001FECDA</string>
@@ -335,7 +340,9 @@
 											<string>DE2091590FF4E9C2001FECDA</string>
 											<string>DE20916E0FF4E9E7001FECDA</string>
 											<string>DE2091CB0FF4EFE2001FECDA</string>
-											<string>DE2091C40FF4EFAD001FECDA</string>
+											<string>DE2092090FF4F5C4001FECDA</string>
+											<string>DE20921D0FF4F6A8001FECDA</string>
+											<string>DE20921E0FF4F6A8001FECDA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -360,6 +367,12 @@
 											<string>DE2091C70FF4EFAD001FECDA</string>
 											<string>DE2091C80FF4EFAD001FECDA</string>
 											<string>DE2091CC0FF4EFE2001FECDA</string>
+											<string>DE20920C0FF4F5C4001FECDA</string>
+											<string>DE20920D0FF4F5C4001FECDA</string>
+											<string>DE2092110FF4F609001FECDA</string>
+											<string>DE2092120FF4F609001FECDA</string>
+											<string>DE20921F0FF4F6A8001FECDA</string>
+											<string>DE2092200FF4F6A8001FECDA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -373,7 +386,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1020, 573}}</string>
 								<key>RubberWindowFrame</key>
-								<string>75 86 1308 792 0 0 1440 878 </string>
+								<string>76 86 1308 792 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -393,7 +406,7 @@
 								<key>Frame</key>
 								<string>{{0, 578}, {1020, 173}}</string>
 								<key>RubberWindowFrame</key>
-								<string>75 86 1308 792 0 0 1440 878 </string>
+								<string>76 86 1308 792 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -561,7 +574,7 @@
 		<string>/Users/kev/apps/iphone/Chem/ChemDraw/ChemDraw.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>75 86 1308 792 0 0 1440 878 </string>
+	<string>76 86 1308 792 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -582,7 +595,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>Node.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -599,6 +612,8 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
