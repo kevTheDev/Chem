@@ -11,10 +11,13 @@
 
 @interface DrawView : UIView {
 	Node *firstNode;
+	Node *secondNode;
 }
 
 - (void) drawNode:(Node *)node;
 
 @property (nonatomic, retain) Node *firstNode;
+@property (nonatomic, retain) Node *secondNode;
+
 
 @end

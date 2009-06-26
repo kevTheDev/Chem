@@ -42,7 +42,7 @@
 			1D6058900D05DD3D006BFB54 /* ChemDraw */,
 		);
 		breakpoints = (
-			DE2092860FF4FAA7001FECDA /* DrawView.m:88 */,
+			DE2092860FF4FAA7001FECDA /* DrawView.m:85 */,
 		);
 		codeSenseManager = DE20913F0FF4E806001FECDA /* Code sense */;
 		executables = (
@@ -259,6 +259,11 @@
 			DE2092AF0FF4FC8F001FECDA /* PBXTextBookmark */ = DE2092AF0FF4FC8F001FECDA /* PBXTextBookmark */;
 			DE2092B00FF4FC8F001FECDA /* PBXTextBookmark */ = DE2092B00FF4FC8F001FECDA /* PBXTextBookmark */;
 			DE2092B10FF4FC9D001FECDA /* PBXTextBookmark */ = DE2092B10FF4FC9D001FECDA /* PBXTextBookmark */;
+			DE2092B60FF4FD81001FECDA /* PBXTextBookmark */ = DE2092B60FF4FD81001FECDA /* PBXTextBookmark */;
+			DE2092B70FF4FD81001FECDA /* PBXTextBookmark */ = DE2092B70FF4FD81001FECDA /* PBXTextBookmark */;
+			DE2092B80FF4FD81001FECDA /* PBXTextBookmark */ = DE2092B80FF4FD81001FECDA /* PBXTextBookmark */;
+			DE2092B90FF4FD81001FECDA /* PBXTextBookmark */ = DE2092B90FF4FD81001FECDA /* PBXTextBookmark */;
+			DE2092BA0FF4FD81001FECDA /* PBXTextBookmark */ = DE2092BA0FF4FD81001FECDA /* PBXTextBookmark */;
 		};
 		sourceControlManager = DE20913E0FF4E806001FECDA /* Source Control */;
 		userBuildSettings = {
@@ -343,16 +348,16 @@
 	};
 	DE2091420FF4E840001FECDA /* DrawView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {959, 518}}";
-			sepNavSelRange = "{314, 0}";
-			sepNavVisRange = "{0, 321}";
+			sepNavIntBoundsRect = "{{0, 0}, {959, 541}}";
+			sepNavSelRange = "{380, 0}";
+			sepNavVisRange = "{0, 389}";
 		};
 	};
 	DE2091430FF4E840001FECDA /* DrawView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {959, 1848}}";
-			sepNavSelRange = "{1744, 0}";
-			sepNavVisRange = "{1459, 1046}";
+			sepNavIntBoundsRect = "{{0, 0}, {959, 2072}}";
+			sepNavSelRange = "{1790, 0}";
+			sepNavVisRange = "{1361, 619}";
 		};
 	};
 	DE2091570FF4E9C2001FECDA /* PBXTextBookmark */ = {
@@ -400,7 +405,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 29";
 		rLen = 12;
-		rLoc = 624;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 566;
 		vrLoc = 0;
@@ -504,7 +509,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 29";
 		rLen = 12;
-		rLoc = 624;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 566;
 		vrLoc = 0;
@@ -556,7 +561,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 29";
 		rLen = 12;
-		rLoc = 624;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 570;
 		vrLoc = 3;
@@ -566,7 +571,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 29";
 		rLen = 0;
-		rLoc = 624;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 791;
 		vrLoc = 227;
@@ -576,7 +581,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 34";
 		rLen = 0;
-		rLoc = 1096;
+		rLoc = 1120;
 		rType = 0;
 		vrLen = 787;
 		vrLoc = 227;
@@ -586,7 +591,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 32";
 		rLen = 0;
-		rLoc = 978;
+		rLoc = 1002;
 		rType = 0;
 		vrLen = 787;
 		vrLoc = 227;
@@ -596,7 +601,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 42";
 		rLen = 0;
-		rLoc = 1311;
+		rLoc = 1335;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 227;
@@ -606,7 +611,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 42";
 		rLen = 0;
-		rLoc = 1306;
+		rLoc = 1330;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 227;
@@ -616,7 +621,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 42";
 		rLen = 0;
-		rLoc = 1306;
+		rLoc = 1330;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 227;
@@ -626,7 +631,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 31";
 		rLen = 0;
-		rLoc = 933;
+		rLoc = 957;
 		rType = 0;
 		vrLen = 816;
 		vrLoc = 227;
@@ -636,7 +641,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 42";
 		rLen = 0;
-		rLoc = 1306;
+		rLoc = 1330;
 		rType = 0;
 		vrLen = 816;
 		vrLoc = 227;
@@ -646,7 +651,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 42";
 		rLen = 0;
-		rLoc = 1306;
+		rLoc = 1330;
 		rType = 0;
 		vrLen = 816;
 		vrLoc = 227;
@@ -656,7 +661,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 32";
 		rLen = 0;
-		rLoc = 978;
+		rLoc = 1002;
 		rType = 0;
 		vrLen = 816;
 		vrLoc = 227;
@@ -666,7 +671,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 42";
 		rLen = 0;
-		rLoc = 1308;
+		rLoc = 1332;
 		rType = 0;
 		vrLen = 816;
 		vrLoc = 227;
@@ -676,7 +681,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 55";
 		rLen = 0;
-		rLoc = 2652;
+		rLoc = 2622;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 657;
@@ -686,7 +691,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 45";
 		rLen = 0;
-		rLoc = 1368;
+		rLoc = 1420;
 		rType = 0;
 		vrLen = 1344;
 		vrLoc = 363;
@@ -696,7 +701,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 44";
 		rLen = 0;
-		rLoc = 1368;
+		rLoc = 1420;
 		rType = 0;
 		vrLen = 1344;
 		vrLoc = 363;
@@ -706,7 +711,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 45";
 		rLen = 0;
-		rLoc = 1368;
+		rLoc = 1420;
 		rType = 0;
 		vrLen = 1341;
 		vrLoc = 363;
@@ -716,7 +721,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 44";
 		rLen = 0;
-		rLoc = 1368;
+		rLoc = 1420;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 363;
@@ -726,7 +731,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 45";
 		rLen = 0;
-		rLoc = 1368;
+		rLoc = 1420;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 363;
@@ -736,7 +741,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 252;
+		rLoc = 271;
 		rType = 0;
 		vrLen = 227;
 		vrLoc = 0;
@@ -746,7 +751,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 2007;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 417;
@@ -756,7 +761,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 2226;
+		rLoc = 2196;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 363;
@@ -766,7 +771,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 266;
+		rLoc = 285;
 		rType = 0;
 		vrLen = 227;
 		vrLoc = 0;
@@ -776,7 +781,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 29";
 		rLen = 12;
-		rLoc = 624;
+		rLoc = 648;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 363;
@@ -786,7 +791,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 31;
-		rLoc = 235;
+		rLoc = 254;
 		rType = 0;
 		vrLen = 243;
 		vrLoc = 0;
@@ -796,7 +801,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 2007;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 363;
@@ -806,7 +811,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 252;
+		rLoc = 271;
 		rType = 0;
 		vrLen = 246;
 		vrLoc = 0;
@@ -816,7 +821,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 2007;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 834;
@@ -826,7 +831,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 252;
+		rLoc = 271;
 		rType = 0;
 		vrLen = 247;
 		vrLoc = 0;
@@ -836,7 +841,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 2007;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 417;
@@ -846,7 +851,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 252;
+		rLoc = 271;
 		rType = 0;
 		vrLen = 227;
 		vrLoc = 0;
@@ -856,7 +861,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 45";
 		rLen = 0;
-		rLoc = 1369;
+		rLoc = 1421;
 		rType = 0;
 		vrLen = 1142;
 		vrLoc = 436;
@@ -866,7 +871,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 44";
 		rLen = 0;
-		rLoc = 1367;
+		rLoc = 1392;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 436;
@@ -876,7 +881,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 1546;
+		rLoc = 1598;
 		rType = 0;
 		vrLen = 1066;
 		vrLoc = 436;
@@ -886,7 +891,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 1973;
+		rLoc = 1943;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 436;
@@ -896,7 +901,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 0;
-		rLoc = 2002;
+		rLoc = 1972;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 988;
@@ -906,7 +911,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 266;
+		rLoc = 285;
 		rType = 0;
 		vrLen = 247;
 		vrLoc = 0;
@@ -916,7 +921,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 30;
-		rLoc = 1977;
+		rLoc = 1947;
 		rType = 0;
 		vrLen = 1037;
 		vrLoc = 436;
@@ -926,7 +931,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 266;
+		rLoc = 285;
 		rType = 0;
 		vrLen = 247;
 		vrLoc = 0;
@@ -936,7 +941,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 0;
-		rLoc = 2002;
+		rLoc = 1972;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 988;
@@ -946,7 +951,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 260;
+		rLoc = 279;
 		rType = 0;
 		vrLen = 245;
 		vrLoc = 0;
@@ -956,7 +961,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 260;
+		rLoc = 279;
 		rType = 0;
 		vrLen = 245;
 		vrLoc = 0;
@@ -966,7 +971,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 260;
+		rLoc = 279;
 		rType = 0;
 		vrLen = 245;
 		vrLoc = 0;
@@ -976,7 +981,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 1546;
+		rLoc = 1598;
 		rType = 0;
 		vrLen = 1034;
 		vrLoc = 988;
@@ -986,7 +991,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 0;
-		rLoc = 1973;
+		rLoc = 1943;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 657;
@@ -996,7 +1001,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 44";
 		rLen = 0;
-		rLoc = 1367;
+		rLoc = 1392;
 		rType = 0;
 		vrLen = 1076;
 		vrLoc = 657;
@@ -1006,7 +1011,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 44";
 		rLen = 0;
-		rLoc = 1365;
+		rLoc = 1389;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 657;
@@ -1016,7 +1021,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 1546;
+		rLoc = 1598;
 		rType = 0;
 		vrLen = 1177;
 		vrLoc = 657;
@@ -1026,7 +1031,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 14";
 		rLen = 0;
-		rLoc = 285;
+		rLoc = 309;
 		rType = 0;
 		vrLen = 1049;
 		vrLoc = 758;
@@ -1036,7 +1041,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 56";
 		rLen = 0;
-		rLoc = 1547;
+		rLoc = 1599;
 		rType = 0;
 		vrLen = 888;
 		vrLoc = 575;
@@ -1046,7 +1051,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 60";
 		rLen = 0;
-		rLoc = 1936;
+		rLoc = 1906;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 493;
@@ -1056,7 +1061,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 69";
 		rLen = 0;
-		rLoc = 2209;
+		rLoc = 2179;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 814;
@@ -1066,7 +1071,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 56";
 		rLen = 0;
-		rLoc = 1547;
+		rLoc = 1599;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 814;
@@ -1076,7 +1081,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 55";
 		rLen = 0;
-		rLoc = 1522;
+		rLoc = 1574;
 		rType = 0;
 		vrLen = 753;
 		vrLoc = 814;
@@ -1086,7 +1091,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 57";
 		rLen = 0;
-		rLoc = 1522;
+		rLoc = 1574;
 		rType = 0;
 		vrLen = 794;
 		vrLoc = 814;
@@ -1096,7 +1101,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 60";
 		rLen = 0;
-		rLoc = 1547;
+		rLoc = 1599;
 		rType = 0;
 		vrLen = 791;
 		vrLoc = 814;
@@ -1106,7 +1111,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 42";
 		rLen = 0;
-		rLoc = 887;
+		rLoc = 911;
 		rType = 0;
 		vrLen = 912;
 		vrLoc = 418;
@@ -1116,7 +1121,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 43";
 		rLen = 0;
-		rLoc = 883;
+		rLoc = 907;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 418;
@@ -1126,7 +1131,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 43";
 		rLen = 0;
-		rLoc = 881;
+		rLoc = 905;
 		rType = 0;
 		vrLen = 966;
 		vrLoc = 418;
@@ -1188,7 +1193,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 43";
 		rLen = 0;
-		rLoc = 881;
+		rLoc = 905;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 190;
@@ -1215,7 +1220,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 43";
 		rLen = 0;
-		rLoc = 881;
+		rLoc = 905;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 190;
@@ -1365,7 +1370,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 808;
 		vrLoc = 1344;
@@ -1405,7 +1410,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 80";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 851;
 		vrLoc = 971;
@@ -1445,7 +1450,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 1344;
@@ -1465,7 +1470,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 829;
 		vrLoc = 1344;
@@ -1495,7 +1500,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 841;
 		vrLoc = 1344;
@@ -1515,7 +1520,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 808;
 		vrLoc = 1344;
@@ -1565,7 +1570,7 @@
 		comments = "error: syntax error before ')' token";
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		rLen = 1;
-		rLoc = 80;
+		rLoc = 82;
 		rType = 1;
 	};
 	DE2092440FF4F81D001FECDA /* PBXTextBookmark */ = {
@@ -1583,7 +1588,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1475;
@@ -1613,7 +1618,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 72";
 		rLen = 0;
-		rLoc = 1490;
+		rLoc = 1542;
 		rType = 0;
 		vrLen = 776;
 		vrLoc = 1344;
@@ -1673,7 +1678,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 72";
 		rLen = 0;
-		rLoc = 1490;
+		rLoc = 1542;
 		rType = 0;
 		vrLen = 776;
 		vrLoc = 1344;
@@ -1703,7 +1708,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 82";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 1344;
@@ -1713,7 +1718,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 719;
 		vrLoc = 1250;
@@ -1733,7 +1738,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 719;
 		vrLoc = 1250;
@@ -1783,7 +1788,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 265;
+		rLoc = 284;
 		rType = 0;
 		vrLen = 256;
 		vrLoc = 0;
@@ -1793,7 +1798,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 66";
 		rLen = 0;
-		rLoc = 1365;
+		rLoc = 1389;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 799;
@@ -1853,7 +1858,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 1586;
+		rLoc = 1638;
 		rType = 0;
 		vrLen = 719;
 		vrLoc = 1250;
@@ -1873,7 +1878,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 90";
 		rLen = 0;
-		rLoc = 2002;
+		rLoc = 1972;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 1185;
@@ -1883,7 +1888,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 260;
+		rLoc = 279;
 		rType = 0;
 		vrLen = 255;
 		vrLoc = 0;
@@ -1893,7 +1898,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 90";
 		rLen = 0;
-		rLoc = 2007;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 794;
 		vrLoc = 1210;
@@ -1903,7 +1908,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 265;
+		rLoc = 284;
 		rType = 0;
 		vrLen = 256;
 		vrLoc = 0;
@@ -1913,7 +1918,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 93";
 		rLen = 0;
-		rLoc = 2007;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 824;
 		vrLoc = 1213;
@@ -1923,7 +1928,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 265;
+		rLoc = 284;
 		rType = 0;
 		vrLen = 283;
 		vrLoc = 0;
@@ -1933,7 +1938,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 66";
 		rLen = 0;
-		rLoc = 1365;
+		rLoc = 1389;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 799;
@@ -1943,7 +1948,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 265;
+		rLoc = 284;
 		rType = 0;
 		vrLen = 256;
 		vrLoc = 0;
@@ -1953,7 +1958,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 94";
 		rLen = 0;
-		rLoc = 2060;
+		rLoc = 2030;
 		rType = 0;
 		vrLen = 900;
 		vrLoc = 1377;
@@ -1963,12 +1968,12 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 88";
 		rLen = 0;
-		rLoc = 1942;
+		rLoc = 1912;
 		rType = 0;
 		vrLen = 902;
 		vrLoc = 1377;
 	};
-	DE2092860FF4FAA7001FECDA /* DrawView.m:88 */ = {
+	DE2092860FF4FAA7001FECDA /* DrawView.m:85 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -1980,7 +1985,7 @@
 		functionName = "-touchesBegan:withEvent:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 88;
+		lineNumber = 85;
 		modificationTime = 267713240.232121;
 		state = 2;
 	};
@@ -1989,7 +1994,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 1823;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 769;
 		vrLoc = 1345;
@@ -1999,7 +2004,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 1779;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 803;
 		vrLoc = 1345;
@@ -2009,7 +2014,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 314;
+		rLoc = 382;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2019,7 +2024,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 20";
 		rLen = 0;
-		rLoc = 285;
+		rLoc = 309;
 		rType = 0;
 		vrLen = 600;
 		vrLoc = 0;
@@ -2029,7 +2034,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 20";
 		rLen = 0;
-		rLoc = 285;
+		rLoc = 309;
 		rType = 0;
 		vrLen = 600;
 		vrLoc = 0;
@@ -2039,7 +2044,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 314;
+		rLoc = 382;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2049,7 +2054,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 87";
 		rLen = 0;
-		rLoc = 1822;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 888;
 		vrLoc = 1270;
@@ -2059,7 +2064,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 29";
 		rLen = 0;
-		rLoc = 434;
+		rLoc = 458;
 		rType = 0;
 		vrLen = 654;
 		vrLoc = 176;
@@ -2069,7 +2074,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 314;
+		rLoc = 382;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2079,7 +2084,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 87";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 833;
 		vrLoc = 1372;
@@ -2089,7 +2094,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 87";
 		rLen = 0;
-		rLoc = 1879;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 1370;
@@ -2099,7 +2104,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 314;
+		rLoc = 382;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2109,7 +2114,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 91";
 		rLen = 0;
-		rLoc = 1783;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 746;
 		vrLoc = 1230;
@@ -2119,7 +2124,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 314;
+		rLoc = 382;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2129,7 +2134,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 1743;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 755;
 		vrLoc = 1230;
@@ -2139,7 +2144,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 1743;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 755;
 		vrLoc = 1230;
@@ -2149,7 +2154,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 314;
+		rLoc = 382;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2159,7 +2164,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 1743;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 755;
 		vrLoc = 1230;
@@ -2169,7 +2174,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 314;
+		rLoc = 382;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2179,7 +2184,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 92";
 		rLen = 0;
-		rLoc = 1853;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 1459;
@@ -2189,9 +2194,59 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 85";
 		rLen = 0;
-		rLoc = 1744;
+		rLoc = 1705;
 		rType = 0;
 		vrLen = 1046;
 		vrLoc = 1459;
+	};
+	DE2092B60FF4FD81001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 20";
+		rLen = 0;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 389;
+		vrLoc = 0;
+	};
+	DE2092B70FF4FD81001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 68";
+		rLen = 0;
+		rLoc = 1420;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 887;
+	};
+	DE2092B80FF4FD81001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 68";
+		rLen = 0;
+		rLoc = 1420;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 887;
+	};
+	DE2092B90FF4FD81001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 20";
+		rLen = 0;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 389;
+		vrLoc = 0;
+	};
+	DE2092BA0FF4FD81001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 89";
+		rLen = 0;
+		rLoc = 1790;
+		rType = 0;
+		vrLen = 619;
+		vrLoc = 1361;
 	};
 }

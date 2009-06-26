@@ -13,6 +13,7 @@
 @implementation DrawView
 
 @synthesize firstNode;
+@synthesize secondNode;
 
 int touchX;
 int touchY;
@@ -64,7 +65,8 @@ char* screenState = "start";
 	
     CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
 	
-    [self drawNode:firstNode];	
+    [self drawNode:firstNode];
+	[self drawNode:secondNode];
 
 }
 
@@ -78,17 +80,20 @@ char* screenState = "start";
 	touchWidth = 10;
 	touchHeight = 10;
 	
-	//firstNode = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
 	
 	Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
-	[self setFirstNode:node];
-
 	
-	NSLog(@"Set X COORD: %f", pos.x);
-	NSLog(@"Set X COORD: %f", [node xCoord]);
-	NSLog(@"Set X COORD: %f", [[self firstNode] xCoord]);
 	
-	screenState = "firstNode";
+	if(screenState == "firstNode") {
+		screenState == "secondNode";
+		[self setSecondNode:node];
+	}
+	else {
+    	screenState = "firstNode";
+		[self setFirstNode:node];
+	}
+	
+	
 	
 	[self setNeedsDisplay];
 	
