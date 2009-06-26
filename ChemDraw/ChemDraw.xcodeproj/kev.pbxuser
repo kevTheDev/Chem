@@ -146,6 +146,9 @@
 			DE2091DE0FF4F1BE001FECDA /* PBXTextBookmark */ = DE2091DE0FF4F1BE001FECDA /* PBXTextBookmark */;
 			DE2091E10FF4F1EA001FECDA /* PBXTextBookmark */ = DE2091E10FF4F1EA001FECDA /* PBXTextBookmark */;
 			DE2091E30FF4F202001FECDA /* PBXTextBookmark */ = DE2091E30FF4F202001FECDA /* PBXTextBookmark */;
+			DE2091E60FF4F2A6001FECDA /* PBXTextBookmark */ = DE2091E60FF4F2A6001FECDA /* PBXTextBookmark */;
+			DE2091E80FF4F2BC001FECDA /* PBXTextBookmark */ = DE2091E80FF4F2BC001FECDA /* PBXTextBookmark */;
+			DE2091ED0FF4F2D3001FECDA /* PBXTextBookmark */ = DE2091ED0FF4F2D3001FECDA /* PBXTextBookmark */;
 		};
 		sourceControlManager = DE20913E0FF4E806001FECDA /* Source Control */;
 		userBuildSettings = {
@@ -237,9 +240,9 @@
 	};
 	DE2091430FF4E840001FECDA /* DrawView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {959, 1330}}";
-			sepNavSelRange = "{1191, 0}";
-			sepNavVisRange = "{814, 915}";
+			sepNavIntBoundsRect = "{{0, 0}, {959, 1414}}";
+			sepNavSelRange = "{1281, 0}";
+			sepNavVisRange = "{814, 791}";
 		};
 	};
 	DE2091570FF4E9C2001FECDA /* PBXTextBookmark */ = {
@@ -563,7 +566,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 55";
 		rLen = 0;
-		rLoc = 1941;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 657;
@@ -633,7 +636,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 1306;
+		rLoc = 1398;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 417;
@@ -643,7 +646,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 1515;
+		rLoc = 1607;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 363;
@@ -683,7 +686,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 1306;
+		rLoc = 1398;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 363;
@@ -703,7 +706,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 1306;
+		rLoc = 1398;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 834;
@@ -723,7 +726,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 1306;
+		rLoc = 1398;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 417;
@@ -763,7 +766,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 1164;
+		rLoc = 1250;
 		rType = 0;
 		vrLen = 1066;
 		vrLoc = 436;
@@ -773,7 +776,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 1267;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 436;
@@ -783,7 +786,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 0;
-		rLoc = 1302;
+		rLoc = 1394;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 988;
@@ -803,7 +806,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 35;
-		rLoc = 1271;
+		rLoc = 1363;
 		rType = 0;
 		vrLen = 1037;
 		vrLoc = 436;
@@ -823,7 +826,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 0;
-		rLoc = 1302;
+		rLoc = 1394;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 988;
@@ -863,7 +866,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 1164;
+		rLoc = 1250;
 		rType = 0;
 		vrLen = 1034;
 		vrLoc = 988;
@@ -873,7 +876,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 0;
-		rLoc = 1267;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 657;
@@ -903,7 +906,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 1164;
+		rLoc = 1250;
 		rType = 0;
 		vrLen = 1177;
 		vrLoc = 657;
@@ -923,7 +926,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 56";
 		rLen = 0;
-		rLoc = 1191;
+		rLoc = 1283;
 		rType = 0;
 		vrLen = 888;
 		vrLoc = 575;
@@ -933,7 +936,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 60";
 		rLen = 0;
-		rLoc = 1256;
+		rLoc = 1348;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 493;
@@ -943,7 +946,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 69";
 		rLen = 0;
-		rLoc = 1498;
+		rLoc = 1590;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 814;
@@ -953,9 +956,39 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 56";
 		rLen = 0;
-		rLoc = 1191;
+		rLoc = 1283;
 		rType = 0;
 		vrLen = 915;
+		vrLoc = 814;
+	};
+	DE2091E60FF4F2A6001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 55";
+		rLen = 0;
+		rLoc = 1226;
+		rType = 0;
+		vrLen = 753;
+		vrLoc = 814;
+	};
+	DE2091E80FF4F2BC001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 57";
+		rLen = 0;
+		rLoc = 1226;
+		rType = 0;
+		vrLen = 794;
+		vrLoc = 814;
+	};
+	DE2091ED0FF4F2D3001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 60";
+		rLen = 0;
+		rLoc = 1281;
+		rType = 0;
+		vrLen = 791;
 		vrLoc = 814;
 	};
 }

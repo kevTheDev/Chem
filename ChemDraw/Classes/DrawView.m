@@ -52,8 +52,12 @@ int touchHeight;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	NSLog(@"TOUCH!");
 	
-	touchX = 50;
-	touchY = 50;
+	UITouch *touch = [touches anyObject];
+
+	CGPoint	pos = [touch locationInView:self];
+	
+	touchX = pos.x;
+	touchY = pos.y;
 	touchWidth = 10;
 	touchHeight = 10;
 	
