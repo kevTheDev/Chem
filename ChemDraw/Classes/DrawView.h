@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Node.h"
+#import "Edge.h"
 
 @interface DrawView : UIView {	
 	NSMutableArray *nodes;
@@ -16,6 +17,9 @@
 
 - (void) drawNode:(Node *)node;
 - (void) renderNodes;
+
+- (void) drawEdge:(Edge *)edge;
+- (void) renderEdges;
 
 @property (nonatomic, retain) NSMutableArray *nodes;
 @property (nonatomic, retain) NSMutableArray *edges;

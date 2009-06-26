@@ -326,18 +326,20 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE2093450FF50B1B001FECDA</string>
+										<string>DE20936F0FF50E21001FECDA</string>
 										<key>history</key>
 										<array>
 											<string>DE20912B0FF4E806001FECDA</string>
 											<string>DE2091570FF4E9C2001FECDA</string>
 											<string>DE2091580FF4E9C2001FECDA</string>
 											<string>DE20916E0FF4E9E7001FECDA</string>
-											<string>DE20926B0FF4FA4A001FECDA</string>
-											<string>DE20926C0FF4FA4A001FECDA</string>
 											<string>DE2092C80FF50040001FECDA</string>
-											<string>DE20933D0FF509CD001FECDA</string>
-											<string>DE20933E0FF509CD001FECDA</string>
+											<string>DE2093530FF50E04001FECDA</string>
+											<string>DE2093540FF50E04001FECDA</string>
+											<string>DE2093550FF50E04001FECDA</string>
+											<string>DE2093560FF50E04001FECDA</string>
+											<string>DE2093570FF50E04001FECDA</string>
+											<string>DE2093580FF50E04001FECDA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -429,6 +431,26 @@
 											<string>DE20932E0FF50784001FECDA</string>
 											<string>DE20933F0FF509CD001FECDA</string>
 											<string>DE2093400FF509CD001FECDA</string>
+											<string>DE2093590FF50E04001FECDA</string>
+											<string>DE20935A0FF50E04001FECDA</string>
+											<string>DE20935B0FF50E04001FECDA</string>
+											<string>DE20935C0FF50E04001FECDA</string>
+											<string>DE20935D0FF50E04001FECDA</string>
+											<string>DE20935E0FF50E04001FECDA</string>
+											<string>DE20935F0FF50E04001FECDA</string>
+											<string>DE2093600FF50E04001FECDA</string>
+											<string>DE2093610FF50E04001FECDA</string>
+											<string>DE2093620FF50E04001FECDA</string>
+											<string>DE2093630FF50E04001FECDA</string>
+											<string>DE2093640FF50E04001FECDA</string>
+											<string>DE2093650FF50E04001FECDA</string>
+											<string>DE2093660FF50E04001FECDA</string>
+											<string>DE2093670FF50E04001FECDA</string>
+											<string>DE2093680FF50E04001FECDA</string>
+											<string>DE2093690FF50E04001FECDA</string>
+											<string>DE20936A0FF50E04001FECDA</string>
+											<string>DE20936B0FF50E04001FECDA</string>
+											<string>DE20936C0FF50E04001FECDA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -646,6 +668,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -658,18 +682,16 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {500, 218}}</string>
+								<string>{{0, 0}, {863, 289}}</string>
 								<key>RubberWindowFrame</key>
-								<string>153 330 500 500 0 0 1440 878 </string>
+								<string>153 259 863 571 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>218pt</string>
+							<string>289pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -684,9 +706,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 223}, {500, 236}}</string>
+								<string>{{0, 294}, {863, 236}}</string>
 								<key>RubberWindowFrame</key>
-								<string>153 330 500 500 0 0 1440 878 </string>
+								<string>153 259 863 571 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -695,7 +717,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>459pt</string>
+					<string>530pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -716,7 +738,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.buildV3</string>
 			<key>WindowString</key>
-			<string>153 330 500 500 0 0 1440 878 </string>
+			<string>153 259 863 571 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>DE2091350FF4E806001FECDA</string>
 			<key>WindowToolIsVisible</key>

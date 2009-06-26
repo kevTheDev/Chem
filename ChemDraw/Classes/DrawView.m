@@ -66,17 +66,14 @@ char* screenState = "start";
 		text = "";
 		screenState = "edge";
 		
-		CGMutablePathRef path = CGPathCreateMutable();
-		
 		Node *firstNode = [[self nodes] objectAtIndex:0];
 		Node *secondNode = [[self nodes] objectAtIndex:1];
 		
-		CGPathMoveToPoint(path, NULL, [firstNode xCoord] + 5.0, [firstNode yCoord] + 5.0); 
-		CGPathAddLineToPoint(path, NULL, [secondNode xCoord] + 5.0, [secondNode yCoord] + 5.0);
+		Edge *edge = [[Edge alloc] initWithNodeA:firstNode nodeB:secondNode];
+		[[self edges] addObject:edge];
+		[edge release];
 		
-		CGPathCloseSubpath(path);
-		CGContextAddPath(ctx, path);
-		CGContextStrokePath(ctx);
+		
 		
 		
 	}
@@ -97,6 +94,7 @@ char* screenState = "start";
     CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
 
 	[self renderNodes];
+	[self renderEdges];
 
 }
 
@@ -125,6 +123,36 @@ char* screenState = "start";
 		// do things here
 		[self drawNode:node];
 	}
+	
+	return;
+}
+
+- (void) renderEdges {
+	
+	for (Edge *edge in [self edges]) {
+		[self drawEdge:edge];
+	}
+	return;
+}
+
+- (void) drawEdge:(Edge *)edge {
+	
+	CGContextRef ctx = UIGraphicsGetCurrentContext();
+	
+	CGMutablePathRef path = CGPathCreateMutable();
+	
+	Node *firstNode = [edge nodeA];
+	Node *secondNode = [edge nodeB];
+	
+	[self drawNode:firstNode];
+	[self drawNode:secondNode];
+	
+	CGPathMoveToPoint(path, NULL, [firstNode xCoord] + 5.0, [firstNode yCoord] + 5.0); 
+	CGPathAddLineToPoint(path, NULL, [secondNode xCoord] + 5.0, [secondNode yCoord] + 5.0);
+	
+	CGPathCloseSubpath(path);
+	CGContextAddPath(ctx, path);
+	CGContextStrokePath(ctx);
 	
 	return;
 }
