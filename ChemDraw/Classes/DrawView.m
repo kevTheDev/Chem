@@ -28,8 +28,8 @@
 	// got the graphics context
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
-	char* text = "TrailsintheSand.com";
-    CGContextSelectFont(ctx, "Helvetica", 16.0, kCGEncodingMacRoman);
+	char* text = "Touch the screen to create the first root node...";
+    CGContextSelectFont(ctx, "Helvetica", 14.0, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(ctx, kCGTextFill);
     CGContextSetRGBFillColor(ctx, 0, 0, 0, 1);
 	
@@ -39,7 +39,7 @@
 													0.0,  0.0);
     CGContextSetTextMatrix(ctx, xform);
 	
-    CGContextShowTextAtPoint(ctx, 80, 50, text, strlen(text));
+    CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
 	
 
 }
