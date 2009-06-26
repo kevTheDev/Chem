@@ -13,6 +13,8 @@
 @interface DrawView : UIView {	
 	NSMutableArray *nodes;
 	NSMutableArray *edges;
+	NSMutableArray *unconfirmedHighlightedNodes;
+	NSMutableArray *unconfirmedHighlightedEdges;
 }
 
 - (void) drawNode:(Node *)node;
@@ -26,6 +28,7 @@
 
 @property (nonatomic, retain) NSMutableArray *nodes;
 @property (nonatomic, retain) NSMutableArray *edges;
-
+@property (nonatomic, retain) NSMutableArray *unconfirmedHighlightedNodes;
+@property (nonatomic, retain) NSMutableArray *unconfirmedHighlightedEdges;
 
 @end

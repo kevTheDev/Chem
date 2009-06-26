@@ -296,7 +296,7 @@
 							<real>266</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>11 86 1308 792 0 0 1440 878 </string>
+						<string>60 86 1308 792 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -326,7 +326,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE2094140FF5280F001FECDA</string>
+										<string>DE20943A0FF52D10001FECDA</string>
 										<key>history</key>
 										<array>
 											<string>DE20912B0FF4E806001FECDA</string>
@@ -337,9 +337,9 @@
 											<string>DE2093A00FF51A63001FECDA</string>
 											<string>DE2093C30FF52385001FECDA</string>
 											<string>DE2093C50FF52385001FECDA</string>
-											<string>DE2093F30FF526F5001FECDA</string>
 											<string>DE2094110FF5280F001FECDA</string>
-											<string>DE2094120FF5280F001FECDA</string>
+											<string>DE2094300FF52C75001FECDA</string>
+											<string>DE2094310FF52C75001FECDA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -500,6 +500,12 @@
 											<string>DE2093FE0FF526F5001FECDA</string>
 											<string>DE2094040FF52778001FECDA</string>
 											<string>DE2094130FF5280F001FECDA</string>
+											<string>DE20941D0FF52AEB001FECDA</string>
+											<string>DE20941E0FF52AEB001FECDA</string>
+											<string>DE20941F0FF52AEB001FECDA</string>
+											<string>DE2094200FF52AEB001FECDA</string>
+											<string>DE2094320FF52C75001FECDA</string>
+											<string>DE2094330FF52C75001FECDA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -513,7 +519,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1020, 573}}</string>
 								<key>RubberWindowFrame</key>
-								<string>11 86 1308 792 0 0 1440 878 </string>
+								<string>60 86 1308 792 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -533,7 +539,7 @@
 								<key>Frame</key>
 								<string>{{0, 578}, {1020, 173}}</string>
 								<key>RubberWindowFrame</key>
-								<string>11 86 1308 792 0 0 1440 878 </string>
+								<string>60 86 1308 792 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -701,7 +707,7 @@
 		<string>/Users/kev/apps/iphone/Chem/ChemDraw/ChemDraw.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>11 86 1308 792 0 0 1440 878 </string>
+	<string>60 86 1308 792 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

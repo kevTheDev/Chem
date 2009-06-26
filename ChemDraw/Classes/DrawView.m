@@ -15,6 +15,8 @@
 
 @synthesize nodes;
 @synthesize edges;
+@synthesize unconfirmedHighlightedNodes;
+@synthesize unconfirmedHighlightedEdges;
 
 int touchWidth = 10;
 int touchHeight = 10;
@@ -42,7 +44,6 @@ char* screenState = "start";
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
 	char* text = "";
-//	NSMutableString *text = @""
 	
 	NSLog(@"SCREEN STATE: %s", screenState);
 	
@@ -50,13 +51,21 @@ char* screenState = "start";
 		text = "Touch the screen to create the first root node...";
 		NSMutableArray *tempNodesArray = [[NSMutableArray alloc] initWithCapacity:10];
 		NSMutableArray *tempEdgesArray = [[NSMutableArray alloc] initWithCapacity:10];
+		NSMutableArray *tempUnEdgesArray = [[NSMutableArray alloc] initWithCapacity:10];
+		NSMutableArray *tempUnNodesArray = [[NSMutableArray alloc] initWithCapacity:10];
+
+		
 		
 		NSLog(@"INIT NODES");
 		[self setNodes:tempNodesArray];
 		[self setEdges:tempEdgesArray];
+		[self setUnconfirmedHighlightedEdges:tempUnEdgesArray];
+		[self setUnconfirmedHighlightedNodes:tempUnNodesArray];
 		
 		[tempNodesArray release];
 		[tempEdgesArray release];
+		[tempUnNodesArray release];
+		[tempUnEdgesArray release];
 		
 		screenState = "firstNode";
 	}
@@ -79,7 +88,23 @@ char* screenState = "start";
 		
 	}
 	else if(screenState == "main") {
-		text = "";
+		if([[self unconfirmedHighlightedEdges] count] > 0 && [[self unconfirmedHighlightedNodes] count] > 0) {
+			text = "Confirm an edge or a node";
+		}
+		else if([[self unconfirmedHighlightedEdges] count] > 0) {
+			text = "Confirm an edge";
+		}
+		else if([[self unconfirmedHighlightedNodes] count] > 0) {
+			text = "Confirm a node";
+		}
+		else {
+			text = "No unconfirmed objects";
+			NSLog(@"No unconfirmed objects");
+		}
+		
+		NSLog(@"H NODES COUNT: %d", [[self unconfirmedHighlightedNodes] count]);
+		NSLog(@"H EDGES COUNT: %d", [[self unconfirmedHighlightedEdges] count]);
+		
 	}
 	else {
 		NSLog(@"Invalid screen state");
@@ -206,9 +231,16 @@ char* screenState = "start";
 	if(nodeDistance > edgeDistance) {
 		[closestNode setUnconfirmedHighlight:NO];
 		[closestEdge setUnconfirmedHighlight:YES];
+		
+		[[self unconfirmedHighlightedEdges] addObject:closestEdge];
+	}
+	else if(nodeDistance < edgeDistance) {
+		[[self unconfirmedHighlightedNodes] addObject:closestNode];
 	}
 	else if(nodeDistance == edgeDistance) {
 		[closestEdge setUnconfirmedHighlight:YES];
+		[[self unconfirmedHighlightedEdges] addObject:closestEdge];
+		[[self unconfirmedHighlightedNodes] addObject:closestNode];
 	}
 
 	
