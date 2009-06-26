@@ -12,6 +12,8 @@
 @interface Node : NSObject {
 	CGFloat xCoord;
 	CGFloat yCoord;
+	
+	BOOL unconfirmedHighlight;
 }
 
 - (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y;
@@ -19,5 +21,7 @@
 
 @property CGFloat xCoord;
 @property CGFloat yCoord;
+
+@property BOOL unconfirmedHighlight;
 
 @end

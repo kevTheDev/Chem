@@ -105,16 +105,56 @@ char* screenState = "start";
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	
 	UITouch *touch = [touches anyObject];
-
 	CGPoint	pos = [touch locationInView:self];
 
-	Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
-	[[self nodes] addObject:node];
-
+	if(screenState == "main") {
+		[self detectNodesForPoint:pos];
+			
+	}
+	else {
+		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
+		[[self nodes] addObject:node];
+		[node release]; //release temp node object
+	}
 	
-	[node release]; //release temp node object
+	
 	
 	[self setNeedsDisplay]; // redraw entire screen
+	
+	return;
+}
+
+- (void) detectNodesForPoint:(CGPoint)point {
+	
+	Node *tempNode = [Node alloc];
+	
+	int closestNodeIndex = 0;
+	float currentShortestDistance = 0;
+	
+	for(int i=0; i<[[self nodes] count]; i++)
+	{
+		tempNode = [[self nodes] objectAtIndex:i];
+		
+		float xDistance = abs(point.x - [tempNode xCoord]);
+		float yDistance = abs(point.y - [tempNode yCoord]);
+		
+		float newDistance = xDistance + yDistance;
+		
+		if(currentShortestDistance == 0) {
+			currentShortestDistance = newDistance;
+		}
+		else {
+			
+			if(newDistance < currentShortestDistance) {
+				currentShortestDistance = newDistance;
+				closestNodeIndex = i;
+			}
+			
+		}
+	}
+	
+	Node *closestNode = [[self nodes] objectAtIndex:closestNodeIndex];
+	[closestNode setUnconfirmedHighlight:YES];
 	
 	return;
 }

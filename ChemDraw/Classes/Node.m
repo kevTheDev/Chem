@@ -14,6 +14,7 @@
 
 @synthesize xCoord;
 @synthesize yCoord;
+@synthesize unconfirmedHighlight;
 
 - (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y {
 	
