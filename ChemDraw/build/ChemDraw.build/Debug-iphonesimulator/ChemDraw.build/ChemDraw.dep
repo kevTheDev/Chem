@@ -1,7 +1,9 @@
-ffffffffffffffffffffffffffffffff 00f4c619a041fae750f0f13d2ad9e010 ffffffffffffffffffffffffffffffff 10536 /Users/kev/apps/iphone/Chem/ChemDraw/build/ChemDraw.build/Debug-iphonesimulator/ChemDraw.build/Objects-normal/i386/DrawView.o
-ffffffffffffffffffffffffffffffff 27095d62194e55396f095b1c6c4f4f66 ffffffffffffffffffffffffffffffff 102 /Users/kev/apps/iphone/Chem/ChemDraw/build/Debug-iphonesimulator/ChemDraw.app.dSYM
-ffffffffffffffffffffffffffffffff 05ba0941ef2cf7f23bba8417c39fd06a ffffffffffffffffffffffffffffffff 238 /Users/kev/apps/iphone/Chem/ChemDraw/build/Debug-iphonesimulator/ChemDraw.app
-ffffffffffffffffffffffffffffffff 1252940ef15ebcda7eeb7fc631257340 ffffffffffffffffffffffffffffffff 23664 /Users/kev/apps/iphone/Chem/ChemDraw/build/Debug-iphonesimulator/ChemDraw.app/ChemDraw
+00000000000000000000000000000000 27095d62194e55396f095b1c6c4f4f66 ffffffffffffffffffffffffffffffff 102 /Users/kev/apps/iphone/Chem/ChemDraw/build/Debug-iphonesimulator/ChemDraw.app.dSYM
+cc1d6223b11937cd553219ad6d63422b 05ba0941ef2cf7f23bba8417c39fd06a ffffffffffffffffffffffffffffffff 238 /Users/kev/apps/iphone/Chem/ChemDraw/build/Debug-iphonesimulator/ChemDraw.app
+b30abec4146c9a8e3cb226c20288bb81 1252940ef15ebcda7eeb7fc631257340 ffffffffffffffffffffffffffffffff 38180 /Users/kev/apps/iphone/Chem/ChemDraw/build/Debug-iphonesimulator/ChemDraw.app/ChemDraw
+b0c62e477f14f8ec0ce9abb747aa52ee 00f4c619a041fae750f0f13d2ad9e010 ffffffffffffffffffffffffffffffff 42928 /Users/kev/apps/iphone/Chem/ChemDraw/build/ChemDraw.build/Debug-iphonesimulator/ChemDraw.build/Objects-normal/i386/DrawView.o
+b0c62e477247fc740ce9abb747aa0566 2076e82d91271e4c057aa51932f1a2a2 ffffffffffffffffffffffffffffffff 13800 /Users/kev/apps/iphone/Chem/ChemDraw/build/ChemDraw.build/Debug-iphonesimulator/ChemDraw.build/Objects-normal/i386/Edge.o
+b0c62e477247e4280ce9abb747aa03c9 856c23dc2874d02507d51d7dbdaa7d9b ffffffffffffffffffffffffffffffff 13812 /Users/kev/apps/iphone/Chem/ChemDraw/build/ChemDraw.build/Debug-iphonesimulator/ChemDraw.build/Objects-normal/i386/Node.o
 b0c62e473b0cce300ce9abb747aa19d3 813d402848ae1a36f40d97b4b6f1ee82 ffffffffffffffffffffffffffffffff 13440 /Users/kev/apps/iphone/Chem/ChemDraw/build/ChemDraw.build/Debug-iphonesimulator/ChemDraw.build/Objects-normal/i386/ChemDrawViewController.o
 b0c62e47365f8eb10ce9abb747aa6a77 01d466feb14308f5c9100fec3aeda863 ffffffffffffffffffffffffffffffff 24384 /Users/kev/apps/iphone/Chem/ChemDraw/build/ChemDraw.build/Debug-iphonesimulator/ChemDraw.build/Objects-normal/i386/ChemDrawAppDelegate.o
 b0c62e4771487e400ce9abb747aa1d1c 960d95faf93d773653f0f7c32bd4a35e ffffffffffffffffffffffffffffffff 6252 /Users/kev/apps/iphone/Chem/ChemDraw/build/ChemDraw.build/Debug-iphonesimulator/ChemDraw.build/Objects-normal/i386/main.o

@@ -15,6 +15,7 @@
 @synthesize nodeA;
 @synthesize nodeB;
 @synthesize unconfirmedHighlight;
+@synthesize confirmedHighlight;
 
 - (Edge *) initWithNodeA:(Node *)firstNode nodeB:(Node *)secondNode {
 	self = [super init];
@@ -76,6 +77,26 @@
 	Node *centerNode = [[Node alloc] initWithXCoord:centerX yCoord:centerY];
 	
 	return centerNode;
+}
+
+- (NSUInteger)hash {
+	
+	Node *selfCenter = [self centerPointNode];
+	
+	NSString *hashValue = [NSString stringWithFormat:@"%f%f", [selfCenter xCoord], [selfCenter yCoord]];
+	return [hashValue intValue];
+}
+
+- (BOOL)isEqual:(id)anObject {
+	
+	Node *objectCenter = [anObject centerPointNode];
+	Node *selfCenter = [self centerPointNode];
+	
+	if( [objectCenter xCoord] == [selfCenter xCoord] && [objectCenter yCoord] == [selfCenter yCoord] ) {
+		return true;
+	}
+	
+	return false;
 }
 
 @end

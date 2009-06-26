@@ -326,7 +326,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE20943A0FF52D10001FECDA</string>
+										<string>DE2094990FF535C5001FECDA</string>
 										<key>history</key>
 										<array>
 											<string>DE20912B0FF4E806001FECDA</string>
@@ -334,12 +334,12 @@
 											<string>DE2091580FF4E9C2001FECDA</string>
 											<string>DE20916E0FF4E9E7001FECDA</string>
 											<string>DE2092C80FF50040001FECDA</string>
-											<string>DE2093A00FF51A63001FECDA</string>
-											<string>DE2093C30FF52385001FECDA</string>
-											<string>DE2093C50FF52385001FECDA</string>
-											<string>DE2094110FF5280F001FECDA</string>
-											<string>DE2094300FF52C75001FECDA</string>
-											<string>DE2094310FF52C75001FECDA</string>
+											<string>DE20943D0FF53075001FECDA</string>
+											<string>DE2094810FF53493001FECDA</string>
+											<string>DE2094900FF535C5001FECDA</string>
+											<string>DE2094910FF535C5001FECDA</string>
+											<string>DE2094920FF535C5001FECDA</string>
+											<string>DE2094930FF535C5001FECDA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -350,162 +350,18 @@
 											<string>DE2091610FF4E9C2001FECDA</string>
 											<string>DE2091620FF4E9C2001FECDA</string>
 											<string>DE20916F0FF4E9E7001FECDA</string>
-											<string>DE2091A60FF4EDEE001FECDA</string>
-											<string>DE2091A70FF4EDEE001FECDA</string>
-											<string>DE2091A80FF4EDEE001FECDA</string>
-											<string>DE2091A90FF4EDEE001FECDA</string>
-											<string>DE2091AA0FF4EDEE001FECDA</string>
-											<string>DE2091AB0FF4EDEE001FECDA</string>
-											<string>DE2091AC0FF4EDEE001FECDA</string>
-											<string>DE2091AD0FF4EDEE001FECDA</string>
-											<string>DE2091AE0FF4EDEE001FECDA</string>
-											<string>DE2091AF0FF4EDEE001FECDA</string>
-											<string>DE2091C60FF4EFAD001FECDA</string>
-											<string>DE2091C70FF4EFAD001FECDA</string>
-											<string>DE2091C80FF4EFAD001FECDA</string>
-											<string>DE2091CC0FF4EFE2001FECDA</string>
-											<string>DE20920C0FF4F5C4001FECDA</string>
 											<string>DE20920D0FF4F5C4001FECDA</string>
 											<string>DE2092110FF4F609001FECDA</string>
-											<string>DE2092120FF4F609001FECDA</string>
-											<string>DE20921F0FF4F6A8001FECDA</string>
-											<string>DE2092200FF4F6A8001FECDA</string>
-											<string>DE20922D0FF4F7CC001FECDA</string>
-											<string>DE20922E0FF4F7CC001FECDA</string>
-											<string>DE20922F0FF4F7CC001FECDA</string>
-											<string>DE2092300FF4F7CC001FECDA</string>
-											<string>DE2092310FF4F7CC001FECDA</string>
-											<string>DE2092320FF4F7CC001FECDA</string>
-											<string>DE2092330FF4F7CC001FECDA</string>
-											<string>DE2092340FF4F7CC001FECDA</string>
-											<string>DE2092350FF4F7CC001FECDA</string>
-											<string>DE2092360FF4F7CC001FECDA</string>
-											<string>DE2092370FF4F7CC001FECDA</string>
-											<string>DE2092380FF4F7CC001FECDA</string>
-											<string>DE2092390FF4F7CC001FECDA</string>
-											<string>DE20923A0FF4F7CC001FECDA</string>
-											<string>DE20923B0FF4F7CC001FECDA</string>
-											<string>DE20924C0FF4F863001FECDA</string>
-											<string>DE20924D0FF4F863001FECDA</string>
-											<string>DE20924E0FF4F863001FECDA</string>
-											<string>DE20924F0FF4F863001FECDA</string>
-											<string>DE2092500FF4F863001FECDA</string>
-											<string>DE2092510FF4F863001FECDA</string>
-											<string>DE2092520FF4F863001FECDA</string>
-											<string>DE2092530FF4F863001FECDA</string>
-											<string>DE20925E0FF4F8FA001FECDA</string>
-											<string>DE20925F0FF4F8FA001FECDA</string>
-											<string>DE20926F0FF4FA4A001FECDA</string>
-											<string>DE2092700FF4FA4A001FECDA</string>
-											<string>DE2092710FF4FA4A001FECDA</string>
-											<string>DE2092720FF4FA4A001FECDA</string>
-											<string>DE2092730FF4FA4A001FECDA</string>
-											<string>DE2092740FF4FA4A001FECDA</string>
-											<string>DE2092750FF4FA4A001FECDA</string>
-											<string>DE2092760FF4FA4A001FECDA</string>
-											<string>DE2092770FF4FA4A001FECDA</string>
-											<string>DE2092780FF4FA4A001FECDA</string>
-											<string>DE2092790FF4FA4A001FECDA</string>
-											<string>DE20927A0FF4FA4A001FECDA</string>
-											<string>DE20927B0FF4FA4A001FECDA</string>
-											<string>DE20927C0FF4FA4A001FECDA</string>
-											<string>DE20927D0FF4FA4A001FECDA</string>
-											<string>DE2092910FF4FB41001FECDA</string>
-											<string>DE2092920FF4FB41001FECDA</string>
-											<string>DE2092A20FF4FC45001FECDA</string>
-											<string>DE2092A30FF4FC45001FECDA</string>
-											<string>DE2092AC0FF4FC8F001FECDA</string>
-											<string>DE2092AD0FF4FC8F001FECDA</string>
-											<string>DE2092AE0FF4FC8F001FECDA</string>
-											<string>DE2092AF0FF4FC8F001FECDA</string>
-											<string>DE2092B80FF4FD81001FECDA</string>
-											<string>DE2092B90FF4FD81001FECDA</string>
-											<string>DE2092BE0FF4FF70001FECDA</string>
-											<string>DE2092BF0FF4FF70001FECDA</string>
-											<string>DE2092C90FF50040001FECDA</string>
-											<string>DE2092CA0FF50040001FECDA</string>
-											<string>DE2092D00FF5005F001FECDA</string>
-											<string>DE20931E0FF5067E001FECDA</string>
-											<string>DE20931F0FF5067E001FECDA</string>
-											<string>DE20932D0FF50784001FECDA</string>
-											<string>DE20932E0FF50784001FECDA</string>
-											<string>DE20933F0FF509CD001FECDA</string>
-											<string>DE2093400FF509CD001FECDA</string>
-											<string>DE2093590FF50E04001FECDA</string>
 											<string>DE20935A0FF50E04001FECDA</string>
 											<string>DE20935B0FF50E04001FECDA</string>
-											<string>DE20935C0FF50E04001FECDA</string>
-											<string>DE20935D0FF50E04001FECDA</string>
-											<string>DE20935E0FF50E04001FECDA</string>
-											<string>DE20935F0FF50E04001FECDA</string>
-											<string>DE2093600FF50E04001FECDA</string>
-											<string>DE2093610FF50E04001FECDA</string>
-											<string>DE2093620FF50E04001FECDA</string>
-											<string>DE2093630FF50E04001FECDA</string>
-											<string>DE2093640FF50E04001FECDA</string>
-											<string>DE2093650FF50E04001FECDA</string>
-											<string>DE2093660FF50E04001FECDA</string>
-											<string>DE2093670FF50E04001FECDA</string>
-											<string>DE2093680FF50E04001FECDA</string>
-											<string>DE2093690FF50E04001FECDA</string>
-											<string>DE20936A0FF50E04001FECDA</string>
-											<string>DE20936B0FF50E04001FECDA</string>
-											<string>DE20936C0FF50E04001FECDA</string>
-											<string>DE2093A30FF51A63001FECDA</string>
-											<string>DE2093A40FF51A63001FECDA</string>
-											<string>DE2093A50FF51A63001FECDA</string>
-											<string>DE2093A60FF51A63001FECDA</string>
-											<string>DE2093A70FF51A63001FECDA</string>
-											<string>DE2093A80FF51A63001FECDA</string>
-											<string>DE2093A90FF51A63001FECDA</string>
-											<string>DE2093AA0FF51A63001FECDA</string>
-											<string>DE2093AB0FF51A63001FECDA</string>
-											<string>DE2093C80FF52385001FECDA</string>
-											<string>DE2093C90FF52385001FECDA</string>
-											<string>DE2093CA0FF52385001FECDA</string>
-											<string>DE2093CB0FF52385001FECDA</string>
-											<string>DE2093CC0FF52385001FECDA</string>
-											<string>DE2093CD0FF52385001FECDA</string>
-											<string>DE2093CE0FF52385001FECDA</string>
-											<string>DE2093CF0FF52385001FECDA</string>
-											<string>DE2093D00FF52385001FECDA</string>
-											<string>DE2093D10FF52385001FECDA</string>
-											<string>DE2093D20FF52385001FECDA</string>
-											<string>DE2093D30FF52385001FECDA</string>
-											<string>DE2093D40FF52385001FECDA</string>
-											<string>DE2093D50FF52385001FECDA</string>
-											<string>DE2093D60FF52385001FECDA</string>
-											<string>DE2093D70FF52385001FECDA</string>
-											<string>DE2093D80FF52385001FECDA</string>
-											<string>DE2093D90FF52385001FECDA</string>
-											<string>DE2093DA0FF52385001FECDA</string>
-											<string>DE2093DB0FF52385001FECDA</string>
-											<string>DE2093DC0FF52385001FECDA</string>
-											<string>DE2093DD0FF52385001FECDA</string>
-											<string>DE2093DE0FF52385001FECDA</string>
-											<string>DE2093DF0FF52385001FECDA</string>
-											<string>DE2093E50FF524D6001FECDA</string>
-											<string>DE2093E60FF524D6001FECDA</string>
-											<string>DE2093E70FF524D6001FECDA</string>
-											<string>DE2093E80FF524D6001FECDA</string>
-											<string>DE2093F50FF526F5001FECDA</string>
-											<string>DE2093F60FF526F5001FECDA</string>
-											<string>DE2093F70FF526F5001FECDA</string>
-											<string>DE2093F80FF526F5001FECDA</string>
-											<string>DE2093F90FF526F5001FECDA</string>
-											<string>DE2093FA0FF526F5001FECDA</string>
-											<string>DE2093FB0FF526F5001FECDA</string>
-											<string>DE2093FC0FF526F5001FECDA</string>
-											<string>DE2093FD0FF526F5001FECDA</string>
-											<string>DE2093FE0FF526F5001FECDA</string>
-											<string>DE2094040FF52778001FECDA</string>
-											<string>DE2094130FF5280F001FECDA</string>
-											<string>DE20941D0FF52AEB001FECDA</string>
-											<string>DE20941E0FF52AEB001FECDA</string>
-											<string>DE20941F0FF52AEB001FECDA</string>
-											<string>DE2094200FF52AEB001FECDA</string>
-											<string>DE2094320FF52C75001FECDA</string>
-											<string>DE2094330FF52C75001FECDA</string>
+											<string>DE2094830FF53493001FECDA</string>
+											<string>DE2094840FF53493001FECDA</string>
+											<string>DE2094850FF53493001FECDA</string>
+											<string>DE2094940FF535C5001FECDA</string>
+											<string>DE2094950FF535C5001FECDA</string>
+											<string>DE2094960FF535C5001FECDA</string>
+											<string>DE2094970FF535C5001FECDA</string>
+											<string>DE2094980FF535C5001FECDA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -563,9 +419,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>DE2091710FF4E9E7001FECDA</string>
+				<string>DE20946E0FF5339F001FECDA</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>DE2091720FF4E9E7001FECDA</string>
+				<string>DE20946F0FF5339F001FECDA</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -699,8 +555,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>DE2091D40FF4F071001FECDA</string>
-		<string>DE2091D50FF4F071001FECDA</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>DE2091350FF4E806001FECDA</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -723,14 +577,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DrawView.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -786,7 +638,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>DE2091350FF4E806001FECDA</string>
-				<string>DE2091760FF4EAD8001FECDA</string>
+				<string>DE2094700FF5339F001FECDA</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -828,8 +680,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 194}}</string>
-											<string>{{316, 0}, {378, 194}}</string>
+											<string>{{0, 0}, {316, 198}}</string>
+											<string>{{316, 0}, {378, 198}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -844,8 +696,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 194}}</string>
-											<string>{{0, 194}, {694, 187}}</string>
+											<string>{{0, 0}, {694, 198}}</string>
+											<string>{{0, 198}, {694, 183}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -878,7 +730,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 194}}</string>
+									<string>{{316, 0}, {378, 198}}</string>
 									<key>RubberWindowFrame</key>
 									<string>153 408 694 422 0 0 1440 878 </string>
 								</dict>
@@ -906,13 +758,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>DE2091770FF4EAD8001FECDA</string>
+				<string>DE2094710FF5339F001FECDA</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>DE2091780FF4EAD8001FECDA</string>
-				<string>DE2091790FF4EAD8001FECDA</string>
-				<string>DE20917A0FF4EAD8001FECDA</string>
-				<string>DE20917B0FF4EAD8001FECDA</string>
-				<string>DE20917C0FF4EAD8001FECDA</string>
+				<string>DE2094720FF5339F001FECDA</string>
+				<string>DE2094730FF5339F001FECDA</string>
+				<string>DE2094740FF5339F001FECDA</string>
+				<string>DE2094750FF5339F001FECDA</string>
+				<string>DE2094760FF5339F001FECDA</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1076,7 +928,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>DE20917D0FF4EAD8001FECDA</string>
+				<string>DE2094770FF5339F001FECDA</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

@@ -105,9 +105,11 @@ char* screenState = "start";
 		NSLog(@"H NODES COUNT: %d", [[self unconfirmedHighlightedNodes] count]);
 		NSLog(@"H EDGES COUNT: %d", [[self unconfirmedHighlightedEdges] count]);
 		
+		screenState = "confirm";
+		
 	}
 	else {
-		NSLog(@"Invalid screen state");
+		//NSLog(@"Invalid screen state");
 	}
 	
     CGContextSelectFont(ctx, "Helvetica", 14.0, kCGEncodingMacRoman);
@@ -137,6 +139,25 @@ char* screenState = "start";
 		[self detectClosestEdgesToPoint:pos withClosestNode:closestNode];
 		
 			
+	}
+	else if(screenState == "confirm") {
+		
+		// detect a user confirming a highlighted object
+		
+		if([[self unconfirmedHighlightedEdges] count] > 0 && [[self unconfirmedHighlightedNodes] count] > 0) {
+			
+			// EDGE CASE - TODO
+		}
+		else if([[self unconfirmedHighlightedEdges] count] > 0) {
+			[self confirmEdgeFromHighlightedEdges:pos];
+		}
+		else if([[self unconfirmedHighlightedNodes] count] > 0) {
+			[self confirmNodeFromHighlightedNodes:pos];
+			
+		}
+		else {
+			NSLog(@"No unconfirmed objects");
+		}
 	}
 	else {
 		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
@@ -288,6 +309,9 @@ char* screenState = "start";
 	if([edge unconfirmedHighlight] == YES) {
 		CGContextSetStrokeColorWithColor(ctx, [UIColor purpleColor].CGColor);
 	}
+	else if([edge confirmedHighlight] == YES) {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor orangeColor].CGColor);
+	}
 	else {
 		CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
 	}
@@ -301,7 +325,10 @@ char* screenState = "start";
 - (void) drawNode:(Node *)node {
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
-	if([node unconfirmedHighlight] == YES) {
+	if([node confirmedHighlight] == YES) {
+		CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
+	}
+	else if([node unconfirmedHighlight] == YES) {
 		CGContextSetRGBFillColor(ctx, 255, 255, 0, 1.0);
 	}
 	else{
@@ -312,6 +339,93 @@ char* screenState = "start";
 	return;
 	
 }
+
+- (Node *) confirmNodeFromHighlightedNodes:(CGPoint)point {
+	Node *tempNode = [Node alloc];
+	
+	int closestNodeIndex = 0;
+	float currentShortestDistance = 0;
+	
+	for(int i=0; i<[[self unconfirmedHighlightedNodes] count]; i++)
+	{
+		tempNode = [[self unconfirmedHighlightedNodes] objectAtIndex:i];
+		
+		float xDistance = abs(point.x - [tempNode xCoord]);
+		float yDistance = abs(point.y - [tempNode yCoord]);
+		
+		float newDistance = xDistance + yDistance;
+		
+		if(currentShortestDistance == 0) {
+			currentShortestDistance = newDistance;
+		}
+		else {
+			
+			if(newDistance < currentShortestDistance) {
+				currentShortestDistance = newDistance;
+				closestNodeIndex = i;
+			}
+			
+		}
+	}
+	
+	Node *closestNode = [[self unconfirmedHighlightedNodes] objectAtIndex:closestNodeIndex];
+	
+	int realNodeIndex = [[self nodes] indexOfObjectIdenticalTo:closestNode];
+	
+	
+	Node *realNode = [[self nodes] objectAtIndex:realNodeIndex];
+	
+	
+	[realNode setUnconfirmedHighlight:NO];
+	[realNode setConfirmedHighlight:YES];
+	
+	return closestNode;
+	
+}
+
+- (Edge *) confirmEdgeFromHighlightedEdges:(CGPoint)point {
+	
+	Edge *tempEdge = [Edge alloc];
+	
+	int closestEdgeIndex = 0;
+	float currentShortestDistance = 0;
+	
+	for(int i=0; i<[[self unconfirmedHighlightedEdges] count]; i++)
+	{
+		tempEdge = [[self unconfirmedHighlightedEdges] objectAtIndex:i];
+		
+		float xDistance = abs(point.x - [[tempEdge centerPointNode]xCoord]);
+		float yDistance = abs(point.y - [[tempEdge centerPointNode] yCoord]);
+		
+		float newDistance = xDistance + yDistance;
+		
+		if(currentShortestDistance == 0) {
+			currentShortestDistance = newDistance;
+		}
+		else {
+			
+			if(newDistance < currentShortestDistance) {
+				currentShortestDistance = newDistance;
+				closestEdgeIndex = i;
+			}
+			
+		}
+	}
+	
+	Node *closestEdge = [[self unconfirmedHighlightedEdges] objectAtIndex:closestEdgeIndex];
+	
+	int realEdgeIndex = [[self edges] indexOfObjectIdenticalTo:closestEdge];
+	
+	
+	Edge *realEdge = [[self edges] objectAtIndex:realEdgeIndex];
+	
+	
+	[realEdge setUnconfirmedHighlight:NO];
+	[realEdge setConfirmedHighlight:YES];
+	
+	return realEdge;
+}
+
 
 - (void)dealloc {
 	[nodes release];

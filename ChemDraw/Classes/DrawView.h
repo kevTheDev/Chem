@@ -26,6 +26,9 @@
 - (Node *) detectNodesForPoint:(CGPoint)point;
 - (void) detectClosestEdgesToPoint:(CGPoint)point withClosestNode:(Node *)closestNode;
 
+- (Node *) confirmNodeFromHighlightedNodes:(CGPoint)point;
+- (Edge *) confirmEdgeFromHighlightedEdges:(CGPoint)point;
+
 @property (nonatomic, retain) NSMutableArray *nodes;
 @property (nonatomic, retain) NSMutableArray *edges;
 @property (nonatomic, retain) NSMutableArray *unconfirmedHighlightedNodes;

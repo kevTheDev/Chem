@@ -15,6 +15,7 @@
 @synthesize xCoord;
 @synthesize yCoord;
 @synthesize unconfirmedHighlight;
+@synthesize confirmedHighlight;
 
 - (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y {
 	
@@ -27,6 +28,21 @@
 	
     return self;
 	
+}
+
+- (NSUInteger)hash {
+
+	NSString *hashValue = [NSString stringWithFormat:@"%f%f", [self xCoord], [self yCoord]];
+	return [hashValue intValue];
+}
+
+- (BOOL)isEqual:(id)anObject {
+	
+	if( [anObject xCoord] == [self xCoord] && [anObject yCoord] == [self yCoord] ) {
+		return true;
+	}
+
+	return false;
 }
 
 @end

@@ -14,6 +14,7 @@
 	CGFloat yCoord;
 	
 	BOOL unconfirmedHighlight;
+	BOOL confirmedHighlight;
 }
 
 - (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y;
@@ -23,5 +24,6 @@
 @property CGFloat yCoord;
 
 @property BOOL unconfirmedHighlight;
+@property BOOL confirmedHighlight;
 
 @end

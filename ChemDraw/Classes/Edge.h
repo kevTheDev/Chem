@@ -14,6 +14,7 @@
 	Node *nodeB;
 	
 	BOOL unconfirmedHighlight;
+	BOOL confirmedHighlight;
 }
 
 - (Edge *) initWithNodeA:(Node *)nodeA nodeB:(Node *)nodeB;
@@ -24,5 +25,6 @@
 @property (nonatomic, retain) Node *nodeB;
 
 @property BOOL unconfirmedHighlight;
+@property BOOL confirmedHighlight;
 
 @end
