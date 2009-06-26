@@ -207,7 +207,14 @@ char* screenState = "start";
 
 - (void) drawNode:(Node *)node {
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
-	CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
+	
+	if([node unconfirmedHighlight] == YES) {
+		CGContextSetRGBFillColor(ctx, 255, 255, 0, 1.0);
+	}
+	else{
+		CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
+	}
+	
     CGContextFillEllipseInRect(ctx, CGRectMake([node xCoord], [node yCoord], touchWidth, touchHeight));
 	return;
 	

@@ -382,6 +382,7 @@
 			DE2093AB0FF51A63001FECDA /* PBXTextBookmark */ = DE2093AB0FF51A63001FECDA /* PBXTextBookmark */;
 			DE2093AC0FF51A63001FECDA /* PBXTextBookmark */ = DE2093AC0FF51A63001FECDA /* PBXTextBookmark */;
 			DE2093AD0FF51A89001FECDA /* PBXTextBookmark */ = DE2093AD0FF51A89001FECDA /* PBXTextBookmark */;
+			DE2093B00FF51AE2001FECDA /* PBXTextBookmark */ = DE2093B00FF51AE2001FECDA /* PBXTextBookmark */;
 		};
 		sourceControlManager = DE20913E0FF4E806001FECDA /* Source Control */;
 		userBuildSettings = {
@@ -473,9 +474,9 @@
 	};
 	DE2091430FF4E840001FECDA /* DrawView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {959, 3038}}";
-			sepNavSelRange = "{2459, 0}";
-			sepNavVisRange = "{2239, 847}";
+			sepNavIntBoundsRect = "{{0, 0}, {959, 3220}}";
+			sepNavSelRange = "{4501, 0}";
+			sepNavVisRange = "{3772, 922}";
 		};
 	};
 	DE2091570FF4E9C2001FECDA /* PBXTextBookmark */ = {
@@ -799,7 +800,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 55";
 		rLen = 0;
-		rLoc = 4582;
+		rLoc = 4693;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 657;
@@ -879,7 +880,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 4582;
+		rLoc = 4693;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 363;
@@ -1179,7 +1180,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 69";
 		rLen = 0;
-		rLoc = 4565;
+		rLoc = 4676;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 814;
@@ -2076,7 +2077,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 94";
 		rLen = 0;
-		rLoc = 4416;
+		rLoc = 4573;
 		rType = 0;
 		vrLen = 900;
 		vrLoc = 1377;
@@ -3375,8 +3376,8 @@
 		isa = PBXTextBookmark;
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 169";
-		rLen = 24;
-		rLoc = 4418;
+		rLen = 0;
+		rLoc = 4575;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 2879;
@@ -3560,5 +3561,15 @@
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 2239;
+	};
+	DE2093B00FF51AE2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 212";
+		rLen = 0;
+		rLoc = 4501;
+		rType = 0;
+		vrLen = 922;
+		vrLoc = 3772;
 	};
 }
