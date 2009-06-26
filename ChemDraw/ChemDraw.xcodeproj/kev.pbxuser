@@ -29,7 +29,7 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {959, 840}}";
+			sepNavIntBoundsRect = "{{0, 0}, {959, 868}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 827}";
 		};
@@ -51,9 +51,9 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					735,
+					781,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -68,17 +68,39 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 267708400;
-			PBXWorkspaceStateSaveDate = 267708400;
+			PBXPerProjectTemplateStateSaveDate = 267708878;
+			PBXWorkspaceStateSaveDate = 267708878;
 		};
 		perUserProjectItems = {
-			DE20912B0FF4E806001FECDA /* PBXTextBookmark */ = DE20912B0FF4E806001FECDA /* PBXTextBookmark */;
-			DE20912C0FF4E806001FECDA /* PBXTextBookmark */ = DE20912C0FF4E806001FECDA /* PBXTextBookmark */;
-			DE20912D0FF4E806001FECDA /* PBXTextBookmark */ = DE20912D0FF4E806001FECDA /* PBXTextBookmark */;
-			DE20912E0FF4E806001FECDA /* PBXTextBookmark */ = DE20912E0FF4E806001FECDA /* PBXTextBookmark */;
-			DE20912F0FF4E806001FECDA /* PBXTextBookmark */ = DE20912F0FF4E806001FECDA /* PBXTextBookmark */;
-			DE2091300FF4E806001FECDA /* PBXTextBookmark */ = DE2091300FF4E806001FECDA /* PBXTextBookmark */;
-			DE2091310FF4E806001FECDA /* PBXTextBookmark */ = DE2091310FF4E806001FECDA /* PBXTextBookmark */;
+			DE20912B0FF4E806001FECDA = DE20912B0FF4E806001FECDA /* PBXTextBookmark */;
+			DE20912E0FF4E806001FECDA = DE20912E0FF4E806001FECDA /* PBXTextBookmark */;
+			DE20912F0FF4E806001FECDA = DE20912F0FF4E806001FECDA /* PBXTextBookmark */;
+			DE2091300FF4E806001FECDA = DE2091300FF4E806001FECDA /* PBXTextBookmark */;
+			DE2091570FF4E9C2001FECDA = DE2091570FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091580FF4E9C2001FECDA = DE2091580FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091590FF4E9C2001FECDA = DE2091590FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE20915A0FF4E9C2001FECDA = DE20915A0FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE20915B0FF4E9C2001FECDA = DE20915B0FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE20915C0FF4E9C2001FECDA = DE20915C0FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE20915E0FF4E9C2001FECDA = DE20915E0FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE20915F0FF4E9C2001FECDA = DE20915F0FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091600FF4E9C2001FECDA = DE2091600FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091610FF4E9C2001FECDA = DE2091610FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091620FF4E9C2001FECDA = DE2091620FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091630FF4E9C2001FECDA = DE2091630FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091640FF4E9C2001FECDA = DE2091640FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091650FF4E9C2001FECDA = DE2091650FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091660FF4E9C2001FECDA = DE2091660FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE2091670FF4E9C2001FECDA = DE2091670FF4E9C2001FECDA /* PBXTextBookmark */;
+			DE20916E0FF4E9E7001FECDA /* PBXTextBookmark */ = DE20916E0FF4E9E7001FECDA /* PBXTextBookmark */;
+			DE20916F0FF4E9E7001FECDA /* PBXTextBookmark */ = DE20916F0FF4E9E7001FECDA /* PBXTextBookmark */;
+			DE2091700FF4E9E7001FECDA /* PBXTextBookmark */ = DE2091700FF4E9E7001FECDA /* PBXTextBookmark */;
+			DE2091750FF4EAD8001FECDA /* PBXTextBookmark */ = DE2091750FF4EAD8001FECDA /* PBXTextBookmark */;
+			DE20917F0FF4EAF0001FECDA /* PBXTextBookmark */ = DE20917F0FF4EAF0001FECDA /* PBXTextBookmark */;
+			DE2091810FF4EAFE001FECDA /* PBXTextBookmark */ = DE2091810FF4EAFE001FECDA /* PBXTextBookmark */;
+			DE2091830FF4EB0A001FECDA /* PBXTextBookmark */ = DE2091830FF4EB0A001FECDA /* PBXTextBookmark */;
+			DE2091850FF4EB13001FECDA /* PBXTextBookmark */ = DE2091850FF4EB13001FECDA /* PBXTextBookmark */;
+			DE2091870FF4EB1A001FECDA /* PBXTextBookmark */ = DE2091870FF4EB1A001FECDA /* PBXTextBookmark */;
 		};
 		sourceControlManager = DE20913E0FF4E806001FECDA /* Source Control */;
 		userBuildSettings = {
@@ -118,26 +140,6 @@
 		vrLen = 245;
 		vrLoc = 0;
 	};
-	DE20912C0FF4E806001FECDA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */;
-		name = "ChemDrawViewController.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 675;
-		vrLoc = 0;
-	};
-	DE20912D0FF4E806001FECDA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */;
-		name = "ChemDrawAppDelegate.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 489;
-		vrLoc = 0;
-	};
 	DE20912E0FF4E806001FECDA /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */;
@@ -168,16 +170,6 @@
 		vrLen = 675;
 		vrLoc = 0;
 	};
-	DE2091310FF4E806001FECDA /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */;
-		name = "ChemDrawAppDelegate.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 489;
-		vrLoc = 0;
-	};
 	DE20913E0FF4E806001FECDA /* Source Control */ = {
 		isa = PBXSourceControlManager;
 		fallbackIsa = XCSourceControlManager;
@@ -188,5 +180,285 @@
 	DE20913F0FF4E806001FECDA /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	DE2091420FF4E840001FECDA /* DrawView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {959, 541}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 207}";
+		};
+	};
+	DE2091430FF4E840001FECDA /* DrawView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {959, 756}}";
+			sepNavSelRange = "{930, 0}";
+			sepNavVisRange = "{227, 786}";
+		};
+	};
+	DE2091570FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */;
+		name = "ChemDrawAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 489;
+		vrLoc = 0;
+	};
+	DE2091580FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ChemDrawAppDelegate.m */;
+		name = "ChemDrawAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 627;
+		vrLoc = 0;
+	};
+	DE2091590FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */;
+		name = "ChemDrawViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 0;
+	};
+	DE20915A0FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 207;
+		vrLoc = 0;
+	};
+	DE20915B0FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 29";
+		rLen = 12;
+		rLoc = 468;
+		rType = 0;
+		vrLen = 566;
+		vrLoc = 0;
+	};
+	DE20915C0FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE20915D0FF4E9C2001FECDA /* CGContext.h */;
+		rLen = 1;
+		rLoc = 7;
+		rType = 1;
+	};
+	DE20915D0FF4E9C2001FECDA /* CGContext.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CGContext.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGContext.h;
+		sourceTree = "<absolute>";
+	};
+	DE20915E0FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */;
+		name = "ChemDrawAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 489;
+		vrLoc = 0;
+	};
+	DE20915F0FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* ChemDrawAppDelegate.m */;
+		name = "ChemDrawAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 627;
+		vrLoc = 0;
+	};
+	DE2091600FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */;
+		name = "ChemDrawViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 0;
+	};
+	DE2091610FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 207;
+		vrLoc = 0;
+	};
+	DE2091620FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 435;
+		vrLoc = 0;
+	};
+	DE2091630FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */;
+		name = "ChemDrawViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 827;
+		vrLoc = 0;
+	};
+	DE2091640FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 435;
+		vrLoc = 0;
+	};
+	DE2091650FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 207;
+		vrLoc = 0;
+	};
+	DE2091660FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 29";
+		rLen = 12;
+		rLoc = 468;
+		rType = 0;
+		vrLen = 566;
+		vrLoc = 0;
+	};
+	DE2091670FF4E9C2001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091680FF4E9C2001FECDA /* CGContext.h */;
+		name = "CGContext.h: 8";
+		rLen = 40;
+		rLoc = 139;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 0;
+	};
+	DE2091680FF4E9C2001FECDA /* CGContext.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CGContext.h;
+		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator2.2.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGContext.h;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {959, 14532}}";
+			sepNavSelRange = "{139, 40}";
+			sepNavVisRange = "{0, 869}";
+		};
+	};
+	DE20916E0FF4E9E7001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091680FF4E9C2001FECDA /* CGContext.h */;
+		name = "CGContext.h: 8";
+		rLen = 40;
+		rLoc = 139;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 0;
+	};
+	DE20916F0FF4E9E7001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091680FF4E9C2001FECDA /* CGContext.h */;
+		name = "CGContext.h: 8";
+		rLen = 40;
+		rLoc = 139;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 0;
+	};
+	DE2091700FF4E9E7001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 29";
+		rLen = 12;
+		rLoc = 468;
+		rType = 0;
+		vrLen = 570;
+		vrLoc = 3;
+	};
+	DE2091750FF4EAD8001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 29";
+		rLen = 0;
+		rLoc = 468;
+		rType = 0;
+		vrLen = 791;
+		vrLoc = 227;
+	};
+	DE20917F0FF4EAF0001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 34";
+		rLen = 0;
+		rLoc = 719;
+		rType = 0;
+		vrLen = 787;
+		vrLoc = 227;
+	};
+	DE2091810FF4EAFE001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 32";
+		rLen = 0;
+		rLoc = 601;
+		rType = 0;
+		vrLen = 787;
+		vrLoc = 227;
+	};
+	DE2091830FF4EB0A001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 42";
+		rLen = 0;
+		rLoc = 934;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 227;
+	};
+	DE2091850FF4EB13001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 42";
+		rLen = 0;
+		rLoc = 930;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 227;
+	};
+	DE2091870FF4EB1A001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 42";
+		rLen = 0;
+		rLoc = 930;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 227;
 	};
 }

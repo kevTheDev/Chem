@@ -228,8 +228,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -254,7 +252,7 @@
 						<dict>
 							<key>PBXSmartGroupTreeModuleColumnWidthsKey</key>
 							<array>
-								<real>186</real>
+								<real>266</real>
 							</array>
 							<key>PBXSmartGroupTreeModuleColumnsKey_v4</key>
 							<array>
@@ -273,13 +271,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 607}}</string>
+							<string>{{0, 0}, {266, 733}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -291,30 +289,32 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {203, 625}}</string>
+						<string>{{0, 0}, {283, 751}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
-							<real>186</real>
+							<real>266</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>132 187 1182 666 0 0 1440 878 </string>
+						<string>75 86 1308 792 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
 					<key>Proportion</key>
-					<string>203pt</string>
+					<string>283pt</string>
 				</dict>
 				<dict>
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ChemDrawAppDelegate.h</string>
+								<string>DrawView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,22 +322,30 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ChemDrawAppDelegate.h</string>
+										<string>DrawView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE2091310FF4E806001FECDA</string>
+										<string>DE2091870FF4EB1A001FECDA</string>
 										<key>history</key>
 										<array>
 											<string>DE20912B0FF4E806001FECDA</string>
-											<string>DE20912C0FF4E806001FECDA</string>
-											<string>DE20912D0FF4E806001FECDA</string>
+											<string>DE2091570FF4E9C2001FECDA</string>
+											<string>DE2091580FF4E9C2001FECDA</string>
+											<string>DE2091590FF4E9C2001FECDA</string>
+											<string>DE20915A0FF4E9C2001FECDA</string>
+											<string>DE20916E0FF4E9E7001FECDA</string>
+											<string>DE20915B0FF4E9C2001FECDA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
 											<string>DE20912E0FF4E806001FECDA</string>
 											<string>DE20912F0FF4E806001FECDA</string>
 											<string>DE2091300FF4E806001FECDA</string>
+											<string>DE20915F0FF4E9C2001FECDA</string>
+											<string>DE2091610FF4E9C2001FECDA</string>
+											<string>DE2091620FF4E9C2001FECDA</string>
+											<string>DE20916F0FF4E9E7001FECDA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -349,14 +357,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {974, 447}}</string>
+								<string>{{0, 0}, {1020, 573}}</string>
 								<key>RubberWindowFrame</key>
-								<string>132 187 1182 666 0 0 1440 878 </string>
+								<string>75 86 1308 792 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>447pt</string>
+							<string>573pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -369,9 +377,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 452}, {974, 173}}</string>
+								<string>{{0, 578}, {1020, 173}}</string>
 								<key>RubberWindowFrame</key>
-								<string>132 187 1182 666 0 0 1440 878 </string>
+								<string>75 86 1308 792 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -380,7 +388,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>974pt</string>
+					<string>1020pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -395,9 +403,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>DE2091320FF4E806001FECDA</string>
+				<string>DE2091710FF4E9E7001FECDA</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>DE2091330FF4E806001FECDA</string>
+				<string>DE2091720FF4E9E7001FECDA</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -537,7 +545,7 @@
 		<string>/Users/kev/apps/iphone/Chem/ChemDraw/ChemDraw.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>132 187 1182 666 0 0 1440 878 </string>
+	<string>75 86 1308 792 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -614,7 +622,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>DE2091350FF4E806001FECDA</string>
-				<string>DE2091360FF4E806001FECDA</string>
+				<string>DE2091760FF4EAD8001FECDA</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -656,8 +664,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 185}}</string>
-											<string>{{316, 0}, {378, 185}}</string>
+											<string>{{0, 0}, {316, 194}}</string>
+											<string>{{316, 0}, {378, 194}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -672,8 +680,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 185}}</string>
-											<string>{{0, 185}, {694, 196}}</string>
+											<string>{{0, 0}, {694, 194}}</string>
+											<string>{{0, 194}, {694, 187}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -706,7 +714,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 185}}</string>
+									<string>{{316, 0}, {378, 194}}</string>
 									<key>RubberWindowFrame</key>
 									<string>153 408 694 422 0 0 1440 878 </string>
 								</dict>
@@ -734,13 +742,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>DE2091370FF4E806001FECDA</string>
+				<string>DE2091770FF4EAD8001FECDA</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>DE2091380FF4E806001FECDA</string>
-				<string>DE2091390FF4E806001FECDA</string>
-				<string>DE20913A0FF4E806001FECDA</string>
-				<string>DE20913B0FF4E806001FECDA</string>
-				<string>DE20913C0FF4E806001FECDA</string>
+				<string>DE2091780FF4EAD8001FECDA</string>
+				<string>DE2091790FF4EAD8001FECDA</string>
+				<string>DE20917A0FF4EAD8001FECDA</string>
+				<string>DE20917B0FF4EAD8001FECDA</string>
+				<string>DE20917C0FF4EAD8001FECDA</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -902,7 +910,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>DE20913D0FF4E806001FECDA</string>
+				<string>DE20917D0FF4EAD8001FECDA</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
