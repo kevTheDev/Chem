@@ -156,6 +156,10 @@ char* screenState = "start";
 	
 	CGPathCloseSubpath(path);
 	CGContextAddPath(ctx, path);
+	
+	CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
+	CGContextSetLineWidth(ctx, 2.0);
+	
 	CGContextStrokePath(ctx);
 	
 	return;
