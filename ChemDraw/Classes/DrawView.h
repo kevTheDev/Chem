@@ -17,6 +17,7 @@
 }
 
 - (void) drawNode:(Node *)node;
+- (void) renderNodes;
 
 @property (nonatomic, retain) NSMutableArray *nodes;
 

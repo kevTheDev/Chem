@@ -16,20 +16,13 @@
 @synthesize secondNode;
 @synthesize nodes;
 
-int touchX;
-int touchY;
-int touchWidth;
-int touchHeight;
-
-
+int touchWidth = 10;
+int touchHeight = 10;
 
 char* screenState = "start";
 
 - (id)initWithFrame:(CGRect)frame {
-	
-	
-	
-	
+
     if (self = [super initWithFrame:frame]) {
         // Initialization code
     }
@@ -40,8 +33,7 @@ char* screenState = "start";
 
 
 - (void)drawRect:(CGRect)rect {
-		
-	
+
     // Drawing code
 	[[UIColor whiteColor] setFill]; 
 	UIRectFill(rect);
@@ -79,47 +71,36 @@ char* screenState = "start";
     CGContextSetTextMatrix(ctx, xform);
 	
     CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
-	
-    //[self drawNode:firstNode];
-	//[self drawNode:secondNode];
-	
-	
-	
-	for (Node *node in [self nodes])
-	{
-		// do things here
-		//NSLog("@XCOORD: %f", [node xCoord]);
-		NSLog(@"NODE ");
-		[self drawNode:node];
-	}
+
+	[self renderNodes];
 
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"TOUCH!");
 	
 	UITouch *touch = [touches anyObject];
 
 	CGPoint	pos = [touch locationInView:self];
-	
-	touchWidth = 10;
-	touchHeight = 10;
-	
-	
+
 	Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
-	
-
-	
 	[[self nodes] addObject:node];
-	
-
-	NSLog(@"NUmber of nodes: %d", [[self nodes] count]);
-	
 
 	
+	[node release]; //release temp node object
 	
-	[self setNeedsDisplay];
+	[self setNeedsDisplay]; // redraw entire screen
+	
+	return;
+}
 
+// draw all nodes
+- (void) renderNodes {
+	
+	for (Node *node in [self nodes])
+	{
+		// do things here
+		[self drawNode:node];
+	}
 	
 	return;
 }
