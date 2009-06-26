@@ -17,6 +17,7 @@
 		28D7ACF80DDB3853001CB0EB /* ChemDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */; };
 		DE2091440FF4E840001FECDA /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091430FF4E840001FECDA /* DrawView.m */; };
 		DE2091FF0FF4F578001FECDA /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
+		DE2093480FF50B67001FECDA /* Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Edge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		DE2091430FF4E840001FECDA /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		DE2091FD0FF4F578001FECDA /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		DE2091FE0FF4F578001FECDA /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		DE2093460FF50B67001FECDA /* Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edge.h; sourceTree = "<group>"; };
+		DE2093470FF50B67001FECDA /* Edge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Edge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				DE2091430FF4E840001FECDA /* DrawView.m */,
 				DE2091FD0FF4F578001FECDA /* Node.h */,
 				DE2091FE0FF4F578001FECDA /* Node.m */,
+				DE2093460FF50B67001FECDA /* Edge.h */,
+				DE2093470FF50B67001FECDA /* Edge.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				28D7ACF80DDB3853001CB0EB /* ChemDrawViewController.m in Sources */,
 				DE2091440FF4E840001FECDA /* DrawView.m in Sources */,
 				DE2091FF0FF4F578001FECDA /* Node.m in Sources */,
+				DE2093480FF50B67001FECDA /* Edge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "DrawView.h"
 
 @class Node;
+@class Edge;
 
 @implementation DrawView
 
