@@ -16,6 +16,8 @@ int touchY;
 int touchWidth;
 int touchHeight;
 
+char* screenState = "start";
+
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         // Initialization code
@@ -32,7 +34,15 @@ int touchHeight;
 	// got the graphics context
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
-	char* text = "Touch the screen to create the first root node...";
+	char* text = "";
+	
+	if(screenState == "start") {
+		text = "Touch the screen to create the first root node...";
+	}
+	else {
+		NSLog(@"Invalid screen state");
+	}
+	
     CGContextSelectFont(ctx, "Helvetica", 14.0, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(ctx, kCGTextFill);
     CGContextSetRGBFillColor(ctx, 0, 0, 0, 1);
@@ -60,6 +70,9 @@ int touchHeight;
 	touchY = pos.y;
 	touchWidth = 10;
 	touchHeight = 10;
+	
+	
+	screenState = "firstNode";
 	
 	[self setNeedsDisplay];
 	
