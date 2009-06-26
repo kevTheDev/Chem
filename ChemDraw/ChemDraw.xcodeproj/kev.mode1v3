@@ -326,7 +326,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE2091B10FF4EDFD001FECDA</string>
+										<string>DE2091E30FF4F202001FECDA</string>
 										<key>history</key>
 										<array>
 											<string>DE20912B0FF4E806001FECDA</string>
@@ -334,8 +334,8 @@
 											<string>DE2091580FF4E9C2001FECDA</string>
 											<string>DE2091590FF4E9C2001FECDA</string>
 											<string>DE20916E0FF4E9E7001FECDA</string>
-											<string>DE2091A40FF4EDEE001FECDA</string>
-											<string>DE2091A50FF4EDEE001FECDA</string>
+											<string>DE2091CB0FF4EFE2001FECDA</string>
+											<string>DE2091C40FF4EFAD001FECDA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -356,6 +356,10 @@
 											<string>DE2091AD0FF4EDEE001FECDA</string>
 											<string>DE2091AE0FF4EDEE001FECDA</string>
 											<string>DE2091AF0FF4EDEE001FECDA</string>
+											<string>DE2091C60FF4EFAD001FECDA</string>
+											<string>DE2091C70FF4EFAD001FECDA</string>
+											<string>DE2091C80FF4EFAD001FECDA</string>
+											<string>DE2091CC0FF4EFE2001FECDA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -549,9 +553,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
+		<string>DE2091D40FF4F071001FECDA</string>
+		<string>DE2091D50FF4F071001FECDA</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>DE2091350FF4E806001FECDA</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/kev/apps/iphone/Chem/ChemDraw/ChemDraw.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -885,6 +891,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -897,7 +905,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {650, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>153 580 650 250 0 0 1440 878 </string>
+								<string>153 581 650 250 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -926,11 +934,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>153 580 650 250 0 0 1440 878 </string>
+			<string>153 581 650 250 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -11,6 +11,10 @@
 
 @implementation DrawView
 
+int touchX;
+int touchY;
+int touchWidth;
+int touchHeight;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -41,15 +45,28 @@
 	
     CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
 	
-    	
+    [self drawNode:ctx];	
 
 }
 
-- (void) drawNode {
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	NSLog(@"TOUCH!");
 	
-	CGContextRef ctx = UIGraphicsGetCurrentContext();
+	touchX = 50;
+	touchY = 50;
+	touchWidth = 10;
+	touchHeight = 10;
+	
+	[self setNeedsDisplay];
+	
+	return;
+}
+
+- (void) drawNode:(CGContextRef)ctx {
+	
+	//CGContextRef ctx = UIGraphicsGetCurrentContext();
 	CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
-    CGContextFillEllipseInRect(ctx, CGRectMake(5, 10, 10, 10));
+    CGContextFillEllipseInRect(ctx, CGRectMake(touchX, touchY, touchWidth, touchHeight));
 	return;
 	
 }

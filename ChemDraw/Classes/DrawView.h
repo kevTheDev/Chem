@@ -13,6 +13,6 @@
 
 }
 
-- (void) drawNode;
+- (void) drawNode:(CGContextRef)ctx;
 
 @end
