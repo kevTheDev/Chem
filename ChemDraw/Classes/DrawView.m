@@ -15,6 +15,7 @@
 @synthesize firstNode;
 @synthesize secondNode;
 @synthesize nodes;
+@synthesize edges;
 
 int touchWidth = 10;
 int touchHeight = 10;
@@ -46,12 +47,17 @@ char* screenState = "start";
 	
 	if(screenState == "start") {
 		text = "Touch the screen to create the first root node...";
-		NSMutableArray *tempArray = [[NSMutableArray alloc] initWithCapacity:10];
+		NSMutableArray *tempNodesArray = [[NSMutableArray alloc] initWithCapacity:10];
+		NSMutableArray *tempEdgesArray = [[NSMutableArray alloc] initWithCapacity:10];
 		
 		NSLog(@"INIT NODES");
-		[self setNodes:tempArray];
+		[self setNodes:tempNodesArray];
+		[self setEdges:tempEdgesArray];
 		
-		screenState = "init";
+		[tempNodesArray release];
+		[tempEdgesArray release];
+		
+		screenState = "firstNode";
 	}
 	else if(screenState == "firstNode") {
 		text = "Touch the screen again to form an edge...";

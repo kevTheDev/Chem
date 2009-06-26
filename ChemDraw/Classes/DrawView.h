@@ -14,12 +14,14 @@
 	Node *secondNode;
 	
 	NSMutableArray *nodes;
+	NSMutableArray *edges;
 }
 
 - (void) drawNode:(Node *)node;
 - (void) renderNodes;
 
 @property (nonatomic, retain) NSMutableArray *nodes;
+@property (nonatomic, retain) NSMutableArray *edges;
 
 @property (nonatomic, retain) Node *firstNode;
 @property (nonatomic, retain) Node *secondNode;
