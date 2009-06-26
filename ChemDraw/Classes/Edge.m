@@ -7,12 +7,14 @@
 //
 
 #import "Edge.h"
+#import "Node.h"
 
 
 @implementation Edge
 
 @synthesize nodeA;
 @synthesize nodeB;
+@synthesize unconfirmedHighlight;
 
 - (Edge *) initWithNodeA:(Node *)firstNode nodeB:(Node *)secondNode {
 	self = [super init];
@@ -25,5 +27,55 @@
     return self;
 }
 
+// returns a node object that contains the x and y points of the center point of the edge
+- (Node *) centerPointNode {
+	
+	float nodeAX = [[self nodeA] xCoord];
+	float nodeBX = [[self nodeB] xCoord];
+	
+	float bigX;
+	float littleX;
+	
+	if(nodeAX > nodeBX) {
+		bigX = nodeAX;
+		littleX = nodeBX;
+	}
+	else {
+		bigX = nodeBX;
+		littleX = nodeAX;
+	}
+	
+	float distanceX = bigX - littleX;
+	float halfDistanceX = distanceX / 2.0;
+	
+	float centerX = littleX + halfDistanceX;
+	
+	float nodeAY = [[self nodeA] yCoord];
+	float nodeBY = [[self nodeB] yCoord];
+	
+	float bigY;
+	float littleY;
+	
+	if(nodeAY > nodeBY) {
+		bigY = nodeAY;
+		littleY = nodeBY;
+	}
+	else {
+		bigY = nodeAY;
+		littleY = nodeBY;
+	}
+	
+	float distanceY = bigY - littleY;
+	float halfDistanceY = distanceY / 2.0;
+	
+	float centerY = littleY + halfDistanceY;
+	
+	NSLog(@"CENTER EDGE X: %f", centerX);
+	NSLog(@"CENTER EDGE Y: %f", centerY);
+	
+	Node *centerNode = [[Node alloc] initWithXCoord:centerX yCoord:centerY];
+	
+	return centerNode;
+}
 
 @end

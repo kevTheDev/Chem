@@ -21,7 +21,8 @@
 - (void) drawEdge:(Edge *)edge;
 - (void) renderEdges;
 
-- (void) detectNodesForPoint:(CGPoint)point;
+- (Node *) detectNodesForPoint:(CGPoint)point;
+- (void) detectClosestEdgesToPoint:(CGPoint)point withClosestNode:(Node *)closestNode;
 
 @property (nonatomic, retain) NSMutableArray *nodes;
 @property (nonatomic, retain) NSMutableArray *edges;

@@ -12,11 +12,17 @@
 @interface Edge : NSObject {
 	Node *nodeA;
 	Node *nodeB;
+	
+	BOOL unconfirmedHighlight;
 }
 
 - (Edge *) initWithNodeA:(Node *)nodeA nodeB:(Node *)nodeB;
 
+- (Node *) centerPointNode;
+
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;
+
+@property BOOL unconfirmedHighlight;
 
 @end

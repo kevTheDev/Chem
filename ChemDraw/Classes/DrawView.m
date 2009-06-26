@@ -108,7 +108,9 @@ char* screenState = "start";
 	CGPoint	pos = [touch locationInView:self];
 
 	if(screenState == "main") {
-		[self detectNodesForPoint:pos];
+		Node *closestNode = [self detectNodesForPoint:pos];
+		[self detectClosestEdgesToPoint:pos withClosestNode:closestNode];
+		
 			
 	}
 	else {
@@ -124,7 +126,7 @@ char* screenState = "start";
 	return;
 }
 
-- (void) detectNodesForPoint:(CGPoint)point {
+- (Node *) detectNodesForPoint:(CGPoint)point {
 	
 	Node *tempNode = [Node alloc];
 	
@@ -155,6 +157,60 @@ char* screenState = "start";
 	
 	Node *closestNode = [[self nodes] objectAtIndex:closestNodeIndex];
 	[closestNode setUnconfirmedHighlight:YES];
+	
+	return closestNode;
+}
+
+- (void) detectClosestEdgesToPoint:(CGPoint)point withClosestNode:(Node *)closestNode {
+	
+	Node *tempNode = [Node alloc];
+	Edge *tempEdge = [Edge alloc];
+	
+	int closestEdgeIndex = 0;
+	float currentShortestDistance = 0;
+	
+	for(int i=0; i<[[self edges] count]; i++)
+	{
+		tempEdge = [[self edges] objectAtIndex:i];
+		tempNode = [tempEdge centerPointNode];
+		
+		
+		float xDistance = abs(point.x - [tempNode xCoord]);
+		float yDistance = abs(point.y - [tempNode yCoord]);
+		
+		float newDistance = xDistance + yDistance;
+
+			
+		if(newDistance < currentShortestDistance) {
+			currentShortestDistance = newDistance;
+			closestEdgeIndex = i;
+		}
+
+	}
+
+	Edge *closestEdge = [[self edges] objectAtIndex:closestEdgeIndex];
+	
+	// find closest out of closest edge and node
+	Node *closestEdgeCenterPoint = [tempEdge centerPointNode];
+	
+	float edgeXDistance = abs(point.x - [closestEdgeCenterPoint xCoord]);
+	float edgeYDistance = abs(point.y - [closestEdgeCenterPoint yCoord]);
+	
+	float edgeDistance = edgeXDistance + edgeYDistance;
+	
+	float nodeXDistance = abs(point.x - [closestNode xCoord]);
+	float nodeYDistance = abs(point.y - [closestNode yCoord]);
+	
+	float nodeDistance = nodeXDistance + nodeYDistance;
+	
+	if(nodeDistance > edgeDistance) {
+		[closestNode setUnconfirmedHighlight:NO];
+		[closestEdge setUnconfirmedHighlight:YES];
+	}
+	else if(nodeDistance == edgeDistance) {
+		[closestEdge setUnconfirmedHighlight:YES];
+	}
+
 	
 	return;
 }
@@ -197,7 +253,12 @@ char* screenState = "start";
 	CGPathCloseSubpath(path);
 	CGContextAddPath(ctx, path);
 	
-	CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
+	if([edge unconfirmedHighlight] == YES) {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor purpleColor].CGColor);
+	}
+	else {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
+	}
 	CGContextSetLineWidth(ctx, 2.0);
 	
 	CGContextStrokePath(ctx);

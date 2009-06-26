@@ -326,7 +326,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE2093B00FF51AE2001FECDA</string>
+										<string>DE2094140FF5280F001FECDA</string>
 										<key>history</key>
 										<array>
 											<string>DE20912B0FF4E806001FECDA</string>
@@ -334,12 +334,12 @@
 											<string>DE2091580FF4E9C2001FECDA</string>
 											<string>DE20916E0FF4E9E7001FECDA</string>
 											<string>DE2092C80FF50040001FECDA</string>
-											<string>DE2093540FF50E04001FECDA</string>
-											<string>DE2093560FF50E04001FECDA</string>
-											<string>DE20939F0FF51A63001FECDA</string>
 											<string>DE2093A00FF51A63001FECDA</string>
-											<string>DE2093A10FF51A63001FECDA</string>
-											<string>DE2093A20FF51A63001FECDA</string>
+											<string>DE2093C30FF52385001FECDA</string>
+											<string>DE2093C50FF52385001FECDA</string>
+											<string>DE2093F30FF526F5001FECDA</string>
+											<string>DE2094110FF5280F001FECDA</string>
+											<string>DE2094120FF5280F001FECDA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -460,6 +460,46 @@
 											<string>DE2093A90FF51A63001FECDA</string>
 											<string>DE2093AA0FF51A63001FECDA</string>
 											<string>DE2093AB0FF51A63001FECDA</string>
+											<string>DE2093C80FF52385001FECDA</string>
+											<string>DE2093C90FF52385001FECDA</string>
+											<string>DE2093CA0FF52385001FECDA</string>
+											<string>DE2093CB0FF52385001FECDA</string>
+											<string>DE2093CC0FF52385001FECDA</string>
+											<string>DE2093CD0FF52385001FECDA</string>
+											<string>DE2093CE0FF52385001FECDA</string>
+											<string>DE2093CF0FF52385001FECDA</string>
+											<string>DE2093D00FF52385001FECDA</string>
+											<string>DE2093D10FF52385001FECDA</string>
+											<string>DE2093D20FF52385001FECDA</string>
+											<string>DE2093D30FF52385001FECDA</string>
+											<string>DE2093D40FF52385001FECDA</string>
+											<string>DE2093D50FF52385001FECDA</string>
+											<string>DE2093D60FF52385001FECDA</string>
+											<string>DE2093D70FF52385001FECDA</string>
+											<string>DE2093D80FF52385001FECDA</string>
+											<string>DE2093D90FF52385001FECDA</string>
+											<string>DE2093DA0FF52385001FECDA</string>
+											<string>DE2093DB0FF52385001FECDA</string>
+											<string>DE2093DC0FF52385001FECDA</string>
+											<string>DE2093DD0FF52385001FECDA</string>
+											<string>DE2093DE0FF52385001FECDA</string>
+											<string>DE2093DF0FF52385001FECDA</string>
+											<string>DE2093E50FF524D6001FECDA</string>
+											<string>DE2093E60FF524D6001FECDA</string>
+											<string>DE2093E70FF524D6001FECDA</string>
+											<string>DE2093E80FF524D6001FECDA</string>
+											<string>DE2093F50FF526F5001FECDA</string>
+											<string>DE2093F60FF526F5001FECDA</string>
+											<string>DE2093F70FF526F5001FECDA</string>
+											<string>DE2093F80FF526F5001FECDA</string>
+											<string>DE2093F90FF526F5001FECDA</string>
+											<string>DE2093FA0FF526F5001FECDA</string>
+											<string>DE2093FB0FF526F5001FECDA</string>
+											<string>DE2093FC0FF526F5001FECDA</string>
+											<string>DE2093FD0FF526F5001FECDA</string>
+											<string>DE2093FE0FF526F5001FECDA</string>
+											<string>DE2094040FF52778001FECDA</string>
+											<string>DE2094130FF5280F001FECDA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -751,7 +791,7 @@
 			<key>WindowToolGUID</key>
 			<string>DE2091350FF4E806001FECDA</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

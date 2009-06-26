@@ -42,7 +42,7 @@
 			1D6058900D05DD3D006BFB54 /* ChemDraw */,
 		);
 		breakpoints = (
-			DE2092860FF4FAA7001FECDA /* DrawView.m:115 */,
+			DE2092860FF4FAA7001FECDA /* DrawView.m:117 */,
 		);
 		codeSenseManager = DE20913F0FF4E806001FECDA /* Code sense */;
 		executables = (
@@ -383,6 +383,73 @@
 			DE2093AC0FF51A63001FECDA /* PBXTextBookmark */ = DE2093AC0FF51A63001FECDA /* PBXTextBookmark */;
 			DE2093AD0FF51A89001FECDA /* PBXTextBookmark */ = DE2093AD0FF51A89001FECDA /* PBXTextBookmark */;
 			DE2093B00FF51AE2001FECDA /* PBXTextBookmark */ = DE2093B00FF51AE2001FECDA /* PBXTextBookmark */;
+			DE2093B90FF52307001FECDA /* PBXTextBookmark */ = DE2093B90FF52307001FECDA /* PBXTextBookmark */;
+			DE2093BA0FF52307001FECDA /* PBXTextBookmark */ = DE2093BA0FF52307001FECDA /* PBXTextBookmark */;
+			DE2093BB0FF52307001FECDA /* PBXTextBookmark */ = DE2093BB0FF52307001FECDA /* PBXTextBookmark */;
+			DE2093BC0FF52307001FECDA /* PBXTextBookmark */ = DE2093BC0FF52307001FECDA /* PBXTextBookmark */;
+			DE2093BD0FF52307001FECDA /* PBXTextBookmark */ = DE2093BD0FF52307001FECDA /* PBXTextBookmark */;
+			DE2093C30FF52385001FECDA /* PBXTextBookmark */ = DE2093C30FF52385001FECDA /* PBXTextBookmark */;
+			DE2093C40FF52385001FECDA /* PBXTextBookmark */ = DE2093C40FF52385001FECDA /* PBXTextBookmark */;
+			DE2093C50FF52385001FECDA /* PBXTextBookmark */ = DE2093C50FF52385001FECDA /* PBXTextBookmark */;
+			DE2093C60FF52385001FECDA /* PBXTextBookmark */ = DE2093C60FF52385001FECDA /* PBXTextBookmark */;
+			DE2093C70FF52385001FECDA /* PBXTextBookmark */ = DE2093C70FF52385001FECDA /* PBXTextBookmark */;
+			DE2093C80FF52385001FECDA /* PBXTextBookmark */ = DE2093C80FF52385001FECDA /* PBXTextBookmark */;
+			DE2093C90FF52385001FECDA /* PBXTextBookmark */ = DE2093C90FF52385001FECDA /* PBXTextBookmark */;
+			DE2093CA0FF52385001FECDA /* PBXTextBookmark */ = DE2093CA0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093CB0FF52385001FECDA /* PBXTextBookmark */ = DE2093CB0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093CC0FF52385001FECDA /* PBXTextBookmark */ = DE2093CC0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093CD0FF52385001FECDA /* PBXTextBookmark */ = DE2093CD0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093CE0FF52385001FECDA /* PBXTextBookmark */ = DE2093CE0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093CF0FF52385001FECDA /* PBXTextBookmark */ = DE2093CF0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D00FF52385001FECDA /* PBXTextBookmark */ = DE2093D00FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D10FF52385001FECDA /* PBXTextBookmark */ = DE2093D10FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D20FF52385001FECDA /* PBXTextBookmark */ = DE2093D20FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D30FF52385001FECDA /* PBXTextBookmark */ = DE2093D30FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D40FF52385001FECDA /* PBXTextBookmark */ = DE2093D40FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D50FF52385001FECDA /* PBXTextBookmark */ = DE2093D50FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D60FF52385001FECDA /* PBXTextBookmark */ = DE2093D60FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D70FF52385001FECDA /* PBXTextBookmark */ = DE2093D70FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D80FF52385001FECDA /* PBXTextBookmark */ = DE2093D80FF52385001FECDA /* PBXTextBookmark */;
+			DE2093D90FF52385001FECDA /* PBXTextBookmark */ = DE2093D90FF52385001FECDA /* PBXTextBookmark */;
+			DE2093DA0FF52385001FECDA /* PBXTextBookmark */ = DE2093DA0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093DB0FF52385001FECDA /* PBXTextBookmark */ = DE2093DB0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093DC0FF52385001FECDA /* PBXTextBookmark */ = DE2093DC0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093DD0FF52385001FECDA /* PBXTextBookmark */ = DE2093DD0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093DE0FF52385001FECDA /* PBXTextBookmark */ = DE2093DE0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093DF0FF52385001FECDA /* PBXTextBookmark */ = DE2093DF0FF52385001FECDA /* PBXTextBookmark */;
+			DE2093E00FF52385001FECDA /* PBXTextBookmark */ = DE2093E00FF52385001FECDA /* PBXTextBookmark */;
+			DE2093E30FF524D6001FECDA /* PBXTextBookmark */ = DE2093E30FF524D6001FECDA /* PBXTextBookmark */;
+			DE2093E40FF524D6001FECDA /* PBXTextBookmark */ = DE2093E40FF524D6001FECDA /* PBXTextBookmark */;
+			DE2093E50FF524D6001FECDA /* PBXTextBookmark */ = DE2093E50FF524D6001FECDA /* PBXTextBookmark */;
+			DE2093E60FF524D6001FECDA /* PBXTextBookmark */ = DE2093E60FF524D6001FECDA /* PBXTextBookmark */;
+			DE2093E70FF524D6001FECDA /* PBXTextBookmark */ = DE2093E70FF524D6001FECDA /* PBXTextBookmark */;
+			DE2093E80FF524D6001FECDA /* PBXTextBookmark */ = DE2093E80FF524D6001FECDA /* PBXTextBookmark */;
+			DE2093E90FF524D6001FECDA /* PBXTextBookmark */ = DE2093E90FF524D6001FECDA /* PBXTextBookmark */;
+			DE2093ED0FF526DC001FECDA /* PBXTextBookmark */ = DE2093ED0FF526DC001FECDA /* PBXTextBookmark */;
+			DE2093EE0FF526DC001FECDA /* PBXTextBookmark */ = DE2093EE0FF526DC001FECDA /* PBXTextBookmark */;
+			DE2093F30FF526F5001FECDA /* PBXTextBookmark */ = DE2093F30FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093F40FF526F5001FECDA /* PBXTextBookmark */ = DE2093F40FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093F50FF526F5001FECDA /* PBXTextBookmark */ = DE2093F50FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093F60FF526F5001FECDA /* PBXTextBookmark */ = DE2093F60FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093F70FF526F5001FECDA /* PBXTextBookmark */ = DE2093F70FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093F80FF526F5001FECDA /* PBXTextBookmark */ = DE2093F80FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093F90FF526F5001FECDA /* PBXTextBookmark */ = DE2093F90FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093FA0FF526F5001FECDA /* PBXTextBookmark */ = DE2093FA0FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093FB0FF526F5001FECDA /* PBXTextBookmark */ = DE2093FB0FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093FC0FF526F5001FECDA /* PBXTextBookmark */ = DE2093FC0FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093FD0FF526F5001FECDA /* PBXTextBookmark */ = DE2093FD0FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093FE0FF526F5001FECDA /* PBXTextBookmark */ = DE2093FE0FF526F5001FECDA /* PBXTextBookmark */;
+			DE2093FF0FF526F5001FECDA /* PBXTextBookmark */ = DE2093FF0FF526F5001FECDA /* PBXTextBookmark */;
+			DE2094020FF52778001FECDA /* PBXTextBookmark */ = DE2094020FF52778001FECDA /* PBXTextBookmark */;
+			DE2094030FF52778001FECDA /* PBXTextBookmark */ = DE2094030FF52778001FECDA /* PBXTextBookmark */;
+			DE2094040FF52778001FECDA /* PBXTextBookmark */ = DE2094040FF52778001FECDA /* PBXTextBookmark */;
+			DE2094050FF52778001FECDA /* PBXTextBookmark */ = DE2094050FF52778001FECDA /* PBXTextBookmark */;
+			DE2094070FF52795001FECDA /* PBXTextBookmark */ = DE2094070FF52795001FECDA /* PBXTextBookmark */;
+			DE20940D0FF527BA001FECDA /* PBXTextBookmark */ = DE20940D0FF527BA001FECDA /* PBXTextBookmark */;
+			DE2094110FF5280F001FECDA /* PBXTextBookmark */ = DE2094110FF5280F001FECDA /* PBXTextBookmark */;
+			DE2094120FF5280F001FECDA /* PBXTextBookmark */ = DE2094120FF5280F001FECDA /* PBXTextBookmark */;
+			DE2094130FF5280F001FECDA /* PBXTextBookmark */ = DE2094130FF5280F001FECDA /* PBXTextBookmark */;
+			DE2094140FF5280F001FECDA /* PBXTextBookmark */ = DE2094140FF5280F001FECDA /* PBXTextBookmark */;
 		};
 		sourceControlManager = DE20913E0FF4E806001FECDA /* Source Control */;
 		userBuildSettings = {
@@ -468,15 +535,15 @@
 	DE2091420FF4E840001FECDA /* DrawView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {959, 541}}";
-			sepNavSelRange = "{437, 0}";
-			sepNavVisRange = "{0, 552}";
+			sepNavSelRange = "{513, 0}";
+			sepNavVisRange = "{0, 641}";
 		};
 	};
 	DE2091430FF4E840001FECDA /* DrawView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {959, 3220}}";
-			sepNavSelRange = "{4501, 0}";
-			sepNavVisRange = "{3772, 922}";
+			sepNavIntBoundsRect = "{{0, 0}, {959, 4102}}";
+			sepNavSelRange = "{4764, 0}";
+			sepNavVisRange = "{4116, 941}";
 		};
 	};
 	DE2091570FF4E9C2001FECDA /* PBXTextBookmark */ = {
@@ -800,7 +867,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 55";
 		rLen = 0;
-		rLoc = 4693;
+		rLoc = 6354;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 657;
@@ -870,7 +937,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 4363;
+		rLoc = 6024;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 417;
@@ -880,7 +947,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 4693;
+		rLoc = 6354;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 363;
@@ -890,7 +957,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 437;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 227;
 		vrLoc = 0;
@@ -920,7 +987,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 4363;
+		rLoc = 6024;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 363;
@@ -940,7 +1007,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 4363;
+		rLoc = 6024;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 834;
@@ -960,7 +1027,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 4363;
+		rLoc = 6024;
 		rType = 0;
 		vrLen = 889;
 		vrLoc = 417;
@@ -1000,7 +1067,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 49";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 1066;
 		vrLoc = 436;
@@ -1010,7 +1077,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 2685;
+		rLoc = 2776;
 		rType = 0;
 		vrLen = 1008;
 		vrLoc = 436;
@@ -1020,7 +1087,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 0;
-		rLoc = 4358;
+		rLoc = 6019;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 988;
@@ -1030,7 +1097,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 437;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 247;
 		vrLoc = 0;
@@ -1040,7 +1107,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 30;
-		rLoc = 4333;
+		rLoc = 5994;
 		rType = 0;
 		vrLen = 1037;
 		vrLoc = 436;
@@ -1050,7 +1117,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 16";
 		rLen = 0;
-		rLoc = 437;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 247;
 		vrLoc = 0;
@@ -1060,7 +1127,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 0;
-		rLoc = 4358;
+		rLoc = 6019;
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 988;
@@ -1100,7 +1167,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 1034;
 		vrLoc = 988;
@@ -1110,7 +1177,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 54";
 		rLen = 0;
-		rLoc = 2685;
+		rLoc = 2776;
 		rType = 0;
 		vrLen = 1125;
 		vrLoc = 657;
@@ -1140,7 +1207,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 50";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 1177;
 		vrLoc = 657;
@@ -1160,7 +1227,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 56";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 888;
 		vrLoc = 575;
@@ -1170,7 +1237,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 60";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 493;
@@ -1180,7 +1247,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 69";
 		rLen = 0;
-		rLoc = 4676;
+		rLoc = 6337;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 814;
@@ -1190,7 +1257,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 56";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 915;
 		vrLoc = 814;
@@ -1220,7 +1287,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 60";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 791;
 		vrLoc = 814;
@@ -1258,7 +1325,7 @@
 	DE2091FD0FF4F578001FECDA /* Node.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {959, 541}}";
-			sepNavSelRange = "{244, 20}";
+			sepNavSelRange = "{380, 36}";
 			sepNavVisRange = "{0, 423}";
 		};
 	};
@@ -1489,7 +1556,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 808;
 		vrLoc = 1344;
@@ -1529,7 +1596,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 80";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 851;
 		vrLoc = 971;
@@ -1569,7 +1636,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 1344;
@@ -1589,7 +1656,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 829;
 		vrLoc = 1344;
@@ -1619,7 +1686,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 841;
 		vrLoc = 1344;
@@ -1639,7 +1706,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 808;
 		vrLoc = 1344;
@@ -1689,7 +1756,7 @@
 		comments = "error: syntax error before ')' token";
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		rLen = 0;
-		rLoc = 113;
+		rLoc = 115;
 		rType = 1;
 	};
 	DE2092440FF4F81D001FECDA /* PBXTextBookmark */ = {
@@ -1707,7 +1774,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 223;
 		vrLoc = 1475;
@@ -1827,7 +1894,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 82";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 1344;
@@ -1837,7 +1904,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 719;
 		vrLoc = 1250;
@@ -1857,7 +1924,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 719;
 		vrLoc = 1250;
@@ -1977,7 +2044,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 81";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 719;
 		vrLoc = 1250;
@@ -1997,7 +2064,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 90";
 		rLen = 0;
-		rLoc = 4358;
+		rLoc = 6019;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 1185;
@@ -2017,7 +2084,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 90";
 		rLen = 0;
-		rLoc = 4363;
+		rLoc = 6024;
 		rType = 0;
 		vrLen = 794;
 		vrLoc = 1210;
@@ -2037,7 +2104,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 93";
 		rLen = 0;
-		rLoc = 4363;
+		rLoc = 6024;
 		rType = 0;
 		vrLen = 824;
 		vrLoc = 1213;
@@ -2077,7 +2144,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 94";
 		rLen = 0;
-		rLoc = 4573;
+		rLoc = 6234;
 		rType = 0;
 		vrLen = 900;
 		vrLoc = 1377;
@@ -2087,12 +2154,12 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 88";
 		rLen = 0;
-		rLoc = 2623;
+		rLoc = 2714;
 		rType = 0;
 		vrLen = 902;
 		vrLoc = 1377;
 	};
-	DE2092860FF4FAA7001FECDA /* DrawView.m:115 */ = {
+	DE2092860FF4FAA7001FECDA /* DrawView.m:117 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2104,7 +2171,7 @@
 		functionName = "-touchesBegan:withEvent:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 115;
+		lineNumber = 117;
 		modificationTime = 267714934.472023;
 		state = 2;
 	};
@@ -2113,7 +2180,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 769;
 		vrLoc = 1345;
@@ -2123,7 +2190,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 803;
 		vrLoc = 1345;
@@ -2133,7 +2200,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 545;
+		rLoc = 634;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2163,7 +2230,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 545;
+		rLoc = 634;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2173,7 +2240,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 87";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 888;
 		vrLoc = 1270;
@@ -2193,7 +2260,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 545;
+		rLoc = 634;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2203,7 +2270,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 87";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 833;
 		vrLoc = 1372;
@@ -2213,7 +2280,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 87";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 1370;
@@ -2223,7 +2290,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 545;
+		rLoc = 634;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2233,7 +2300,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 91";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 746;
 		vrLoc = 1230;
@@ -2243,7 +2310,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 545;
+		rLoc = 634;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2253,7 +2320,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 755;
 		vrLoc = 1230;
@@ -2263,7 +2330,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 755;
 		vrLoc = 1230;
@@ -2273,7 +2340,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 545;
+		rLoc = 634;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2283,7 +2350,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 755;
 		vrLoc = 1230;
@@ -2293,7 +2360,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 18";
 		rLen = 0;
-		rLoc = 545;
+		rLoc = 634;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 0;
@@ -2303,7 +2370,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 92";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 1459;
@@ -2313,7 +2380,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 85";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 1046;
 		vrLoc = 1459;
@@ -2323,7 +2390,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 20";
 		rLen = 0;
-		rLoc = 544;
+		rLoc = 633;
 		rType = 0;
 		vrLen = 389;
 		vrLoc = 0;
@@ -2353,7 +2420,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 20";
 		rLen = 0;
-		rLoc = 544;
+		rLoc = 633;
 		rType = 0;
 		vrLen = 389;
 		vrLoc = 0;
@@ -2363,7 +2430,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 89";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 619;
 		vrLoc = 1361;
@@ -2373,7 +2440,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 21";
 		rLen = 0;
-		rLoc = 544;
+		rLoc = 633;
 		rType = 0;
 		vrLen = 455;
 		vrLoc = 0;
@@ -2383,7 +2450,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 2538;
+		rLoc = 2629;
 		rType = 0;
 		vrLen = 616;
 		vrLoc = 0;
@@ -2393,7 +2460,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 2538;
+		rLoc = 2629;
 		rType = 0;
 		vrLen = 616;
 		vrLoc = 0;
@@ -2403,7 +2470,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 21";
 		rLen = 0;
-		rLoc = 544;
+		rLoc = 633;
 		rType = 0;
 		vrLen = 455;
 		vrLoc = 0;
@@ -2423,7 +2490,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 95";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 662;
 		vrLoc = 141;
@@ -2443,7 +2510,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 95";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 662;
 		vrLoc = 141;
@@ -2473,7 +2540,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 21";
 		rLen = 0;
-		rLoc = 483;
+		rLoc = 572;
 		rType = 0;
 		vrLen = 469;
 		vrLoc = 0;
@@ -2483,7 +2550,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 95";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 641;
 		vrLoc = 162;
@@ -2493,7 +2560,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 21";
 		rLen = 0;
-		rLoc = 483;
+		rLoc = 572;
 		rType = 0;
 		vrLen = 469;
 		vrLoc = 0;
@@ -2503,7 +2570,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 94";
 		rLen = 0;
-		rLoc = 2538;
+		rLoc = 2629;
 		rType = 0;
 		vrLen = 765;
 		vrLoc = 1776;
@@ -2513,7 +2580,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 95";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 742;
 		vrLoc = 1356;
@@ -2543,7 +2610,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 98";
 		rLen = 0;
-		rLoc = 2554;
+		rLoc = 2645;
 		rType = 0;
 		vrLen = 710;
 		vrLoc = 1421;
@@ -2553,7 +2620,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 100";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 702;
 		vrLoc = 1489;
@@ -2563,7 +2630,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 102";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 728;
 		vrLoc = 1489;
@@ -2573,7 +2640,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 98";
 		rLen = 0;
-		rLoc = 2538;
+		rLoc = 2629;
 		rType = 0;
 		vrLen = 735;
 		vrLoc = 1489;
@@ -2583,7 +2650,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 98";
 		rLen = 0;
-		rLoc = 2538;
+		rLoc = 2629;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 1521;
@@ -2593,7 +2660,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 105";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 823;
 		vrLoc = 1788;
@@ -2603,7 +2670,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 103";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 794;
 		vrLoc = 1788;
@@ -2613,7 +2680,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 105";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 682;
 		vrLoc = 1788;
@@ -2623,7 +2690,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 105";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 682;
 		vrLoc = 1788;
@@ -2693,7 +2760,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 121";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 684;
 		vrLoc = 1886;
@@ -2703,7 +2770,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 122";
 		rLen = 0;
-		rLoc = 2619;
+		rLoc = 2710;
 		rType = 0;
 		vrLen = 686;
 		vrLoc = 1861;
@@ -2783,7 +2850,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 109";
 		rLen = 0;
-		rLoc = 2623;
+		rLoc = 2714;
 		rType = 0;
 		vrLen = 572;
 		vrLoc = 1553;
@@ -2793,7 +2860,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 84";
 		rLen = 0;
-		rLoc = 2473;
+		rLoc = 2564;
 		rType = 0;
 		vrLen = 665;
 		vrLoc = 1680;
@@ -2813,7 +2880,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 24";
 		rLen = 0;
-		rLoc = 543;
+		rLoc = 632;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 0;
@@ -2843,7 +2910,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 24";
 		rLen = 0;
-		rLoc = 543;
+		rLoc = 632;
 		rType = 0;
 		vrLen = 568;
 		vrLoc = 0;
@@ -2913,7 +2980,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 21";
 		rLen = 0;
-		rLoc = 544;
+		rLoc = 633;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 0;
@@ -2943,7 +3010,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 21";
 		rLen = 0;
-		rLoc = 544;
+		rLoc = 633;
 		rType = 0;
 		vrLen = 434;
 		vrLoc = 0;
@@ -2971,15 +3038,15 @@
 	DE2093460FF50B67001FECDA /* Edge.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {959, 541}}";
-			sepNavSelRange = "{249, 58}";
-			sepNavVisRange = "{0, 402}";
+			sepNavSelRange = "{349, 0}";
+			sepNavVisRange = "{0, 499}";
 		};
 	};
 	DE2093470FF50B67001FECDA /* Edge.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {959, 541}}";
-			sepNavSelRange = "{388, 0}";
-			sepNavVisRange = "{0, 425}";
+			sepNavIntBoundsRect = "{{0, 0}, {959, 1148}}";
+			sepNavSelRange = "{1328, 0}";
+			sepNavVisRange = "{773, 692}";
 		};
 	};
 	DE2093530FF50E04001FECDA /* PBXTextBookmark */ = {
@@ -2997,7 +3064,7 @@
 		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
 		name = "Edge.h: 17";
 		rLen = 58;
-		rLoc = 249;
+		rLoc = 279;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -3017,7 +3084,7 @@
 		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
 		name = "Edge.m: 22";
 		rLen = 0;
-		rLoc = 388;
+		rLoc = 439;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 0;
@@ -3037,7 +3104,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 129";
 		rLen = 0;
-		rLoc = 3594;
+		rLoc = 5126;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 2547;
@@ -3057,7 +3124,7 @@
 		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
 		name = "Edge.h: 18";
 		rLen = 0;
-		rLoc = 394;
+		rLoc = 453;
 		rType = 0;
 		vrLen = 341;
 		vrLoc = 0;
@@ -3067,7 +3134,7 @@
 		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
 		name = "Edge.m: 15";
 		rLen = 0;
-		rLoc = 197;
+		rLoc = 214;
 		rType = 0;
 		vrLen = 204;
 		vrLoc = 0;
@@ -3097,7 +3164,7 @@
 		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
 		name = "Edge.m: 15";
 		rLen = 0;
-		rLoc = 215;
+		rLoc = 266;
 		rType = 0;
 		vrLen = 222;
 		vrLoc = 0;
@@ -3127,7 +3194,7 @@
 		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
 		name = "Edge.h: 17";
 		rLen = 58;
-		rLoc = 249;
+		rLoc = 279;
 		rType = 0;
 		vrLen = 402;
 		vrLoc = 0;
@@ -3137,7 +3204,7 @@
 		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
 		name = "Edge.m: 18";
 		rLen = 0;
-		rLoc = 287;
+		rLoc = 338;
 		rType = 0;
 		vrLen = 288;
 		vrLoc = 0;
@@ -3157,7 +3224,7 @@
 		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
 		name = "Edge.m: 22";
 		rLen = 0;
-		rLoc = 388;
+		rLoc = 439;
 		rType = 0;
 		vrLen = 425;
 		vrLoc = 0;
@@ -3167,7 +3234,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 140";
 		rLen = 0;
-		rLoc = 4331;
+		rLoc = 5992;
 		rType = 0;
 		vrLen = 838;
 		vrLoc = 2309;
@@ -3177,7 +3244,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 21";
 		rLen = 0;
-		rLoc = 437;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 489;
 		vrLoc = 0;
@@ -3227,7 +3294,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 129";
 		rLen = 0;
-		rLoc = 3594;
+		rLoc = 5126;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 2547;
@@ -3247,7 +3314,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 129";
 		rLen = 0;
-		rLoc = 3594;
+		rLoc = 5126;
 		rType = 0;
 		vrLen = 888;
 		vrLoc = 2547;
@@ -3377,7 +3444,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 169";
 		rLen = 0;
-		rLoc = 4575;
+		rLoc = 6236;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 2879;
@@ -3387,7 +3454,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 160";
 		rLen = 0;
-		rLoc = 4253;
+		rLoc = 5911;
 		rType = 0;
 		vrLen = 874;
 		vrLoc = 2879;
@@ -3397,7 +3464,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 160";
 		rLen = 0;
-		rLoc = 4221;
+		rLoc = 5879;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 2879;
@@ -3407,7 +3474,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 161";
 		rLen = 0;
-		rLoc = 4289;
+		rLoc = 5950;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 2846;
@@ -3417,7 +3484,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 24";
 		rLen = 0;
-		rLoc = 437;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 0;
@@ -3447,7 +3514,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 157";
 		rLen = 0;
-		rLoc = 3389;
+		rLoc = 3482;
 		rType = 0;
 		vrLen = 763;
 		vrLoc = 2640;
@@ -3457,7 +3524,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 111";
 		rLen = 0;
-		rLoc = 2462;
+		rLoc = 2553;
 		rType = 0;
 		vrLen = 662;
 		vrLoc = 2133;
@@ -3466,7 +3533,7 @@
 		isa = PBXTextBookmark;
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 24";
-		rLen = 44;
+		rLen = 46;
 		rLoc = 393;
 		rType = 0;
 		vrLen = 529;
@@ -3476,8 +3543,8 @@
 		isa = PBXTextBookmark;
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 126";
-		rLen = 43;
-		rLoc = 2689;
+		rLen = 45;
+		rLoc = 2780;
 		rType = 0;
 		vrLen = 609;
 		vrLoc = 2239;
@@ -3487,7 +3554,7 @@
 		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
 		name = "DrawView.h: 24";
 		rLen = 0;
-		rLoc = 437;
+		rLoc = 526;
 		rType = 0;
 		vrLen = 552;
 		vrLoc = 0;
@@ -3497,7 +3564,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 131";
 		rLen = 0;
-		rLoc = 3313;
+		rLoc = 3406;
 		rType = 0;
 		vrLen = 609;
 		vrLoc = 2239;
@@ -3527,7 +3594,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 157";
 		rLen = 0;
-		rLoc = 3389;
+		rLoc = 3482;
 		rType = 0;
 		vrLen = 764;
 		vrLoc = 2640;
@@ -3547,7 +3614,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 118";
 		rLen = 0;
-		rLoc = 2459;
+		rLoc = 2550;
 		rType = 0;
 		vrLen = 681;
 		vrLoc = 2239;
@@ -3557,7 +3624,7 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 112";
 		rLen = 0;
-		rLoc = 2459;
+		rLoc = 2550;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 2239;
@@ -3567,9 +3634,675 @@
 		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
 		name = "DrawView.m: 212";
 		rLen = 0;
-		rLoc = 4501;
+		rLoc = 6162;
 		rType = 0;
 		vrLen = 922;
 		vrLoc = 3772;
+	};
+	DE2093B90FF52307001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 21";
+		rLen = 32;
+		rLoc = 338;
+		rType = 0;
+		vrLen = 269;
+		vrLoc = 232;
+	};
+	DE2093BA0FF52307001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'tempNode' undeclared (first use in this function)";
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		rLen = 1;
+		rLoc = 177;
+		rType = 1;
+	};
+	DE2093BB0FF52307001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 171";
+		rLen = 5;
+		rLoc = 6416;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 2654;
+	};
+	DE2093BC0FF52307001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 21";
+		rLen = 32;
+		rLoc = 338;
+		rType = 0;
+		vrLen = 269;
+		vrLoc = 232;
+	};
+	DE2093BD0FF52307001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 175";
+		rLen = 54;
+		rLoc = 3909;
+		rType = 0;
+		vrLen = 365;
+		vrLoc = 3387;
+	};
+	DE2093C30FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091FD0FF4F578001FECDA /* Node.h */;
+		name = "Node.h: 25";
+		rLen = 36;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 423;
+		vrLoc = 0;
+	};
+	DE2093C40FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 22";
+		rLen = 21;
+		rLoc = 370;
+		rType = 0;
+		vrLen = 603;
+		vrLoc = 0;
+	};
+	DE2093C50FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
+		name = "Edge.h: 21";
+		rLen = 0;
+		rLoc = 349;
+		rType = 0;
+		vrLen = 499;
+		vrLoc = 0;
+	};
+	DE2093C60FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 71";
+		rLen = 0;
+		rLoc = 1261;
+		rType = 0;
+		vrLen = 725;
+		vrLoc = 0;
+	};
+	DE2093C70FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 211";
+		rLen = 11;
+		rLoc = 5127;
+		rType = 0;
+		vrLen = 829;
+		vrLoc = 4231;
+	};
+	DE2093C80FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 212";
+		rLen = 0;
+		rLoc = 6162;
+		rType = 0;
+		vrLen = 641;
+		vrLoc = 3181;
+	};
+	DE2093C90FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 25";
+		rLen = 49;
+		rLoc = 440;
+		rType = 0;
+		vrLen = 603;
+		vrLoc = 0;
+	};
+	DE2093CA0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 164";
+		rLen = 0;
+		rLoc = 4964;
+		rType = 0;
+		vrLen = 571;
+		vrLoc = 3168;
+	};
+	DE2093CB0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
+		name = "Edge.h: 17";
+		rLen = 58;
+		rLoc = 279;
+		rType = 0;
+		vrLen = 402;
+		vrLoc = 0;
+	};
+	DE2093CC0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091FD0FF4F578001FECDA /* Node.h */;
+		name = "Node.h: 16";
+		rLen = 26;
+		rLoc = 239;
+		rType = 0;
+		vrLen = 423;
+		vrLoc = 0;
+	};
+	DE2093CD0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
+		name = "Edge.h: 16";
+		rLen = 0;
+		rLoc = 275;
+		rType = 0;
+		vrLen = 432;
+		vrLoc = 0;
+	};
+	DE2093CE0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 22";
+		rLen = 0;
+		rLoc = 439;
+		rType = 0;
+		vrLen = 425;
+		vrLoc = 0;
+	};
+	DE2093CF0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
+		name = "Edge.h: 16";
+		rLen = 0;
+		rLoc = 275;
+		rType = 0;
+		vrLen = 432;
+		vrLoc = 0;
+	};
+	DE2093D00FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091FD0FF4F578001FECDA /* Node.h */;
+		name = "Node.h: 25";
+		rLen = 36;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 423;
+		vrLoc = 0;
+	};
+	DE2093D10FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
+		name = "Edge.h: 24";
+		rLen = 0;
+		rLoc = 492;
+		rType = 0;
+		vrLen = 470;
+		vrLoc = 0;
+	};
+	DE2093D20FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 16";
+		rLen = 0;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 459;
+		vrLoc = 0;
+	};
+	DE2093D30FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 173";
+		rLen = 0;
+		rLoc = 3905;
+		rType = 0;
+		vrLen = 779;
+		vrLoc = 3431;
+	};
+	DE2093D40FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 16";
+		rLen = 0;
+		rLoc = 266;
+		rType = 0;
+		vrLen = 459;
+		vrLoc = 0;
+	};
+	DE2093D50FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
+		name = "Edge.h: 21";
+		rLen = 27;
+		rLoc = 340;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 0;
+	};
+	DE2093D60FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 10";
+		rLen = 0;
+		rLoc = 170;
+		rType = 0;
+		vrLen = 596;
+		vrLoc = 3;
+	};
+	DE2093D70FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
+		name = "Edge.h: 17";
+		rLen = 0;
+		rLoc = 277;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 0;
+	};
+	DE2093D80FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 16";
+		rLen = 0;
+		rLoc = 232;
+		rType = 0;
+		vrLen = 596;
+		vrLoc = 3;
+	};
+	DE2093D90FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091FD0FF4F578001FECDA /* Node.h */;
+		name = "Node.h: 25";
+		rLen = 36;
+		rLoc = 380;
+		rType = 0;
+		vrLen = 423;
+		vrLoc = 0;
+	};
+	DE2093DA0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 211";
+		rLen = 11;
+		rLoc = 5127;
+		rType = 0;
+		vrLen = 768;
+		vrLoc = 4256;
+	};
+	DE2093DB0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 22";
+		rLen = 21;
+		rLoc = 370;
+		rType = 0;
+		vrLen = 603;
+		vrLoc = 0;
+	};
+	DE2093DC0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
+		name = "Edge.h: 22";
+		rLen = 0;
+		rLoc = 368;
+		rType = 0;
+		vrLen = 509;
+		vrLoc = 0;
+	};
+	DE2093DD0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 31";
+		rLen = 0;
+		rLoc = 569;
+		rType = 0;
+		vrLen = 386;
+		vrLoc = 377;
+	};
+	DE2093DE0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093460FF50B67001FECDA /* Edge.h */;
+		name = "Edge.h: 21";
+		rLen = 0;
+		rLoc = 349;
+		rType = 0;
+		vrLen = 499;
+		vrLoc = 0;
+	};
+	DE2093DF0FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 71";
+		rLen = 0;
+		rLoc = 1261;
+		rType = 0;
+		vrLen = 725;
+		vrLoc = 0;
+	};
+	DE2093E00FF52385001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 239";
+		rLen = 0;
+		rLoc = 5728;
+		rType = 0;
+		vrLen = 877;
+		vrLoc = 4549;
+	};
+	DE2093E30FF524D6001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 25";
+		rLen = 35;
+		rLoc = 490;
+		rType = 0;
+		vrLen = 655;
+		vrLoc = 0;
+	};
+	DE2093E40FF524D6001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 112";
+		rLen = 0;
+		rLoc = 2544;
+		rType = 0;
+		vrLen = 938;
+		vrLoc = 1865;
+	};
+	DE2093E50FF524D6001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 129";
+		rLen = 0;
+		rLoc = 2789;
+		rType = 0;
+		vrLen = 845;
+		vrLoc = 2667;
+	};
+	DE2093E60FF524D6001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 24";
+		rLen = 0;
+		rLoc = 402;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 0;
+	};
+	DE2093E70FF524D6001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 112";
+		rLen = 0;
+		rLoc = 2544;
+		rType = 0;
+		vrLen = 938;
+		vrLoc = 1865;
+	};
+	DE2093E80FF524D6001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 25";
+		rLen = 35;
+		rLoc = 490;
+		rType = 0;
+		vrLen = 655;
+		vrLoc = 0;
+	};
+	DE2093E90FF524D6001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 180";
+		rLen = 0;
+		rLoc = 4019;
+		rType = 0;
+		vrLen = 948;
+		vrLoc = 3430;
+	};
+	DE2093ED0FF526DC001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: 'DrawView' may not respond to '-detectClosestEdgesToPoint:withClosestNodeDistance:'";
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		rLen = 1;
+		rLoc = 111;
+		rType = 1;
+	};
+	DE2093EE0FF526DC001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 112";
+		rLen = 0;
+		rLoc = 2529;
+		rType = 0;
+		vrLen = 411;
+		vrLoc = 2312;
+	};
+	DE2093F30FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 25";
+		rLen = 0;
+		rLoc = 513;
+		rType = 0;
+		vrLen = 641;
+		vrLoc = 0;
+	};
+	DE2093F40FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 112";
+		rLen = 15;
+		rLoc = 2517;
+		rType = 0;
+		vrLen = 770;
+		vrLoc = 2018;
+	};
+	DE2093F50FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 164";
+		rLen = 35;
+		rLoc = 3600;
+		rType = 0;
+		vrLen = 939;
+		vrLoc = 3433;
+	};
+	DE2093F60FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 25";
+		rLen = 0;
+		rLoc = 525;
+		rType = 0;
+		vrLen = 638;
+		vrLoc = 0;
+	};
+	DE2093F70FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 129";
+		rLen = 0;
+		rLoc = 2789;
+		rType = 0;
+		vrLen = 862;
+		vrLoc = 2487;
+	};
+	DE2093F80FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 24";
+		rLen = 0;
+		rLoc = 402;
+		rType = 0;
+		vrLen = 639;
+		vrLoc = 0;
+	};
+	DE2093F90FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 112";
+		rLen = 0;
+		rLoc = 2544;
+		rType = 0;
+		vrLen = 905;
+		vrLoc = 1965;
+	};
+	DE2093FA0FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 24";
+		rLen = 0;
+		rLoc = 402;
+		rType = 0;
+		vrLen = 639;
+		vrLoc = 0;
+	};
+	DE2093FB0FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 164";
+		rLen = 0;
+		rLoc = 3623;
+		rType = 0;
+		vrLen = 917;
+		vrLoc = 3532;
+	};
+	DE2093FC0FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 25";
+		rLen = 0;
+		rLoc = 513;
+		rType = 0;
+		vrLen = 641;
+		vrLoc = 0;
+	};
+	DE2093FD0FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 112";
+		rLen = 15;
+		rLoc = 2517;
+		rType = 0;
+		vrLen = 770;
+		vrLoc = 2018;
+	};
+	DE2093FE0FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091420FF4E840001FECDA /* DrawView.h */;
+		name = "DrawView.h: 25";
+		rLen = 0;
+		rLoc = 513;
+		rType = 0;
+		vrLen = 641;
+		vrLoc = 0;
+	};
+	DE2093FF0FF526F5001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 112";
+		rLen = 0;
+		rLoc = 2532;
+		rType = 0;
+		vrLen = 863;
+		vrLoc = 1965;
+	};
+	DE2094020FF52778001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 164";
+		rLen = 7;
+		rLoc = 3586;
+		rType = 0;
+		vrLen = 1022;
+		vrLoc = 3547;
+	};
+	DE2094030FF52778001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 71";
+		rLen = 0;
+		rLoc = 1261;
+		rType = 0;
+		vrLen = 725;
+		vrLoc = 0;
+	};
+	DE2094040FF52778001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 164";
+		rLen = 7;
+		rLoc = 3586;
+		rType = 0;
+		vrLen = 1022;
+		vrLoc = 3547;
+	};
+	DE2094050FF52778001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 70";
+		rLen = 0;
+		rLoc = 1236;
+		rType = 0;
+		vrLen = 670;
+		vrLoc = 790;
+	};
+	DE2094070FF52795001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 73";
+		rLen = 0;
+		rLoc = 1309;
+		rType = 0;
+		vrLen = 684;
+		vrLoc = 773;
+	};
+	DE20940D0FF527BA001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 74";
+		rLen = 0;
+		rLoc = 1328;
+		rType = 0;
+		vrLen = 692;
+		vrLoc = 773;
+	};
+	DE2094110FF5280F001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 74";
+		rLen = 0;
+		rLoc = 1328;
+		rType = 0;
+		vrLen = 692;
+		vrLoc = 773;
+	};
+	DE2094120FF5280F001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 164";
+		rLen = 7;
+		rLoc = 3586;
+		rType = 0;
+		vrLen = 1022;
+		vrLoc = 3547;
+	};
+	DE2094130FF5280F001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2093470FF50B67001FECDA /* Edge.m */;
+		name = "Edge.m: 74";
+		rLen = 0;
+		rLoc = 1328;
+		rType = 0;
+		vrLen = 692;
+		vrLoc = 773;
+	};
+	DE2094140FF5280F001FECDA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DE2091430FF4E840001FECDA /* DrawView.m */;
+		name = "DrawView.m: 206";
+		rLen = 0;
+		rLoc = 4764;
+		rType = 0;
+		vrLen = 941;
+		vrLoc = 4116;
 	};
 }
