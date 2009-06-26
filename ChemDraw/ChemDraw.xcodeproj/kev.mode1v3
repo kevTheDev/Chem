@@ -271,7 +271,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
+									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -326,7 +326,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DE20936F0FF50E21001FECDA</string>
+										<string>DE2093860FF51027001FECDA</string>
 										<key>history</key>
 										<array>
 											<string>DE20912B0FF4E806001FECDA</string>
@@ -339,7 +339,7 @@
 											<string>DE2093550FF50E04001FECDA</string>
 											<string>DE2093560FF50E04001FECDA</string>
 											<string>DE2093570FF50E04001FECDA</string>
-											<string>DE2093580FF50E04001FECDA</string>
+											<string>DE2093710FF50EBB001FECDA</string>
 										</array>
 										<key>prevStack</key>
 										<array>

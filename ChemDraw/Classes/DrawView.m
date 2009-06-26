@@ -42,7 +42,9 @@ char* screenState = "start";
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
 	char* text = "";
+//	NSMutableString *text = @""
 	
+	NSLog(@"SCREEN STATE: %s", screenState);
 	
 	if(screenState == "start") {
 		text = "Touch the screen to create the first root node...";
@@ -63,8 +65,8 @@ char* screenState = "start";
 		screenState = "secondNode";
 	}
 	else if(screenState == "secondNode") {
-		text = "";
-		screenState = "edge";
+		text = "Touch near an edge or node to manipulate it...";
+		
 		
 		Node *firstNode = [[self nodes] objectAtIndex:0];
 		Node *secondNode = [[self nodes] objectAtIndex:1];
@@ -73,9 +75,11 @@ char* screenState = "start";
 		[[self edges] addObject:edge];
 		[edge release];
 		
+		screenState = "main";
 		
-		
-		
+	}
+	else if(screenState == "main") {
+		text = "";
 	}
 	else {
 		NSLog(@"Invalid screen state");
