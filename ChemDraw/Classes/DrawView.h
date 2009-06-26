@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Node.h"
 
-@interface DrawView : UIView {
-	Node *firstNode;
-	Node *secondNode;
-	
+@interface DrawView : UIView {	
 	NSMutableArray *nodes;
 	NSMutableArray *edges;
 }
@@ -22,9 +19,6 @@
 
 @property (nonatomic, retain) NSMutableArray *nodes;
 @property (nonatomic, retain) NSMutableArray *edges;
-
-@property (nonatomic, retain) Node *firstNode;
-@property (nonatomic, retain) Node *secondNode;
 
 
 @end

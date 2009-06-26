@@ -12,8 +12,6 @@
 
 @implementation DrawView
 
-@synthesize firstNode;
-@synthesize secondNode;
 @synthesize nodes;
 @synthesize edges;
 
@@ -61,6 +59,25 @@ char* screenState = "start";
 	}
 	else if(screenState == "firstNode") {
 		text = "Touch the screen again to form an edge...";
+		screenState = "secondNode";
+	}
+	else if(screenState == "secondNode") {
+		text = "";
+		screenState = "edge";
+		
+		CGMutablePathRef path = CGPathCreateMutable();
+		
+		Node *firstNode = [[self nodes] objectAtIndex:0];
+		Node *secondNode = [[self nodes] objectAtIndex:1];
+		
+		CGPathMoveToPoint(path, NULL, [firstNode xCoord] + 5.0, [firstNode yCoord] + 5.0); 
+		CGPathAddLineToPoint(path, NULL, [secondNode xCoord] + 5.0, [secondNode yCoord] + 5.0);
+		
+		CGPathCloseSubpath(path);
+		CGContextAddPath(ctx, path);
+		CGContextStrokePath(ctx);
+		
+		
 	}
 	else {
 		NSLog(@"Invalid screen state");
