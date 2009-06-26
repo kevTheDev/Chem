@@ -8,19 +8,25 @@
 
 #import "DrawView.h"
 
+@class Node;
 
 @implementation DrawView
+
+@synthesize firstNode;
 
 int touchX;
 int touchY;
 int touchWidth;
 int touchHeight;
 
+
+
 char* screenState = "start";
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         // Initialization code
+		//firstNode = [Node alloc];
     }
     return self;
 }
@@ -58,7 +64,7 @@ char* screenState = "start";
 	
     CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
 	
-    [self drawNode:ctx];	
+    [self drawNode:firstNode];	
 
 }
 
@@ -69,24 +75,32 @@ char* screenState = "start";
 
 	CGPoint	pos = [touch locationInView:self];
 	
-	touchX = pos.x;
-	touchY = pos.y;
 	touchWidth = 10;
 	touchHeight = 10;
 	
+	//firstNode = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
+	
+	Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
+	[self setFirstNode:node];
+
+	
+	NSLog(@"Set X COORD: %f", pos.x);
+	NSLog(@"Set X COORD: %f", [node xCoord]);
+	NSLog(@"Set X COORD: %f", [[self firstNode] xCoord]);
 	
 	screenState = "firstNode";
 	
 	[self setNeedsDisplay];
 	
+	//[firstNode release];
+	
 	return;
 }
 
-- (void) drawNode:(CGContextRef)ctx {
-	
-	//CGContextRef ctx = UIGraphicsGetCurrentContext();
+- (void) drawNode:(Node *)node {
+	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
-    CGContextFillEllipseInRect(ctx, CGRectMake(touchX, touchY, touchWidth, touchHeight));
+    CGContextFillEllipseInRect(ctx, CGRectMake([node xCoord], [node yCoord], touchWidth, touchHeight));
 	return;
 	
 }
@@ -110,6 +124,7 @@ char* screenState = "start";
 
 
 - (void)dealloc {
+	[firstNode release];
     [super dealloc];
 }
 

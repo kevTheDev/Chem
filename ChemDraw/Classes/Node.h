@@ -10,14 +10,14 @@
 
 
 @interface Node : NSObject {
-	int xCoord;
-	int yCoord;
+	CGFloat xCoord;
+	CGFloat yCoord;
 }
 
-- (Node *) initWithXCoord:(int)x yCoord:(int)y;
+- (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y;
 
 
-@property int xCoord;
-@property int yCoord;
+@property CGFloat xCoord;
+@property CGFloat yCoord;
 
 @end

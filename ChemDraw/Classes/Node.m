@@ -15,7 +15,7 @@
 @synthesize xCoord;
 @synthesize yCoord;
 
-- (Node *) initWithXCoord:(int)x yCoord:(int)y {
+- (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y {
 	
 	self = [super init];
 	

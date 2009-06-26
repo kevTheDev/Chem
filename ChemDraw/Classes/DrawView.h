@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Node.h"
 
 @interface DrawView : UIView {
-
+	Node *firstNode;
 }
 
-- (void) drawNode:(CGContextRef)ctx;
+- (void) drawNode:(Node *)node;
+
+@property (nonatomic, retain) Node *firstNode;
 
 @end
