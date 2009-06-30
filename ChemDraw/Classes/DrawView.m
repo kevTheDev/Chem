@@ -18,8 +18,8 @@
 @synthesize unconfirmedHighlightedNodes;
 @synthesize unconfirmedHighlightedEdges;
 
-int touchWidth = 10;
-int touchHeight = 10;
+int NODE_WIDTH = 10;
+int NODE_HEIGHT = 10;
 
 char* screenState = "start";
 
@@ -49,24 +49,12 @@ char* screenState = "start";
 	
 	if(screenState == "start") {
 		text = "Touch the screen to create the first root node...";
-		NSMutableArray *tempNodesArray = [[NSMutableArray alloc] initWithCapacity:10];
-		NSMutableArray *tempEdgesArray = [[NSMutableArray alloc] initWithCapacity:10];
-		NSMutableArray *tempUnEdgesArray = [[NSMutableArray alloc] initWithCapacity:10];
-		NSMutableArray *tempUnNodesArray = [[NSMutableArray alloc] initWithCapacity:10];
 
-		
-		
-		NSLog(@"INIT NODES");
-		[self setNodes:tempNodesArray];
-		[self setEdges:tempEdgesArray];
-		[self setUnconfirmedHighlightedEdges:tempUnEdgesArray];
-		[self setUnconfirmedHighlightedNodes:tempUnNodesArray];
-		
-		[tempNodesArray release];
-		[tempEdgesArray release];
-		[tempUnNodesArray release];
-		[tempUnEdgesArray release];
-		
+		[self setNodes:[[NSMutableArray alloc] initWithCapacity:10]];
+		[self setEdges:[[NSMutableArray alloc] initWithCapacity:10]];
+		[self setUnconfirmedHighlightedEdges:[[NSMutableArray alloc] initWithCapacity:10]];
+		[self setUnconfirmedHighlightedNodes:[[NSMutableArray alloc] initWithCapacity:10]];
+
 		screenState = "firstNode";
 	}
 	else if(screenState == "firstNode") {
@@ -335,7 +323,7 @@ char* screenState = "start";
 		CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
 	}
 	
-    CGContextFillEllipseInRect(ctx, CGRectMake([node xCoord], [node yCoord], touchWidth, touchHeight));
+    CGContextFillEllipseInRect(ctx, CGRectMake([node xCoord], [node yCoord], NODE_WIDTH, NODE_HEIGHT));
 	return;
 	
 }
