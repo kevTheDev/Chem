@@ -1,7 +1,7 @@
 # xcode noise
 build/*
 *.pbxuser
-*.mode1v3
+ChemDraw.xcodeproj/*.mode1v3
 
 # old skool
 .svn
@@ -9,3 +9,11 @@ build/*
 # osx noise
 .DS_Store
 profile
+
+
+build/
+*.pyc
+*~.nib/
+*.pbxuser
+*.perspective
+*.perspectivev3 
