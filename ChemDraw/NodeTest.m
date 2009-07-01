@@ -97,6 +97,24 @@
 
 }
 
+- (void) testIsEqual {
+	Node *equalNode = [[Node alloc] initWithXCoord:10.0 yCoord:15.0];	
+	STAssertTrue([node isEqual:equalNode], nil);
+	[equalNode release];
+}
+
+- (void) testIsNotEqualX {
+	Node *unequalNode = [[Node alloc] initWithXCoord:11.0 yCoord:15.0];
+	STAssertFalse([node isEqual:unequalNode], nil);
+	[unequalNode release];
+}
+
+- (void) testIsNotEqualY {
+	Node *unequalNode = [[Node alloc] initWithXCoord:10.0 yCoord:14.0];
+	STAssertFalse([node isEqual:unequalNode], nil);
+	[unequalNode release];
+}
+
 - (void) tearDown {
 	
 	[node release];
