@@ -39,6 +39,24 @@
 	STAssertTrue([node isHighlighted], nil);
 }
 
+- (void) testConfirmSelection {
+	STAssertFalse([node confirmedHighlight], nil);	
+	[node confirmSelection];	
+	STAssertTrue([node confirmedHighlight], nil);
+}
+
+- (void) testConfirmSelectionResetsHighlight {
+	[node highlight];
+	[node confirmSelection];
+	STAssertFalse([node isHighlighted], nil);
+}
+
+- (void) testIsSelected {
+	STAssertFalse([node isSelected], nil);
+	[node confirmSelection];
+	STAssertTrue([node isSelected], nil);
+}
+
 - (void) testInitXCoord {
 	STAssertEquals((float) [node xCoord], 10.0f, nil);
 }
