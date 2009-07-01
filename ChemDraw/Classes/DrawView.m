@@ -206,7 +206,7 @@ char* screenState = "start";
 	for(int i=0; i<[[self edges] count]; i++)
 	{
 		tempEdge = [[self edges] objectAtIndex:i];
-		tempNode = [tempEdge centerPointNode];
+		tempNode = [tempEdge centerNode];
 		
 		
 		float xDistance = abs(point.x - [tempNode xCoord]);
@@ -225,7 +225,7 @@ char* screenState = "start";
 	Edge *closestEdge = [[self edges] objectAtIndex:closestEdgeIndex];
 	
 	// find closest out of closest edge and node
-	Node *closestEdgeCenterPoint = [tempEdge centerPointNode];
+	Node *closestEdgeCenterPoint = [tempEdge centerNode];
 	
 	float edgeXDistance = abs(point.x - [closestEdgeCenterPoint xCoord]);
 	float edgeYDistance = abs(point.y - [closestEdgeCenterPoint yCoord]);
@@ -382,8 +382,8 @@ char* screenState = "start";
 	{
 		tempEdge = [[self unconfirmedHighlightedEdges] objectAtIndex:i];
 		
-		float xDistance = abs(point.x - [[tempEdge centerPointNode]xCoord]);
-		float yDistance = abs(point.y - [[tempEdge centerPointNode] yCoord]);
+		float xDistance = abs(point.x - [[tempEdge centerNode]xCoord]);
+		float yDistance = abs(point.y - [[tempEdge centerNode] yCoord]);
 		
 		float newDistance = xDistance + yDistance;
 		

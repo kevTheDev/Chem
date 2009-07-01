@@ -14,6 +14,7 @@
 
 @synthesize nodeA;
 @synthesize nodeB;
+@synthesize centerNode;
 @synthesize unconfirmedHighlight;
 @synthesize confirmedHighlight;
 
@@ -23,9 +24,32 @@
 	if ( self ) {
         [self setNodeA:firstNode];
 		[self setNodeB:secondNode];
+		[self setCenterNode:[self centerPointNode]];
     }
 	
     return self;
+}
+
+
+
+- (NSUInteger)hash {
+	
+	Node *selfCenter = [self centerPointNode];
+	
+	NSString *hashValue = [NSString stringWithFormat:@"%f%f", [selfCenter xCoord], [selfCenter yCoord]];
+	return [hashValue intValue];
+}
+
+- (BOOL)isEqual:(id)anObject {
+	
+	Node *objectCenter = [anObject centerNode];
+	Node *selfCenter = [self centerNode];
+	
+	if( [objectCenter xCoord] == [selfCenter xCoord] && [objectCenter yCoord] == [selfCenter yCoord] ) {
+		return true;
+	}
+	
+	return false;
 }
 
 // returns a node object that contains the x and y points of the center point of the edge
@@ -74,35 +98,16 @@
 	NSLog(@"CENTER EDGE X: %f", centerX);
 	NSLog(@"CENTER EDGE Y: %f", centerY);
 	
-	Node *centerNode = [[Node alloc] initWithXCoord:centerX yCoord:centerY];
+	Node *node = [[Node alloc] initWithXCoord:centerX yCoord:centerY];
 	
-	return centerNode;
-}
-
-- (NSUInteger)hash {
-	
-	Node *selfCenter = [self centerPointNode];
-	
-	NSString *hashValue = [NSString stringWithFormat:@"%f%f", [selfCenter xCoord], [selfCenter yCoord]];
-	return [hashValue intValue];
-}
-
-- (BOOL)isEqual:(id)anObject {
-	
-	Node *objectCenter = [anObject centerPointNode];
-	Node *selfCenter = [self centerPointNode];
-	
-	if( [objectCenter xCoord] == [selfCenter xCoord] && [objectCenter yCoord] == [selfCenter yCoord] ) {
-		return true;
-	}
-	
-	return false;
+	return node;
 }
 
 - (void) dealloc {
 	
 	[nodeA release];
 	[nodeB release];
+	[centerNode release];
 	[super dealloc];
 	
 }

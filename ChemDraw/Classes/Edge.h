@@ -12,6 +12,7 @@
 @interface Edge : NSObject {
 	Node *nodeA;
 	Node *nodeB;
+	Node *centerNode;
 	
 	BOOL unconfirmedHighlight;
 	BOOL confirmedHighlight;
@@ -23,6 +24,7 @@
 
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;
+@property (nonatomic, retain) Node *centerNode;
 
 @property BOOL unconfirmedHighlight;
 @property BOOL confirmedHighlight;
