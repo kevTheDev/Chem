@@ -190,7 +190,7 @@ char* screenState = "start";
 	}
 	
 	Node *closestNode = [[self nodes] objectAtIndex:closestNodeIndex];
-	[closestNode setUnconfirmedHighlight:YES];
+	[closestNode highlight];
 	
 	return closestNode;
 }
@@ -239,7 +239,7 @@ char* screenState = "start";
 	
 	if(nodeDistance > edgeDistance) {
 		[closestNode setUnconfirmedHighlight:NO];
-		[closestEdge setUnconfirmedHighlight:YES];
+		[closestEdge highlight];
 		
 		[[self unconfirmedHighlightedEdges] addObject:closestEdge];
 	}
@@ -247,7 +247,7 @@ char* screenState = "start";
 		[[self unconfirmedHighlightedNodes] addObject:closestNode];
 	}
 	else if(nodeDistance == edgeDistance) {
-		[closestEdge setUnconfirmedHighlight:YES];
+		[closestEdge highlight];
 		[[self unconfirmedHighlightedEdges] addObject:closestEdge];
 		[[self unconfirmedHighlightedNodes] addObject:closestNode];
 	}
@@ -363,9 +363,7 @@ char* screenState = "start";
 	
 	Node *realNode = [[self nodes] objectAtIndex:realNodeIndex];
 	
-	
-	[realNode setUnconfirmedHighlight:NO];
-	[realNode setConfirmedHighlight:YES];
+	[realNode confirmSelection];
 	
 	return closestNode;
 	
@@ -406,10 +404,7 @@ char* screenState = "start";
 	
 	
 	Edge *realEdge = [[self edges] objectAtIndex:realEdgeIndex];
-	
-	
-	[realEdge setUnconfirmedHighlight:NO];
-	[realEdge setConfirmedHighlight:YES];
+	[realEdge confirmSelection];
 	
 	return realEdge;
 }

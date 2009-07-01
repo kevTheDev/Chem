@@ -30,7 +30,23 @@
     return self;
 }
 
+- (void) confirmSelection {
+	[self setUnconfirmedHighlight:NO];
+	[self setConfirmedHighlight:YES];
+}
 
+- (BOOL) isSelected {
+	return [self confirmedHighlight];
+}
+
+- (void) highlight {
+	[self setUnconfirmedHighlight:YES];	
+}
+
+- (BOOL) isHighlighted {
+	
+	return ([self unconfirmedHighlight]);
+}
 
 - (NSUInteger)hash {
 	

@@ -54,6 +54,37 @@
 	STAssertEquals([reverseCenterNode yCoord], 27.0f, nil);
 }
 
+- (void) testHighlight {
+	[edge highlight];
+	STAssertTrue([edge unconfirmedHighlight], nil);	
+}
+
+- (void) testIsHighlighted {
+	STAssertFalse([edge isHighlighted], nil);
+	
+	[edge highlight];
+	STAssertTrue([edge isHighlighted], nil);
+}
+
+- (void) testConfirmSelection {
+	STAssertFalse([edge confirmedHighlight], nil);	
+	[edge confirmSelection];	
+	STAssertTrue([edge confirmedHighlight], nil);
+}
+
+- (void) testConfirmSelectionResetsHighlight {
+	[edge highlight];
+	[edge confirmSelection];
+	STAssertFalse([edge isHighlighted], nil);
+}
+
+- (void) testIsSelected {
+	STAssertFalse([edge isSelected], nil);
+	[edge confirmSelection];
+	STAssertTrue([edge isSelected], nil);
+}
+
+
 
 - (void) tearDown {
 	

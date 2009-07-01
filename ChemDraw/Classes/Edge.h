@@ -22,6 +22,13 @@
 
 - (Node *) centerPointNode;
 
+- (void) highlight;
+- (BOOL) isHighlighted;
+
+- (void) confirmSelection;
+- (BOOL) isSelected;
+
+
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;
 @property (nonatomic, retain) Node *centerNode;
