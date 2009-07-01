@@ -25,6 +25,8 @@
 		DED6FCC00FFB2A93008CE1A7 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */; };
 		DED6FCC10FFB2A93008CE1A7 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */; };
 		DED6FCCE0FFB2B3B008CE1A7 /* ArithmeticTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */; };
+		DED6FD390FFB3237008CE1A7 /* EdgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FD380FFB3237008CE1A7 /* EdgeTest.m */; };
+		DED6FD8E0FFB37F5008CE1A7 /* Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Edge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,7 @@
 		DED6FCBE0FFB2A93008CE1A7 /* Arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arithmetic.h; sourceTree = "<group>"; };
 		DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arithmetic.m; sourceTree = "<group>"; };
 		DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArithmeticTest.m; sourceTree = "<group>"; };
+		DED6FD380FFB3237008CE1A7 /* EdgeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,7 @@
 			children = (
 				DE874FF10FFA67F500B1E023 /* NodeTest.m */,
 				DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */,
+				DED6FD380FFB3237008CE1A7 /* EdgeTest.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -278,6 +282,8 @@
 				DE8750160FFA690400B1E023 /* Node.m in Sources */,
 				DED6FCC10FFB2A93008CE1A7 /* Arithmetic.m in Sources */,
 				DED6FCCE0FFB2B3B008CE1A7 /* ArithmeticTest.m in Sources */,
+				DED6FD390FFB3237008CE1A7 /* EdgeTest.m in Sources */,
+				DED6FD8E0FFB37F5008CE1A7 /* Edge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

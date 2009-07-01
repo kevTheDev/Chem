@@ -99,4 +99,12 @@
 	return false;
 }
 
+- (void) dealloc {
+	
+	[nodeA release];
+	[nodeB release];
+	[super dealloc];
+	
+}
+
 @end
