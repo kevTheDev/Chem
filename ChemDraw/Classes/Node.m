@@ -30,6 +30,15 @@
 	
 }
 
+- (void) highlight {
+	[self setUnconfirmedHighlight:YES];	
+}
+
+- (BOOL) isHighlighted {
+	
+	return ([self unconfirmedHighlight] || [self confirmedHighlight]);
+}
+
 - (int) xCoordForHash {
 	
 	return [Arithmetic roundFloatDownToInteger:[self xCoord]];

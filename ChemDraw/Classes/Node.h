@@ -23,6 +23,9 @@
 - (int) xCoordForHash;
 - (int) yCoordForHash;
 
+- (void) highlight;
+- (BOOL) isHighlighted;
+
 @property CGFloat xCoord;
 @property CGFloat yCoord;
 

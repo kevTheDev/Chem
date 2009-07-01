@@ -27,6 +27,18 @@
 	
 }
 
+- (void) testHighlight {
+	[node highlight];
+	STAssertTrue([node unconfirmedHighlight], nil);	
+}
+
+- (void) testIsHighlighted {
+	STAssertFalse([node isHighlighted], nil);
+	
+	[node highlight];
+	STAssertTrue([node isHighlighted], nil);
+}
+
 - (void) testInitXCoord {
 	STAssertEquals((float) [node xCoord], 10.0f, nil);
 }
