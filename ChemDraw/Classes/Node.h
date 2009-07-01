@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Arithmetic.h"
 
 @interface Node : NSObject {
 	CGFloat xCoord;
@@ -18,7 +18,10 @@
 }
 
 - (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y;
+- (NSString *)hashString;
 
+- (int) xCoordForHash;
+- (int) yCoordForHash;
 
 @property CGFloat xCoord;
 @property CGFloat yCoord;

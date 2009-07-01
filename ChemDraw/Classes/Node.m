@@ -30,10 +30,24 @@
 	
 }
 
-- (NSUInteger)hash {
+- (int) xCoordForHash {
+	
+	return [Arithmetic roundFloatDownToInteger:[self xCoord]];
+}
 
-	NSString *hashValue = [NSString stringWithFormat:@"%f%f", [self xCoord], [self yCoord]];
-	return [hashValue intValue];
+- (int) yCoordForHash {
+	
+	return [Arithmetic roundFloatDownToInteger:[self yCoord]];
+}
+
+- (NSString *)hashString {
+	
+	return [NSString stringWithFormat:@"%d%d", [self xCoordForHash], [self yCoordForHash]];
+}
+
+- (NSUInteger)hash {
+	
+	return [[self hashString] intValue];
 }
 
 - (BOOL)isEqual:(id)anObject {
