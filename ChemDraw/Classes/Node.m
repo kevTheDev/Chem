@@ -70,6 +70,10 @@
 
 - (BOOL)isEqual:(id)anObject {
 	
+	if([anObject class] != [self class]) {
+		return false;
+	}
+	
 	if( [anObject xCoord] == [self xCoord] && [anObject yCoord] == [self yCoord] ) {
 		return true;
 	}

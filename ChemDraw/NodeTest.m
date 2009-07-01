@@ -97,10 +97,11 @@
 
 }
 
-- (void) testIsEqual {
-	Node *equalNode = [[Node alloc] initWithXCoord:10.0 yCoord:15.0];	
-	STAssertTrue([node isEqual:equalNode], nil);
-	[equalNode release];
+// tests that a node cannot be equal to an object of a different class
+- (void) testIsNotEqualToNonNode {
+	NSString *testString = @"test string";
+	STAssertFalse([node isEqual:testString], nil);
+	[testString release];
 }
 
 - (void) testIsNotEqualX {
@@ -113,6 +114,12 @@
 	Node *unequalNode = [[Node alloc] initWithXCoord:10.0 yCoord:14.0];
 	STAssertFalse([node isEqual:unequalNode], nil);
 	[unequalNode release];
+}
+
+- (void) testIsEqual {
+	Node *equalNode = [[Node alloc] initWithXCoord:10.0 yCoord:15.0];	
+	STAssertTrue([node isEqual:equalNode], nil);
+	[equalNode release];
 }
 
 - (void) tearDown {
