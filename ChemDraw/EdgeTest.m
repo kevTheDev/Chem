@@ -17,6 +17,7 @@
 	Node *nodeB;
 	
 	Edge *edge;
+	Edge *reverseEdge;
 }
 
 @end
@@ -29,7 +30,7 @@
 	nodeB = [[Node alloc] initWithXCoord:50.0 yCoord:40.0];
 	
 	edge = [[Edge alloc] initWithNodeA:nodeA nodeB:nodeB];
-		
+	reverseEdge = [[Edge alloc] initWithNodeA:nodeB nodeB:nodeA];
 }
 
 - (void) testNodeANotNil {	
@@ -46,6 +47,11 @@
 	
 	STAssertEquals([centerNode xCoord], 30.0f, nil);
 	STAssertEquals([centerNode yCoord], 27.0f, nil);
+	
+	// test for when edge nodes are reversed - i.e. make sure we don't get negative values skewing things
+	Node *reverseCenterNode = [reverseEdge centerPointNode];
+	STAssertEquals([reverseCenterNode xCoord], 30.0f, nil);
+	STAssertEquals([reverseCenterNode yCoord], 27.0f, nil);
 }
 
 
@@ -54,6 +60,7 @@
 	[nodeB release];
 	[nodeA release];
 	[edge release];
+	[reverseEdge release];
 	
 }
 
