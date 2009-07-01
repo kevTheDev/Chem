@@ -84,7 +84,15 @@
 	STAssertTrue([edge isSelected], nil);
 }
 
+// tests that an edge cannot be equal to an object of another class
+- (void) testIsNotEqualToNonEdge {
+	NSString *testString = @"test string";	
+	STAssertFalse([edge isEqual:testString], nil);
+}
 
+- (void) testIsEqualIfBothNodesEqual {
+	STAssertTrue([edge isEqual:reverseEdge], nil);
+}
 
 - (void) tearDown {
 	

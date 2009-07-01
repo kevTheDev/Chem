@@ -48,26 +48,6 @@
 	return ([self unconfirmedHighlight]);
 }
 
-- (NSUInteger)hash {
-	
-	Node *selfCenter = [self centerPointNode];
-	
-	NSString *hashValue = [NSString stringWithFormat:@"%f%f", [selfCenter xCoord], [selfCenter yCoord]];
-	return [hashValue intValue];
-}
-
-- (BOOL)isEqual:(id)anObject {
-	
-	Node *objectCenter = [anObject centerNode];
-	Node *selfCenter = [self centerNode];
-	
-	if( [objectCenter xCoord] == [selfCenter xCoord] && [objectCenter yCoord] == [selfCenter yCoord] ) {
-		return true;
-	}
-	
-	return false;
-}
-
 // returns a node object that contains the x and y points of the center point of the edge
 - (Node *) centerPointNode {
 	
@@ -117,6 +97,34 @@
 	Node *node = [[Node alloc] initWithXCoord:centerX yCoord:centerY];
 	
 	return node;
+}
+
+- (NSUInteger)hash {
+	
+	Node *selfCenter = [self centerPointNode];
+	
+	NSString *hashValue = [NSString stringWithFormat:@"%f%f", [selfCenter xCoord], [selfCenter yCoord]];
+	return [hashValue intValue];
+}
+
+- (BOOL)isEqual:(id)anObject {
+	
+	if([anObject class] != [self class]) {
+		return false;
+	}
+	
+	Node *anObjectNodeA = [anObject nodeA];
+	Node *anObjectNodeB = [anObject nodeB];
+	
+	if([[self nodeA] isEqual:anObjectNodeA] && [[self nodeB] isEqual:anObjectNodeB]) {
+		return YES;		
+	}
+	
+	if([[self nodeA] isEqual:anObjectNodeB] && [[self nodeB] isEqual:anObjectNodeA]) {
+		return YES;		
+	}
+	
+	return false;
 }
 
 - (void) dealloc {
