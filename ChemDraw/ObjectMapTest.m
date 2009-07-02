@@ -220,6 +220,39 @@
 	STAssertEquals(newHighlightedEdgesCount, 0, nil);
 }
 
+- (void) testSelectClosestObjectToPointWithNode {
+	[objectMap addNode:nodeOneA];
+	[objectMap addNode:nodeOneB];
+	[objectMap addEdge:edgeOne];
+	
+	[objectMap addNode:nodeTwoA];
+	[objectMap addNode:nodeTwoB];
+	[objectMap addEdge:edgeTwo];
+	
+	[objectMap selectClosestObjectToPoint:point];
+	
+	int newSelectedNodesCount = [objectMap selectedNodesCount];
+	STAssertEquals(newSelectedNodesCount, 1, nil);
+	
+	int selectedEdgesCount = [objectMap selectedEdgesCount];
+	STAssertEquals(selectedEdgesCount, 0, nil);
+}
+
+- (void) testSelectClosestObjectToPointWithEdge {
+	[objectMap addEdge:edgeOne];
+	
+	[objectMap addNode:nodeTwoA];
+	[objectMap addNode:nodeTwoB];
+	[objectMap addEdge:edgeTwo];
+	
+	[objectMap selectClosestObjectToPoint:point];
+	
+	int newSelectedNodesCount = [objectMap selectedNodesCount];
+	STAssertEquals(newSelectedNodesCount, 0, nil);
+	
+	int selectedEdgesCount = [objectMap selectedEdgesCount];
+	STAssertEquals(selectedEdgesCount, 1, nil);
+}
 
 
 @end
