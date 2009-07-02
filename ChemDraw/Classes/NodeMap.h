@@ -30,7 +30,7 @@
 
 - (void) selectNodeAtIndex:(NSUInteger)index;
 - (void) selectNode:(Node *)node;
-//- (NSUInteger)selectedNodesCount;
+- (NSUInteger)selectedNodesCount;
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
