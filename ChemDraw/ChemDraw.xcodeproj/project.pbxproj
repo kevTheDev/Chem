@@ -18,6 +18,10 @@
 		DE2091440FF4E840001FECDA /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091430FF4E840001FECDA /* DrawView.m */; };
 		DE2091FF0FF4F578001FECDA /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
 		DE2093480FF50B67001FECDA /* Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Edge.m */; };
+		DE4F4CD30FFCB05300DA8541 /* NodeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD20FFCB05300DA8541 /* NodeMap.m */; };
+		DE4F4CD40FFCB05300DA8541 /* NodeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD20FFCB05300DA8541 /* NodeMap.m */; };
+		DE4F4CDA0FFCB0A300DA8541 /* NodeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */; };
+		DE4F4CDB0FFCB0A300DA8541 /* NodeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */; };
 		DE874F700FFA512400B1E023 /* EdgeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* EdgeMap.m */; };
 		DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */; };
 		DE874FF20FFA67F500B1E023 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874FF10FFA67F500B1E023 /* NodeTest.m */; };
@@ -49,6 +53,9 @@
 		DE2091FE0FF4F578001FECDA /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 		DE2093460FF50B67001FECDA /* Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edge.h; sourceTree = "<group>"; };
 		DE2093470FF50B67001FECDA /* Edge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Edge.m; sourceTree = "<group>"; };
+		DE4F4CD10FFCB05300DA8541 /* NodeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeMap.h; sourceTree = "<group>"; };
+		DE4F4CD20FFCB05300DA8541 /* NodeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMap.m; sourceTree = "<group>"; };
+		DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMapTest.m; sourceTree = "<group>"; };
 		DE874F6E0FFA512400B1E023 /* EdgeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeMap.h; sourceTree = "<group>"; };
 		DE874F6F0FFA512400B1E023 /* EdgeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeMap.m; sourceTree = "<group>"; };
 		DE874F8A0FFA592000B1E023 /* Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +107,8 @@
 				DE874F6F0FFA512400B1E023 /* EdgeMap.m */,
 				DED6FCBE0FFB2A93008CE1A7 /* Arithmetic.h */,
 				DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */,
+				DE4F4CD10FFCB05300DA8541 /* NodeMap.h */,
+				DE4F4CD20FFCB05300DA8541 /* NodeMap.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -163,6 +172,7 @@
 				DE874FF10FFA67F500B1E023 /* NodeTest.m */,
 				DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */,
 				DED6FD380FFB3237008CE1A7 /* EdgeTest.m */,
+				DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -271,6 +281,8 @@
 				DE2093480FF50B67001FECDA /* Edge.m in Sources */,
 				DE874F700FFA512400B1E023 /* EdgeMap.m in Sources */,
 				DED6FCC00FFB2A93008CE1A7 /* Arithmetic.m in Sources */,
+				DE4F4CD40FFCB05300DA8541 /* NodeMap.m in Sources */,
+				DE4F4CDA0FFCB0A300DA8541 /* NodeMapTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +296,8 @@
 				DED6FCCE0FFB2B3B008CE1A7 /* ArithmeticTest.m in Sources */,
 				DED6FD390FFB3237008CE1A7 /* EdgeTest.m in Sources */,
 				DED6FD8E0FFB37F5008CE1A7 /* Edge.m in Sources */,
+				DE4F4CD30FFCB05300DA8541 /* NodeMap.m in Sources */,
+				DE4F4CDB0FFCB0A300DA8541 /* NodeMapTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

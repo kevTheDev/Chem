@@ -16,12 +16,8 @@
 - (EdgeMap *) initWithCapacity:(int)capacity {
 	self = [super init];
 	
-	
-	
-	
-	
 	if ( self ) {
-		//[[self edges] initWithCapacity:capacity];		
+		[[self edges] initWithCapacity:capacity];		
 		//[self setEdges:[[NSMutableArray alloc] initWithCapacity:capacity]];
     }
 	
