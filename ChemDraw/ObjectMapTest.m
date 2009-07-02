@@ -106,16 +106,16 @@
 	STAssertEqualObjects(closestObject, nodeOneA, nil);
 }
 
-//- (void) testHighlightNode {
-//	[objectMap addNode:nodeOneA];
-//	[objectMap addNode:nodeOneB];
-//	
-//	[objectMap highlightNode:nodeOneA];
-//	
-//	Node *highlightedNode = [objectMap objectAtIndex:1];
-//	
-//	STAssertTrue([highlightedNode isHighlighted], nil);
-//}
+- (void) testHighlightNode {
+	[objectMap addNode:nodeOneA];
+	[objectMap addNode:nodeOneB];
+	
+	[objectMap highlightNode:nodeOneA];
+	
+	Node *highlightedNode = [objectMap nodeAtIndex:0];
+	
+	STAssertTrue([highlightedNode isHighlighted], nil);
+}
 
 - (void) testHighlightedNodesCount {
 	[objectMap addNode:nodeOneA];
@@ -123,44 +123,35 @@
 	
 	[objectMap highlightNode:nodeOneA];
 	
-	//int newHighlightedCount = [objectMap highlightedNodesCount];
+	int newHighlightedCount = [objectMap highlightedNodesCount];
 	
-	//STAssertEquals(newHighlightedCount, 1, nil);
+	STAssertEquals(newHighlightedCount, 1, nil);
 }
-//
-//- (void) testSelectNodeAtIndex {
-//	[nodeMap addNode:nodeOne];
-//	[nodeMap addNode:nodeTwo];
-//	
-//	[nodeMap selectNodeAtIndex:1];
-//	
-//	Node *selectedNode = [nodeMap objectAtIndex:1];
-//	
-//	STAssertTrue([selectedNode isSelected], nil);
-//}
-//
+
+
+
 - (void) testSelectedNodesCount {
 	[objectMap addNode:nodeOneA];
 	[objectMap addNode:nodeOneB];
 	
 	[objectMap selectNode:nodeOneB];
 	
-	//int newSelectedCount = [objectMap selectedNodesCount];
+	int newSelectedCount = [objectMap selectedNodesCount];
 	
-	//STAssertEquals(newSelectedCount, 1, nil);
+	STAssertEquals(newSelectedCount, 1, nil);
 }
-//
-//- (void) testSelectNodeAtIndexResetsHighlightedNodesArray {
-//	[nodeMap addNode:nodeOne];
-//	[nodeMap addNode:nodeTwo];
-//	
-//	[nodeMap highlightNodeAtIndex:1];
-//	[nodeMap selectNodeAtIndex:1];
-//	
-//	int newHighlightedCount = [nodeMap highlightedNodesCount];
-//	
-//	STAssertEquals(newHighlightedCount, 0, nil);
-//}
+
+- (void) testSelectNodeAtIndexResetsHighlightedNodesArray {
+	[objectMap addNode:nodeOneA];
+	[objectMap addNode:nodeOneB];
+	
+	[objectMap highlightNode:nodeOneA];
+	[objectMap selectNode:nodeOneA];
+	
+	int newHighlightedCount = [objectMap highlightedNodesCount];
+	
+	STAssertEquals(newHighlightedCount, 0, nil);
+}
 
 //- (void) testHighlightEdgeAtIndex {
 //	[objectMap addEdge:edgeOne];

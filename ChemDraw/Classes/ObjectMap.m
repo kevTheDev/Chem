@@ -27,29 +27,7 @@
 	
 }
 
-//- (NSMutableArray *)plainNodes {
-//	return [nodeMap nodes];
-//}
-//
-//- (NSMutableArray *)plainEdges {
-//	return [edgeMap edges];
-//}
 
-//- (NSMutableArray *)highlightedNodes {
-//	return [nodeMap highlightedNodes];
-//}
-//
-//- (NSMutableArray *)selectedNodes {
-//	return [nodeMap selectedNodes];
-//}
-//
-//- (NSMutableArray *)selectedEdges {
-//	return [edgeMap highlightedEdges];
-//}
-//
-//- (NSMutableArray *)highlightedEdges {
-//	return [edgeMap selectedEdges];
-//}
 
 - (NSUInteger)edgesCount {
 	return [edgeMap count];
@@ -86,13 +64,13 @@
 	[nodeMap selectNodeAtIndex:nodeMapIndex];
 }
 
-//- (NSUInteger)selectedNodesCount {
-//	return [nodeMap selectedNodesCount];
-//}
+- (NSUInteger)selectedNodesCount {
+	return [nodeMap selectedNodesCount];
+}
 
-//- (NSUInteger)highlightedNodesCount {
-//	return [nodeMap highlightedNodesCount];
-//}
+- (NSUInteger)highlightedNodesCount {
+	return [nodeMap highlightedNodesCount];
+}
 
 - (void) highlightNode:(Node *)node {
 	int nodeMapIndex = [nodeMap indexOfObject:node];
