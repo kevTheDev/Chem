@@ -13,9 +13,9 @@
 	NSMutableArray *edges;
 }
 
-@property (nonatomic, retain) NSMutableArray *edges;
-
-- (EdgeMap *) initWithCapacity:(int)capacity;
+- (BOOL) isEmpty;
+- (void) addEdge:(Edge *)edge;
+- (NSUInteger) count;
 
 
 @end

@@ -11,17 +11,29 @@
 
 @implementation EdgeMap
 
-@synthesize edges;
 
-- (EdgeMap *) initWithCapacity:(int)capacity {
+- (EdgeMap *) init {
+	
 	self = [super init];
 	
-	if ( self ) {
-		[[self edges] initWithCapacity:capacity];		
-		//[self setEdges:[[NSMutableArray alloc] initWithCapacity:capacity]];
+    if ( self ) {
+        edges = [[NSMutableArray alloc] initWithCapacity:5];
     }
 	
     return self;
+	
+}
+
+- (NSUInteger) count {
+	return [edges count];
+}
+
+- (BOOL) isEmpty {
+	return [edges count] == 0;	
+}
+
+- (void) addEdge:(Edge *)edge {
+	[edges addObject:edge];
 }
 
 - (void)dealloc {
