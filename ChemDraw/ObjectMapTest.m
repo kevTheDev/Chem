@@ -153,62 +153,38 @@
 	STAssertEquals(newHighlightedCount, 0, nil);
 }
 
-//- (void) testHighlightEdgeAtIndex {
-//	[objectMap addEdge:edgeOne];
-//	[objectMap addEdge:edgeTwo];
-//	
-//	[objectMap highlightEdge:edgeOne];
-//	
-//	Edge *highlightedEdge = [objectMap objectAtIndex:0];
-//	Edge *otherEdge = [objectMap objectAtIndex:1];
-//	
-//	STAssertTrue([highlightedEdge isHighlighted], nil);
-//	STAssertFalse([otherEdge isHighlighted], nil);
-//}
-
 - (void) testHighlightedEdgesCount {
 	[objectMap addEdge:edgeOne];
 	[objectMap addEdge:edgeTwo];
 	
 	[objectMap highlightEdge:edgeTwo];
 	
-	//int newHighlightedCount = [objectMap highlightedEdgesCount];
+	int newHighlightedCount = [objectMap highlightedEdgesCount];
 	
-	//STAssertEquals(newHighlightedCount, 1, nil);
+	STAssertEquals(newHighlightedCount, 1, nil);
 }
-//
-//- (void) testSelectEdgeAtIndex {
-//	[edgeMap addEdge:edgeOne];
-//	[edgeMap addEdge:edgeTwo];
-//	
-//	[edgeMap selectEdgeAtIndex:1];
-//	
-//	Node *selectedNode = [edgeMap objectAtIndex:1];
-//	
-//	STAssertTrue([selectedNode isSelected], nil);
-//}
-//
+
 - (void) testSelectedEdgesCount {
 	[objectMap addEdge:edgeOne];
 	[objectMap addEdge:edgeTwo];	
 	[objectMap selectEdge:edgeTwo];
 	
-	//int newSelectedCount = [objectMap selectedEdgesCount];
+	int newSelectedCount = [objectMap selectedEdgesCount];
 	
-	//STAssertEquals(newSelectedCount, 1, nil);
+	STAssertEquals(newSelectedCount, 1, nil);
 }
-//
-//- (void) testSelectEdgeAtIndexResetsHighlightedNodesArray {
-//	[edgeMap addEdge:edgeOne];
-//	[edgeMap addEdge:edgeTwo];
-//	
-//	[edgeMap highlightEdgeAtIndex:1];
-//	[edgeMap selectEdgeAtIndex:1];
-//	
-//	int newHighlightedCount = [edgeMap highlightedEdgesCount];
-//	
-//	STAssertEquals(newHighlightedCount, 0, nil);
-//}
+
+- (void) testSelectEdgeResetsHighlightedEdges {
+	[objectMap addEdge:edgeOne];
+	[objectMap addEdge:edgeTwo];
+	
+	[objectMap highlightEdge:edgeOne];
+	[objectMap selectEdge:edgeOne];
+	
+	int newHighlightedCount = [objectMap highlightedEdgesCount];
+	
+	STAssertEquals(newHighlightedCount, 0, nil);
+}
 
 - (void) testHighlightClosestObjectToPointWithNode {
 	[objectMap addNode:nodeOneA];
@@ -221,11 +197,11 @@
 	
 	[objectMap highlightClosestObjectToPoint:point];
 
-	//int newHighlightedCount = [objectMap highlightedNodesCount];
-	//STAssertEquals(newHighlightedCount, 1, nil);
+	int newHighlightedCount = [objectMap highlightedNodesCount];
+	STAssertEquals(newHighlightedCount, 1, nil);
 	
-	//int newHighlightedEdgesCount = [objectMap highlightedEdgesCount];
-	//STAssertEquals(newHighlightedEdgesCount, 0, nil);
+	int newHighlightedEdgesCount = [objectMap highlightedEdgesCount];
+	STAssertEquals(newHighlightedEdgesCount, 0, nil);
 }
 
 - (void) testHighlightClosestObjectToPointWithEdge {

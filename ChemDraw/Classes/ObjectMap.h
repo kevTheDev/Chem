@@ -34,9 +34,9 @@
 
 // highlighting and selecting edges
 - (void) highlightEdge:(Edge *)edge;
-//- (NSUInteger)highlightedEdgesCount;
+- (NSUInteger)highlightedEdgesCount;
 - (void) selectEdge:(Edge *)edge;
-//- (NSUInteger)selectedEdgesCount;
+- (NSUInteger)selectedEdgesCount;
 
 - (void) highlightClosestObjectToPoint:(CGPoint)point;
 - (void) selectClosestObjectToPoint:(CGPoint)point;
