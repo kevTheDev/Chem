@@ -113,6 +113,21 @@
 
 }
 
+- (void) highlightClosestObjectToPoint:(CGPoint)point {
+	NSObject *closestObject = [self closestObjectToPoint:point];
+	
+	if([closestObject className] == @"Node") {
+		int nodeMapIndex = [nodeMap indexOfObject:closestObject];
+		[nodeMap highlightNodeAtIndex:nodeMapIndex];
+	}
+	else {
+		int edgeMapIndex = [edgeMap indexOfObject:closestObject];
+		[edgeMap highlightEdgeAtIndex:edgeMapIndex];
+	}
+		
+	
+}
+
 - (void)dealloc {
 	[nodeMap release];
 	[edgeMap release];

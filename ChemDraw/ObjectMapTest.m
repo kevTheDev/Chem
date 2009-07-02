@@ -219,4 +219,21 @@
 //	STAssertEquals(newHighlightedCount, 0, nil);
 //}
 
+- (void) testHighlightClosestObjectToPoint {
+	[objectMap addNode:nodeOneA];
+	[objectMap addNode:nodeOneB];
+	[objectMap addEdge:edgeOne];
+	
+	[objectMap addNode:nodeTwoA];
+	[objectMap addNode:nodeTwoB];
+	[objectMap addEdge:edgeTwo];
+	
+	[objectMap highlightClosestObjectToPoint:point];
+	
+	NSObject *closestObject = [objectMap closestObjectToPoint:point];
+	
+	STAssertTrue([closestObject isHighlighted], nil);
+	
+}
+
 @end

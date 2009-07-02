@@ -128,6 +128,9 @@ char* screenState = "start";
 		//Node *closestNode = [self detectNodesForPoint:pos];
 		
 		Node *closestNode = [objectMap closestNodeToPoint:pos];
+		
+		//NSObject *closestObjectToPoint = [objectMap closestObjectToPoint:pos];
+
 		[self detectClosestEdgesToPoint:pos withClosestNode:closestNode];
 		
 			

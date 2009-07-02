@@ -38,6 +38,7 @@
 - (void) selectEdge:(Edge *)edge;
 - (NSUInteger)selectedEdgesCount;
 
+- (void) highlightClosestObjectToPoint:(CGPoint)point;
 
 @property (nonatomic, retain) NodeMap *nodeMap;
 
