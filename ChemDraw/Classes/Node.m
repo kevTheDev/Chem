@@ -58,14 +58,11 @@
 	return [Arithmetic roundFloatDownToInteger:[self yCoord]];
 }
 
-- (NSString *)hashString {
-	
-	return [NSString stringWithFormat:@"%d%d", [self xCoordForHash], [self yCoordForHash]];
-}
 
 - (NSUInteger)hash {
 	
-	return [[self hashString] intValue];
+	NSString *hashString = [NSString stringWithFormat:@"%d%d", [self xCoordForHash], [self yCoordForHash]];	
+	return [hashString intValue];
 }
 
 - (BOOL)isEqual:(id)anObject {

@@ -18,7 +18,6 @@
 }
 
 - (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y;
-- (NSString *)hashString;
 
 - (int) xCoordForHash;
 - (int) yCoordForHash;
