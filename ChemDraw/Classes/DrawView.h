@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Node.h"
 #import "Edge.h"
+#import "ObjectMap.h"
 
 @interface DrawView : UIView {	
+	ObjectMap *objectMap;
+	
 	NSMutableArray *nodes;
 	NSMutableArray *edges;
 	NSMutableArray *unconfirmedHighlightedNodes;

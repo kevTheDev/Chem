@@ -20,7 +20,6 @@
 		DE2093480FF50B67001FECDA /* Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Edge.m */; };
 		DE4F4CD30FFCB05300DA8541 /* NodeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD20FFCB05300DA8541 /* NodeMap.m */; };
 		DE4F4CD40FFCB05300DA8541 /* NodeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD20FFCB05300DA8541 /* NodeMap.m */; };
-		DE4F4CDA0FFCB0A300DA8541 /* NodeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */; };
 		DE4F4CDB0FFCB0A300DA8541 /* NodeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */; };
 		DE4F4D4D0FFCB8D500DA8541 /* EdgeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4D4C0FFCB8D500DA8541 /* EdgeMapTest.m */; };
 		DE4F4D5A0FFCBA7300DA8541 /* EdgeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* EdgeMap.m */; };
@@ -295,7 +294,6 @@
 				DE874F700FFA512400B1E023 /* EdgeMap.m in Sources */,
 				DED6FCC00FFB2A93008CE1A7 /* Arithmetic.m in Sources */,
 				DE4F4CD40FFCB05300DA8541 /* NodeMap.m in Sources */,
-				DE4F4CDA0FFCB0A300DA8541 /* NodeMapTest.m in Sources */,
 				DE4F4DAE0FFCC6C500DA8541 /* ObjectMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

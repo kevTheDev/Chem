@@ -8,6 +8,7 @@
 
 #import "DrawView.h"
 
+@class ObjectMap;
 @class Node;
 @class Edge;
 
@@ -49,7 +50,9 @@ char* screenState = "start";
 	
 	if(screenState == "start") {
 		text = "Touch the screen to create the first root node...";
-
+		
+		objectMap = [[ObjectMap alloc] init];
+		
 		[self setNodes:[[NSMutableArray alloc] initWithCapacity:10]];
 		[self setEdges:[[NSMutableArray alloc] initWithCapacity:10]];
 		[self setUnconfirmedHighlightedEdges:[[NSMutableArray alloc] initWithCapacity:10]];
@@ -411,6 +414,7 @@ char* screenState = "start";
 
 
 - (void)dealloc {
+	[objectMap release];
 	[nodes release];
     [super dealloc];
 }
