@@ -36,7 +36,7 @@ char* screenState = "start";
 
 
 - (void)drawRect:(CGRect)rect {
-
+	
     // Drawing code
 	[[UIColor whiteColor] setFill]; 
 	UIRectFill(rect);
@@ -81,13 +81,13 @@ char* screenState = "start";
 		
 	}
 	else if(screenState == "main") {
-		if([[self unconfirmedHighlightedEdges] count] > 0 && [[self unconfirmedHighlightedNodes] count] > 0) {
+		if([objectMap highlightedNodesCount] > 0 && [objectMap highlightedEdgesCount] > 0) {
 			text = "Confirm an edge or a node";
 		}
-		else if([[self unconfirmedHighlightedEdges] count] > 0) {
+		else if([objectMap highlightedEdgesCount] > 0) {
 			text = "Confirm an edge";
 		}
-		else if([[self unconfirmedHighlightedNodes] count] > 0) {
+		else if([objectMap highlightedNodesCount] > 0) {
 			text = "Confirm a node";
 		}
 		else {
@@ -127,6 +127,8 @@ char* screenState = "start";
 	UITouch *touch = [touches anyObject];
 	CGPoint	pos = [touch locationInView:self];
 
+	NSLog(@"TOUCH BEGAN WITH SCREEN STATE: %s", screenState);
+	
 	if(screenState == "main") {
 		//Node *closestNode = [self detectNodesForPoint:pos];
 		
@@ -143,21 +145,21 @@ char* screenState = "start";
 	else if(screenState == "confirm") {
 		
 		// detect a user confirming a highlighted object
-		
-		if([[self unconfirmedHighlightedEdges] count] > 0 && [[self unconfirmedHighlightedNodes] count] > 0) {
-			
-			// EDGE CASE - TODO
-		}
-		else if([[self unconfirmedHighlightedEdges] count] > 0) {
-			[self confirmEdgeFromHighlightedEdges:pos];
-		}
-		else if([[self unconfirmedHighlightedNodes] count] > 0) {
-			[self confirmNodeFromHighlightedNodes:pos];
-			
-		}
-		else {
-			NSLog(@"No unconfirmed objects");
-		}
+		[objectMap selectClosestObjectToPoint:pos];
+		//if([[self unconfirmedHighlightedEdges] count] > 0 && [[self unconfirmedHighlightedNodes] count] > 0) {
+//			
+//			// EDGE CASE - TODO
+//		}
+//		else if([[self unconfirmedHighlightedEdges] count] > 0) {
+//			[self confirmEdgeFromHighlightedEdges:pos];
+//		}
+//		else if([[self unconfirmedHighlightedNodes] count] > 0) {
+//			[self confirmNodeFromHighlightedNodes:pos];
+//			
+//		}
+//		else {
+//			NSLog(@"No unconfirmed objects");
+//		}
 	}
 	else {
 		// create a node and add it to the object map

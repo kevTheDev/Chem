@@ -138,7 +138,10 @@
 }
 
 - (void) selectClosestObjectToPoint:(CGPoint)point {
+	NSLog(@"SELECTING THE CLOSEST OBJECT");
 	NSObject *closestObject = [self closestObjectToPoint:point];
+	
+	NSLog(@"SELECTING THE CLOSEST OBJECT 2");
 	
 	if([closestObject isKindOfClass:[Node class]]) {
 		

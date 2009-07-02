@@ -39,7 +39,7 @@
 - (NSUInteger)selectedEdgesCount;
 
 - (void) highlightClosestObjectToPoint:(CGPoint)point;
-
+- (void) selectClosestObjectToPoint:(CGPoint)point;
 
 // array access methods
 - (id)nodeAtIndex:(NSUInteger)index;
