@@ -97,21 +97,41 @@
 }
 
 - (NSObject *) closestObjectToPoint:(CGPoint)point {
+	
+	NSLog(@"IN CLOSEST OBJECT TO POINT");
+	
 	Node *closestNode = [nodeMap closestNodeToPoint:point];
 	Edge *closestEdge = [edgeMap closestEdgeToPoint:point];
 	
+	NSLog(@"IN CLOSEST OBJECT TO POINT 2");
+	
 	// find closest out of closest edge and node
-	Node *closestEdgeCenterPoint = [closestEdge centerNode];
+	Node *closestEdgeCenterPoint = [closestEdge centerPointNode];
+	
+	NSLog(@"IN CLOSEST OBJECT TO POINT 3");
+	
+	NSLog(@"CLOSEST EDGE CENTER POINT X: %f", closestEdgeCenterPoint.xCoord);
 	
 	float edgeXDistance = abs(point.x - [closestEdgeCenterPoint xCoord]);
+	
+	NSLog(@"IN CLOSEST OBJECT TO POINT 4");
+	
 	float edgeYDistance = abs(point.y - [closestEdgeCenterPoint yCoord]);
 	
+	NSLog(@"IN CLOSEST OBJECT TO POINT 5");
+	
 	float edgeDistance = edgeXDistance + edgeYDistance;
+	
+	NSLog(@"IN CLOSEST OBJECT TO POINT 6");
 	
 	float nodeXDistance = abs(point.x - [closestNode xCoord]);
 	float nodeYDistance = abs(point.y - [closestNode yCoord]);
 	
+	NSLog(@"IN CLOSEST OBJECT TO POINT 6");
+	
 	float nodeDistance = nodeXDistance + nodeYDistance;
+	
+	NSLog(@"IN CLOSEST OBJECT TO POINT 7");
 	
 	if(nodeDistance > edgeDistance) {
 		return closestEdge;
