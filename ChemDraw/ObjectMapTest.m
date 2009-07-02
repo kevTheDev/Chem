@@ -213,11 +213,11 @@
 	
 	[objectMap highlightClosestObjectToPoint:point];
 	
-	//int newHighlightedCount = [objectMap highlightedEdgesCount];
-	//STAssertEquals(newHighlightedCount, 1, nil);
+	int newHighlightedCount = [objectMap highlightedEdgesCount];
+	STAssertEquals(newHighlightedCount, 1, nil);
 	
-	//int newHighlightedEdgesCount = [objectMap highlightedNodesCount];
-	//STAssertEquals(newHighlightedEdgesCount, 0, nil);
+	int newHighlightedEdgesCount = [objectMap highlightedNodesCount];
+	STAssertEquals(newHighlightedEdgesCount, 0, nil);
 }
 
 
