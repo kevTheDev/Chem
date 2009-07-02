@@ -12,6 +12,7 @@
 @implementation ObjectMap
 
 @synthesize nodeMap;
+@synthesize edgeMap;
 
 - (ObjectMap *) init {
 	
@@ -24,6 +25,14 @@
 	
     return self;
 	
+}
+
+- (id)nodeAtIndex:(NSUInteger)index {
+	return [nodeMap objectAtIndex:index];
+}
+
+- (id)edgeAtIndex:(NSUInteger)index {
+	return [edgeMap objectAtIndex:index];
 }
 
 - (void) selectEdge:(Edge *)edge {

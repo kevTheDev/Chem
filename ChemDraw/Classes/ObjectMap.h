@@ -40,6 +40,13 @@
 
 - (void) highlightClosestObjectToPoint:(CGPoint)point;
 
+
+// array access methods
+- (id)nodeAtIndex:(NSUInteger)index;
+- (id)edgeAtIndex:(NSUInteger)index;
+
+
 @property (nonatomic, retain) NodeMap *nodeMap;
+@property (nonatomic, retain) EdgeMap *edgeMap;
 
 @end

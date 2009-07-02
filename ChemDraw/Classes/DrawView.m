@@ -67,11 +67,14 @@ char* screenState = "start";
 	else if(screenState == "secondNode") {
 		text = "Touch near an edge or node to manipulate it...";
 
-		Node *firstNode = [[self nodes] objectAtIndex:0];
-		Node *secondNode = [[self nodes] objectAtIndex:1];
+		//Node *firstNode = [[self nodes] objectAtIndex:0];
+//		Node *secondNode = [[self nodes] objectAtIndex:1];
+		Node *firstNode = [objectMap nodeAtIndex:0];
+		Node *secondNode = [objectMap nodeAtIndex:1];
 		
 		Edge *edge = [[Edge alloc] initWithNodeA:firstNode nodeB:secondNode];
-		[[self edges] addObject:edge];
+		//[[self edges] addObject:edge];
+		[objectMap addEdge:edge];
 		[edge release];
 		
 		screenState = "main";
@@ -278,7 +281,7 @@ char* screenState = "start";
 
 - (void) renderEdges {
 	
-	for (Edge *edge in [self edges]) {
+	for (Edge *edge in [objectMap edgeMap]) {
 		[self drawEdge:edge];
 	}
 	return;
@@ -371,7 +374,7 @@ char* screenState = "start";
 	
 	Node *realNode = [[self nodes] objectAtIndex:realNodeIndex];
 	
-	[realNode confirmSelection];
+	[realNode select];
 	
 	return closestNode;
 	
@@ -412,7 +415,7 @@ char* screenState = "start";
 	
 	
 	Edge *realEdge = [[self edges] objectAtIndex:realEdgeIndex];
-	[realEdge confirmSelection];
+	[realEdge select];
 	
 	return realEdge;
 }

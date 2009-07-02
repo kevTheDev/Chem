@@ -101,6 +101,10 @@
 	
 }
 
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len {
+	return [edges countByEnumeratingWithState:state objects:stackbuf count:len];
+}
+
 - (void)dealloc {
 	[edges release];
     [super dealloc];
