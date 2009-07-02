@@ -96,4 +96,48 @@
 	STAssertFalse([otherEdge isHighlighted], nil);
 }
 
+- (void) testHighlightedEdgesCount {
+	[edgeMap addEdge:edgeOne];
+	[edgeMap addEdge:edgeTwo];
+	
+	[edgeMap highlightEdgeAtIndex:1];
+	
+	int newHighlightedCount = [edgeMap highlightedEdgesCount];
+	
+	STAssertEquals(newHighlightedCount, 1, nil);
+}
+
+- (void) testSelectNodeAtIndex {
+	[edgeMap addEdge:edgeOne];
+	[edgeMap addEdge:edgeTwo];
+	
+	[edgeMap selectEdgeAtIndex:1];
+	
+	Node *selectedNode = [edgeMap objectAtIndex:1];
+	
+	STAssertTrue([selectedNode isSelected], nil);
+}
+
+- (void) testSelectedNodesCount {
+	[edgeMap addEdge:edgeOne];
+	[edgeMap addEdge:edgeTwo];	
+	[edgeMap selectEdgeAtIndex:1];
+	
+	int newSelectedCount = [edgeMap selectedEdgesCount];
+	
+	STAssertEquals(newSelectedCount, 1, nil);
+}
+
+- (void) testSelectNodeAtIndexResetsHighlightedNodesArray {
+	[edgeMap addEdge:edgeOne];
+	[edgeMap addEdge:edgeTwo];
+	
+	[edgeMap highlightEdgeAtIndex:1];
+	[edgeMap selectEdgeAtIndex:1];
+	
+	int newHighlightedCount = [edgeMap highlightedEdgesCount];
+	
+	STAssertEquals(newHighlightedCount, 0, nil);
+}
+
 @end

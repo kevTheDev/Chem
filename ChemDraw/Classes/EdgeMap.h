@@ -11,6 +11,8 @@
 
 @interface EdgeMap : NSObject {
 	NSMutableArray *edges;
+	NSMutableArray *highlightedEdges;
+	NSMutableArray *selectedEdges;
 }
 
 - (BOOL) isEmpty;
@@ -21,7 +23,12 @@
 - (Edge *) closestEdgeToPoint:(CGPoint)point;
 
 - (id)objectAtIndex:(NSUInteger)index;
+
 - (void) highlightEdgeAtIndex:(NSUInteger)index;
+- (NSUInteger)highlightedEdgesCount;
+
+- (void) selectEdgeAtIndex:(NSUInteger)index;
+- (NSUInteger)selectedEdgesCount;
 
 
 @end

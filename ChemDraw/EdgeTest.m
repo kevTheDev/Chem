@@ -66,21 +66,21 @@
 	STAssertTrue([edge isHighlighted], nil);
 }
 
-- (void) testConfirmSelection {
+- (void) testSelect {
 	STAssertFalse([edge confirmedHighlight], nil);	
-	[edge confirmSelection];	
+	[edge select];	
 	STAssertTrue([edge confirmedHighlight], nil);
 }
 
-- (void) testConfirmSelectionResetsHighlight {
+- (void) testSelectResetsHighlight {
 	[edge highlight];
-	[edge confirmSelection];
+	[edge select];
 	STAssertFalse([edge isHighlighted], nil);
 }
 
 - (void) testIsSelected {
 	STAssertFalse([edge isSelected], nil);
-	[edge confirmSelection];
+	[edge select];
 	STAssertTrue([edge isSelected], nil);
 }
 

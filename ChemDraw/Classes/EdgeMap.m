@@ -18,10 +18,29 @@
 	
     if ( self ) {
         edges = [[NSMutableArray alloc] initWithCapacity:5];
+		highlightedEdges = [[NSMutableArray alloc] initWithCapacity:5];
+		selectedEdges = [[NSMutableArray alloc] initWithCapacity:5];
     }
 	
     return self;
 	
+}
+
+- (NSUInteger)selectedEdgesCount {
+	return [selectedEdges count];
+}
+
+- (void) selectEdgeAtIndex:(NSUInteger)index {
+	Edge *edge = [edges objectAtIndex:index];
+	[edge select];
+	
+	[selectedEdges addObject:edge];	
+	[highlightedEdges removeAllObjects];
+	return;
+}
+
+- (NSUInteger)highlightedEdgesCount {
+	return [highlightedEdges count];
 }
 
 - (id)objectAtIndex:(NSUInteger)index {
@@ -31,6 +50,7 @@
 - (void) highlightEdgeAtIndex:(NSUInteger)index {
 	Edge *edge = [edges objectAtIndex:index];
 	[edge highlight];
+	[highlightedEdges addObject:edge];	
 	return;
 }
 

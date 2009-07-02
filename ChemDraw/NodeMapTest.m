@@ -103,13 +103,12 @@
 	[nodeMap addNode:nodeOne];
 	[nodeMap addNode:nodeTwo];
 	
+	[nodeMap highlightNodeAtIndex:1];
 	[nodeMap selectNodeAtIndex:1];
 	
 	int newHighlightedCount = [nodeMap highlightedNodesCount];
 	
 	STAssertEquals(newHighlightedCount, 0, nil);
-	
-	
 }
 
 @end

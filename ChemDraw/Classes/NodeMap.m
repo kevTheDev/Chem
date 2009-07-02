@@ -28,7 +28,9 @@
 - (void) selectNodeAtIndex:(NSUInteger)index {
 	Node *node = [nodes objectAtIndex:index];
 	[node select];
+	
 	[selectedNodes addObject:node];	
+	[highlightedNodes removeAllObjects];
 	return;
 }
 
