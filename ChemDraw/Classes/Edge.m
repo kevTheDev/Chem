@@ -14,7 +14,10 @@
 
 @synthesize nodeA;
 @synthesize nodeB;
-@synthesize centerNode;
+@synthesize nodeAPoint;
+@synthesize nodeBPoint;
+@synthesize centerPoint;
+
 @synthesize unconfirmedHighlight;
 @synthesize confirmedHighlight;
 
@@ -24,7 +27,19 @@
 	if ( self ) {
         [self setNodeA:firstNode];
 		[self setNodeB:secondNode];
-		[self setCenterNode:[self centerPointNode]];
+		
+		Node *tempNode = [self centerPointNode];
+		CGPoint tempPoint = CGPointMake(tempNode.xCoord, tempNode.yCoord);
+		[self setCenterPoint:tempPoint];
+		[tempNode release];
+		
+		CGPoint tempPointOne = CGPointMake(firstNode.xCoord, firstNode.yCoord);
+		CGPoint tempPointTwo = CGPointMake(secondNode.xCoord, secondNode.yCoord);
+		
+		[self setNodeAPoint:tempPointOne];
+		[self setNodeBPoint:tempPointTwo];
+		
+		//[self setCenterNode:[self centerPointNode]];
     }
 	
     return self;
@@ -48,11 +63,19 @@
 	return ([self unconfirmedHighlight]);
 }
 
+- (Node *) centerNode {
+	return [self centerPointNode];
+}
+
 // returns a node object that contains the x and y points of the center point of the edge
 - (Node *) centerPointNode {
 	
-	float nodeAX = [[self nodeA] xCoord];
-	float nodeBX = [[self nodeB] xCoord];
+	NSLog(@"CENTER POINT NODE 1");
+	float nodeAX = [nodeA xCoord];
+	NSLog(@"CENTER POINT NODE 2");	
+	float nodeBX = [nodeB xCoord];
+	
+	NSLog(@"CENTER POINT NODE 3");	
 	
 	float bigX;
 	float littleX;
@@ -134,7 +157,7 @@
 	
 	[nodeA release];
 	[nodeB release];
-	[centerNode release];
+	//[centerNode release];
 	[super dealloc];
 	
 }

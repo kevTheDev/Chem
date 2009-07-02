@@ -12,7 +12,9 @@
 @interface Edge : NSObject {
 	Node *nodeA;
 	Node *nodeB;
-	Node *centerNode;
+	CGPoint centerPoint;
+	CGPoint nodeAPoint;
+	CGPoint nodeBPoint;
 	
 	BOOL unconfirmedHighlight;
 	BOOL confirmedHighlight;
@@ -21,6 +23,7 @@
 - (Edge *) initWithNodeA:(Node *)nodeA nodeB:(Node *)nodeB;
 
 - (Node *) centerPointNode;
+- (Node *) centerNode;
 
 - (void) highlight;
 - (BOOL) isHighlighted;
@@ -31,7 +34,9 @@
 
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;
-@property (nonatomic, retain) Node *centerNode;
+@property CGPoint centerPoint;
+@property CGPoint nodeAPoint;
+@property CGPoint nodeBPoint;
 
 @property BOOL unconfirmedHighlight;
 @property BOOL confirmedHighlight;

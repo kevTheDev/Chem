@@ -84,20 +84,49 @@
 // returns the closest edge in the map to a point
 - (Edge *) closestEdgeToPoint:(CGPoint)point {
 	
-	NodeMap *centerNodes = [[NodeMap alloc] init];
+	//NodeMap *centerNodes = [[NodeMap alloc] init];
+	
+	//Node *edgeCenterNode;
+	
+	CGPoint edgeCenterPoint;
+	
+	int closestNodeIndex = 0;
+	float currentShortestDistance = 0.0;
 	
 	for(int i=0; i<[edges count]; i++)
 	{				
-		Node *edgeCenterNode = [[edges objectAtIndex:i] centerNode];
-		[centerNodes addNode:edgeCenterNode];		
+		//edgeCenterNode = [[edges objectAtIndex:i] centerNode];
+		//[centerNodes addNode:edgeCenterNode];
+		
+		edgeCenterPoint = [[edges objectAtIndex:i] centerPoint];
+		
+		float xDistance = abs(point.x - edgeCenterPoint.x);
+		float yDistance = abs(point.y - edgeCenterPoint.y);
+		
+		float newDistance = xDistance + yDistance;
+		
+		if(currentShortestDistance == 0) {
+			currentShortestDistance = newDistance;
+		}
+		else {
+			
+			if(newDistance < currentShortestDistance) {
+				currentShortestDistance = newDistance;
+				closestNodeIndex = i;
+			}
+			
+		}
+		
 	}
 	
-	Node *closestCenterNode = [centerNodes closestNodeToPoint:point];
-	int closestEdgeIndex  = [centerNodes indexOfObject:closestCenterNode];
+	//[edgeCenterNode release];
 	
-	[centerNodes release];
+	//Node *closestCenterNode = [centerNodes closestNodeToPoint:point];
+	//int closestEdgeIndex  = [centerNodes indexOfObject:closestCenterNode];
+	
+	//[centerNodes release];
 		
-	return [edges objectAtIndex:closestEdgeIndex];
+	return [edges objectAtIndex:closestNodeIndex];
 	
 }
 
