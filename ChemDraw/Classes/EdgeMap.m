@@ -30,6 +30,11 @@
 	return [selectedEdges count];
 }
 
+- (void) selectEdge:(Edge *)edge {
+	NSUInteger edgeIndex = [edges indexOfObject:edge];
+	[self selectEdgeAtIndex:edgeIndex];
+}
+
 - (void) selectEdgeAtIndex:(NSUInteger)index {
 	Edge *edge = [edges objectAtIndex:index];
 	[edge select];

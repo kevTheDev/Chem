@@ -34,6 +34,11 @@
 	return;
 }
 
+- (void) selectNode:(Node *)node {
+	NSUInteger nodeIndex = [nodes indexOfObject:node];
+	[self selectNodeAtIndex:nodeIndex];
+}
+
 - (NSUInteger)selectedNodesCount {
 	return [selectedNodes count];
 	
