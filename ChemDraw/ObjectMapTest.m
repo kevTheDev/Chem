@@ -72,6 +72,26 @@
 	STAssertEquals(newCount, 2, nil);
 }
 
+- (void) testClosestNodeToPoint {
+	[objectMap addNode:nodeOneA];
+	[objectMap addNode:nodeOneB];
+	
+	[objectMap addNode:nodeTwoA];
+	[objectMap addNode:nodeTwoB];
+	
+	Node *closestNode = [objectMap closestNodeToPoint:point];
+	
+	STAssertEqualObjects(closestNode, nodeOneA, nil);
+}
+
+- (void) testClosestEdgeToPoint {
+	[objectMap addEdge:edgeOne];
+	[objectMap addEdge:edgeTwo];
+	
+	Edge *closestEdge = [objectMap closestEdgeToPoint:point];
+	STAssertEqualObjects(closestEdge, edgeTwo, nil);	
+}
+
 - (void) testClosestObjectToPoint {
 	[objectMap addNode:nodeOneA];
 	[objectMap addNode:nodeOneB];

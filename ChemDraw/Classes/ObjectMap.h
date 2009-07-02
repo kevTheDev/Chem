@@ -21,6 +21,10 @@
 - (void) addNode:(Node *)node;
 - (void) addEdge:(Edge *)edge;
 
+- (Node *) closestNodeToPoint:(CGPoint)point;
+- (Edge *) closestEdgeToPoint:(CGPoint)point;
 - (NSObject *) closestObjectToPoint:(CGPoint)point;
+
+@property (nonatomic, retain) NodeMap *nodes;
 
 @end

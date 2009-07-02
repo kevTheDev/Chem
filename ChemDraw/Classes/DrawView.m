@@ -66,8 +66,7 @@ char* screenState = "start";
 	}
 	else if(screenState == "secondNode") {
 		text = "Touch near an edge or node to manipulate it...";
-		
-		
+
 		Node *firstNode = [[self nodes] objectAtIndex:0];
 		Node *secondNode = [[self nodes] objectAtIndex:1];
 		
@@ -126,7 +125,9 @@ char* screenState = "start";
 	CGPoint	pos = [touch locationInView:self];
 
 	if(screenState == "main") {
-		Node *closestNode = [self detectNodesForPoint:pos];
+		//Node *closestNode = [self detectNodesForPoint:pos];
+		
+		Node *closestNode = [objectMap closestNodeToPoint:pos];
 		[self detectClosestEdgesToPoint:pos withClosestNode:closestNode];
 		
 			
@@ -151,8 +152,9 @@ char* screenState = "start";
 		}
 	}
 	else {
-		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];
-		[[self nodes] addObject:node];
+		// create a node and add it to the object map
+		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
+		[objectMap addNode:node];		
 		[node release]; //release temp node object
 	}
 	
@@ -262,7 +264,7 @@ char* screenState = "start";
 // draw all nodes
 - (void) renderNodes {
 	
-	for (Node *node in [self nodes])
+	for (Node *node in [objectMap nodes])
 	{
 		// do things here
 		[self drawNode:node];

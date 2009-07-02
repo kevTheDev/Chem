@@ -20,5 +20,9 @@
 
 - (Node *) closestNodeToPoint:(CGPoint)point;
 - (NSUInteger)indexOfObject:(id)anObject;
+- (id)objectAtIndex:(NSUInteger)index;
+
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
 @end

@@ -27,6 +27,11 @@
 	return [nodes indexOfObject:anObject];
 }
 
+- (id)objectAtIndex:(NSUInteger)index {
+	return [nodes objectAtIndex:index];
+	
+}
+
 - (BOOL) isEmpty {
 	return [nodes count] == 0;	
 }
@@ -74,7 +79,9 @@
 	return [nodes objectAtIndex:closestNodeIndex];
 }
 
-
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len {
+	return [nodes countByEnumeratingWithState:state objects:stackbuf count:len];
+}
 
 - (void) dealloc {
 	[nodes release];

@@ -11,6 +11,8 @@
 
 @implementation ObjectMap
 
+@synthesize nodes;
+
 - (ObjectMap *) init {
 	
 	self = [super init];
@@ -40,8 +42,16 @@
 	[edges addEdge:edge];
 }
 
+- (Node *) closestNodeToPoint:(CGPoint)point {
+	return [nodes closestNodeToPoint:point];
+}
+
+- (Edge *) closestEdgeToPoint:(CGPoint)point {
+	return [edges closestEdgeToPoint:point];
+}
+
 - (NSObject *) closestObjectToPoint:(CGPoint)point {
-	Node *closestNode = [nodes closestNodeToPoint:point];
+	Node *closestNode = [self closestNodeToPoint:point];
 	Edge *closestEdge = [edges closestEdgeToPoint:point];
 	
 	// find closest out of closest edge and node
