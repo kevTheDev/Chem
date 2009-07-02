@@ -30,7 +30,7 @@
 	
 }
 
-- (void) confirmSelection {
+- (void) select {
 	[self setUnconfirmedHighlight:NO];
 	[self setConfirmedHighlight:YES];
 }

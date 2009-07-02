@@ -37,21 +37,21 @@
 	STAssertTrue([node isHighlighted], nil);
 }
 
-- (void) testConfirmSelection {
+- (void) testSelect {
 	STAssertFalse([node confirmedHighlight], nil);	
-	[node confirmSelection];	
+	[node select];	
 	STAssertTrue([node confirmedHighlight], nil);
 }
 
 - (void) testConfirmSelectionResetsHighlight {
 	[node highlight];
-	[node confirmSelection];
+	[node select];
 	STAssertFalse([node isHighlighted], nil);
 }
 
 - (void) testIsSelected {
 	STAssertFalse([node isSelected], nil);
-	[node confirmSelection];
+	[node select];
 	STAssertTrue([node isSelected], nil);
 }
 

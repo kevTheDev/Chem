@@ -66,4 +66,50 @@
 	STAssertTrue([highlightedNode isHighlighted], nil);
 }
 
+- (void) testHighlightedNodesCount {
+	[nodeMap addNode:nodeOne];
+	[nodeMap addNode:nodeTwo];
+	
+	[nodeMap highlightNodeAtIndex:1];
+	
+	int newHighlightedCount = [nodeMap highlightedNodesCount];
+	
+	STAssertEquals(newHighlightedCount, 1, nil);
+}
+
+- (void) testSelectNodeAtIndex {
+	[nodeMap addNode:nodeOne];
+	[nodeMap addNode:nodeTwo];
+	
+	[nodeMap selectNodeAtIndex:1];
+	
+	Node *selectedNode = [nodeMap objectAtIndex:1];
+	
+	STAssertTrue([selectedNode isSelected], nil);
+}
+
+- (void) testSelectedNodesCount {
+	[nodeMap addNode:nodeOne];
+	[nodeMap addNode:nodeTwo];
+	
+	[nodeMap selectNodeAtIndex:1];
+	
+	int newSelectedCount = [nodeMap selectedNodesCount];
+	
+	STAssertEquals(newSelectedCount, 1, nil);
+}
+
+- (void) testSelectNodeAtIndexResetsHighlightedNodesArray {
+	[nodeMap addNode:nodeOne];
+	[nodeMap addNode:nodeTwo];
+	
+	[nodeMap selectNodeAtIndex:1];
+	
+	int newHighlightedCount = [nodeMap highlightedNodesCount];
+	
+	STAssertEquals(newHighlightedCount, 0, nil);
+	
+	
+}
+
 @end

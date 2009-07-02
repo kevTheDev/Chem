@@ -25,7 +25,7 @@
 - (void) highlight;
 - (BOOL) isHighlighted;
 
-- (void) confirmSelection;
+- (void) select;
 - (BOOL) isSelected;
 
 @property CGFloat xCoord;

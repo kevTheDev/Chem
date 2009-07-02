@@ -11,6 +11,8 @@
 
 @interface NodeMap : NSObject {
 	NSMutableArray *nodes;
+	NSMutableArray *highlightedNodes;
+	NSMutableArray *selectedNodes;
 }
 
 - (BOOL) isEmpty;
@@ -23,6 +25,10 @@
 - (id)objectAtIndex:(NSUInteger)index;
 
 - (void) highlightNodeAtIndex:(NSUInteger)index;
+- (NSUInteger)highlightedNodesCount;
+
+- (void) selectNodeAtIndex:(NSUInteger)index;
+- (NSUInteger)selectedNodesCount;
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 

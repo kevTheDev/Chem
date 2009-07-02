@@ -17,15 +17,35 @@
 	
     if ( self ) {
         nodes = [[NSMutableArray alloc] initWithCapacity:5];
+		highlightedNodes = [[NSMutableArray alloc] initWithCapacity:5];
+		selectedNodes = [[NSMutableArray alloc] initWithCapacity:5];
     }
 	
     return self;
 	
 }
 
+- (void) selectNodeAtIndex:(NSUInteger)index {
+	Node *node = [nodes objectAtIndex:index];
+	[node select];
+	[selectedNodes addObject:node];	
+	return;
+}
+
+- (NSUInteger)selectedNodesCount {
+	return [selectedNodes count];
+	
+	
+}
+
+- (NSUInteger)highlightedNodesCount {
+	return [highlightedNodes count];
+}
+
 - (void) highlightNodeAtIndex:(NSUInteger)index {
 	Node *node = [nodes objectAtIndex:index];
 	[node highlight];
+	[highlightedNodes addObject:node];	
 	return;
 }
 
@@ -90,6 +110,7 @@
 }
 
 - (void) dealloc {
+	[highlightedNodes release];
 	[nodes release];
 	[super dealloc];	
 }
