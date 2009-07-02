@@ -11,6 +11,8 @@
 
 @implementation EdgeMap
 
+@synthesize highlightedEdges;
+@synthesize selectedEdges;
 
 - (EdgeMap *) init {
 	

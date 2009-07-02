@@ -108,7 +108,11 @@ char* screenState = "start";
 	
     CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
 	NSLog(@"RENDERED TEXT");
-	//[self renderNodes];
+	
+	//if([objectMap edgesCount] == 0) {
+		[self renderNodes];
+	//}
+	
 	NSLog(@"RENDERED NODES");
 	[self renderEdges];
 	NSLog(@"RENDERED EDGES");
@@ -153,18 +157,59 @@ char* screenState = "start";
 	
 	
 	
-	for (Node *node in [objectMap nodeMap])
-	{
-		// do things here
-		[self drawNode:node];
-	}
+	//for (Node *node in [objectMap nodeMap])
+//	{
+//		// do things here
+//		[self drawNode:node];
+//	}
+	
+	[self renderPlainNodes];
+	[self renderSelectedNodes];
+	[self renderHighlightedNodes];
 	
 	return;
 }
 
+- (void) renderPlainNodes {
+	return;
+}
+
+- (void) renderHighlightedNodes {
+	for (Node *node in [objectMap highlightedNodes]) {
+		[self drawNode:node];
+	}
+	return;
+}
+
+- (void) renderSelectedNodes {
+	for (Node *node in [objectMap selectedNodes]) {
+		[self drawNode:node];
+	}
+	return;
+}
+
 - (void) renderEdges {
-	
-	for (Edge *edge in [objectMap edgeMap]) {
+
+	[self renderPlainEdges];
+	[self renderHighlightedEdges];
+	[self renderSelectedEdges];
+	return;
+}
+
+- (void) renderPlainEdges {
+	return;
+}
+
+- (void) renderHighlightedEdges {
+	for (Edge *edge in [objectMap highlightedEdges]) {
+		[self drawEdge:edge];
+	}
+	return;
+}
+
+
+- (void) renderSelectedEdges {
+	for (Edge *edge in [objectMap selectedEdges]) {
 		[self drawEdge:edge];
 	}
 	return;
@@ -185,9 +230,7 @@ char* screenState = "start";
 	CGPoint nodeBPoint = [edge nodeBPoint];
 	
 	NSLog(@"DRWA THE EDGE 3");
-	
-	//[self drawNode:firstNode];
-	//[self drawNode:secondNode];
+
 	
 	NSLog(@"SECOND NODE X: %f", nodeAPoint.x);
 	
@@ -217,7 +260,19 @@ char* screenState = "start";
 	
 	CGContextStrokePath(ctx);
 	
+	[self drawNodePoint:nodeAPoint];
+	[self drawNodePoint:nodeBPoint];
+	
 	return;
+}
+
+- (void) drawNodePoint:(CGPoint)nodePoint {
+	CGContextRef ctx = UIGraphicsGetCurrentContext();
+
+	CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
+	
+    CGContextFillEllipseInRect(ctx, CGRectMake(nodePoint.x, nodePoint.y, NODE_WIDTH, NODE_HEIGHT));
+	
 }
 
 - (void) drawNode:(Node *)node {

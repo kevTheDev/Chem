@@ -26,6 +26,16 @@
 - (void) drawEdge:(Edge *)edge;
 - (void) renderEdges;
 
+- (void) renderPlainNodes;
+- (void) renderSelectedNodes;
+- (void) renderHighlightedNodes;
+
+- (void) renderPlainEdges;
+- (void) renderHighlightedEdges;
+- (void) renderSelectedEdges;
+
+- (void) drawNodePoint:(CGPoint)nodePoint;
+
 //- (Node *) detectNodesForPoint:(CGPoint)point;
 //- (void) detectClosestEdgesToPoint:(CGPoint)point withClosestNode:(Node *)closestNode;
 //

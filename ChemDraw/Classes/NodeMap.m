@@ -11,6 +11,9 @@
 
 @implementation NodeMap
 
+@synthesize highlightedNodes;
+@synthesize selectedNodes;
+
 - (NodeMap *) init {
 	
 	self = [super init];

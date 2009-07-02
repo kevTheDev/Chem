@@ -45,6 +45,13 @@
 - (id)nodeAtIndex:(NSUInteger)index;
 - (id)edgeAtIndex:(NSUInteger)index;
 
+- (NSUInteger)edgesCount;
+
+- (NSMutableArray *)highlightedNodes;
+- (NSMutableArray *)selectedNodes;
+
+- (NSMutableArray *)highlightedEdges;
+- (NSMutableArray *)selectedEdges;
 
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) EdgeMap *edgeMap;

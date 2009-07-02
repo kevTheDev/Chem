@@ -27,6 +27,26 @@
 	
 }
 
+- (NSMutableArray *)highlightedNodes {
+	return [nodeMap highlightedNodes];
+}
+
+- (NSMutableArray *)selectedNodes {
+	return [nodeMap selectedNodes];
+}
+
+- (NSMutableArray *)selectedEdges {
+	return [edgeMap highlightedEdges];
+}
+
+- (NSMutableArray *)highlightedEdges {
+	return [edgeMap selectedEdges];
+}
+
+- (NSUInteger)edgesCount {
+	return [edgeMap count];
+}
+
 - (id)nodeAtIndex:(NSUInteger)index {
 	return [nodeMap objectAtIndex:index];
 }

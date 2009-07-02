@@ -34,4 +34,7 @@
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
+@property (nonatomic, retain) NSMutableArray *highlightedNodes;
+@property (nonatomic, retain) NSMutableArray *selectedNodes;
+
 @end
