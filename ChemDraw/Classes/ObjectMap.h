@@ -11,7 +11,7 @@
 #import "EdgeMap.h"
 
 @interface ObjectMap : NSObject {
-	NodeMap *nodes;
+	NodeMap *nodeMap;
 	EdgeMap *edges;
 }
 
@@ -25,6 +25,13 @@
 - (Edge *) closestEdgeToPoint:(CGPoint)point;
 - (NSObject *) closestObjectToPoint:(CGPoint)point;
 
-@property (nonatomic, retain) NodeMap *nodes;
+// highlighting and selecting nodes
+- (void) highlightNode:(Node *)node;
+- (NSUInteger)highlightedNodesCount;
+
+- (void) selectNode:(Node *)node;
+- (NSUInteger)selectedNodesCount;
+
+@property (nonatomic, retain) NodeMap *nodeMap;
 
 @end

@@ -11,48 +11,67 @@
 
 @implementation ObjectMap
 
-@synthesize nodes;
+@synthesize nodeMap;
 
 - (ObjectMap *) init {
 	
 	self = [super init];
 	
     if ( self ) {
-		nodes = [[NodeMap alloc] init];
-        edges = [[EdgeMap alloc] init];
+		nodeMap = [[NodeMap alloc] init];
+        edgeMap = [[EdgeMap alloc] init];
     }
 	
     return self;
 	
 }
 
+- (void) selectNode:(Node *)node {
+	int nodeMapIndex = [nodeMap indexOfObject:node];
+	[nodeMap selectNodeAtIndex:nodeMapIndex];
+}
+
+- (NSUInteger)selectedNodesCount {
+	return [nodeMap selectedNodesCount];
+}
+
+- (NSUInteger)highlightedNodesCount {
+	return [nodeMap highlightedNodesCount];
+}
+
+- (void) highlightNode:(Node *)node {
+	int nodeMapIndex = [nodeMap indexOfObject:node];
+	
+	[nodeMap highlightNodeAtIndex:nodeMapIndex];
+}
+
 - (BOOL) isEmpty {
-	return ([nodes count] == 0) && ([edges count] == 0);
+	return ([nodeMap count] == 0) && ([edgeMap count] == 0);
 }
 
 - (NSUInteger) count {
-	return [edges count] + [nodes count];
+	return [edgeMap count] + [nodeMap count];
 }
 
 - (void) addNode:(Node *)node {
-	[nodes addNode:node];
+	[nodeMap addNode:node];
 }
 
 - (void) addEdge:(Edge *)edge {
-	[edges addEdge:edge];
+	[edgeMap addEdge:edge];
 }
 
 - (Node *) closestNodeToPoint:(CGPoint)point {
-	return [nodes closestNodeToPoint:point];
+	return [nodeMap closestNodeToPoint:point];
 }
 
 - (Edge *) closestEdgeToPoint:(CGPoint)point {
-	return [edges closestEdgeToPoint:point];
+	return [edgeMap closestEdgeToPoint:point];
 }
 
 - (NSObject *) closestObjectToPoint:(CGPoint)point {
 	Node *closestNode = [self closestNodeToPoint:point];
-	Edge *closestEdge = [edges closestEdgeToPoint:point];
+	Edge *closestEdge = [edgeMap closestEdgeToPoint:point];
 	
 	// find closest out of closest edge and node
 	Node *closestEdgeCenterPoint = [closestEdge centerNode];
@@ -77,8 +96,8 @@
 }
 
 - (void)dealloc {
-	[nodes release];
-	[edges release];
+	[nodeMap release];
+	[edgeMap release];
     [super dealloc];
 }
 

@@ -264,7 +264,7 @@ char* screenState = "start";
 // draw all nodes
 - (void) renderNodes {
 	
-	for (Node *node in [objectMap nodes])
+	for (Node *node in [objectMap nodeMap])
 	{
 		// do things here
 		[self drawNode:node];
