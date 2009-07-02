@@ -14,10 +14,6 @@
 
 @implementation DrawView
 
-//@synthesize nodes;
-//@synthesize edges;
-//@synthesize unconfirmedHighlightedNodes;
-//@synthesize unconfirmedHighlightedEdges;
 
 int NODE_WIDTH = 10;
 int NODE_HEIGHT = 10;
@@ -52,11 +48,6 @@ char* screenState = "start";
 		text = "Touch the screen to create the first root node...";
 		
 		objectMap = [[ObjectMap alloc] init];
-		
-		//[self setNodes:[[NSMutableArray alloc] initWithCapacity:10]];
-//		[self setEdges:[[NSMutableArray alloc] initWithCapacity:10]];
-//		[self setUnconfirmedHighlightedEdges:[[NSMutableArray alloc] initWithCapacity:10]];
-//		[self setUnconfirmedHighlightedNodes:[[NSMutableArray alloc] initWithCapacity:10]];
 
 		screenState = "firstNode";
 	}
@@ -67,8 +58,6 @@ char* screenState = "start";
 	else if(screenState == "secondNode") {
 		text = "Touch near an edge or node to manipulate it...";
 
-		//Node *firstNode = [[self nodes] objectAtIndex:0];
-//		Node *secondNode = [[self nodes] objectAtIndex:1];
 		Node *firstNode = [objectMap nodeAtIndex:0];
 		Node *secondNode = [objectMap nodeAtIndex:1];
 		
@@ -76,7 +65,6 @@ char* screenState = "start";
 		NSLog(@"SECOND NODE X: %f", [secondNode xCoord]);
 		
 		Edge *edge = [[Edge alloc] initWithNodeA:firstNode nodeB:secondNode];
-		//[[self edges] addObject:edge];
 		[objectMap addEdge:edge];
 		[edge release];
 		
@@ -97,9 +85,7 @@ char* screenState = "start";
 			text = "No unconfirmed objects";
 			NSLog(@"No unconfirmed objects");
 		}
-		
-		//NSLog(@"H NODES COUNT: %d", [[self unconfirmedHighlightedNodes] count]);
-		//NSLog(@"H EDGES COUNT: %d", [[self unconfirmedHighlightedEdges] count]);
+
 		
 		screenState = "confirm";
 		
@@ -137,38 +123,15 @@ char* screenState = "start";
 	NSLog(@"TOUCH BEGAN WITH SCREEN STATE: %s", screenState);
 	
 	if(screenState == "main") {
-		//Node *closestNode = [self detectNodesForPoint:pos];
-		
-		//Node *closestNode = [objectMap closestNodeToPoint:pos];
-		
-		[objectMap highlightClosestObjectToPoint:pos];
-		
-		//NSObject *closestObjectToPoint = [objectMap closestObjectToPoint:pos];
 
-		//[self detectClosestEdgesToPoint:pos withClosestNode:closestNode];
-		
-			
+		[objectMap highlightClosestObjectToPoint:pos];
+	
 	}
 	else if(screenState == "confirm") {
 		
 		// detect a user confirming a highlighted object
 		[objectMap selectClosestObjectToPoint:pos];
 		NSLog(@"SELECTED CLOSEST OBJECT");
-		
-		//if([[self unconfirmedHighlightedEdges] count] > 0 && [[self unconfirmedHighlightedNodes] count] > 0) {
-//			
-//			// EDGE CASE - TODO
-//		}
-//		else if([[self unconfirmedHighlightedEdges] count] > 0) {
-//			[self confirmEdgeFromHighlightedEdges:pos];
-//		}
-//		else if([[self unconfirmedHighlightedNodes] count] > 0) {
-//			[self confirmNodeFromHighlightedNodes:pos];
-//			
-//		}
-//		else {
-//			NSLog(@"No unconfirmed objects");
-//		}
 	}
 	else {
 		// create a node and add it to the object map
@@ -184,101 +147,6 @@ char* screenState = "start";
 	return;
 }
 
-//- (Node *) detectNodesForPoint:(CGPoint)point {
-//	
-//	Node *tempNode = [Node alloc];
-//	
-//	int closestNodeIndex = 0;
-//	float currentShortestDistance = 0;
-//	
-//	for(int i=0; i<[[self nodes] count]; i++)
-//	{
-//		tempNode = [[self nodes] objectAtIndex:i];
-//		
-//		float xDistance = abs(point.x - [tempNode xCoord]);
-//		float yDistance = abs(point.y - [tempNode yCoord]);
-//		
-//		float newDistance = xDistance + yDistance;
-//		
-//		if(currentShortestDistance == 0) {
-//			currentShortestDistance = newDistance;
-//		}
-//		else {
-//			
-//			if(newDistance < currentShortestDistance) {
-//				currentShortestDistance = newDistance;
-//				closestNodeIndex = i;
-//			}
-//			
-//		}
-//	}
-//	
-//	Node *closestNode = [[self nodes] objectAtIndex:closestNodeIndex];
-//	[closestNode highlight];
-//	
-//	return closestNode;
-//}
-
-//- (void) detectClosestEdgesToPoint:(CGPoint)point withClosestNode:(Node *)closestNode {
-//	
-//	Node *tempNode = [Node alloc];
-//	Edge *tempEdge = [Edge alloc];
-//	
-//	int closestEdgeIndex = 0;
-//	float currentShortestDistance = 0;
-//	
-//	for(int i=0; i<[[self edges] count]; i++)
-//	{
-//		tempEdge = [[self edges] objectAtIndex:i];
-//		tempNode = [tempEdge centerNode];
-//		
-//		
-//		float xDistance = abs(point.x - [tempNode xCoord]);
-//		float yDistance = abs(point.y - [tempNode yCoord]);
-//		
-//		float newDistance = xDistance + yDistance;
-//
-//			
-//		if(newDistance < currentShortestDistance) {
-//			currentShortestDistance = newDistance;
-//			closestEdgeIndex = i;
-//		}
-//
-//	}
-//
-//	Edge *closestEdge = [[self edges] objectAtIndex:closestEdgeIndex];
-//	
-//	// find closest out of closest edge and node
-//	Node *closestEdgeCenterPoint = [tempEdge centerNode];
-//	
-//	float edgeXDistance = abs(point.x - [closestEdgeCenterPoint xCoord]);
-//	float edgeYDistance = abs(point.y - [closestEdgeCenterPoint yCoord]);
-//	
-//	float edgeDistance = edgeXDistance + edgeYDistance;
-//	
-//	float nodeXDistance = abs(point.x - [closestNode xCoord]);
-//	float nodeYDistance = abs(point.y - [closestNode yCoord]);
-//	
-//	float nodeDistance = nodeXDistance + nodeYDistance;
-//	
-//	if(nodeDistance > edgeDistance) {
-//		[closestNode setUnconfirmedHighlight:NO];
-//		[closestEdge highlight];
-//		
-//		[[self unconfirmedHighlightedEdges] addObject:closestEdge];
-//	}
-//	else if(nodeDistance < edgeDistance) {
-//		[[self unconfirmedHighlightedNodes] addObject:closestNode];
-//	}
-//	else if(nodeDistance == edgeDistance) {
-//		[closestEdge highlight];
-//		[[self unconfirmedHighlightedEdges] addObject:closestEdge];
-//		[[self unconfirmedHighlightedNodes] addObject:closestNode];
-//	}
-//
-//	
-//	return;
-//}
 
 // draw all nodes
 - (void) renderNodes {
@@ -369,87 +237,6 @@ char* screenState = "start";
 	return;
 	
 }
-
-//- (Node *) confirmNodeFromHighlightedNodes:(CGPoint)point {
-//	Node *tempNode = [Node alloc];
-//	
-//	int closestNodeIndex = 0;
-//	float currentShortestDistance = 0;
-//	
-//	for(int i=0; i<[[self unconfirmedHighlightedNodes] count]; i++)
-//	{
-//		tempNode = [[self unconfirmedHighlightedNodes] objectAtIndex:i];
-//		
-//		float xDistance = abs(point.x - [tempNode xCoord]);
-//		float yDistance = abs(point.y - [tempNode yCoord]);
-//		
-//		float newDistance = xDistance + yDistance;
-//		
-//		if(currentShortestDistance == 0) {
-//			currentShortestDistance = newDistance;
-//		}
-//		else {
-//			
-//			if(newDistance < currentShortestDistance) {
-//				currentShortestDistance = newDistance;
-//				closestNodeIndex = i;
-//			}
-//			
-//		}
-//	}
-//	
-//	Node *closestNode = [[self unconfirmedHighlightedNodes] objectAtIndex:closestNodeIndex];
-//	
-//	int realNodeIndex = [[self nodes] indexOfObjectIdenticalTo:closestNode];
-//	
-//	
-//	Node *realNode = [[self nodes] objectAtIndex:realNodeIndex];
-//	
-//	[realNode select];
-//	
-//	return closestNode;
-//	
-//}
-
-//- (Edge *) confirmEdgeFromHighlightedEdges:(CGPoint)point {
-//	
-//	Edge *tempEdge = [Edge alloc];
-//	
-//	int closestEdgeIndex = 0;
-//	float currentShortestDistance = 0;
-//	
-//	for(int i=0; i<[[self unconfirmedHighlightedEdges] count]; i++)
-//	{
-//		tempEdge = [[self unconfirmedHighlightedEdges] objectAtIndex:i];
-//		
-//		float xDistance = abs(point.x - [[tempEdge centerNode]xCoord]);
-//		float yDistance = abs(point.y - [[tempEdge centerNode] yCoord]);
-//		
-//		float newDistance = xDistance + yDistance;
-//		
-//		if(currentShortestDistance == 0) {
-//			currentShortestDistance = newDistance;
-//		}
-//		else {
-//			
-//			if(newDistance < currentShortestDistance) {
-//				currentShortestDistance = newDistance;
-//				closestEdgeIndex = i;
-//			}
-//			
-//		}
-//	}
-//	
-//	Node *closestEdge = [[self unconfirmedHighlightedEdges] objectAtIndex:closestEdgeIndex];
-//	
-//	int realEdgeIndex = [[self edges] indexOfObjectIdenticalTo:closestEdge];
-//	
-//	
-//	Edge *realEdge = [[self edges] objectAtIndex:realEdgeIndex];
-//	[realEdge select];
-//	
-//	return realEdge;
-//}
 
 
 - (void)dealloc {
