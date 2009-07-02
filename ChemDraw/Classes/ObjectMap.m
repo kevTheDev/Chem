@@ -114,9 +114,13 @@
 }
 
 - (void) highlightClosestObjectToPoint:(CGPoint)point {
-	NSObject *closestObject = [self closestObjectToPoint:point];
+	//NSObject *closestObject = [self closestObjectToPoint:point];
 	
-	if([closestObject className] == @"Node") {
+	
+	
+	NSObject *closestObject = [nodeMap objectAtIndex:0];
+	
+	if([closestObject isKindOfClass:[Node class]]) {
 		int nodeMapIndex = [nodeMap indexOfObject:closestObject];
 		[nodeMap highlightNodeAtIndex:nodeMapIndex];
 	}

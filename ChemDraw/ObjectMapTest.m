@@ -229,11 +229,10 @@
 	[objectMap addEdge:edgeTwo];
 	
 	[objectMap highlightClosestObjectToPoint:point];
-	
 	NSObject *closestObject = [objectMap closestObjectToPoint:point];
 	
-	STAssertTrue([closestObject isHighlighted], nil);
-	
+	STAssertEqualObjects(closestObject, nodeOneA, nil);
+	STAssertTrue([closestObject isKindOfClass:[Node class]], nil);
 }
 
 @end
