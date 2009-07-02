@@ -24,6 +24,16 @@
 	
 }
 
+- (id)objectAtIndex:(NSUInteger)index {
+	return [edges objectAtIndex:index];
+}
+
+- (void) highlightEdgeAtIndex:(NSUInteger)index {
+	Edge *edge = [edges objectAtIndex:index];
+	[edge highlight];
+	return;
+}
+
 - (NSUInteger) count {
 	return [edges count];
 }

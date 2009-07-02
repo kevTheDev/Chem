@@ -83,4 +83,17 @@
 	STAssertEqualObjects(closestEdge, edgeTwo, nil);
 }
 
+- (void) testHighlightEdgeAtIndex {
+	[edgeMap addEdge:edgeOne];
+	[edgeMap addEdge:edgeTwo];
+	
+	[edgeMap highlightEdgeAtIndex:0];
+	
+	Edge *highlightedEdge = [edgeMap objectAtIndex:0];
+	Edge *otherEdge = [edgeMap objectAtIndex:1];
+	
+	STAssertTrue([highlightedEdge isHighlighted], nil);
+	STAssertFalse([otherEdge isHighlighted], nil);
+}
+
 @end

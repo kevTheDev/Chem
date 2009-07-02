@@ -22,6 +22,7 @@
 - (NSUInteger)indexOfObject:(id)anObject;
 - (id)objectAtIndex:(NSUInteger)index;
 
+- (void) highlightNodeAtIndex:(NSUInteger)index;
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 

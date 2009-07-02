@@ -55,4 +55,15 @@
 	STAssertEqualObjects(closestNode, nodeTwo, nil);
 }
 
+- (void) testHighlightNodeAtIndex {
+	[nodeMap addNode:nodeOne];
+	[nodeMap addNode:nodeTwo];
+	
+	[nodeMap highlightNodeAtIndex:1];
+	
+	Node *highlightedNode = [nodeMap objectAtIndex:1];
+	
+	STAssertTrue([highlightedNode isHighlighted], nil);
+}
+
 @end

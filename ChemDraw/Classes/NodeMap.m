@@ -23,6 +23,12 @@
 	
 }
 
+- (void) highlightNodeAtIndex:(NSUInteger)index {
+	Node *node = [nodes objectAtIndex:index];
+	[node highlight];
+	return;
+}
+
 - (NSUInteger)indexOfObject:(id)anObject {
 	return [nodes indexOfObject:anObject];
 }

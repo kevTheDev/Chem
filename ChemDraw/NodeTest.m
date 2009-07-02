@@ -11,10 +11,8 @@
 
 #import "Node.h"
 
-@interface NodeTest : SenTestCase {
-	
-	Node *node;
-	
+@interface NodeTest : SenTestCase {	
+	Node *node;	
 }
 
 @end

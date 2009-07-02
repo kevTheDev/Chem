@@ -17,6 +17,11 @@
 - (void) addEdge:(Edge *)edge;
 - (NSUInteger) count;
 
+
 - (Edge *) closestEdgeToPoint:(CGPoint)point;
+
+- (id)objectAtIndex:(NSUInteger)index;
+- (void) highlightEdgeAtIndex:(NSUInteger)index;
+
 
 @end
