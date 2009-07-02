@@ -94,6 +94,19 @@
 	STAssertTrue([edge isEqual:reverseEdge], nil);
 }
 
+- (void) testHashIsProductOfNodeHashes {
+	
+	int nodeAHash = [nodeA hash];
+	int nodeBHash = [nodeB hash];
+	
+	NSString *expectedHashString = [NSString stringWithFormat:@"%d%d", nodeAHash, nodeBHash];
+	
+	int edgeHash = [edge hash];
+
+	STAssertEquals(edgeHash, [expectedHashString intValue], nil);
+	
+}
+
 - (void) tearDown {
 	
 	[nodeB release];

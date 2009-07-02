@@ -101,10 +101,13 @@
 
 - (NSUInteger)hash {
 	
-	Node *selfCenter = [self centerPointNode];
+	//Node *selfCenter = [self centerPointNode];
 	
-	NSString *hashValue = [NSString stringWithFormat:@"%f%f", [selfCenter xCoord], [selfCenter yCoord]];
-	return [hashValue intValue];
+	//NSString *hashValue = [NSString stringWithFormat:@"%f%f", [selfCenter xCoord], [selfCenter yCoord]];
+	
+	NSString *hashString = [NSString stringWithFormat:@"%d%d", [nodeA hash], [nodeB hash]];
+	
+	return [hashString intValue];
 }
 
 - (BOOL)isEqual:(id)anObject {
