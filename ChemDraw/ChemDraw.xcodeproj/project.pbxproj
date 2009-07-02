@@ -24,6 +24,9 @@
 		DE4F4CDB0FFCB0A300DA8541 /* NodeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */; };
 		DE4F4D4D0FFCB8D500DA8541 /* EdgeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4D4C0FFCB8D500DA8541 /* EdgeMapTest.m */; };
 		DE4F4D5A0FFCBA7300DA8541 /* EdgeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* EdgeMap.m */; };
+		DE4F4DAA0FFCC68300DA8541 /* ObjectMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */; };
+		DE4F4DAE0FFCC6C500DA8541 /* ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */; };
+		DE4F4DAF0FFCC6C500DA8541 /* ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */; };
 		DE874F700FFA512400B1E023 /* EdgeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* EdgeMap.m */; };
 		DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */; };
 		DE874FF20FFA67F500B1E023 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874FF10FFA67F500B1E023 /* NodeTest.m */; };
@@ -59,6 +62,9 @@
 		DE4F4CD20FFCB05300DA8541 /* NodeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMap.m; sourceTree = "<group>"; };
 		DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMapTest.m; sourceTree = "<group>"; };
 		DE4F4D4C0FFCB8D500DA8541 /* EdgeMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeMapTest.m; sourceTree = "<group>"; };
+		DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectMapTest.m; sourceTree = "<group>"; };
+		DE4F4DAC0FFCC6C500DA8541 /* ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectMap.h; sourceTree = "<group>"; };
+		DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectMap.m; sourceTree = "<group>"; };
 		DE874F6E0FFA512400B1E023 /* EdgeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeMap.h; sourceTree = "<group>"; };
 		DE874F6F0FFA512400B1E023 /* EdgeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeMap.m; sourceTree = "<group>"; };
 		DE874F8A0FFA592000B1E023 /* Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +118,8 @@
 				DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */,
 				DE4F4CD10FFCB05300DA8541 /* NodeMap.h */,
 				DE4F4CD20FFCB05300DA8541 /* NodeMap.m */,
+				DE4F4DAC0FFCC6C500DA8541 /* ObjectMap.h */,
+				DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 				DED6FD380FFB3237008CE1A7 /* EdgeTest.m */,
 				DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */,
 				DE4F4D4C0FFCB8D500DA8541 /* EdgeMapTest.m */,
+				DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -287,6 +296,7 @@
 				DED6FCC00FFB2A93008CE1A7 /* Arithmetic.m in Sources */,
 				DE4F4CD40FFCB05300DA8541 /* NodeMap.m in Sources */,
 				DE4F4CDA0FFCB0A300DA8541 /* NodeMapTest.m in Sources */,
+				DE4F4DAE0FFCC6C500DA8541 /* ObjectMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +314,8 @@
 				DE4F4CDB0FFCB0A300DA8541 /* NodeMapTest.m in Sources */,
 				DE4F4D4D0FFCB8D500DA8541 /* EdgeMapTest.m in Sources */,
 				DE4F4D5A0FFCBA7300DA8541 /* EdgeMap.m in Sources */,
+				DE4F4DAA0FFCC68300DA8541 /* ObjectMapTest.m in Sources */,
+				DE4F4DAF0FFCC6C500DA8541 /* ObjectMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
