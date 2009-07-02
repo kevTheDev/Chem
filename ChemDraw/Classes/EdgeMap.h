@@ -17,5 +17,6 @@
 - (void) addEdge:(Edge *)edge;
 - (NSUInteger) count;
 
+- (Edge *) closestEdgeToPoint:(CGPoint)point;
 
 @end

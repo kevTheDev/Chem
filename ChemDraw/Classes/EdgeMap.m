@@ -7,7 +7,7 @@
 //
 
 #import "EdgeMap.h"
-
+#import "NodeMap.h"
 
 @implementation EdgeMap
 
@@ -34,6 +34,26 @@
 
 - (void) addEdge:(Edge *)edge {
 	[edges addObject:edge];
+}
+
+// returns the closest edge in the map to a point
+- (Edge *) closestEdgeToPoint:(CGPoint)point {
+	
+	NodeMap *centerNodes = [[NodeMap alloc] init];
+	
+	for(int i=0; i<[edges count]; i++)
+	{				
+		Node *edgeCenterNode = [[edges objectAtIndex:i] centerNode];
+		[centerNodes addNode:edgeCenterNode];		
+	}
+	
+	Node *closestCenterNode = [centerNodes closestNodeToPoint:point];
+	int closestEdgeIndex  = [centerNodes indexOfObject:closestCenterNode];
+	
+	[centerNodes release];
+		
+	return [edges objectAtIndex:closestEdgeIndex];
+	
 }
 
 - (void)dealloc {

@@ -23,6 +23,10 @@
 	
 }
 
+- (NSUInteger)indexOfObject:(id)anObject {
+	return [nodes indexOfObject:anObject];
+}
+
 - (BOOL) isEmpty {
 	return [nodes count] == 0;	
 }

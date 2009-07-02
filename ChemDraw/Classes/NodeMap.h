@@ -19,5 +19,6 @@
 - (NSUInteger) count;
 
 - (Node *) closestNodeToPoint:(CGPoint)point;
+- (NSUInteger)indexOfObject:(id)anObject;
 
 @end

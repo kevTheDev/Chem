@@ -11,6 +11,7 @@
 
 #import "EdgeMap.h"
 #import "Edge.h"
+#import "NodeMap.h"
 #import "Node.h"
 
 @interface EdgeMapTest : SenTestCase {	
@@ -39,8 +40,8 @@
 	nodeOneB = [[Node alloc] initWithXCoord:90.0 yCoord:20.0];
 	edgeOne = [[Edge alloc] initWithNodeA:nodeOneA nodeB:nodeOneB];
 	
-	nodeTwoA = [[Node alloc] initWithXCoord:90.0 yCoord:90.0];
-	nodeTwoB = [[Node alloc] initWithXCoord:10.0 yCoord:60.0];
+	nodeTwoA = [[Node alloc] initWithXCoord:10.0 yCoord:60.0];
+	nodeTwoB = [[Node alloc] initWithXCoord:90.0 yCoord:90.0];
 	edgeTwo = [[Edge alloc] initWithNodeA:nodeTwoA nodeB:nodeTwoB];
 	
 	
@@ -59,13 +60,27 @@
 	STAssertEquals(newCount, 2, nil);	
 }
 
-//- (void) testClosestNodeToPoint {
-//	[nodeMap addNode:nodeOne];
-//	[nodeMap addNode:nodeTwo];
-//	
-//	Node *closestNode = [nodeMap closestNodeToPoint:point];
-//	
-//	STAssertEqualObjects(closestNode, nodeOne, nil);
-//}
+- (void) testClosestCenterPointToPoint {
+	
+	Node *centerNodeOne = [edgeOne centerNode];
+	Node *centerNodeTwo = [edgeTwo centerNode];
+	
+	NodeMap *nodeMap = [[NodeMap alloc] init];
+	[nodeMap addNode:centerNodeOne];
+	[nodeMap addNode:centerNodeTwo];
+	
+	Node *closestNode = [nodeMap closestNodeToPoint:point];
+	
+	STAssertEqualObjects(closestNode, centerNodeTwo, nil);
+}
+
+- (void) testClosestEdgeToPoint {
+	[edgeMap addEdge:edgeOne];
+	[edgeMap addEdge:edgeTwo];
+	
+	Edge *closestEdge = [edgeMap closestEdgeToPoint:point];
+	
+	STAssertEqualObjects(closestEdge, edgeTwo, nil);
+}
 
 @end

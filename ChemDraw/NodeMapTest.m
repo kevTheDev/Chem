@@ -28,8 +28,8 @@
 - (void) setUp {
 	nodeMap = [[NodeMap alloc] init];
 	
-	nodeOne = [[Node alloc] initWithXCoord:10.0 yCoord:90.0];
-	nodeTwo = [[Node alloc] initWithXCoord:90.0 yCoord:20.0];
+	nodeOne = [[Node alloc] initWithXCoord:50.0 yCoord:55.0];
+	nodeTwo = [[Node alloc] initWithXCoord:50.0 yCoord:75.0];
 	
 	point = CGPointMake(30.0, 100.0);
 }
@@ -52,7 +52,7 @@
 	
 	Node *closestNode = [nodeMap closestNodeToPoint:point];
 	
-	STAssertEqualObjects(closestNode, nodeOne, nil);
+	STAssertEqualObjects(closestNode, nodeTwo, nil);
 }
 
 @end
