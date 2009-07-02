@@ -106,7 +106,7 @@
 // returns the closest node in the map to a point
 - (Node *) closestNodeToPoint:(CGPoint)point {
 	
-	Node *tempNode = [Node alloc];
+	Node *tempNode;
 	
 	int closestNodeIndex = 0;
 	float currentShortestDistance = 0;
@@ -132,8 +132,6 @@
 			
 		}
 	} // end of for loop
-	
-	[tempNode release];
 	
 	return [nodes objectAtIndex:closestNodeIndex];
 }

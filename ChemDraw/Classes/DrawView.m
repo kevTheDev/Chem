@@ -109,11 +109,12 @@ char* screenState = "start";
     CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
 	NSLog(@"RENDERED TEXT");
 	
-	if([objectMap edgesCount] == 0) {
+//	if([objectMap edgesCount] == 0) {
 //		[self renderNodes];
-	}
+//	}
 //	
 	NSLog(@"RENDERED NODES");
+	[self renderNodes];
 	[self renderEdges];
 	NSLog(@"RENDERED EDGES");
 
@@ -157,100 +158,42 @@ char* screenState = "start";
 	for (Node *node in [objectMap nodeMap]) {
 		[self drawNode:node];
 	}
-
-	
-	//[self renderPlainNodes];
-//	[self renderSelectedNodes];
-//	[self renderHighlightedNodes];
 	
 	return;
 }
 
-//- (void) renderPlainNodes {
-//	for (Node *node in [objectMap plainNodes]) {
-//		[self drawNode:node];
-//	}
-//	return;
-//}
-//
-//- (void) renderHighlightedNodes {
-//	for (Node *node in [objectMap highlightedNodes]) {
-//		[self drawNode:node];
-//	}
-//	return;
-//}
-//
-//- (void) renderSelectedNodes {
-//	for (Node *node in [objectMap selectedNodes]) {
-//		[self drawNode:node];
-//	}
-//	return;
-//}
 
 - (void) renderEdges {
 	for (Edge *edge in [objectMap edgeMap]) {
 		[self drawEdge:edge];
 	}
-	//}
-//	[self renderPlainEdges];
-//	[self renderHighlightedEdges];
-//	[self renderSelectedEdges];
+
 	return;
 }
 
-//- (void) renderPlainEdges {
-//	for (Edge *edge in [objectMap plainEdges]) {
-//		[self drawEdge:edge];
-//	}
-//	return;
-//}
-//
-//- (void) renderHighlightedEdges {
-//	for (Edge *edge in [objectMap highlightedEdges]) {
-//		[self drawEdge:edge];
-//	}
-//	return;
-//}
-//
-//
-//- (void) renderSelectedEdges {
-//	for (Edge *edge in [objectMap selectedEdges]) {
-//		[self drawEdge:edge];
-//	}
-//	return;
-//}
-
 - (void) drawEdge:(Edge *)edge {
 	
-	NSLog(@"DRWA THE EDGE 1");
-	
+
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
-	NSLog(@"DRWA THE EDGE 2");
-	CGMutablePathRef path = CGPathCreateMutable();
 	
-	//Node *firstNode = [edge nodeA];
-	//Node *secondNode = [edge nodeB];
+	CGMutablePathRef path = CGPathCreateMutable();
+
 	
 	CGPoint nodeAPoint = [edge nodeAPoint];
 	CGPoint nodeBPoint = [edge nodeBPoint];
 	
-	NSLog(@"DRWA THE EDGE 3");
-
-	
-	NSLog(@"SECOND NODE X: %f", nodeAPoint.x);
 	
 	CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 5.0);
 	
-	NSLog(@"DRWA THE EDGE 4");
-	
+		
 	CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 5.0);
 	
-	NSLog(@"DRWA THE EDGE 5");
+
 	
 	CGPathCloseSubpath(path);
 	CGContextAddPath(ctx, path);
 	
-	NSLog(@"DRWA THE EDGE 1");
+	
 	
 	if([edge unconfirmedHighlight] == YES) {
 		CGContextSetStrokeColorWithColor(ctx, [UIColor purpleColor].CGColor);
@@ -264,9 +207,6 @@ char* screenState = "start";
 	CGContextSetLineWidth(ctx, 2.0);
 	
 	CGContextStrokePath(ctx);
-	
-	[self drawNodePoint:nodeAPoint];
-	[self drawNodePoint:nodeBPoint];
 	
 	return;
 }
