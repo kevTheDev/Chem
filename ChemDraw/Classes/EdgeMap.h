@@ -34,5 +34,6 @@
 - (void) selectEdge:(Edge *)edge;
 - (NSUInteger)selectedEdgesCount;
 
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
 @end
