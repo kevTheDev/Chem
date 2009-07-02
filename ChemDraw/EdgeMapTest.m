@@ -107,7 +107,7 @@
 	STAssertEquals(newHighlightedCount, 1, nil);
 }
 
-- (void) testSelectNodeAtIndex {
+- (void) testSelectEdgeAtIndex {
 	[edgeMap addEdge:edgeOne];
 	[edgeMap addEdge:edgeTwo];
 	
@@ -118,7 +118,7 @@
 	STAssertTrue([selectedNode isSelected], nil);
 }
 
-- (void) testSelectedNodesCount {
+- (void) testSelectedEdgesCount {
 	[edgeMap addEdge:edgeOne];
 	[edgeMap addEdge:edgeTwo];	
 	[edgeMap selectEdgeAtIndex:1];
@@ -128,7 +128,7 @@
 	STAssertEquals(newSelectedCount, 1, nil);
 }
 
-- (void) testSelectNodeAtIndexResetsHighlightedNodesArray {
+- (void) testSelectEdgeAtIndexResetsHighlightedNodesArray {
 	[edgeMap addEdge:edgeOne];
 	[edgeMap addEdge:edgeTwo];
 	

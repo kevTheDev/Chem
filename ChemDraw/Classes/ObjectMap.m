@@ -26,6 +26,24 @@
 	
 }
 
+- (void) selectEdge:(Edge *)edge {
+	int edgeMapIndex = [edgeMap indexOfObject:edge];
+	[edgeMap selectEdgeAtIndex:edgeMapIndex];
+}
+
+- (NSUInteger)selectedEdgesCount {
+	return [edgeMap selectedEdgesCount];
+}
+
+- (void) highlightEdge:(Edge *)edge {
+	int edgeMapIndex = [edgeMap indexOfObject:edge];
+	[edgeMap highlightEdgeAtIndex:edgeMapIndex];
+}
+
+- (NSUInteger)highlightedEdgesCount {
+	return [edgeMap highlightedEdgesCount];
+}
+
 - (void) selectNode:(Node *)node {
 	int nodeMapIndex = [nodeMap indexOfObject:node];
 	[nodeMap selectNodeAtIndex:nodeMapIndex];

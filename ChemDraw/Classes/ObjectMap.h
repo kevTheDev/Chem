@@ -12,7 +12,7 @@
 
 @interface ObjectMap : NSObject {
 	NodeMap *nodeMap;
-	EdgeMap *edges;
+	EdgeMap *edgeMap;
 }
 
 - (BOOL) isEmpty;
@@ -31,6 +31,13 @@
 
 - (void) selectNode:(Node *)node;
 - (NSUInteger)selectedNodesCount;
+
+// highlighting and selecting edges
+- (void) highlightEdge:(Edge *)edge;
+- (NSUInteger)highlightedEdgesCount;
+- (void) selectEdge:(Edge *)edge;
+- (NSUInteger)selectedEdgesCount;
+
 
 @property (nonatomic, retain) NodeMap *nodeMap;
 

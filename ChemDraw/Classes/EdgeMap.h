@@ -22,7 +22,9 @@
 
 - (Edge *) closestEdgeToPoint:(CGPoint)point;
 
+- (NSUInteger)indexOfObject:(id)anObject;
 - (id)objectAtIndex:(NSUInteger)index;
+
 
 - (void) highlightEdgeAtIndex:(NSUInteger)index;
 - (NSUInteger)highlightedEdgesCount;

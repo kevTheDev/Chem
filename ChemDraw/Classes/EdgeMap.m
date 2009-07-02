@@ -43,6 +43,10 @@
 	return [highlightedEdges count];
 }
 
+- (NSUInteger)indexOfObject:(id)anObject {
+	return [edges indexOfObject:anObject];
+}
+
 - (id)objectAtIndex:(NSUInteger)index {
 	return [edges objectAtIndex:index];
 }
