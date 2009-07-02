@@ -11,8 +11,9 @@
 
 @implementation EdgeMap
 
-@synthesize highlightedEdges;
-@synthesize selectedEdges;
+//@synthesize edges;
+//@synthesize highlightedEdges;
+//@synthesize selectedEdges;
 
 - (EdgeMap *) init {
 	
@@ -20,17 +21,17 @@
 	
     if ( self ) {
         edges = [[NSMutableArray alloc] initWithCapacity:5];
-		highlightedEdges = [[NSMutableArray alloc] initWithCapacity:5];
-		selectedEdges = [[NSMutableArray alloc] initWithCapacity:5];
+		//highlightedEdges = [[NSMutableArray alloc] initWithCapacity:5];
+		//selectedEdges = [[NSMutableArray alloc] initWithCapacity:5];
     }
 	
     return self;
 	
 }
 
-- (NSUInteger)selectedEdgesCount {
-	return [selectedEdges count];
-}
+//- (NSUInteger)selectedEdgesCount {
+//	return [selectedEdges count];
+//}
 
 - (void) selectEdge:(Edge *)edge {
 	NSUInteger edgeIndex = [edges indexOfObject:edge];
@@ -41,14 +42,14 @@
 	Edge *edge = [edges objectAtIndex:index];
 	[edge select];
 	
-	[selectedEdges addObject:edge];	
-	[highlightedEdges removeAllObjects];
+	//[selectedEdges addObject:edge];	
+	//[highlightedEdges removeObject:edge];
 	return;
 }
 
-- (NSUInteger)highlightedEdgesCount {
-	return [highlightedEdges count];
-}
+//- (NSUInteger)highlightedEdgesCount {
+//	return [highlightedEdges count];
+//}
 
 - (NSUInteger)indexOfObject:(id)anObject {
 	return [edges indexOfObject:anObject];
@@ -61,7 +62,8 @@
 - (void) highlightEdgeAtIndex:(NSUInteger)index {
 	Edge *edge = [edges objectAtIndex:index];
 	[edge highlight];
-	[highlightedEdges addObject:edge];	
+	//[highlightedEdges addObject:edge];
+	//[edges removeObject:edge];
 	return;
 }
 

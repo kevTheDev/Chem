@@ -11,8 +11,8 @@
 
 @interface NodeMap : NSObject {
 	NSMutableArray *nodes;
-	NSMutableArray *highlightedNodes;
-	NSMutableArray *selectedNodes;
+	//NSMutableArray *highlightedNodes;
+//	NSMutableArray *selectedNodes;
 }
 
 - (BOOL) isEmpty;
@@ -26,15 +26,16 @@
 
 - (void) highlightNodeAtIndex:(NSUInteger)index;
 - (void) highlightNode:(Node *)node;
-- (NSUInteger)highlightedNodesCount;
+//- (NSUInteger)highlightedNodesCount;
 
 - (void) selectNodeAtIndex:(NSUInteger)index;
 - (void) selectNode:(Node *)node;
-- (NSUInteger)selectedNodesCount;
+//- (NSUInteger)selectedNodesCount;
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
-@property (nonatomic, retain) NSMutableArray *highlightedNodes;
-@property (nonatomic, retain) NSMutableArray *selectedNodes;
+//@property (nonatomic, retain) NSMutableArray *nodes;
+//@property (nonatomic, retain) NSMutableArray *highlightedNodes;
+//@property (nonatomic, retain) NSMutableArray *selectedNodes;
 
 @end

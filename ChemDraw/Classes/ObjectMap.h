@@ -27,16 +27,16 @@
 
 // highlighting and selecting nodes
 - (void) highlightNode:(Node *)node;
-- (NSUInteger)highlightedNodesCount;
+//- (NSUInteger)highlightedNodesCount;
 
 - (void) selectNode:(Node *)node;
-- (NSUInteger)selectedNodesCount;
+//- (NSUInteger)selectedNodesCount;
 
 // highlighting and selecting edges
 - (void) highlightEdge:(Edge *)edge;
-- (NSUInteger)highlightedEdgesCount;
+//- (NSUInteger)highlightedEdgesCount;
 - (void) selectEdge:(Edge *)edge;
-- (NSUInteger)selectedEdgesCount;
+//- (NSUInteger)selectedEdgesCount;
 
 - (void) highlightClosestObjectToPoint:(CGPoint)point;
 - (void) selectClosestObjectToPoint:(CGPoint)point;
@@ -47,11 +47,14 @@
 
 - (NSUInteger)edgesCount;
 
-- (NSMutableArray *)highlightedNodes;
-- (NSMutableArray *)selectedNodes;
-
-- (NSMutableArray *)highlightedEdges;
-- (NSMutableArray *)selectedEdges;
+//- (NSMutableArray *)highlightedNodes;
+//- (NSMutableArray *)selectedNodes;
+//
+//- (NSMutableArray *)highlightedEdges;
+//- (NSMutableArray *)selectedEdges;
+//
+//- (NSMutableArray *)plainEdges;
+//- (NSMutableArray *)plainNodes;
 
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) EdgeMap *edgeMap;

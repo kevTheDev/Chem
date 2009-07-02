@@ -11,8 +11,8 @@
 
 @interface EdgeMap : NSObject {
 	NSMutableArray *edges;
-	NSMutableArray *highlightedEdges;
-	NSMutableArray *selectedEdges;
+	//NSMutableArray *highlightedEdges;
+//	NSMutableArray *selectedEdges;
 }
 
 - (BOOL) isEmpty;
@@ -28,15 +28,16 @@
 
 - (void) highlightEdgeAtIndex:(NSUInteger)index;
 - (void) highlightEdge:(Edge *)edge;
-- (NSUInteger)highlightedEdgesCount;
+//- (NSUInteger)highlightedEdgesCount;
 
 - (void) selectEdgeAtIndex:(NSUInteger)index;
 - (void) selectEdge:(Edge *)edge;
-- (NSUInteger)selectedEdgesCount;
+//- (NSUInteger)selectedEdgesCount;
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
-@property (nonatomic, retain) NSMutableArray *highlightedEdges;
-@property (nonatomic, retain) NSMutableArray *selectedEdges;
+//@property (nonatomic, retain) NSMutableArray *edges;
+//@property (nonatomic, retain) NSMutableArray *highlightedEdges;
+//@property (nonatomic, retain) NSMutableArray *selectedEdges;
 
 @end

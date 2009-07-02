@@ -72,20 +72,20 @@ char* screenState = "start";
 		
 	}
 	else if(screenState == "main") {
-		if([objectMap highlightedNodesCount] > 0 && [objectMap highlightedEdgesCount] > 0) {
-			text = "Confirm an edge or a node";
-		}
-		else if([objectMap highlightedEdgesCount] > 0) {
-			text = "Confirm an edge";
-		}
-		else if([objectMap highlightedNodesCount] > 0) {
-			text = "Confirm a node";
-		}
-		else {
-			text = "No unconfirmed objects";
-			NSLog(@"No unconfirmed objects");
-		}
-
+		//if([objectMap highlightedNodesCount] > 0 && [objectMap highlightedEdgesCount] > 0) {
+//			text = "Confirm an edge or a node";
+//		}
+//		else if([objectMap highlightedEdgesCount] > 0) {
+//			text = "Confirm an edge";
+//		}
+//		else if([objectMap highlightedNodesCount] > 0) {
+//			text = "Confirm a node";
+//		}
+//		else {
+//			text = "No unconfirmed objects";
+//			NSLog(@"No unconfirmed objects");
+//		}
+//
 		
 		screenState = "confirm";
 		
@@ -109,10 +109,10 @@ char* screenState = "start";
     CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
 	NSLog(@"RENDERED TEXT");
 	
-	//if([objectMap edgesCount] == 0) {
-		[self renderNodes];
-	//}
-	
+	if([objectMap edgesCount] == 0) {
+//		[self renderNodes];
+	}
+//	
 	NSLog(@"RENDERED NODES");
 	[self renderEdges];
 	NSLog(@"RENDERED EDGES");
@@ -154,66 +154,71 @@ char* screenState = "start";
 
 // draw all nodes
 - (void) renderNodes {
+	for (Node *node in [objectMap nodeMap]) {
+		[self drawNode:node];
+	}
+
 	
+	//[self renderPlainNodes];
+//	[self renderSelectedNodes];
+//	[self renderHighlightedNodes];
 	
-	
-	//for (Node *node in [objectMap nodeMap])
-//	{
-//		// do things here
+	return;
+}
+
+//- (void) renderPlainNodes {
+//	for (Node *node in [objectMap plainNodes]) {
 //		[self drawNode:node];
 //	}
-	
-	[self renderPlainNodes];
-	[self renderSelectedNodes];
-	[self renderHighlightedNodes];
-	
-	return;
-}
-
-- (void) renderPlainNodes {
-	return;
-}
-
-- (void) renderHighlightedNodes {
-	for (Node *node in [objectMap highlightedNodes]) {
-		[self drawNode:node];
-	}
-	return;
-}
-
-- (void) renderSelectedNodes {
-	for (Node *node in [objectMap selectedNodes]) {
-		[self drawNode:node];
-	}
-	return;
-}
+//	return;
+//}
+//
+//- (void) renderHighlightedNodes {
+//	for (Node *node in [objectMap highlightedNodes]) {
+//		[self drawNode:node];
+//	}
+//	return;
+//}
+//
+//- (void) renderSelectedNodes {
+//	for (Node *node in [objectMap selectedNodes]) {
+//		[self drawNode:node];
+//	}
+//	return;
+//}
 
 - (void) renderEdges {
-
-	[self renderPlainEdges];
-	[self renderHighlightedEdges];
-	[self renderSelectedEdges];
-	return;
-}
-
-- (void) renderPlainEdges {
-	return;
-}
-
-- (void) renderHighlightedEdges {
-	for (Edge *edge in [objectMap highlightedEdges]) {
+	for (Edge *edge in [objectMap edgeMap]) {
 		[self drawEdge:edge];
 	}
+	//}
+//	[self renderPlainEdges];
+//	[self renderHighlightedEdges];
+//	[self renderSelectedEdges];
 	return;
 }
 
-
-- (void) renderSelectedEdges {
-	for (Edge *edge in [objectMap selectedEdges]) {
-		[self drawEdge:edge];
-	}
-	return;
-}
+//- (void) renderPlainEdges {
+//	for (Edge *edge in [objectMap plainEdges]) {
+//		[self drawEdge:edge];
+//	}
+//	return;
+//}
+//
+//- (void) renderHighlightedEdges {
+//	for (Edge *edge in [objectMap highlightedEdges]) {
+//		[self drawEdge:edge];
+//	}
+//	return;
+//}
+//
+//
+//- (void) renderSelectedEdges {
+//	for (Edge *edge in [objectMap selectedEdges]) {
+//		[self drawEdge:edge];
+//	}
+//	return;
+//}
 
 - (void) drawEdge:(Edge *)edge {
 	

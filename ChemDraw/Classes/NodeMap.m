@@ -11,8 +11,9 @@
 
 @implementation NodeMap
 
-@synthesize highlightedNodes;
-@synthesize selectedNodes;
+///@synthesize nodes;
+//@synthesize highlightedNodes;
+//@synthesize selectedNodes;
 
 - (NodeMap *) init {
 	
@@ -20,8 +21,8 @@
 	
     if ( self ) {
         nodes = [[NSMutableArray alloc] initWithCapacity:5];
-		highlightedNodes = [[NSMutableArray alloc] initWithCapacity:5];
-		selectedNodes = [[NSMutableArray alloc] initWithCapacity:5];
+		//highlightedNodes = [[NSMutableArray alloc] initWithCapacity:5];
+		//selectedNodes = [[NSMutableArray alloc] initWithCapacity:5];
     }
 	
     return self;
@@ -30,10 +31,11 @@
 
 - (void) selectNodeAtIndex:(NSUInteger)index {
 	Node *node = [nodes objectAtIndex:index];
+	
 	[node select];
 	
-	[selectedNodes addObject:node];	
-	[highlightedNodes removeAllObjects];
+	//[selectedNodes addObject:node];
+	//[highlightedNodes removeObject:node];
 	return;
 }
 
@@ -42,22 +44,22 @@
 	[self selectNodeAtIndex:nodeIndex];
 }
 
-- (NSUInteger)selectedNodesCount {
-	return [selectedNodes count];
-	
-	
-}
+//- (NSUInteger)selectedNodesCount {
+//	return [selectedNodes count];
+//	
+//	
+//}
 
-- (NSUInteger)highlightedNodesCount {
-	return [highlightedNodes count];
-}
+//- (NSUInteger)highlightedNodesCount {
+//	return [highlightedNodes count];
+//}
 
 - (void) highlightNodeAtIndex:(NSUInteger)index {
 	Node *node = [nodes objectAtIndex:index];
-	NSLog(@"NODE X: %f", [node xCoord]);
-	NSLog(@"NODE Y: %f", [node yCoord]);
+
 	[node highlight];
-	[highlightedNodes addObject:node];	
+	//[highlightedNodes addObject:node];
+	//[nodes removeObject:node];
 	
 }
 
@@ -128,7 +130,7 @@
 }
 
 - (void) dealloc {
-	[highlightedNodes release];
+	//[highlightedNodes release];
 	[nodes release];
 	[super dealloc];	
 }
