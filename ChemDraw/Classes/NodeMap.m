@@ -44,15 +44,28 @@
 	[self selectNodeAtIndex:nodeIndex];
 }
 
-//- (NSUInteger)selectedNodesCount {
-//	return [selectedNodes count];
-//	
-//	
-//}
+- (NSUInteger)selectedNodesCount {
+	int count = 0;
+	
+	for(Node *node in nodes) {
+		if([node isSelected]) {
+			count++;
+		}
+	}
+	return count;
+}
 
-//- (NSUInteger)highlightedNodesCount {
-//	return [highlightedNodes count];
-//}
+- (NSUInteger)highlightedNodesCount {
+	int count = 0;
+	
+	for(Node *node in nodes) {
+		if([node isHighlighted]) {
+			count++;
+		}
+	}
+		
+	return count;
+}
 
 - (void) highlightNodeAtIndex:(NSUInteger)index {
 	Node *node = [nodes objectAtIndex:index];

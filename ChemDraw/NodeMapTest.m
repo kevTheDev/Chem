@@ -99,16 +99,16 @@
 	STAssertEquals(newSelectedCount, 1, nil);
 }
 
-- (void) testSelectNodeAtIndexResetsHighlightedNodesArray {
-	[nodeMap addNode:nodeOne];
-	[nodeMap addNode:nodeTwo];
-	
-	[nodeMap highlightNodeAtIndex:1];
-	[nodeMap selectNodeAtIndex:1];
-	
-	int newHighlightedCount = [nodeMap highlightedNodesCount];
-	
-	STAssertEquals(newHighlightedCount, 0, nil);
-}
+//- (void) testSelectNodeAtIndexResetsHighlightedNodesArray {
+//	[nodeMap addNode:nodeOne];
+//	[nodeMap addNode:nodeTwo];
+//	
+//	[nodeMap highlightNodeAtIndex:1];
+//	[nodeMap selectNodeAtIndex:1];
+//	
+//	int newHighlightedCount = [nodeMap highlightedNodesCount];
+//	
+//	STAssertEquals(newHighlightedCount, 0, nil);
+//}
 
 @end

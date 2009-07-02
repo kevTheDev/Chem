@@ -28,11 +28,11 @@
 
 - (void) highlightEdgeAtIndex:(NSUInteger)index;
 - (void) highlightEdge:(Edge *)edge;
-//- (NSUInteger)highlightedEdgesCount;
+- (NSUInteger)highlightedEdgesCount;
 
 - (void) selectEdgeAtIndex:(NSUInteger)index;
 - (void) selectEdge:(Edge *)edge;
-//- (NSUInteger)selectedEdgesCount;
+- (NSUInteger)selectedEdgesCount;
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 

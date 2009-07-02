@@ -23,7 +23,7 @@
 - (Edge *) initWithNodeA:(Node *)nodeA nodeB:(Node *)nodeB;
 
 - (Node *) centerPointNode;
-- (Node *) centerNode;
+//- (Node *) centerNode;
 
 - (void) highlight;
 - (BOOL) isHighlighted;

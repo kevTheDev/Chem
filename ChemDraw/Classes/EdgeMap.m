@@ -29,9 +29,17 @@
 	
 }
 
-//- (NSUInteger)selectedEdgesCount {
-//	return [selectedEdges count];
-//}
+- (NSUInteger)selectedEdgesCount {
+	int count = 0;
+	
+	for(Edge *edge in edges) {
+		if([edge isSelected]) {
+			count++;
+		}
+	}
+	
+	return count;
+}
 
 - (void) selectEdge:(Edge *)edge {
 	NSUInteger edgeIndex = [edges indexOfObject:edge];
@@ -47,9 +55,17 @@
 	return;
 }
 
-//- (NSUInteger)highlightedEdgesCount {
-//	return [highlightedEdges count];
-//}
+- (NSUInteger)highlightedEdgesCount {
+	int count = 0;
+	
+	for(Edge *edge in edges) {
+		if([edge isHighlighted]) {
+			count++;
+		}
+	}
+	
+	return count;
+}
 
 - (NSUInteger)indexOfObject:(id)anObject {
 	return [edges indexOfObject:anObject];
@@ -88,20 +104,13 @@
 // returns the closest edge in the map to a point
 - (Edge *) closestEdgeToPoint:(CGPoint)point {
 	
-	//NodeMap *centerNodes = [[NodeMap alloc] init];
-	
-	//Node *edgeCenterNode;
 	
 	CGPoint edgeCenterPoint;
 	
 	int closestNodeIndex = 0;
 	float currentShortestDistance = 0.0;
 	
-	for(int i=0; i<[edges count]; i++)
-	{				
-		//edgeCenterNode = [[edges objectAtIndex:i] centerNode];
-		//[centerNodes addNode:edgeCenterNode];
-		
+	for(int i=0; i<[edges count]; i++) {		
 		edgeCenterPoint = [[edges objectAtIndex:i] centerPoint];
 		
 		float xDistance = abs(point.x - edgeCenterPoint.x);
@@ -122,13 +131,7 @@
 		}
 		
 	}
-	
-	//[edgeCenterNode release];
-	
-	//Node *closestCenterNode = [centerNodes closestNodeToPoint:point];
-	//int closestEdgeIndex  = [centerNodes indexOfObject:closestCenterNode];
-	
-	//[centerNodes release];
+
 		
 	return [edges objectAtIndex:closestNodeIndex];
 	

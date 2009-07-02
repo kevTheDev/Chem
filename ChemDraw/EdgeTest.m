@@ -43,13 +43,13 @@
 
 - (void) testCenterPoint {
 	
-	Node *centerNode = [edge centerNode];
+	Node *centerNode = [edge centerPointNode];
 	
 	STAssertEquals([centerNode xCoord], 30.0f, nil);
 	STAssertEquals([centerNode yCoord], 27.0f, nil);
 	
 	// test for when edge nodes are reversed - i.e. make sure we don't get negative values skewing things
-	Node *reverseCenterNode = [reverseEdge centerNode];
+	Node *reverseCenterNode = [reverseEdge centerPointNode];
 	STAssertEquals([reverseCenterNode xCoord], 30.0f, nil);
 	STAssertEquals([reverseCenterNode yCoord], 27.0f, nil);
 }

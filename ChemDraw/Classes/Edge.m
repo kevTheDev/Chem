@@ -38,8 +38,7 @@
 		
 		[self setNodeAPoint:tempPointOne];
 		[self setNodeBPoint:tempPointTwo];
-		
-		//[self setCenterNode:[self centerPointNode]];
+
     }
 	
     return self;
@@ -63,9 +62,9 @@
 	return ([self unconfirmedHighlight]);
 }
 
-- (Node *) centerNode {
-	return [self centerPointNode];
-}
+//- (Node *) centerNode {
+//	return [self centerPointNode];
+//}
 
 // returns a node object that contains the x and y points of the center point of the edge
 - (Node *) centerPointNode {
@@ -118,7 +117,7 @@
 	NSLog(@"CENTER EDGE Y: %f", centerY);
 	
 	Node *node = [[Node alloc] initWithXCoord:centerX yCoord:centerY];
-	
+
 	return node;
 }
 
@@ -157,7 +156,6 @@
 	
 	[nodeA release];
 	[nodeB release];
-	//[centerNode release];
 	[super dealloc];
 	
 }

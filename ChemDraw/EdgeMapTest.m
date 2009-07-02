@@ -62,8 +62,8 @@
 
 - (void) testClosestCenterPointToPoint {
 	
-	Node *centerNodeOne = [edgeOne centerNode];
-	Node *centerNodeTwo = [edgeTwo centerNode];
+	Node *centerNodeOne = [edgeOne centerPointNode];
+	Node *centerNodeTwo = [edgeTwo centerPointNode];
 	
 	NodeMap *nodeMap = [[NodeMap alloc] init];
 	[nodeMap addNode:centerNodeOne];
@@ -128,16 +128,16 @@
 	STAssertEquals(newSelectedCount, 1, nil);
 }
 
-- (void) testSelectEdgeAtIndexResetsHighlightedNodesArray {
-	[edgeMap addEdge:edgeOne];
-	[edgeMap addEdge:edgeTwo];
-	
-	[edgeMap highlightEdgeAtIndex:1];
-	[edgeMap selectEdgeAtIndex:1];
-	
-	int newHighlightedCount = [edgeMap highlightedEdgesCount];
-	
-	STAssertEquals(newHighlightedCount, 0, nil);
-}
+//- (void) testSelectEdgeAtIndexResetsHighlightedNodesArray {
+//	[edgeMap addEdge:edgeOne];
+//	[edgeMap addEdge:edgeTwo];
+//	
+//	[edgeMap highlightEdgeAtIndex:1];
+//	[edgeMap selectEdgeAtIndex:1];
+//	
+//	int newHighlightedCount = [edgeMap highlightedEdgesCount];
+//	
+//	STAssertEquals(newHighlightedCount, 0, nil);
+//}
 
 @end
