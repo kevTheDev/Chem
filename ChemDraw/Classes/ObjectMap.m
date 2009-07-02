@@ -88,7 +88,7 @@
 }
 
 - (NSObject *) closestObjectToPoint:(CGPoint)point {
-	Node *closestNode = [self closestNodeToPoint:point];
+	Node *closestNode = [nodeMap closestNodeToPoint:point];
 	Edge *closestEdge = [edgeMap closestEdgeToPoint:point];
 	
 	// find closest out of closest edge and node
@@ -114,19 +114,21 @@
 }
 
 - (void) highlightClosestObjectToPoint:(CGPoint)point {
-	//NSObject *closestObject = [self closestObjectToPoint:point];
+	NSObject *closestObject = [self closestObjectToPoint:point];
 	
 	
 	
-	NSObject *closestObject = [nodeMap objectAtIndex:0];
+	//NSObject *closestObject = [nodeMap objectAtIndex:0];
 	
 	if([closestObject isKindOfClass:[Node class]]) {
-		int nodeMapIndex = [nodeMap indexOfObject:closestObject];
-		[nodeMap highlightNodeAtIndex:nodeMapIndex];
+		
+		Node *node = (Node *) closestObject;
+		[nodeMap highlightNode:node];
 	}
+	
 	else {
-		int edgeMapIndex = [edgeMap indexOfObject:closestObject];
-		[edgeMap highlightEdgeAtIndex:edgeMapIndex];
+		Edge *edge = (Edge *) closestObject;
+		[edgeMap highlightEdge:edge];
 	}
 		
 	

@@ -25,6 +25,7 @@
 - (id)objectAtIndex:(NSUInteger)index;
 
 - (void) highlightNodeAtIndex:(NSUInteger)index;
+- (void) highlightNode:(Node *)node;
 - (NSUInteger)highlightedNodesCount;
 
 - (void) selectNodeAtIndex:(NSUInteger)index;

@@ -58,6 +58,12 @@
 	return;
 }
 
+- (void) highlightEdge:(Edge *)edge {
+	NSUInteger edgeIndex = [edges indexOfObject:edge];
+	NSLog(@"EDGE MAP INDEX: %d", edgeIndex);
+	[self highlightEdgeAtIndex:edgeIndex];
+}
+
 - (NSUInteger) count {
 	return [edges count];
 }

@@ -27,6 +27,7 @@
 
 
 - (void) highlightEdgeAtIndex:(NSUInteger)index;
+- (void) highlightEdge:(Edge *)edge;
 - (NSUInteger)highlightedEdgesCount;
 
 - (void) selectEdgeAtIndex:(NSUInteger)index;

@@ -46,9 +46,17 @@
 
 - (void) highlightNodeAtIndex:(NSUInteger)index {
 	Node *node = [nodes objectAtIndex:index];
+	NSLog(@"NODE X: %f", [node xCoord]);
+	NSLog(@"NODE Y: %f", [node yCoord]);
 	[node highlight];
 	[highlightedNodes addObject:node];	
-	return;
+	
+}
+
+- (void) highlightNode:(Node *)node {
+	NSUInteger nodeIndex = [nodes indexOfObject:node];
+	NSLog(@"NODE MAP INDEX: %d", nodeIndex);
+	[self highlightNodeAtIndex:nodeIndex];
 }
 
 - (NSUInteger)indexOfObject:(id)anObject {
