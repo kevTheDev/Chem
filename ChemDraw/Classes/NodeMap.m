@@ -35,4 +35,46 @@
 	[nodes addObject:node];
 }
 
+// returns the closest node in the map to a point
+- (Node *) closestNodeToPoint:(CGPoint)point {
+	
+	Node *tempNode = [Node alloc];
+	
+	int closestNodeIndex = 0;
+	float currentShortestDistance = 0;
+	
+	for(int i=0; i<[nodes count]; i++)
+	{
+		tempNode = [nodes objectAtIndex:i];
+		
+		float xDistance = abs(point.x - [tempNode xCoord]);
+		float yDistance = abs(point.y - [tempNode yCoord]);
+		
+		float newDistance = xDistance + yDistance;
+		
+		if(currentShortestDistance == 0) {
+			currentShortestDistance = newDistance;
+		}
+		else {
+			
+			if(newDistance < currentShortestDistance) {
+				currentShortestDistance = newDistance;
+				closestNodeIndex = i;
+			}
+			
+		}
+	} // end of for loop
+	
+	[tempNode release];
+	
+	return [nodes objectAtIndex:closestNodeIndex];
+}
+
+
+
+- (void) dealloc {
+	[nodes release];
+	[super dealloc];	
+}
+
 @end

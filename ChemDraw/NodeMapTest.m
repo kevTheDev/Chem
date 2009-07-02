@@ -14,7 +14,11 @@
 
 @interface NodeMapTest : SenTestCase {	
 	NodeMap *nodeMap;
-	Node *node;
+	
+	Node *nodeOne;
+	Node *nodeTwo;
+	
+	CGPoint point;
 }
 
 @end
@@ -23,7 +27,11 @@
 
 - (void) setUp {
 	nodeMap = [[NodeMap alloc] init];
-	node = [[Node alloc] initWithXCoord:10.0 yCoord:15.0];
+	
+	nodeOne = [[Node alloc] initWithXCoord:10.0 yCoord:90.0];
+	nodeTwo = [[Node alloc] initWithXCoord:90.0 yCoord:20.0];
+	
+	point = CGPointMake(30.0, 100.0);
 }
 
 - (void) testInit {
@@ -31,13 +39,20 @@
 }
 
 - (void) testAddNode {
-	[nodeMap addNode:node];
-	STAssertFalse([nodeMap isEmpty], nil);
+	[nodeMap addNode:nodeOne];
+	[nodeMap addNode:nodeTwo];
 	
 	int newCount = [nodeMap count];
-	STAssertEquals(newCount, 1, nil);
+	STAssertEquals(newCount, 2, nil);	
+}
+
+- (void) testClosestNodeToPoint {
+	[nodeMap addNode:nodeOne];
+	[nodeMap addNode:nodeTwo];
 	
+	Node *closestNode = [nodeMap closestNodeToPoint:point];
 	
+	STAssertEqualObjects(closestNode, nodeOne, nil);
 }
 
 @end

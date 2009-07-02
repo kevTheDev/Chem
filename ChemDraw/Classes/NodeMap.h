@@ -18,4 +18,6 @@
 - (void) addNode:(Node *)node;
 - (NSUInteger) count;
 
+- (Node *) closestNodeToPoint:(CGPoint)point;
+
 @end
