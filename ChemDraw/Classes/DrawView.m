@@ -279,6 +279,15 @@
 	[self setNeedsDisplay]; // redraw entire screen
 }
 
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	if([programState currentState] == GESTURE_MODE) {
+		[NSTimer scheduledTimerWithTimeInterval:1.00 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
+	}
+	
+	return;
+}
+
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx {
 	
 	CGContextSelectFont(ctx, "Helvetica", 14.0, kCGEncodingMacRoman);
@@ -345,6 +354,21 @@
 	
 }
 
+// Finished drawing chemical symbol
+-(void) onTimer {
+	NSLog(@"TIMER FIRED");
+	
+	Node *selectedNode = [objectMap currentlySelectedNode];
+	[selectedNode setElementType:@"Oxygen"];
+	
+	[objectMap clearSelectedNodes];
+	
+	NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
+	
+	[programState setCurrentState:ADD_NODE];
+	[self setNeedsDisplay]; // redraw entire screen 
+	
+}
 
 - (void)dealloc {
 	[programState release];

@@ -47,4 +47,6 @@
 
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 
+-(void) onTimer;
+
 @end
