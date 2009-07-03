@@ -147,6 +147,16 @@
 	}	
 }
 
+- (Node *) currentlySelectedNode {
+	for(Node *node in nodes) {
+		if([node isSelected]) {
+			return node;
+		}
+	}
+	
+	return NULL;
+}
+
 
 - (void) dealloc {
 	[nodes release];

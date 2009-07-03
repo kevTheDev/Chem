@@ -55,6 +55,29 @@ char* screenState = "start";
 		programState = [[ProgramState alloc] init];	
 	}
 	
+	// init toolbar buttons arrays
+	if([bondButtons count] == 0) {
+		
+		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+		[tempArray addObject:doubleBondButton];
+		
+		bondButtons = [[NSArray alloc] initWithArray:tempArray];
+		
+		[tempArray release];
+		
+	}
+	
+	if([nodeButtons count] == 0) {
+		
+		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+		[tempArray addObject:addNodeButton];
+		
+		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
+		
+		[tempArray release];
+		
+	}
+	
     // Drawing code
 	[[UIColor whiteColor] setFill]; 
 	UIRectFill(rect);
@@ -112,6 +135,15 @@ char* screenState = "start";
 	}
 	else {
 		NSLog(@"SCREEN STATE CONFIRM");
+		
+		NSObject *selectedObject = [objectMap currentlySelectedObject];
+		if([selectedObject isKindOfClass:[Node class]]) {
+			[toolBar setItems:nodeButtons];
+		}
+		else {
+			[toolBar setItems:bondButtons];
+		}
+		
 		[self addSubview:toolBar];
 	}
 	

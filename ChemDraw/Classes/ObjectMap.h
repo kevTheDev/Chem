@@ -50,6 +50,8 @@
 - (void) renderWithContext:(CGContextRef)ctx;
 
 - (Bond *) currentlySelectedBond;
+- (Node *) currentlySelectedNode;
+- (NSObject *) currentlySelectedObject;
 
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) BondMap *bondMap;

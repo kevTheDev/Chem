@@ -18,8 +18,14 @@
 	ProgramState *programState;
 	ObjectMap *objectMap;
 	
-	//UIBarButtonItem *doubleBondButton;
+	NSArray *bondButtons;
+	NSArray *nodeButtons;
+	
 	IBOutlet UIToolbar *toolBar;
+	
+	IBOutlet UIBarButtonItem *doubleBondButton;
+	IBOutlet UIBarButtonItem *addNodeButton;
+	
 }
 
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx;

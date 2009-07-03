@@ -160,8 +160,29 @@
 	
 }
 
+- (Node *) currentlySelectedNode {
+	return [nodeMap currentlySelectedNode];
+}
+
 - (Bond *) currentlySelectedBond {
 	return [bondMap currentlySelectedBond];
+}
+
+- (NSObject *) currentlySelectedObject {
+	Bond *selectedBond = [self currentlySelectedBond];
+	Node *selectedNode = [self currentlySelectedNode];
+	
+	if(selectedBond != NULL) {
+		return selectedBond;
+	}
+	else if(selectedNode != NULL) {
+		return selectedNode;
+	}
+	else {
+		return NULL;
+	}
+	
+	
 }
 
 - (void) renderWithContext:(CGContextRef)ctx {

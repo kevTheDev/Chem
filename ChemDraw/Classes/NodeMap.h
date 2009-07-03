@@ -35,6 +35,6 @@
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
 - (void) renderWithContext:(CGContextRef)ctx;
-//- (void) drawNode:(Node *)node withContext:(CGContextRef)ctx;
+- (Node *) currentlySelectedNode;
 
 @end
