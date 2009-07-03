@@ -78,4 +78,21 @@
 	return false;
 }
 
+
+- (void) renderWithContext:(CGContextRef)ctx {	
+	if([self isSelected]) {
+		CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
+	}
+	else if([self isHighlighted]) {
+		CGContextSetRGBFillColor(ctx, 255, 255, 0, 1.0);
+	}
+	else{
+		CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
+	}
+	
+    CGContextFillEllipseInRect(ctx, CGRectMake(xCoord, yCoord, 10.0, 10.0));
+	return;
+	
+}
+
 @end

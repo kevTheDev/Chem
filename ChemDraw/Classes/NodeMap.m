@@ -143,30 +143,12 @@
 // draw all nodes
 - (void) renderWithContext:(CGContextRef)ctx {
 	for (Node *node in nodes) {
-		[self drawNode:node withContext:ctx];
-	}
-	
-	return;
+		[node renderWithContext:ctx];
+	}	
 }
 
-- (void) drawNode:(Node *)node withContext:(CGContextRef)ctx {	
-	if([node confirmedHighlight] == YES) {
-		CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
-	}
-	else if([node unconfirmedHighlight] == YES) {
-		CGContextSetRGBFillColor(ctx, 255, 255, 0, 1.0);
-	}
-	else{
-		CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
-	}
-	
-    CGContextFillEllipseInRect(ctx, CGRectMake([node xCoord], [node yCoord], 10.0, 10.0));
-	return;
-	
-}
 
 - (void) dealloc {
-	//[highlightedNodes release];
 	[nodes release];
 	[super dealloc];	
 }

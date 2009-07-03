@@ -37,6 +37,5 @@
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
 - (void) renderWithContext:(CGContextRef)ctx;
-- (void) drawEdge:(Edge *)edge withContext:(CGContextRef)ctx;
 
 @end

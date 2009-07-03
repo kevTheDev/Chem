@@ -28,6 +28,8 @@
 - (void) select;
 - (BOOL) isSelected;
 
+- (void) renderWithContext:(CGContextRef)ctx;
+
 @property CGFloat xCoord;
 @property CGFloat yCoord;
 

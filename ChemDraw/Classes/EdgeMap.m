@@ -11,18 +11,12 @@
 
 @implementation EdgeMap
 
-//@synthesize edges;
-//@synthesize highlightedEdges;
-//@synthesize selectedEdges;
-
 - (EdgeMap *) init {
 	
 	self = [super init];
 	
     if ( self ) {
         edges = [[NSMutableArray alloc] initWithCapacity:5];
-		//highlightedEdges = [[NSMutableArray alloc] initWithCapacity:5];
-		//selectedEdges = [[NSMutableArray alloc] initWithCapacity:5];
     }
 	
     return self;
@@ -49,9 +43,6 @@
 - (void) selectEdgeAtIndex:(NSUInteger)index {
 	Edge *edge = [edges objectAtIndex:index];
 	[edge select];
-	
-	//[selectedEdges addObject:edge];	
-	//[highlightedEdges removeObject:edge];
 	return;
 }
 
@@ -78,8 +69,6 @@
 - (void) highlightEdgeAtIndex:(NSUInteger)index {
 	Edge *edge = [edges objectAtIndex:index];
 	[edge highlight];
-	//[highlightedEdges addObject:edge];
-	//[edges removeObject:edge];
 	return;
 }
 
@@ -103,8 +92,7 @@
 
 // returns the closest edge in the map to a point
 - (Edge *) closestEdgeToPoint:(CGPoint)point {
-	
-	
+
 	CGPoint edgeCenterPoint;
 	
 	int closestNodeIndex = 0;
@@ -143,43 +131,8 @@
 
 - (void) renderWithContext:(CGContextRef)ctx {
 	for (Edge *edge in edges) {
-		[self drawEdge:edge withContext:ctx];
+		[edge renderWithContext:ctx];
 	}
-}
-
-- (void) drawEdge:(Edge *)edge withContext:(CGContextRef)ctx {
-	
-	CGMutablePathRef path = CGPathCreateMutable();
-	
-	
-	CGPoint nodeAPoint = [edge nodeAPoint];
-	CGPoint nodeBPoint = [edge nodeBPoint];
-	
-	
-	CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 5.0);
-	
-	
-	CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 5.0);
-
-	CGPathCloseSubpath(path);
-	CGContextAddPath(ctx, path);
-	
-	
-	
-	if([edge unconfirmedHighlight] == YES) {
-		CGContextSetStrokeColorWithColor(ctx, [UIColor purpleColor].CGColor);
-	}
-	else if([edge confirmedHighlight] == YES) {
-		CGContextSetStrokeColorWithColor(ctx, [UIColor orangeColor].CGColor);
-	}
-	else {
-		CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
-	}
-	CGContextSetLineWidth(ctx, 2.0);
-	
-	CGContextStrokePath(ctx);
-	
-	return;
 }
 
 - (void)dealloc {

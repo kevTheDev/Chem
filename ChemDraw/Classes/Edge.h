@@ -31,6 +31,8 @@
 - (void) select;
 - (BOOL) isSelected;
 
+- (void) renderWithContext:(CGContextRef)ctx;
+
 
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;

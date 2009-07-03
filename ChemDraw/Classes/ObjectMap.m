@@ -161,22 +161,8 @@
 }
 
 - (void) renderWithContext:(CGContextRef)ctx {
-	[self renderNodesWithContext:ctx];
-	[self renderEdgesWithContext:ctx];
-}
-
-// draw all edges
-- (void) renderEdgesWithContext:(CGContextRef)ctx {
-	[edgeMap renderWithContext:ctx];	
-	
-	return;
-}
-
-// draw all nodes
-- (void) renderNodesWithContext:(CGContextRef)ctx {
-	[nodeMap renderWithContext:ctx];	
-	
-	return;
+	[nodeMap renderWithContext:ctx];
+	[edgeMap renderWithContext:ctx];
 }
 
 - (void)dealloc {

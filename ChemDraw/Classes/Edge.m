@@ -9,7 +9,6 @@
 #import "Edge.h"
 #import "Node.h"
 
-
 @implementation Edge
 
 @synthesize nodeA;
@@ -25,19 +24,18 @@
 	self = [super init];
 	
 	if ( self ) {
-        [self setNodeA:firstNode];
-		[self setNodeB:secondNode];
+		
+		nodeA = firstNode;
+		nodeB = secondNode;
 		
 		Node *tempNode = [self centerPointNode];
-		CGPoint tempPoint = CGPointMake(tempNode.xCoord, tempNode.yCoord);
-		[self setCenterPoint:tempPoint];
+		centerPoint = CGPointMake(tempNode.xCoord, tempNode.yCoord);
 		[tempNode release];
 		
-		CGPoint tempPointOne = CGPointMake(firstNode.xCoord, firstNode.yCoord);
-		CGPoint tempPointTwo = CGPointMake(secondNode.xCoord, secondNode.yCoord);
 		
-		[self setNodeAPoint:tempPointOne];
-		[self setNodeBPoint:tempPointTwo];
+		// create these structs for optimal drawing - quicker than drawing nodes
+		nodeAPoint = CGPointMake(firstNode.xCoord, firstNode.yCoord);
+		nodeBPoint = CGPointMake(secondNode.xCoord, secondNode.yCoord);
 
     }
 	
@@ -62,19 +60,11 @@
 	return ([self unconfirmedHighlight]);
 }
 
-//- (Node *) centerNode {
-//	return [self centerPointNode];
-//}
-
 // returns a node object that contains the x and y points of the center point of the edge
 - (Node *) centerPointNode {
 	
-	NSLog(@"CENTER POINT NODE 1");
 	float nodeAX = [nodeA xCoord];
-	NSLog(@"CENTER POINT NODE 2");	
 	float nodeBX = [nodeB xCoord];
-	
-	NSLog(@"CENTER POINT NODE 3");	
 	
 	float bigX;
 	float littleX;
@@ -122,13 +112,8 @@
 }
 
 - (NSUInteger)hash {
-	
-	//Node *selfCenter = [self centerPointNode];
-	
-	//NSString *hashValue = [NSString stringWithFormat:@"%f%f", [selfCenter xCoord], [selfCenter yCoord]];
-	
-	NSString *hashString = [NSString stringWithFormat:@"%d%d", [nodeA hash], [nodeB hash]];
-	
+
+	NSString *hashString = [NSString stringWithFormat:@"%d%d", [nodeA hash], [nodeB hash]];	
 	return [hashString intValue];
 }
 
@@ -150,6 +135,32 @@
 	}
 	
 	return false;
+}
+
+- (void) renderWithContext:(CGContextRef)ctx {
+	CGMutablePathRef path = CGPathCreateMutable();
+
+	CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 5.0);
+	CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 5.0);
+	CGPathCloseSubpath(path);
+	CGContextAddPath(ctx, path);
+	
+
+	if([self isHighlighted]) {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor purpleColor].CGColor);
+	}
+	else if([self isSelected]) {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor orangeColor].CGColor);
+	}
+	else {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
+	}
+	
+	CGContextSetLineWidth(ctx, 2.0);
+	CGContextStrokePath(ctx);
+	
+	return;
+	
 }
 
 - (void) dealloc {
