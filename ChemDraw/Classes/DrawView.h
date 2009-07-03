@@ -33,6 +33,8 @@
 	
 	NSMutableArray *gesturePoints;
 	
+	NSTimer *symbolTimer;
+	
 }
 
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx;

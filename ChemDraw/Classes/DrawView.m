@@ -273,16 +273,18 @@
 		[pointObject initWithPoint:pos];
 		[gesturePoints addObject:pointObject];
 		[pointObject release];
-		NSLog(@"GESTURE POINT ADDED");
+		
+		CGRect rectToRedraw = CGRectMake(pos.x, pos.y, 10.0, 10.0);
+		[self setNeedsDisplayInRect:rectToRedraw];
 	}
 	
-	[self setNeedsDisplay]; // redraw entire screen
+	
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	
 	if([programState currentState] == GESTURE_MODE) {
-		[NSTimer scheduledTimerWithTimeInterval:0.50 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
+		symbolTimer = [NSTimer scheduledTimerWithTimeInterval:0.50 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
 	}
 	
 	return;
@@ -346,9 +348,6 @@
 
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx {	
 	
-	NSLog(@"RENDER POINT X: %f", point.x);
-	NSLog(@"RENDER POINT Y: %f", point.y);
-	
 	CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
     CGContextFillEllipseInRect(ctx, CGRectMake(point.x, point.y, 10.0, 10.0));
 	
@@ -366,6 +365,8 @@
 	NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
 	
 	[programState setCurrentState:ADD_NODE];
+	[symbolTimer invalidate];
+	
 	[self setNeedsDisplay]; // redraw entire screen 
 	
 }
