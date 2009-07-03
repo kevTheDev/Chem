@@ -13,7 +13,9 @@
 	int currentState;
 }
 
-- initWithState:(int)startState;
+- (ProgramState *) initWithState:(int)startState;
+
+- (void) setCurrentState:(int)newState;
 
 - (char *)currentPrompt;
 
