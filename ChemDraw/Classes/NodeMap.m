@@ -11,18 +11,12 @@
 
 @implementation NodeMap
 
-///@synthesize nodes;
-//@synthesize highlightedNodes;
-//@synthesize selectedNodes;
-
 - (NodeMap *) init {
 	
 	self = [super init];
 	
     if ( self ) {
         nodes = [[NSMutableArray alloc] initWithCapacity:5];
-		//highlightedNodes = [[NSMutableArray alloc] initWithCapacity:5];
-		//selectedNodes = [[NSMutableArray alloc] initWithCapacity:5];
     }
 	
     return self;
@@ -33,9 +27,7 @@
 	Node *node = [nodes objectAtIndex:index];
 	
 	[node select];
-	
-	//[selectedNodes addObject:node];
-	//[highlightedNodes removeObject:node];
+
 	return;
 }
 
@@ -71,8 +63,6 @@
 	Node *node = [nodes objectAtIndex:index];
 
 	[node highlight];
-	//[highlightedNodes addObject:node];
-	//[nodes removeObject:node];
 	
 }
 
@@ -157,11 +147,26 @@
 	return NULL;
 }
 
+- (Node *) currentlyHighlightedNode {
+	for(Node *node in nodes) {
+		if([node isHighlighted]) {
+			return node;
+		}
+	}
+	
+	return NULL;
+}
+
 - (void) clearSelectedNodes {
 	for(Node *node in nodes) {
 		[node setConfirmedHighlight:NO];
+	}	
+}
+
+- (void) clearHighlightedNodes {
+	for(Node *node in nodes) {
+		[node setUnconfirmedHighlight:NO];
 	}
-	
 }
 
 - (void) dealloc {

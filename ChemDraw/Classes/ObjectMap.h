@@ -52,12 +52,16 @@
 
 - (Bond *) currentlySelectedBond;
 - (Node *) currentlySelectedNode;
+
 - (NSObject *) currentlySelectedObject;
+- (NSObject *) currentlyHighlightedObject;
 
 - (NSUInteger) indexOfNode:(Node *)node;
 
 - (void) clearSelectedNodes;
 - (void) clearSelectedBonds;
+- (void) clearSelectedObjects;
+- (void) clearHighlightedObjects;
 
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) BondMap *bondMap;

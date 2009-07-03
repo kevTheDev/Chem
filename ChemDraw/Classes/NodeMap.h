@@ -36,7 +36,9 @@
 
 - (void) renderWithContext:(CGContextRef)ctx;
 - (Node *) currentlySelectedNode;
+- (Node *) currentlyHighlightedNode;
 
 - (void) clearSelectedNodes;
+- (void) clearHighlightedNodes;
 
 @end

@@ -91,6 +91,16 @@
 	[bondMap clearSelectedBonds];
 }
 
+- (void) clearSelectedObjects {
+	[bondMap clearSelectedBonds];
+	[nodeMap clearSelectedNodes];
+}
+
+- (void) clearHighlightedObjects {
+	[bondMap clearHighlightedBonds];
+	[nodeMap clearHighlightedNodes];
+}
+
 - (NSUInteger)selectedNodesCount {
 	return [nodeMap selectedNodesCount];
 }
@@ -208,7 +218,21 @@
 	else {
 		return NULL;
 	}
+}
+
+- (NSObject *) currentlyHighlightedObject {
+	Bond *highlightedBond = [bondMap currentlyHighlightedBond];
+	Node *highlightedNode = [nodeMap currentlyHighlightedNode];
 	
+	if(highlightedBond != NULL) {
+		return highlightedBond;
+	}
+	else if(highlightedNode != NULL) {
+		return highlightedNode;
+	}
+	else {
+		return NULL;
+	}
 	
 }
 

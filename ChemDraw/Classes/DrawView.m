@@ -160,21 +160,28 @@
 		
 		NSObject *selectedObject = [objectMap currentlySelectedObject];
 		
-		
+		// if we have selected a node then show the node buttons
 		if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
-			Node *firstNode = (Node *) selectedObject;
 			
-			int secondNodeIndex = [objectMap nodesCount] - 1;
-			Node *secondNode = [objectMap nodeAtIndex:secondNodeIndex];
+			// special case - if we highlight one node and click on another - create a bond to join them
 			
-			Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
-			[objectMap addBond:bond];
-			[bond release];
-			
-		}
-
-		if([selectedObject isKindOfClass:[Node class]]) {
-			[toolBar setItems:nodeButtons];
+			NSObject *highlightedObject = [objectMap currentlyHighlightedObject];
+			if([highlightedObject isKindOfClass:[Node class]] && ![highlightedObject isEqual:selectedObject]) {
+				NSLog(@"JOIN TWO NODES TOGETHER");
+				Bond *bond = [[Bond alloc] initWithNodeA:(Node *)selectedObject nodeB:(Node *)highlightedObject];
+				[objectMap addBond:bond];
+				[bond release];
+				
+				[programState setCurrentState:SELECT_OBJECT];
+				[objectMap clearSelectedObjects];
+				[objectMap clearHighlightedObjects];
+				
+			}
+			else {
+				[toolBar setItems:nodeButtons];
+				[self addSubview:toolBar];
+				[programState setCurrentState:TOOLBAR_MODE];
+			}
 		}
 		else {
 			Bond *bond = (Bond *) selectedObject;
@@ -188,12 +195,13 @@
 			else {
 				NSLog(@"BOND IS SINGLE");
 				[toolBar setItems:doubleBondButtons];
-			}			
+			}
+			[self addSubview:toolBar];
+			[programState setCurrentState:TOOLBAR_MODE];
 			
 		}
 		
-		[self addSubview:toolBar];
-		[programState setCurrentState:TOOLBAR_MODE];
+		
 	}
 	else if([programState currentState] == ADD_NODE) {
 		NSObject *selectedObject = [objectMap currentlySelectedObject];

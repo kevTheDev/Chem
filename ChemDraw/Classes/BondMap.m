@@ -145,9 +145,25 @@
 	return NULL;
 }
 
+- (Bond *) currentlyHighlightedBond {
+	for(Bond *bond in bonds) {
+		if([bond isHighlighted]) {
+			return bond;
+		}
+	}
+	
+	return NULL;
+}
+
 - (void) clearSelectedBonds {
 	for(Bond *bond in bonds) {
 		[bond setConfirmedHighlight:NO];
+	}
+}
+
+- (void) clearHighlightedBonds {
+	for(Bond *bond in bonds) {
+		[bond setUnconfirmedHighlight:NO];
 	}
 }
 

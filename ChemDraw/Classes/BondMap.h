@@ -37,7 +37,9 @@
 - (void) renderWithContext:(CGContextRef)ctx;
 
 - (Bond *) currentlySelectedBond;
+- (Bond *) currentlyHighlightedBond;
 
 - (void) clearSelectedBonds;
+- (void) clearHighlightedBonds;
 
 @end
