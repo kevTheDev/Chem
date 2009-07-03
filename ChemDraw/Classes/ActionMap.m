@@ -11,10 +11,27 @@
 
 @implementation ActionMap
 
+- (ActionMap *) init {
+	self = [super init];
+	
+	if(self) {
+		actions = [[NSMutableArray alloc] init];
+	}
+	
+	return self;
+	
+}
+
 - (void) addAction:(Action *)action {
+	[actions addObject:action];
 }
 
 - (void) removeAction:(Action *)action {
+	[actions removeObject:action];
+}
+
+- (Action *) lastAction {
+	return [actions lastObject];
 }
 
 @end

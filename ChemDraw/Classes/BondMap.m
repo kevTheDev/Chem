@@ -167,6 +167,10 @@
 	}
 }
 
+- (void) removeLastBond {
+	[bonds removeLastObject];
+}
+
 - (void)dealloc {
 	[bonds release];
     [super dealloc];

@@ -19,6 +19,8 @@
 	self = [super init];
 	
     if ( self ) {
+		
+		actionMap = [[ActionMap alloc] init];
 		nodeMap = [[NodeMap alloc] init];
         bondMap = [[BondMap alloc] init];
 		
@@ -125,10 +127,16 @@
 
 - (void) addNode:(Node *)node {
 	[nodeMap addNode:node];
+	AddNodeAction *action = [[AddNodeAction alloc] init];
+	[actionMap addAction:action];
+	[action release];
 }
 
 - (void) addBond:(Bond *)bond {
 	[bondMap addBond:bond];
+	AddBondAction *action = [[AddBondAction alloc] init];
+	[actionMap addAction:action];
+	[action release];
 }
 
 - (Node *) closestNodeToPoint:(CGPoint)point {
@@ -239,10 +247,24 @@
 - (void) renderWithContext:(CGContextRef)ctx {
 	[bondMap renderWithContext:ctx];
 	[nodeMap renderWithContext:ctx];
+}
+
+- (void) undoLastAction {
+	Action *lastAction = [actionMap lastAction];
 	
+	if([lastAction isKindOfClass:[AddNodeAction class]]) {
+		[nodeMap removeLastNode];
+	}
+	else {
+		[bondMap removeLastBond];
+	}
+	
+	[actionMap removeAction:lastAction];
+		
 }
 
 - (void)dealloc {
+	[actionMap release];
 	[nodeMap release];
 	[bondMap release];
     [super dealloc];

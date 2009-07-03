@@ -29,9 +29,15 @@
     return self;
 }
 
+- (IBAction)undoLastAction:(id)sender {
+	[objectMap undoLastAction];
+	[self setNeedsDisplay]; // redraw entire screen
+}
+
 - (IBAction)changeElement:(id)sender {
 	NSLog(@"Change element");
 	[programState setCurrentState:GESTURE_MODE];
+	[toolBar setItems:standardButtons];
 	[self setNeedsDisplay]; // redraw entire screen
 	
 }
@@ -42,11 +48,12 @@
 
 	[selectedBond setIsDouble:YES];
 	
-	[toolBar removeFromSuperview];	
+	//[toolBar removeFromSuperview];	
 	[objectMap clearSelectedBonds];
 	
 	[programState setCurrentState:SELECT_OBJECT];
 	
+	[toolBar setItems:standardButtons];
 	[self setNeedsDisplay]; // redraw entire screen
 	
 	
@@ -59,11 +66,11 @@
 	
 	[selectedBond setIsDouble:NO];
 	
-	[toolBar removeFromSuperview];	
+	//[toolBar removeFromSuperview];	
 	[objectMap clearSelectedBonds];
 	
 	[programState setCurrentState:SELECT_OBJECT];
-	
+	[toolBar setItems:standardButtons];
 	[self setNeedsDisplay]; // redraw entire screen
 	
 	
@@ -73,7 +80,7 @@
 - (IBAction)addNewNode:(id)sender {
 
 	[programState setCurrentState:ADD_NODE];
-	[toolBar removeFromSuperview];
+	[toolBar setItems:standardButtons];
 	[self setNeedsDisplay]; // redraw entire screen
 }
 
@@ -84,8 +91,8 @@
 	if(programState == NULL) {
 		programState = [[ProgramState alloc] init];
 		objectMap = [[ObjectMap alloc] init];
-		[self setupToolbar];
-		[toolBar removeFromSuperview];
+		[self setupToolbarButtonArrays];
+		//[toolBar removeFromSuperview];
 		gesturePoints = [[NSMutableArray alloc] init];
 	}
 
@@ -178,8 +185,8 @@
 				
 			}
 			else {
-				[toolBar setItems:nodeButtons];
-				[self addSubview:toolBar];
+				[toolBar setItems:nodeButtons animated:YES];
+				
 				[programState setCurrentState:TOOLBAR_MODE];
 			}
 		}
@@ -190,13 +197,12 @@
 			
 			if([bond isDouble]) {
 				NSLog(@"BOND IS DOUBLE");
-				[toolBar setItems:singleBondButtons];
+				[toolBar setItems:singleBondButtons animated:YES];
 			}
 			else {
 				NSLog(@"BOND IS SINGLE");
-				[toolBar setItems:doubleBondButtons];
+				[toolBar setItems:doubleBondButtons animated:YES];
 			}
-			[self addSubview:toolBar];
 			[programState setCurrentState:TOOLBAR_MODE];
 			
 		}
@@ -287,7 +293,7 @@
 	return;
 }
 
-- (void) setupToolbar {
+- (void) setupToolbarButtonArrays {
 	// init toolbar buttons arrays
 	if([singleBondButtons count] == 0) {
 		
@@ -322,6 +328,17 @@
 		[tempArray release];
 		
 	}
+	
+	if([standardButtons count] == 0) {
+		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+		[tempArray addObject:undoButton];
+		
+		standardButtons = [[NSArray alloc] initWithArray:tempArray];
+		
+		[tempArray release];
+	}
+	
+	[toolBar setItems:standardButtons];
 
 }
 

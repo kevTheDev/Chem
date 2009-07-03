@@ -22,6 +22,7 @@
 	NSArray *singleBondButtons;
 	NSArray *doubleBondButtons;
 	NSArray *nodeButtons;
+	NSArray *standardButtons;
 	
 	IBOutlet UIToolbar *toolBar;
 	
@@ -30,6 +31,8 @@
 	
 	IBOutlet UIBarButtonItem *addNodeButton;
 	IBOutlet UIBarButtonItem *changeElementButton;
+	
+	IBOutlet UIBarButtonItem *undoButton;
 	
 	NSMutableArray *gesturePoints;
 	
@@ -45,7 +48,9 @@
 - (IBAction)addNewNode:(id)sender;
 - (IBAction)changeElement:(id)sender;
 
-- (void) setupToolbar;
+- (IBAction)undoLastAction:(id)sender;
+
+- (void) setupToolbarButtonArrays;
 
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 

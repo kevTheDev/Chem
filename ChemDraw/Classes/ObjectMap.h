@@ -10,6 +10,8 @@
 #import "NodeMap.h"
 #import "BondMap.h"
 #import "ActionMap.h"
+#import "AddNodeAction.h"
+#import "AddBondAction.h"
 
 @interface ObjectMap : NSObject {
 	
@@ -66,6 +68,8 @@
 - (void) clearSelectedBonds;
 - (void) clearSelectedObjects;
 - (void) clearHighlightedObjects;
+
+- (void) undoLastAction;
 
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) BondMap *bondMap;

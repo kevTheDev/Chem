@@ -169,6 +169,10 @@
 	}
 }
 
+- (void) removeLastNode {
+	[nodes removeLastObject];
+}
+
 - (void) dealloc {
 	[nodes release];
 	[super dealloc];	

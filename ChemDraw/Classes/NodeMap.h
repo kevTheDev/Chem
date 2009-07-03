@@ -41,4 +41,6 @@
 - (void) clearSelectedNodes;
 - (void) clearHighlightedNodes;
 
+- (void) removeLastNode;
+
 @end

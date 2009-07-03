@@ -16,4 +16,6 @@
 - (void) addAction:(Action *)action;
 - (void) removeAction:(Action *)action;
 
+- (Action *) lastAction;
+
 @end

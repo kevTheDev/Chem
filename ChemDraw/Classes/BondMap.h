@@ -42,4 +42,6 @@
 - (void) clearSelectedBonds;
 - (void) clearHighlightedBonds;
 
+- (void) removeLastBond;
+
 @end
