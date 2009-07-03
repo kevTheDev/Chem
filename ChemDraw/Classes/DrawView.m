@@ -12,7 +12,7 @@
 @class ObjectMap;
 @class Node;
 @class Bond;
-
+@class PointObject;
 
 @implementation DrawView
 
@@ -86,6 +86,7 @@
 		objectMap = [[ObjectMap alloc] init];
 		[self setupToolbar];
 		[toolBar removeFromSuperview];
+		gesturePoints = [[NSMutableArray alloc] init];
 	}
 
 	// got the graphics context
@@ -94,6 +95,18 @@
 	if([programState currentState] == GESTURE_MODE) {
 		[[UIColor whiteColor] setFill]; 
 		UIRectFill(rect);
+		
+		CGPoint point;
+		
+		for(PointObject *pointObject in gesturePoints) {
+			
+			NSLog(@"DRAW GESTURE POINT");
+			
+			point = [pointObject originalPoint];
+			[self renderPoint:point withContext:ctx];
+				
+
+		}
 	}
 	else {
 		// Drawing code
@@ -236,6 +249,11 @@
 		
 	}
 	else if([programState currentState] == GESTURE_MODE) {
+		PointObject *pointObject = [PointObject alloc];
+		[pointObject initWithPoint:pos];
+		[gesturePoints addObject:pointObject];
+		[pointObject release];
+		NSLog(@"GESTURE POINT ADDED");
 	}
 
 
@@ -243,6 +261,20 @@
 	[self setNeedsDisplay]; // redraw entire screen
 	
 	return;
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	UITouch *touch = [touches anyObject];
+	CGPoint	pos = [touch locationInView:self];
+	
+	if([programState currentState] == GESTURE_MODE) {
+		PointObject *pointObject = [PointObject alloc];
+		[pointObject initWithPoint:pos];
+		[gesturePoints addObject:pointObject];
+		[pointObject release];
+		NSLog(@"GESTURE POINT ADDED");
+	}
 }
 
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx {
@@ -299,6 +331,16 @@
 		
 	}
 
+}
+
+- (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx {	
+	
+	NSLog(@"RENDER POINT X: %f", point.x);
+	NSLog(@"RENDER POINT Y: %f", point.y);
+	
+	CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
+    CGContextFillEllipseInRect(ctx, CGRectMake(point.x, point.y, 10.0, 10.0));
+	
 }
 
 

@@ -32,6 +32,8 @@
 		DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */; };
 		DE874FF20FFA67F500B1E023 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874FF10FFA67F500B1E023 /* NodeTest.m */; };
 		DE8750160FFA690400B1E023 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
+		DEB16F7D0FFE528B00F8BE1B /* PointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB16F7C0FFE528B00F8BE1B /* PointObject.m */; };
+		DEB16F7E0FFE528B00F8BE1B /* PointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB16F7C0FFE528B00F8BE1B /* PointObject.m */; };
 		DED6FCC00FFB2A93008CE1A7 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */; };
 		DED6FCC10FFB2A93008CE1A7 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */; };
 		DED6FCCE0FFB2B3B008CE1A7 /* ArithmeticTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */; };
@@ -74,6 +76,8 @@
 		DE874F8B0FFA592000B1E023 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DE874FF10FFA67F500B1E023 /* NodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeTest.m; sourceTree = "<group>"; };
+		DEB16F7B0FFE528B00F8BE1B /* PointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointObject.h; sourceTree = "<group>"; };
+		DEB16F7C0FFE528B00F8BE1B /* PointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointObject.m; sourceTree = "<group>"; };
 		DED6FCBE0FFB2A93008CE1A7 /* Arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arithmetic.h; sourceTree = "<group>"; };
 		DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arithmetic.m; sourceTree = "<group>"; };
 		DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArithmeticTest.m; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */,
 				DE4F55EE0FFE070100DA8541 /* ProgramState.h */,
 				DE4F55EF0FFE070100DA8541 /* ProgramState.m */,
+				DEB16F7B0FFE528B00F8BE1B /* PointObject.h */,
+				DEB16F7C0FFE528B00F8BE1B /* PointObject.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 				DE4F4CD40FFCB05300DA8541 /* NodeMap.m in Sources */,
 				DE4F4DAE0FFCC6C500DA8541 /* ObjectMap.m in Sources */,
 				DE4F55F00FFE070100DA8541 /* ProgramState.m in Sources */,
+				DEB16F7E0FFE528B00F8BE1B /* PointObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +329,7 @@
 				DE4F4DAA0FFCC68300DA8541 /* ObjectMapTest.m in Sources */,
 				DE4F4DAF0FFCC6C500DA8541 /* ObjectMap.m in Sources */,
 				DE4F55F10FFE070100DA8541 /* ProgramState.m in Sources */,
+				DEB16F7D0FFE528B00F8BE1B /* PointObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

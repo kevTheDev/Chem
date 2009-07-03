@@ -12,6 +12,7 @@
 #import "Node.h"
 #import "Bond.h"
 #import "ObjectMap.h"
+#import "PointObject.h"
 
 @interface DrawView : UIView {	
 	
@@ -30,6 +31,8 @@
 	IBOutlet UIBarButtonItem *addNodeButton;
 	IBOutlet UIBarButtonItem *changeElementButton;
 	
+	NSMutableArray *gesturePoints;
+	
 }
 
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx;
@@ -41,5 +44,7 @@
 - (IBAction)changeElement:(id)sender;
 
 - (void) setupToolbar;
+
+- (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 
 @end
