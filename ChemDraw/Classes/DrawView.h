@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "ProgramState.h"
 #import "Node.h"
 #import "Edge.h"
 #import "ObjectMap.h"
 
 @interface DrawView : UIView {	
+	
+	ProgramState *programState;
 	ObjectMap *objectMap;
 }
 

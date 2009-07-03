@@ -8,18 +8,22 @@
 
 #import "DrawView.h"
 
+@class ProgramState;
 @class ObjectMap;
 @class Node;
 @class Edge;
+
 
 @implementation DrawView
 
 char* screenState = "start";
 
+// this init method never seems to really get called
 - (id)initWithFrame:(CGRect)frame {
-
+		
     if (self = [super initWithFrame:frame]) {
         // Initialization code
+		
     }
 	
 		
@@ -29,12 +33,18 @@ char* screenState = "start";
 
 - (void)drawRect:(CGRect)rect {
 	
+	if(programState == NULL) {
+		programState = [[ProgramState alloc] init];	
+	}
+	
     // Drawing code
 	[[UIColor whiteColor] setFill]; 
 	UIRectFill(rect);
 	
 	// got the graphics context
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
+	
+	NSLog(@"PROG STATE: %s", [programState currentPrompt]);
 	
 	char* text = "";
 	
@@ -88,8 +98,6 @@ char* screenState = "start";
 	
 	[self renderText:text withXCoord:15.0 withYCoord:50.0 withContext:(CGContextRef)ctx];
 	[objectMap renderWithContext:ctx];
-	//[self renderNodesWithContext:ctx];
-	//[self renderEdgesWithContext:ctx];
 
 }
 
@@ -145,6 +153,7 @@ char* screenState = "start";
 
 
 - (void)dealloc {
+	[programState release];
 	[objectMap release];
     [super dealloc];
 }
