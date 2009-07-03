@@ -29,6 +29,10 @@
     return self;
 }
 
+- (IBAction)changeElement:(id)sender {
+	NSLog(@"Change element");
+}
+
 - (IBAction)makeDoubleBond:(id)sender {
 	
 	Bond *selectedBond = [objectMap currentlySelectedBond];
@@ -269,6 +273,7 @@
 		
 		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 		[tempArray addObject:addNodeButton];
+		[tempArray addObject:changeElementButton];
 		
 		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
 		

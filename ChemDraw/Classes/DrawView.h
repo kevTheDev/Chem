@@ -26,7 +26,9 @@
 	
 	IBOutlet UIBarButtonItem *singleBondButton;
 	IBOutlet UIBarButtonItem *doubleBondButton;
+	
 	IBOutlet UIBarButtonItem *addNodeButton;
+	IBOutlet UIBarButtonItem *changeElementButton;
 	
 }
 
@@ -34,7 +36,9 @@
 
 - (IBAction)makeDoubleBond:(id)sender;
 - (IBAction)makeSingleBond:(id)sender;
+
 - (IBAction)addNewNode:(id)sender;
+- (IBAction)changeElement:(id)sender;
 
 - (void) setupToolbar;
 
