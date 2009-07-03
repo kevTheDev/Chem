@@ -16,6 +16,8 @@
 @synthesize yCoord;
 @synthesize unconfirmedHighlight;
 @synthesize confirmedHighlight;
+@synthesize elementType;
+
 
 int DRAW_WIDTH = 10;
 int DRAW_HEIGHT = 10;
@@ -27,6 +29,8 @@ int DRAW_HEIGHT = 10;
     if ( self ) {
         [self setXCoord:x];
 		[self setYCoord:y];
+		
+		elementType = @"Carbon";
     }
 	
     return self;

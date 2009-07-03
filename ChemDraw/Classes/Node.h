@@ -15,6 +15,8 @@
 	
 	BOOL unconfirmedHighlight;
 	BOOL confirmedHighlight;
+	
+	NSString *elementType;
 }
 
 - (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y;
@@ -35,5 +37,7 @@
 
 @property BOOL unconfirmedHighlight;
 @property BOOL confirmedHighlight;
+
+@property (nonatomic, retain) NSString *elementType;
 
 @end
