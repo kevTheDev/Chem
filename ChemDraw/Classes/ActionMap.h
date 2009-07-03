@@ -20,6 +20,8 @@
 
 - (void) removeLastAction;
 
+- (NSUInteger) count;
+
 @end
 
 

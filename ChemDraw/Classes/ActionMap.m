@@ -38,4 +38,8 @@
 	[actions removeLastObject];
 }
 
+- (NSUInteger) count {
+	return [actions count];
+}
+
 @end

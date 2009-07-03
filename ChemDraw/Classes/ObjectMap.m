@@ -238,6 +238,10 @@
 }
 
 - (void) undoLastAction {
+	
+	// dont let the user remove the first bond
+	if([actionMap count] > 3) {
+	
 	Action *lastAction = [actionMap lastAction];
 	
 	if([lastAction isKindOfClass:[AddNodeAction class]]) {
@@ -258,6 +262,7 @@
 	}
 	
 	[actionMap removeLastAction];
+	}
 		
 }
 
