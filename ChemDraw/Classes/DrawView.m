@@ -42,6 +42,7 @@ char* screenState = "start";
 	
 	NSLog(@"IS BOND DOUBLE?: %d", [selectedBond isDouble]);
 	[toolBar removeFromSuperview];
+	[self setNeedsDisplay]; // redraw entire screen
 	
 }
 

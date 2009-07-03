@@ -165,8 +165,9 @@
 }
 
 - (void) renderWithContext:(CGContextRef)ctx {
-	[nodeMap renderWithContext:ctx];
 	[bondMap renderWithContext:ctx];
+	[nodeMap renderWithContext:ctx];
+	
 }
 
 - (void)dealloc {
