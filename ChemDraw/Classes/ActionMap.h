@@ -18,4 +18,8 @@
 
 - (Action *) lastAction;
 
+- (void) removeLastAction;
+
 @end
+
+

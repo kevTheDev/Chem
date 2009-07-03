@@ -34,4 +34,8 @@
 	return [actions lastObject];
 }
 
+- (void) removeLastAction {
+	[actions removeLastObject];
+}
+
 @end

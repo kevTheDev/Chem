@@ -31,6 +31,10 @@
 
 - (IBAction)undoLastAction:(id)sender {
 	[objectMap undoLastAction];
+	[programState setCurrentState:SELECT_OBJECT];
+	
+	NSLog(@"UNDO LAST ACTION");
+	
 	[self setNeedsDisplay]; // redraw entire screen
 }
 
@@ -177,7 +181,6 @@
 				NSLog(@"JOIN TWO NODES TOGETHER");
 				Bond *bond = [[Bond alloc] initWithNodeA:(Node *)selectedObject nodeB:(Node *)highlightedObject];
 				[objectMap addBond:bond];
-				[bond release];
 				
 				[programState setCurrentState:SELECT_OBJECT];
 				[objectMap clearSelectedObjects];
@@ -223,9 +226,6 @@
 			
 			Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
 			[objectMap addBond:bond];
-
-			[bond release];
-			[secondNode release]; //release temp node object
 			
 		}
 		
@@ -237,8 +237,6 @@
 		PointObject *pointObject = [PointObject alloc];
 		[pointObject initWithPoint:pos];
 		[gesturePoints addObject:pointObject];
-		[pointObject release];
-		NSLog(@"GESTURE POINT ADDED");
 	}
 
 
@@ -257,7 +255,6 @@
 		PointObject *pointObject = [PointObject alloc];
 		[pointObject initWithPoint:pos];
 		[gesturePoints addObject:pointObject];
-		[pointObject release];
 		
 		CGRect rectToRedraw = CGRectMake(pos.x, pos.y, 10.0, 10.0);
 		[self setNeedsDisplayInRect:rectToRedraw];

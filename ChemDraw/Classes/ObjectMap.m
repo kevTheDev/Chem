@@ -32,10 +32,6 @@
 		[self addBond:bond];
 		[self addNode:firstNode];
 		[self addNode:secondNode];
-		
-		[firstNode release];
-		[secondNode release];
-		[bond release];
     }
 	
     return self;
@@ -129,14 +125,12 @@
 	[nodeMap addNode:node];
 	AddNodeAction *action = [[AddNodeAction alloc] init];
 	[actionMap addAction:action];
-	[action release];
 }
 
 - (void) addBond:(Bond *)bond {
 	[bondMap addBond:bond];
 	AddBondAction *action = [[AddBondAction alloc] init];
 	[actionMap addAction:action];
-	[action release];
 }
 
 - (Node *) closestNodeToPoint:(CGPoint)point {
@@ -253,13 +247,17 @@
 	Action *lastAction = [actionMap lastAction];
 	
 	if([lastAction isKindOfClass:[AddNodeAction class]]) {
+		
+		NSLog(@"LAST ACTION WAS A NODE ACTION");		
 		[nodeMap removeLastNode];
 	}
 	else {
+		NSLog(@"LAST ACTION WAS A BOND ACTION");
 		[bondMap removeLastBond];
+		//[nodeMap removeLastNode];		
 	}
 	
-	[actionMap removeAction:lastAction];
+	[actionMap removeLastAction];
 		
 }
 

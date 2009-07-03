@@ -168,7 +168,10 @@
 }
 
 - (void) removeLastBond {
+	//Bond *bond = [[bonds lastObject] copy];
 	[bonds removeLastObject];
+	
+//	return bond;
 }
 
 - (void)dealloc {
