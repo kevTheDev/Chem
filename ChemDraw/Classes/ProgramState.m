@@ -51,12 +51,12 @@
 //			prompt = "Touch the screen to create the first root node...";
 //			break;
 //		case FIRST_NODE:
-//			prompt = "Touch the screen again to form an edge...";
+//			prompt = "Touch the screen again to form an bond...";
 //			break;
 //		case SECOND_NODE:
 //			
 //		case MAIN:
-//			prompt = "Touch near an edge or node to manipulate it...";
+//			prompt = "Touch near an bond or node to manipulate it...";
 //			break:
 //		case CONFIRM:
 //			break;

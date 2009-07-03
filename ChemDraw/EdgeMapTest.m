@@ -1,5 +1,5 @@
 //
-//  EdgeMapTest.m
+//  BondMapTest.m
 //  ChemDraw
 //
 //  Created by Kevin Edwards on 02/07/2009.
@@ -9,19 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <SenTestingKit/SenTestingKit.h>
 
-#import "EdgeMap.h"
-#import "Edge.h"
+#import "BondMap.h"
+#import "Bond.h"
 #import "NodeMap.h"
 #import "Node.h"
 
-@interface EdgeMapTest : SenTestCase {	
-	EdgeMap *edgeMap;
+@interface BondMapTest : SenTestCase {	
+	BondMap *bondMap;
 	
-	Edge *edgeOne;
+	Bond *bondOne;
 	Node *nodeOneA;
 	Node *nodeOneB;
 	
-	Edge *edgeTwo;	
+	Bond *bondTwo;	
 	Node *nodeTwoA;
 	Node *nodeTwoB;
 
@@ -30,40 +30,40 @@
 
 @end
 
-@implementation EdgeMapTest
+@implementation BondMapTest
 
 - (void) setUp {
-	edgeMap = [[EdgeMap alloc] init];
+	bondMap = [[BondMap alloc] init];
 	
 	
 	nodeOneA = [[Node alloc] initWithXCoord:10.0 yCoord:90.0];
 	nodeOneB = [[Node alloc] initWithXCoord:90.0 yCoord:20.0];
-	edgeOne = [[Edge alloc] initWithNodeA:nodeOneA nodeB:nodeOneB];
+	bondOne = [[Bond alloc] initWithNodeA:nodeOneA nodeB:nodeOneB];
 	
 	nodeTwoA = [[Node alloc] initWithXCoord:10.0 yCoord:60.0];
 	nodeTwoB = [[Node alloc] initWithXCoord:90.0 yCoord:90.0];
-	edgeTwo = [[Edge alloc] initWithNodeA:nodeTwoA nodeB:nodeTwoB];
+	bondTwo = [[Bond alloc] initWithNodeA:nodeTwoA nodeB:nodeTwoB];
 	
 	
 	point = CGPointMake(30.0, 100.0);
 }
 
 - (void) testInit {
-	STAssertTrue([edgeMap isEmpty], nil);
+	STAssertTrue([bondMap isEmpty], nil);
 }
 
-- (void) testAddEdge {
-	[edgeMap addEdge:edgeOne];
-	[edgeMap addEdge:edgeTwo];
+- (void) testAddBond {
+	[bondMap addBond:bondOne];
+	[bondMap addBond:bondTwo];
 	
-	int newCount = [edgeMap count];
+	int newCount = [bondMap count];
 	STAssertEquals(newCount, 2, nil);	
 }
 
 - (void) testClosestCenterPointToPoint {
 	
-	Node *centerNodeOne = [edgeOne centerPointNode];
-	Node *centerNodeTwo = [edgeTwo centerPointNode];
+	Node *centerNodeOne = [bondOne centerPointNode];
+	Node *centerNodeTwo = [bondTwo centerPointNode];
 	
 	NodeMap *nodeMap = [[NodeMap alloc] init];
 	[nodeMap addNode:centerNodeOne];
@@ -74,68 +74,68 @@
 	STAssertEqualObjects(closestNode, centerNodeTwo, nil);
 }
 
-- (void) testClosestEdgeToPoint {
-	[edgeMap addEdge:edgeOne];
-	[edgeMap addEdge:edgeTwo];
+- (void) testClosestBondToPoint {
+	[bondMap addBond:bondOne];
+	[bondMap addBond:bondTwo];
 	
-	Edge *closestEdge = [edgeMap closestEdgeToPoint:point];
+	Bond *closestBond = [bondMap closestBondToPoint:point];
 	
-	STAssertEqualObjects(closestEdge, edgeTwo, nil);
+	STAssertEqualObjects(closestBond, bondTwo, nil);
 }
 
-- (void) testHighlightEdgeAtIndex {
-	[edgeMap addEdge:edgeOne];
-	[edgeMap addEdge:edgeTwo];
+- (void) testHighlightBondAtIndex {
+	[bondMap addBond:bondOne];
+	[bondMap addBond:bondTwo];
 	
-	[edgeMap highlightEdgeAtIndex:0];
+	[bondMap highlightBondAtIndex:0];
 	
-	Edge *highlightedEdge = [edgeMap objectAtIndex:0];
-	Edge *otherEdge = [edgeMap objectAtIndex:1];
+	Bond *highlightedBond = [bondMap objectAtIndex:0];
+	Bond *otherBond = [bondMap objectAtIndex:1];
 	
-	STAssertTrue([highlightedEdge isHighlighted], nil);
-	STAssertFalse([otherEdge isHighlighted], nil);
+	STAssertTrue([highlightedBond isHighlighted], nil);
+	STAssertFalse([otherBond isHighlighted], nil);
 }
 
-- (void) testHighlightedEdgesCount {
-	[edgeMap addEdge:edgeOne];
-	[edgeMap addEdge:edgeTwo];
+- (void) testHighlightedBondsCount {
+	[bondMap addBond:bondOne];
+	[bondMap addBond:bondTwo];
 	
-	[edgeMap highlightEdgeAtIndex:1];
+	[bondMap highlightBondAtIndex:1];
 	
-	int newHighlightedCount = [edgeMap highlightedEdgesCount];
+	int newHighlightedCount = [bondMap highlightedBondsCount];
 	
 	STAssertEquals(newHighlightedCount, 1, nil);
 }
 
-- (void) testSelectEdgeAtIndex {
-	[edgeMap addEdge:edgeOne];
-	[edgeMap addEdge:edgeTwo];
+- (void) testSelectBondAtIndex {
+	[bondMap addBond:bondOne];
+	[bondMap addBond:bondTwo];
 	
-	[edgeMap selectEdgeAtIndex:1];
+	[bondMap selectBondAtIndex:1];
 	
-	Node *selectedNode = [edgeMap objectAtIndex:1];
+	Node *selectedNode = [bondMap objectAtIndex:1];
 	
 	STAssertTrue([selectedNode isSelected], nil);
 }
 
-- (void) testSelectedEdgesCount {
-	[edgeMap addEdge:edgeOne];
-	[edgeMap addEdge:edgeTwo];	
-	[edgeMap selectEdgeAtIndex:1];
+- (void) testSelectedBondsCount {
+	[bondMap addBond:bondOne];
+	[bondMap addBond:bondTwo];	
+	[bondMap selectBondAtIndex:1];
 	
-	int newSelectedCount = [edgeMap selectedEdgesCount];
+	int newSelectedCount = [bondMap selectedBondsCount];
 	
 	STAssertEquals(newSelectedCount, 1, nil);
 }
 
-- (void) testSelectEdgeAtIndexResetsHighlightedNodesArray {
-	[edgeMap addEdge:edgeOne];
-	[edgeMap addEdge:edgeTwo];
+- (void) testSelectBondAtIndexResetsHighlightedNodesArray {
+	[bondMap addBond:bondOne];
+	[bondMap addBond:bondTwo];
 	
-	[edgeMap highlightEdgeAtIndex:1];
-	[edgeMap selectEdgeAtIndex:1];
+	[bondMap highlightBondAtIndex:1];
+	[bondMap selectBondAtIndex:1];
 	
-	int newHighlightedCount = [edgeMap highlightedEdgesCount];
+	int newHighlightedCount = [bondMap highlightedBondsCount];
 	
 	STAssertEquals(newHighlightedCount, 0, nil);
 }

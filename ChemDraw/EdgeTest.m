@@ -1,5 +1,5 @@
 //
-//  EdgeTest.m
+//  BondTest.m
 //  ChemDraw
 //
 //  Created by Kevin Edwards on 30/06/2009.
@@ -10,89 +10,89 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
 
-#import "Edge.h"
+#import "Bond.h"
 
-@interface EdgeTest : SenTestCase {
+@interface BondTest : SenTestCase {
 	
 	Node *nodeA;
 	Node *nodeB;
 	
-	Edge *edge;
-	Edge *reverseEdge;
+	Bond *bond;
+	Bond *reverseBond;
 }
 
 @end
 
-@implementation EdgeTest
+@implementation BondTest
 
 - (void) setUp {
 	
 	nodeA = [[Node alloc] initWithXCoord:10.0 yCoord:14.0];
 	nodeB = [[Node alloc] initWithXCoord:50.0 yCoord:40.0];
 	
-	edge = [[Edge alloc] initWithNodeA:nodeA nodeB:nodeB];
-	reverseEdge = [[Edge alloc] initWithNodeA:nodeB nodeB:nodeA];
+	bond = [[Bond alloc] initWithNodeA:nodeA nodeB:nodeB];
+	reverseBond = [[Bond alloc] initWithNodeA:nodeB nodeB:nodeA];
 }
 
 - (void) testNodeANotNil {	
-	STAssertNotNil([edge nodeA], nil);	
+	STAssertNotNil([bond nodeA], nil);	
 }
 
 - (void) testNodeBNotNil {	
-	STAssertNotNil([edge nodeB], nil);	
+	STAssertNotNil([bond nodeB], nil);	
 }
 
 - (void) testCenterPoint {
 	
-	Node *centerNode = [edge centerPointNode];
+	Node *centerNode = [bond centerPointNode];
 	
 	STAssertEquals([centerNode xCoord], 30.0f, nil);
 	STAssertEquals([centerNode yCoord], 27.0f, nil);
 	
-	// test for when edge nodes are reversed - i.e. make sure we don't get negative values skewing things
-	Node *reverseCenterNode = [reverseEdge centerPointNode];
+	// test for when bond nodes are reversed - i.e. make sure we don't get negative values skewing things
+	Node *reverseCenterNode = [reverseBond centerPointNode];
 	STAssertEquals([reverseCenterNode xCoord], 30.0f, nil);
 	STAssertEquals([reverseCenterNode yCoord], 27.0f, nil);
 }
 
 - (void) testHighlight {
-	[edge highlight];
-	STAssertTrue([edge unconfirmedHighlight], nil);	
+	[bond highlight];
+	STAssertTrue([bond unconfirmedHighlight], nil);	
 }
 
 - (void) testIsHighlighted {
-	STAssertFalse([edge isHighlighted], nil);
+	STAssertFalse([bond isHighlighted], nil);
 	
-	[edge highlight];
-	STAssertTrue([edge isHighlighted], nil);
+	[bond highlight];
+	STAssertTrue([bond isHighlighted], nil);
 }
 
 - (void) testSelect {
-	STAssertFalse([edge confirmedHighlight], nil);	
-	[edge select];	
-	STAssertTrue([edge confirmedHighlight], nil);
+	STAssertFalse([bond confirmedHighlight], nil);	
+	[bond select];	
+	STAssertTrue([bond confirmedHighlight], nil);
 }
 
 - (void) testSelectResetsHighlight {
-	[edge highlight];
-	[edge select];
-	STAssertFalse([edge isHighlighted], nil);
+	[bond highlight];
+	[bond select];
+	STAssertFalse([bond isHighlighted], nil);
 }
 
 - (void) testIsSelected {
-	STAssertFalse([edge isSelected], nil);
-	[edge select];
-	STAssertTrue([edge isSelected], nil);
+	STAssertFalse([bond isSelected], nil);
+	[bond select];
+	STAssertTrue([bond isSelected], nil);
 }
 
-// tests that an edge cannot be equal to an object of another class
-- (void) testIsNotEqualToNonEdge {
+// tests that an bond cannot be equal to an object of another class
+- (void) testIsNotEqualToNonBond {
 	NSString *testString = @"test string";	
-	STAssertFalse([edge isEqual:testString], nil);
+	STAssertFalse([bond isEqual:testString], nil);
 }
 
 - (void) testIsEqualIfBothNodesEqual {
-	STAssertTrue([edge isEqual:reverseEdge], nil);
+	STAssertTrue([bond isEqual:reverseBond], nil);
 }
 
 - (void) testHashIsProductOfNodeHashes {
@@ -102,9 +102,9 @@
 	
 	NSString *expectedHashString = [NSString stringWithFormat:@"%d%d", nodeAHash, nodeBHash];
 	
-	int edgeHash = [edge hash];
+	int bondHash = [bond hash];
 
-	STAssertEquals(edgeHash, [expectedHashString intValue], nil);
+	STAssertEquals(bondHash, [expectedHashString intValue], nil);
 	
 }
 
@@ -112,10 +112,11 @@
 	
 	[nodeB release];
 	[nodeA release];
-	[edge release];
-	[reverseEdge release];
+	[bond release];
+	[reverseBond release];
 	
 }
 
 
 @end
+	

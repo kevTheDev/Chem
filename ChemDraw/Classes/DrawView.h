@@ -10,7 +10,7 @@
 
 #import "ProgramState.h"
 #import "Node.h"
-#import "Edge.h"
+#import "Bond.h"
 #import "ObjectMap.h"
 
 @interface DrawView : UIView {	

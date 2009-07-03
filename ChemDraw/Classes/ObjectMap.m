@@ -12,7 +12,7 @@
 @implementation ObjectMap
 
 @synthesize nodeMap;
-@synthesize edgeMap;
+@synthesize bondMap;
 
 - (ObjectMap *) init {
 	
@@ -20,7 +20,7 @@
 	
     if ( self ) {
 		nodeMap = [[NodeMap alloc] init];
-        edgeMap = [[EdgeMap alloc] init];
+        bondMap = [[BondMap alloc] init];
     }
 	
     return self;
@@ -29,34 +29,34 @@
 
 
 
-- (NSUInteger)edgesCount {
-	return [edgeMap count];
+- (NSUInteger)bondsCount {
+	return [bondMap count];
 }
 
 - (id)nodeAtIndex:(NSUInteger)index {
 	return [nodeMap objectAtIndex:index];
 }
 
-- (id)edgeAtIndex:(NSUInteger)index {
-	return [edgeMap objectAtIndex:index];
+- (id)bondAtIndex:(NSUInteger)index {
+	return [bondMap objectAtIndex:index];
 }
 
-- (void) selectEdge:(Edge *)edge {
-	int edgeMapIndex = [edgeMap indexOfObject:edge];
-	[edgeMap selectEdgeAtIndex:edgeMapIndex];
+- (void) selectBond:(Bond *)bond {
+	int bondMapIndex = [bondMap indexOfObject:bond];
+	[bondMap selectBondAtIndex:bondMapIndex];
 }
 
-- (NSUInteger)selectedEdgesCount {
-	return [edgeMap selectedEdgesCount];
+- (NSUInteger)selectedBondsCount {
+	return [bondMap selectedBondsCount];
 }
 
-- (void) highlightEdge:(Edge *)edge {
-	int edgeMapIndex = [edgeMap indexOfObject:edge];
-	[edgeMap highlightEdgeAtIndex:edgeMapIndex];
+- (void) highlightBond:(Bond *)bond {
+	int bondMapIndex = [bondMap indexOfObject:bond];
+	[bondMap highlightBondAtIndex:bondMapIndex];
 }
 
-- (NSUInteger)highlightedEdgesCount {
-	return [edgeMap highlightedEdgesCount];
+- (NSUInteger)highlightedBondsCount {
+	return [bondMap highlightedBondsCount];
 }
 
 - (void) selectNode:(Node *)node {
@@ -79,41 +79,41 @@
 }
 
 - (BOOL) isEmpty {
-	return ([nodeMap count] == 0) && ([edgeMap count] == 0);
+	return ([nodeMap count] == 0) && ([bondMap count] == 0);
 }
 
 - (NSUInteger) count {
-	return [edgeMap count] + [nodeMap count];
+	return [bondMap count] + [nodeMap count];
 }
 
 - (void) addNode:(Node *)node {
 	[nodeMap addNode:node];
 }
 
-- (void) addEdge:(Edge *)edge {
-	[edgeMap addEdge:edge];
+- (void) addBond:(Bond *)bond {
+	[bondMap addBond:bond];
 }
 
 - (Node *) closestNodeToPoint:(CGPoint)point {
 	return [nodeMap closestNodeToPoint:point];
 }
 
-- (Edge *) closestEdgeToPoint:(CGPoint)point {
-	return [edgeMap closestEdgeToPoint:point];
+- (Bond *) closestBondToPoint:(CGPoint)point {
+	return [bondMap closestBondToPoint:point];
 }
 
 - (NSObject *) closestObjectToPoint:(CGPoint)point {
 	
 	Node *closestNode = [nodeMap closestNodeToPoint:point];
-	Edge *closestEdge = [edgeMap closestEdgeToPoint:point];
+	Bond *closestBond = [bondMap closestBondToPoint:point];
 
 	
-	CGPoint closestEdgeCenterPoint = [closestEdge centerPoint];
+	CGPoint closestBondCenterPoint = [closestBond centerPoint];
 	
-	float edgeXDistance = abs(point.x - closestEdgeCenterPoint.x);
-	float edgeYDistance = abs(point.y - closestEdgeCenterPoint.y);
+	float bondXDistance = abs(point.x - closestBondCenterPoint.x);
+	float bondYDistance = abs(point.y - closestBondCenterPoint.y);
 
-	float edgeDistance = edgeXDistance + edgeYDistance;
+	float bondDistance = bondXDistance + bondYDistance;
 	
 	
 	float nodeXDistance = abs(point.x - [closestNode xCoord]);
@@ -121,8 +121,8 @@
 		
 	float nodeDistance = nodeXDistance + nodeYDistance;
 	
-	if(nodeDistance > edgeDistance) {
-		return closestEdge;
+	if(nodeDistance > bondDistance) {
+		return closestBond;
 	}
 	else {
 		return closestNode;
@@ -139,8 +139,8 @@
 		[nodeMap highlightNode:node];
 	}	
 	else {
-		Edge *edge = (Edge *) closestObject;
-		[edgeMap highlightEdge:edge];
+		Bond *bond = (Bond *) closestObject;
+		[bondMap highlightBond:bond];
 	}
 
 }
@@ -154,20 +154,20 @@
 		[nodeMap selectNode:node];
 	}	
 	else {
-		Edge *edge = (Edge *) closestObject;
-		[edgeMap selectEdge:edge];		
+		Bond *bond = (Bond *) closestObject;
+		[bondMap selectBond:bond];		
 	}
 	
 }
 
 - (void) renderWithContext:(CGContextRef)ctx {
 	[nodeMap renderWithContext:ctx];
-	[edgeMap renderWithContext:ctx];
+	[bondMap renderWithContext:ctx];
 }
 
 - (void)dealloc {
 	[nodeMap release];
-	[edgeMap release];
+	[bondMap release];
     [super dealloc];
 }
 

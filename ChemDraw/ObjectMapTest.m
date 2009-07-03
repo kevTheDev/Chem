@@ -10,8 +10,8 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 #import "ObjectMap.h"
-#import "EdgeMap.h"
-#import "Edge.h"
+#import "BondMap.h"
+#import "Bond.h"
 #import "NodeMap.h"
 #import "Node.h"
 
@@ -19,11 +19,11 @@
 	
 	ObjectMap *objectMap;
 		
-	Edge *edgeOne;
+	Bond *bondOne;
 	Node *nodeOneA;
 	Node *nodeOneB;
 	
-	Edge *edgeTwo;	
+	Bond *bondTwo;	
 	Node *nodeTwoA;
 	Node *nodeTwoB;
 	
@@ -40,11 +40,11 @@
 	
 	nodeOneA = [[Node alloc] initWithXCoord:10.0 yCoord:90.0];
 	nodeOneB = [[Node alloc] initWithXCoord:90.0 yCoord:20.0];
-	edgeOne = [[Edge alloc] initWithNodeA:nodeOneA nodeB:nodeOneB];
+	bondOne = [[Bond alloc] initWithNodeA:nodeOneA nodeB:nodeOneB];
 	
 	nodeTwoA = [[Node alloc] initWithXCoord:10.0 yCoord:60.0];
 	nodeTwoB = [[Node alloc] initWithXCoord:90.0 yCoord:90.0];
-	edgeTwo = [[Edge alloc] initWithNodeA:nodeTwoA nodeB:nodeTwoB];
+	bondTwo = [[Bond alloc] initWithNodeA:nodeTwoA nodeB:nodeTwoB];
 	
 	
 	point = CGPointMake(30.0, 100.0);
@@ -54,8 +54,8 @@
 	STAssertTrue([objectMap isEmpty], nil);
 }
 
-- (void) testAddEdge {
-	[objectMap addEdge:edgeOne];	
+- (void) testAddBond {
+	[objectMap addBond:bondOne];	
 	STAssertFalse([objectMap isEmpty], nil);	
 }
 
@@ -65,7 +65,7 @@
 }
 
 - (void) testCount {
-	[objectMap addEdge:edgeOne];
+	[objectMap addBond:bondOne];
 	[objectMap addNode:nodeOneB];
 	
 	int newCount = [objectMap count];
@@ -84,22 +84,22 @@
 	STAssertEqualObjects(closestNode, nodeOneA, nil);
 }
 
-- (void) testClosestEdgeToPoint {
-	[objectMap addEdge:edgeOne];
-	[objectMap addEdge:edgeTwo];
+- (void) testClosestBondToPoint {
+	[objectMap addBond:bondOne];
+	[objectMap addBond:bondTwo];
 	
-	Edge *closestEdge = [objectMap closestEdgeToPoint:point];
-	STAssertEqualObjects(closestEdge, edgeTwo, nil);	
+	Bond *closestBond = [objectMap closestBondToPoint:point];
+	STAssertEqualObjects(closestBond, bondTwo, nil);	
 }
 
 - (void) testClosestObjectToPoint {
 	[objectMap addNode:nodeOneA];
 	[objectMap addNode:nodeOneB];
-	[objectMap addEdge:edgeOne];
+	[objectMap addBond:bondOne];
 	
 	[objectMap addNode:nodeTwoA];
 	[objectMap addNode:nodeTwoB];
-	[objectMap addEdge:edgeTwo];
+	[objectMap addBond:bondTwo];
 	
 	NSObject *closestObject = [objectMap closestObjectToPoint:point];
 	
@@ -153,35 +153,35 @@
 	STAssertEquals(newHighlightedCount, 0, nil);
 }
 
-- (void) testHighlightedEdgesCount {
-	[objectMap addEdge:edgeOne];
-	[objectMap addEdge:edgeTwo];
+- (void) testHighlightedBondsCount {
+	[objectMap addBond:bondOne];
+	[objectMap addBond:bondTwo];
 	
-	[objectMap highlightEdge:edgeTwo];
+	[objectMap highlightBond:bondTwo];
 	
-	int newHighlightedCount = [objectMap highlightedEdgesCount];
+	int newHighlightedCount = [objectMap highlightedBondsCount];
 	
 	STAssertEquals(newHighlightedCount, 1, nil);
 }
 
-- (void) testSelectedEdgesCount {
-	[objectMap addEdge:edgeOne];
-	[objectMap addEdge:edgeTwo];	
-	[objectMap selectEdge:edgeTwo];
+- (void) testSelectedBondsCount {
+	[objectMap addBond:bondOne];
+	[objectMap addBond:bondTwo];	
+	[objectMap selectBond:bondTwo];
 	
-	int newSelectedCount = [objectMap selectedEdgesCount];
+	int newSelectedCount = [objectMap selectedBondsCount];
 	
 	STAssertEquals(newSelectedCount, 1, nil);
 }
 
-- (void) testSelectEdgeResetsHighlightedEdges {
-	[objectMap addEdge:edgeOne];
-	[objectMap addEdge:edgeTwo];
+- (void) testSelectBondResetsHighlightedBonds {
+	[objectMap addBond:bondOne];
+	[objectMap addBond:bondTwo];
 	
-	[objectMap highlightEdge:edgeOne];
-	[objectMap selectEdge:edgeOne];
+	[objectMap highlightBond:bondOne];
+	[objectMap selectBond:bondOne];
 	
-	int newHighlightedCount = [objectMap highlightedEdgesCount];
+	int newHighlightedCount = [objectMap highlightedBondsCount];
 	
 	STAssertEquals(newHighlightedCount, 0, nil);
 }
@@ -189,69 +189,69 @@
 - (void) testHighlightClosestObjectToPointWithNode {
 	[objectMap addNode:nodeOneA];
 	[objectMap addNode:nodeOneB];
-	[objectMap addEdge:edgeOne];
+	[objectMap addBond:bondOne];
 	
 	[objectMap addNode:nodeTwoA];
 	[objectMap addNode:nodeTwoB];
-	[objectMap addEdge:edgeTwo];
+	[objectMap addBond:bondTwo];
 	
 	[objectMap highlightClosestObjectToPoint:point];
 
 	int newHighlightedCount = [objectMap highlightedNodesCount];
 	STAssertEquals(newHighlightedCount, 1, nil);
 	
-	int newHighlightedEdgesCount = [objectMap highlightedEdgesCount];
-	STAssertEquals(newHighlightedEdgesCount, 0, nil);
+	int newHighlightedBondsCount = [objectMap highlightedBondsCount];
+	STAssertEquals(newHighlightedBondsCount, 0, nil);
 }
 
-- (void) testHighlightClosestObjectToPointWithEdge {
-	[objectMap addEdge:edgeOne];
+- (void) testHighlightClosestObjectToPointWithBond {
+	[objectMap addBond:bondOne];
 	
 	[objectMap addNode:nodeTwoA];
 	[objectMap addNode:nodeTwoB];
-	[objectMap addEdge:edgeTwo];
+	[objectMap addBond:bondTwo];
 	
 	[objectMap highlightClosestObjectToPoint:point];
 	
-	int newHighlightedCount = [objectMap highlightedEdgesCount];
+	int newHighlightedCount = [objectMap highlightedBondsCount];
 	STAssertEquals(newHighlightedCount, 1, nil);
 	
-	int newHighlightedEdgesCount = [objectMap highlightedNodesCount];
-	STAssertEquals(newHighlightedEdgesCount, 0, nil);
+	int newHighlightedBondsCount = [objectMap highlightedNodesCount];
+	STAssertEquals(newHighlightedBondsCount, 0, nil);
 }
 
 - (void) testSelectClosestObjectToPointWithNode {
 	[objectMap addNode:nodeOneA];
 	[objectMap addNode:nodeOneB];
-	[objectMap addEdge:edgeOne];
+	[objectMap addBond:bondOne];
 	
 	[objectMap addNode:nodeTwoA];
 	[objectMap addNode:nodeTwoB];
-	[objectMap addEdge:edgeTwo];
+	[objectMap addBond:bondTwo];
 	
 	[objectMap selectClosestObjectToPoint:point];
 	
 	int newSelectedNodesCount = [objectMap selectedNodesCount];
 	STAssertEquals(newSelectedNodesCount, 1, nil);
 	
-	int selectedEdgesCount = [objectMap selectedEdgesCount];
-	STAssertEquals(selectedEdgesCount, 0, nil);
+	int selectedBondsCount = [objectMap selectedBondsCount];
+	STAssertEquals(selectedBondsCount, 0, nil);
 }
 
-- (void) testSelectClosestObjectToPointWithEdge {
-	[objectMap addEdge:edgeOne];
+- (void) testSelectClosestObjectToPointWithBond {
+	[objectMap addBond:bondOne];
 	
 	[objectMap addNode:nodeTwoA];
 	[objectMap addNode:nodeTwoB];
-	[objectMap addEdge:edgeTwo];
+	[objectMap addBond:bondTwo];
 	
 	[objectMap selectClosestObjectToPoint:point];
 	
 	int newSelectedNodesCount = [objectMap selectedNodesCount];
 	STAssertEquals(newSelectedNodesCount, 0, nil);
 	
-	int selectedEdgesCount = [objectMap selectedEdgesCount];
-	STAssertEquals(selectedEdgesCount, 1, nil);
+	int selectedBondsCount = [objectMap selectedBondsCount];
+	STAssertEquals(selectedBondsCount, 1, nil);
 }
 
 

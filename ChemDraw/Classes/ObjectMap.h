@@ -8,21 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "NodeMap.h"
-#import "EdgeMap.h"
+#import "BondMap.h"
 
 @interface ObjectMap : NSObject {
 	NodeMap *nodeMap;
-	EdgeMap *edgeMap;
+	BondMap *bondMap;
 }
 
 - (BOOL) isEmpty;
 - (NSUInteger) count;
 
 - (void) addNode:(Node *)node;
-- (void) addEdge:(Edge *)edge;
+- (void) addBond:(Bond *)bond;
 
 - (Node *) closestNodeToPoint:(CGPoint)point;
-- (Edge *) closestEdgeToPoint:(CGPoint)point;
+- (Bond *) closestBondToPoint:(CGPoint)point;
 - (NSObject *) closestObjectToPoint:(CGPoint)point;
 
 // highlighting and selecting nodes
@@ -32,24 +32,24 @@
 - (void) selectNode:(Node *)node;
 - (NSUInteger)selectedNodesCount;
 
-// highlighting and selecting edges
-- (void) highlightEdge:(Edge *)edge;
-- (NSUInteger)highlightedEdgesCount;
-- (void) selectEdge:(Edge *)edge;
-- (NSUInteger)selectedEdgesCount;
+// highlighting and selecting bonds
+- (void) highlightBond:(Bond *)bond;
+- (NSUInteger)highlightedBondsCount;
+- (void) selectBond:(Bond *)bond;
+- (NSUInteger)selectedBondsCount;
 
 - (void) highlightClosestObjectToPoint:(CGPoint)point;
 - (void) selectClosestObjectToPoint:(CGPoint)point;
 
 // array access methods
 - (id)nodeAtIndex:(NSUInteger)index;
-- (id)edgeAtIndex:(NSUInteger)index;
+- (id)bondAtIndex:(NSUInteger)index;
 
-- (NSUInteger)edgesCount;
+- (NSUInteger)bondsCount;
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
 @property (nonatomic, retain) NodeMap *nodeMap;
-@property (nonatomic, retain) EdgeMap *edgeMap;
+@property (nonatomic, retain) BondMap *bondMap;
 
 @end

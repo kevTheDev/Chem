@@ -17,18 +17,18 @@
 		28D7ACF80DDB3853001CB0EB /* ChemDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */; };
 		DE2091440FF4E840001FECDA /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091430FF4E840001FECDA /* DrawView.m */; };
 		DE2091FF0FF4F578001FECDA /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
-		DE2093480FF50B67001FECDA /* Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Edge.m */; };
+		DE2093480FF50B67001FECDA /* Bond.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Bond.m */; };
 		DE4F4CD30FFCB05300DA8541 /* NodeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD20FFCB05300DA8541 /* NodeMap.m */; };
 		DE4F4CD40FFCB05300DA8541 /* NodeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD20FFCB05300DA8541 /* NodeMap.m */; };
 		DE4F4CDB0FFCB0A300DA8541 /* NodeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */; };
 		DE4F4D4D0FFCB8D500DA8541 /* EdgeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4D4C0FFCB8D500DA8541 /* EdgeMapTest.m */; };
-		DE4F4D5A0FFCBA7300DA8541 /* EdgeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* EdgeMap.m */; };
+		DE4F4D5A0FFCBA7300DA8541 /* BondMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* BondMap.m */; };
 		DE4F4DAA0FFCC68300DA8541 /* ObjectMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */; };
 		DE4F4DAE0FFCC6C500DA8541 /* ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */; };
 		DE4F4DAF0FFCC6C500DA8541 /* ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */; };
 		DE4F55F00FFE070100DA8541 /* ProgramState.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F55EF0FFE070100DA8541 /* ProgramState.m */; };
 		DE4F55F10FFE070100DA8541 /* ProgramState.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F55EF0FFE070100DA8541 /* ProgramState.m */; };
-		DE874F700FFA512400B1E023 /* EdgeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* EdgeMap.m */; };
+		DE874F700FFA512400B1E023 /* BondMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* BondMap.m */; };
 		DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */; };
 		DE874FF20FFA67F500B1E023 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874FF10FFA67F500B1E023 /* NodeTest.m */; };
 		DE8750160FFA690400B1E023 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
@@ -36,7 +36,7 @@
 		DED6FCC10FFB2A93008CE1A7 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */; };
 		DED6FCCE0FFB2B3B008CE1A7 /* ArithmeticTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */; };
 		DED6FD390FFB3237008CE1A7 /* EdgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FD380FFB3237008CE1A7 /* EdgeTest.m */; };
-		DED6FD8E0FFB37F5008CE1A7 /* Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Edge.m */; };
+		DED6FD8E0FFB37F5008CE1A7 /* Bond.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Bond.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +57,8 @@
 		DE2091430FF4E840001FECDA /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		DE2091FD0FF4F578001FECDA /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		DE2091FE0FF4F578001FECDA /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
-		DE2093460FF50B67001FECDA /* Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edge.h; sourceTree = "<group>"; };
-		DE2093470FF50B67001FECDA /* Edge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Edge.m; sourceTree = "<group>"; };
+		DE2093460FF50B67001FECDA /* Bond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bond.h; sourceTree = "<group>"; };
+		DE2093470FF50B67001FECDA /* Bond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bond.m; sourceTree = "<group>"; };
 		DE4F4CD10FFCB05300DA8541 /* NodeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeMap.h; sourceTree = "<group>"; };
 		DE4F4CD20FFCB05300DA8541 /* NodeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMap.m; sourceTree = "<group>"; };
 		DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMapTest.m; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 		DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectMap.m; sourceTree = "<group>"; };
 		DE4F55EE0FFE070100DA8541 /* ProgramState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramState.h; sourceTree = "<group>"; };
 		DE4F55EF0FFE070100DA8541 /* ProgramState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramState.m; sourceTree = "<group>"; };
-		DE874F6E0FFA512400B1E023 /* EdgeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeMap.h; sourceTree = "<group>"; };
-		DE874F6F0FFA512400B1E023 /* EdgeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeMap.m; sourceTree = "<group>"; };
+		DE874F6E0FFA512400B1E023 /* BondMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BondMap.h; sourceTree = "<group>"; };
+		DE874F6F0FFA512400B1E023 /* BondMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BondMap.m; sourceTree = "<group>"; };
 		DE874F8A0FFA592000B1E023 /* Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE874F8B0FFA592000B1E023 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -113,10 +113,10 @@
 				DE2091430FF4E840001FECDA /* DrawView.m */,
 				DE2091FD0FF4F578001FECDA /* Node.h */,
 				DE2091FE0FF4F578001FECDA /* Node.m */,
-				DE2093460FF50B67001FECDA /* Edge.h */,
-				DE2093470FF50B67001FECDA /* Edge.m */,
-				DE874F6E0FFA512400B1E023 /* EdgeMap.h */,
-				DE874F6F0FFA512400B1E023 /* EdgeMap.m */,
+				DE2093460FF50B67001FECDA /* Bond.h */,
+				DE2093470FF50B67001FECDA /* Bond.m */,
+				DE874F6E0FFA512400B1E023 /* BondMap.h */,
+				DE874F6F0FFA512400B1E023 /* BondMap.m */,
 				DED6FCBE0FFB2A93008CE1A7 /* Arithmetic.h */,
 				DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */,
 				DE4F4CD10FFCB05300DA8541 /* NodeMap.h */,
@@ -296,8 +296,8 @@
 				28D7ACF80DDB3853001CB0EB /* ChemDrawViewController.m in Sources */,
 				DE2091440FF4E840001FECDA /* DrawView.m in Sources */,
 				DE2091FF0FF4F578001FECDA /* Node.m in Sources */,
-				DE2093480FF50B67001FECDA /* Edge.m in Sources */,
-				DE874F700FFA512400B1E023 /* EdgeMap.m in Sources */,
+				DE2093480FF50B67001FECDA /* Bond.m in Sources */,
+				DE874F700FFA512400B1E023 /* BondMap.m in Sources */,
 				DED6FCC00FFB2A93008CE1A7 /* Arithmetic.m in Sources */,
 				DE4F4CD40FFCB05300DA8541 /* NodeMap.m in Sources */,
 				DE4F4DAE0FFCC6C500DA8541 /* ObjectMap.m in Sources */,
@@ -314,11 +314,11 @@
 				DED6FCC10FFB2A93008CE1A7 /* Arithmetic.m in Sources */,
 				DED6FCCE0FFB2B3B008CE1A7 /* ArithmeticTest.m in Sources */,
 				DED6FD390FFB3237008CE1A7 /* EdgeTest.m in Sources */,
-				DED6FD8E0FFB37F5008CE1A7 /* Edge.m in Sources */,
+				DED6FD8E0FFB37F5008CE1A7 /* Bond.m in Sources */,
 				DE4F4CD30FFCB05300DA8541 /* NodeMap.m in Sources */,
 				DE4F4CDB0FFCB0A300DA8541 /* NodeMapTest.m in Sources */,
 				DE4F4D4D0FFCB8D500DA8541 /* EdgeMapTest.m in Sources */,
-				DE4F4D5A0FFCBA7300DA8541 /* EdgeMap.m in Sources */,
+				DE4F4D5A0FFCBA7300DA8541 /* BondMap.m in Sources */,
 				DE4F4DAA0FFCC68300DA8541 /* ObjectMapTest.m in Sources */,
 				DE4F4DAF0FFCC6C500DA8541 /* ObjectMap.m in Sources */,
 				DE4F55F10FFE070100DA8541 /* ProgramState.m in Sources */,

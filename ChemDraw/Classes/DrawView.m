@@ -11,7 +11,7 @@
 @class ProgramState;
 @class ObjectMap;
 @class Node;
-@class Edge;
+@class Bond;
 
 
 @implementation DrawView
@@ -58,29 +58,29 @@ char* screenState = "start";
 		screenState = "firstNode";
 	}
 	else if(screenState == "firstNode") {
-		text = "Touch the screen again to form an edge...";
+		text = "Touch the screen again to form an bond...";
 		screenState = "secondNode";
 	}
 	else if(screenState == "secondNode") {
-		text = "Touch near an edge or node to manipulate it...";
+		text = "Touch near an bond or node to manipulate it...";
 
 		Node *firstNode = [objectMap nodeAtIndex:0];
 		Node *secondNode = [objectMap nodeAtIndex:1];
 
 		
-		Edge *edge = [[Edge alloc] initWithNodeA:firstNode nodeB:secondNode];
-		[objectMap addEdge:edge];
-		[edge release];
+		Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
+		[objectMap addBond:bond];
+		[bond release];
 		
 		screenState = "main";
 		
 	}
 	else if(screenState == "main") {
-		if([objectMap highlightedNodesCount] > 0 && [objectMap highlightedEdgesCount] > 0) {
-			text = "Confirm an edge or a node";
+		if([objectMap highlightedNodesCount] > 0 && [objectMap highlightedBondsCount] > 0) {
+			text = "Confirm an bond or a node";
 		}
-		else if([objectMap highlightedEdgesCount] > 0) {
-			text = "Confirm an edge";
+		else if([objectMap highlightedBondsCount] > 0) {
+			text = "Confirm an bond";
 		}
 		else if([objectMap highlightedNodesCount] > 0) {
 			text = "Confirm a node";
