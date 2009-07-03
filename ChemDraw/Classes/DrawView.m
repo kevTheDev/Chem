@@ -275,6 +275,8 @@
 		[pointObject release];
 		NSLog(@"GESTURE POINT ADDED");
 	}
+	
+	[self setNeedsDisplay]; // redraw entire screen
 }
 
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx {
