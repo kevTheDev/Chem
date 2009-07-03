@@ -47,6 +47,9 @@
 
 - (NSUInteger)edgesCount;
 
+- (void) renderWithContext:(CGContextRef)ctx;
+- (void) renderNodesWithContext:(CGContextRef)ctx;
+- (void) renderEdgesWithContext:(CGContextRef)ctx;
 
 
 @property (nonatomic, retain) NodeMap *nodeMap;

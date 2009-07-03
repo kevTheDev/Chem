@@ -141,6 +141,47 @@
 	return [edges countByEnumeratingWithState:state objects:stackbuf count:len];
 }
 
+- (void) renderWithContext:(CGContextRef)ctx {
+	for (Edge *edge in edges) {
+		[self drawEdge:edge withContext:ctx];
+	}
+}
+
+- (void) drawEdge:(Edge *)edge withContext:(CGContextRef)ctx {
+	
+	CGMutablePathRef path = CGPathCreateMutable();
+	
+	
+	CGPoint nodeAPoint = [edge nodeAPoint];
+	CGPoint nodeBPoint = [edge nodeBPoint];
+	
+	
+	CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 5.0);
+	
+	
+	CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 5.0);
+
+	CGPathCloseSubpath(path);
+	CGContextAddPath(ctx, path);
+	
+	
+	
+	if([edge unconfirmedHighlight] == YES) {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor purpleColor].CGColor);
+	}
+	else if([edge confirmedHighlight] == YES) {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor orangeColor].CGColor);
+	}
+	else {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
+	}
+	CGContextSetLineWidth(ctx, 2.0);
+	
+	CGContextStrokePath(ctx);
+	
+	return;
+}
+
 - (void)dealloc {
 	[edges release];
     [super dealloc];

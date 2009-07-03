@@ -104,47 +104,22 @@
 
 - (NSObject *) closestObjectToPoint:(CGPoint)point {
 	
-	NSLog(@"IN CLOSEST OBJECT TO POINT");
-	
 	Node *closestNode = [nodeMap closestNodeToPoint:point];
 	Edge *closestEdge = [edgeMap closestEdgeToPoint:point];
-	
-	NSLog(@"IN CLOSEST OBJECT TO POINT 2");
-	
-	// find closest out of closest edge and node
-	//Node *closestEdgeCenterPoint = [closestEdge centerPointNode];
-	
-	NSLog(@"EDGE HIGHLIGHTED? %b", [closestEdge isHighlighted]);
+
 	
 	CGPoint closestEdgeCenterPoint = [closestEdge centerPoint];
 	
-	NSLog(@"IN CLOSEST OBJECT TO POINT 3");
-	
-	NSLog(@"CLOSEST EDGE CENTER POINT X: %f", closestEdgeCenterPoint.x);
-	
 	float edgeXDistance = abs(point.x - closestEdgeCenterPoint.x);
-	
-	NSLog(@"IN CLOSEST OBJECT TO POINT 4");
-	
 	float edgeYDistance = abs(point.y - closestEdgeCenterPoint.y);
-	
-	
-	NSLog(@"IN CLOSEST OBJECT TO POINT 5");
-	
+
 	float edgeDistance = edgeXDistance + edgeYDistance;
 	
-	NSLog(@"IN CLOSEST OBJECT TO POINT 6");
 	
 	float nodeXDistance = abs(point.x - [closestNode xCoord]);
 	float nodeYDistance = abs(point.y - [closestNode yCoord]);
-	
-	NSLog(@"IN CLOSEST OBJECT TO POINT 6");
-	
+		
 	float nodeDistance = nodeXDistance + nodeYDistance;
-	
-	NSLog(@"IN CLOSEST OBJECT TO POINT 7");
-	
-	
 	
 	if(nodeDistance > edgeDistance) {
 		return closestEdge;
@@ -171,11 +146,8 @@
 }
 
 - (void) selectClosestObjectToPoint:(CGPoint)point {
-	NSLog(@"SELECTING THE CLOSEST OBJECT");
 	NSObject *closestObject = [self closestObjectToPoint:point];
-	
-	NSLog(@"SELECTING THE CLOSEST OBJECT 2");
-	
+		
 	if([closestObject isKindOfClass:[Node class]]) {
 		
 		Node *node = (Node *) closestObject;
@@ -183,12 +155,28 @@
 	}	
 	else {
 		Edge *edge = (Edge *) closestObject;
-		NSLog(@"SELECTING THE CLOSEST OBJECT 3");
-		[edgeMap selectEdge:edge];
-		NSLog(@"SELECTING THE CLOSEST OBJECT 4");
-		
+		[edgeMap selectEdge:edge];		
 	}
 	
+}
+
+- (void) renderWithContext:(CGContextRef)ctx {
+	[self renderNodesWithContext:ctx];
+	[self renderEdgesWithContext:ctx];
+}
+
+// draw all edges
+- (void) renderEdgesWithContext:(CGContextRef)ctx {
+	[edgeMap renderWithContext:ctx];	
+	
+	return;
+}
+
+// draw all nodes
+- (void) renderNodesWithContext:(CGContextRef)ctx {
+	[nodeMap renderWithContext:ctx];	
+	
+	return;
 }
 
 - (void)dealloc {

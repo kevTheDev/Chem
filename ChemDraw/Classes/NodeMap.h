@@ -34,8 +34,7 @@
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id *)stackbuf count:(NSUInteger)len;
 
-//@property (nonatomic, retain) NSMutableArray *nodes;
-//@property (nonatomic, retain) NSMutableArray *highlightedNodes;
-//@property (nonatomic, retain) NSMutableArray *selectedNodes;
+- (void) renderWithContext:(CGContextRef)ctx;
+- (void) drawNode:(Node *)node withContext:(CGContextRef)ctx;
 
 @end
