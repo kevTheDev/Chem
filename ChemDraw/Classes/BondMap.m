@@ -145,6 +145,12 @@
 	return NULL;
 }
 
+- (void) clearSelectedBonds {
+	for(Bond *bond in bonds) {
+		[bond setConfirmedHighlight:NO];
+	}
+}
+
 - (void)dealloc {
 	[bonds release];
     [super dealloc];

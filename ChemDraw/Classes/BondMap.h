@@ -38,4 +38,6 @@
 
 - (Bond *) currentlySelectedBond;
 
+- (void) clearSelectedBonds;
+
 @end

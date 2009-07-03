@@ -46,12 +46,18 @@
 - (id)bondAtIndex:(NSUInteger)index;
 
 - (NSUInteger)bondsCount;
+- (NSUInteger)nodesCount;
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
 - (Bond *) currentlySelectedBond;
 - (Node *) currentlySelectedNode;
 - (NSObject *) currentlySelectedObject;
+
+- (NSUInteger) indexOfNode:(Node *)node;
+
+- (void) clearSelectedNodes;
+- (void) clearSelectedBonds;
 
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) BondMap *bondMap;

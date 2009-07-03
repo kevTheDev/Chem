@@ -42,8 +42,23 @@ char* screenState = "start";
 	
 	NSLog(@"IS BOND DOUBLE?: %d", [selectedBond isDouble]);
 	[toolBar removeFromSuperview];
+	
+	[objectMap clearSelectedBonds];
+	
+	screenState = "secondNode";
 	[self setNeedsDisplay]; // redraw entire screen
 	
+	
+	
+}
+
+- (IBAction)addNewNode:(id)sender {
+	
+	screenState = "secondNode";
+	
+	
+	[toolBar removeFromSuperview];
+	//[self setNeedsDisplay]; // redraw entire screen
 }
 
 
@@ -104,9 +119,23 @@ char* screenState = "start";
 	}
 	else if(screenState == "secondNode") {
 		text = "Touch near an bond or node to manipulate it...";
-
-		Node *firstNode = [objectMap nodeAtIndex:0];
-		Node *secondNode = [objectMap nodeAtIndex:1];
+		
+		Node *firstNode;
+		Node *secondNode;
+		
+		NSObject *selectedObject = [objectMap currentlySelectedObject];
+		if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
+			firstNode = (Node *) selectedObject;
+			
+			int secondNodeIndex = [objectMap nodesCount] - 1;
+			secondNode = [objectMap nodeAtIndex:secondNodeIndex];
+			
+			[objectMap clearSelectedNodes];
+		}
+		else {
+			firstNode = [objectMap nodeAtIndex:0];
+			secondNode = [objectMap nodeAtIndex:1];
+		}
 
 		
 		Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
@@ -170,7 +199,9 @@ char* screenState = "start";
 		[objectMap selectClosestObjectToPoint:pos];
 		NSLog(@"SELECTED CLOSEST OBJECT");
 	}
-	else {
+	else if(screenState == "firstNode" || screenState == "secondNode") {
+		NSLog(@"TOUCH BEGAN WITH SCREEN STATE: %s", screenState);
+		
 		// create a node and add it to the object map
 		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
 		[objectMap addNode:node];		

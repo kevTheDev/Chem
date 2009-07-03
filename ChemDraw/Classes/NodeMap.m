@@ -157,6 +157,12 @@
 	return NULL;
 }
 
+- (void) clearSelectedNodes {
+	for(Node *node in nodes) {
+		[node setConfirmedHighlight:NO];
+	}
+	
+}
 
 - (void) dealloc {
 	[nodes release];

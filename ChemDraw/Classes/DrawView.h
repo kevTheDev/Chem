@@ -31,5 +31,6 @@
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx;
 
 - (IBAction)makeDoubleBond:(id)sender;
+- (IBAction)addNewNode:(id)sender;
 
 @end

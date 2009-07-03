@@ -27,10 +27,16 @@
 	
 }
 
-
+- (NSUInteger)nodesCount {
+	return [nodeMap count];
+}
 
 - (NSUInteger)bondsCount {
 	return [bondMap count];
+}
+
+- (NSUInteger) indexOfNode:(Node *)node {
+	return [nodeMap indexOfObject:node];
 }
 
 - (id)nodeAtIndex:(NSUInteger)index {
@@ -62,6 +68,14 @@
 - (void) selectNode:(Node *)node {
 	int nodeMapIndex = [nodeMap indexOfObject:node];
 	[nodeMap selectNodeAtIndex:nodeMapIndex];
+}
+
+- (void) clearSelectedNodes {
+	[nodeMap clearSelectedNodes];
+}
+
+- (void) clearSelectedBonds {
+	[bondMap clearSelectedBonds];
 }
 
 - (NSUInteger)selectedNodesCount {
