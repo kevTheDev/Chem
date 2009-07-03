@@ -16,7 +16,6 @@
 
 @implementation DrawView
 
-char* screenState = "start";
 
 // this init method never seems to really get called
 - (id)initWithFrame:(CGRect)frame {
@@ -31,21 +30,16 @@ char* screenState = "start";
 }
 
 - (IBAction)makeDoubleBond:(id)sender {
-	NSLog(@"DOUBLE BOND PRESSED");
 	
 	Bond *selectedBond = [objectMap currentlySelectedBond];
-	
-	NSLog(@"IS BOND DOUBLE?: %d", [selectedBond isDouble]);
-	
-	
+
 	[selectedBond setIsDouble:YES];
 	
-	NSLog(@"IS BOND DOUBLE?: %d", [selectedBond isDouble]);
-	[toolBar removeFromSuperview];
-	
+	[toolBar removeFromSuperview];	
 	[objectMap clearSelectedBonds];
 	
-	screenState = "secondNode";
+	[programState setCurrentState:SELECT_OBJECT];
+	
 	[self setNeedsDisplay]; // redraw entire screen
 	
 	
@@ -53,44 +47,21 @@ char* screenState = "start";
 }
 
 - (IBAction)addNewNode:(id)sender {
-	
-	screenState = "secondNode";
-	
-	
+
+	[programState setCurrentState:ADD_NODE];
 	[toolBar removeFromSuperview];
-	//[self setNeedsDisplay]; // redraw entire screen
+	[self setNeedsDisplay]; // redraw entire screen
 }
 
 
 - (void)drawRect:(CGRect)rect {
-	
-	[toolBar removeFromSuperview];
+
 	
 	if(programState == NULL) {
-		programState = [[ProgramState alloc] init];	
-	}
-	
-	// init toolbar buttons arrays
-	if([bondButtons count] == 0) {
-		
-		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:doubleBondButton];
-		
-		bondButtons = [[NSArray alloc] initWithArray:tempArray];
-		
-		[tempArray release];
-		
-	}
-	
-	if([nodeButtons count] == 0) {
-		
-		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:addNodeButton];
-		
-		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
-		
-		[tempArray release];
-		
+		programState = [[ProgramState alloc] init];
+		objectMap = [[ObjectMap alloc] init];
+		[self setupToolbar];
+		[toolBar removeFromSuperview];
 	}
 	
     // Drawing code
@@ -100,72 +71,88 @@ char* screenState = "start";
 	// got the graphics context
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
-	NSLog(@"PROG STATE: %s", [programState currentPrompt]);
-	
-	char* text = "";
-	
-	NSLog(@"SCREEN STATE: %s", screenState);
-	
-	if(screenState == "start") {
-		text = "Touch the screen to create the first root node...";
-		
-		objectMap = [[ObjectMap alloc] init];
+	char *prompt = [programState currentPrompt];
+	[self renderText:prompt withXCoord:15.0 withYCoord:50.0 withContext:(CGContextRef)ctx];
+	[objectMap renderWithContext:ctx];
 
-		screenState = "firstNode";
-	}
-	else if(screenState == "firstNode") {
-		text = "Touch the screen again to form an bond...";
-		screenState = "secondNode";
-	}
-	else if(screenState == "secondNode") {
-		text = "Touch near an bond or node to manipulate it...";
-		
-		Node *firstNode;
-		Node *secondNode;
-		
-		NSObject *selectedObject = [objectMap currentlySelectedObject];
-		if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
-			firstNode = (Node *) selectedObject;
-			
-			int secondNodeIndex = [objectMap nodesCount] - 1;
-			secondNode = [objectMap nodeAtIndex:secondNodeIndex];
-			
-			[objectMap clearSelectedNodes];
-		}
-		else {
-			firstNode = [objectMap nodeAtIndex:0];
-			secondNode = [objectMap nodeAtIndex:1];
-		}
+}
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	UITouch *touch = [touches anyObject];
+	CGPoint	pos = [touch locationInView:self];
+	
+	switch([programState currentState]) {
+		case FIRST_NODE:
+			NSLog(@"TOUCH BEGAN, SCREEN STATE: FIRST_NODE");
+			break;
+		case SECOND_NODE:
+			NSLog(@"TOUCH BEGAN, SCREEN STATE: SECOND_NODE");
+			break;
+		case SELECT_OBJECT:
+			NSLog(@"TOUCH BEGAN, SCREEN STATE: SELECT_OBJECT");
+			break;
+		case MANIPULATE_OBJECT:
+			NSLog(@"TOUCH BEGAN, SCREEN STATE: MANIPULATE_OBJECT");
+			break;
+		case ADD_NODE:
+			NSLog(@"TOUCH BEGAN, SCREEN STATE: ADD_NODE");
+			break;
+		default:
+			NSLog(@"TOUCH BEGAN, SCREEN STATE: NO STATE");
+			break;
+	}
+	
+	
+	
+	if([programState currentState] == FIRST_NODE) {
+		
+		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
+		[objectMap addNode:node];		
+		[node release]; //release temp node object
+		
+		[programState setCurrentState:SECOND_NODE];
+	}
+	else if([programState currentState] == SECOND_NODE) {
+		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
+		[objectMap addNode:node];		
+		[node release]; //release temp node object
+		
+		Node *firstNode = [objectMap nodeAtIndex:0];
+		Node *secondNode = [objectMap nodeAtIndex:1];
 		
 		Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
 		[objectMap addBond:bond];
 		[bond release];
 		
-		screenState = "main";
-		
+		[programState setCurrentState:SELECT_OBJECT];
 	}
-	else if(screenState == "main") {
-		if([objectMap highlightedNodesCount] > 0 && [objectMap highlightedBondsCount] > 0) {
-			text = "Confirm an bond or a node";
-		}
-		else if([objectMap highlightedBondsCount] > 0) {
-			text = "Confirm an bond";
-		}
-		else if([objectMap highlightedNodesCount] > 0) {
-			text = "Confirm a node";
-		}
-		else {
-			text = "No unconfirmed objects";
-		}
+	else if([programState currentState] == SELECT_OBJECT) {
 
-		screenState = "confirm";
-		
+		[objectMap highlightClosestObjectToPoint:pos];
+		[programState setCurrentState:MANIPULATE_OBJECT];
+			
 	}
-	else {
-		NSLog(@"SCREEN STATE CONFIRM");
+	else if([programState currentState] == MANIPULATE_OBJECT) {
+		
+		// detect a user confirming a highlighted object
+		[objectMap selectClosestObjectToPoint:pos];
 		
 		NSObject *selectedObject = [objectMap currentlySelectedObject];
+		
+		
+		if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
+			Node *firstNode = (Node *) selectedObject;
+			
+			int secondNodeIndex = [objectMap nodesCount] - 1;
+			Node *secondNode = [objectMap nodeAtIndex:secondNodeIndex];
+			
+			Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
+			[objectMap addBond:bond];
+			[bond release];
+			
+		}
+
 		if([selectedObject isKindOfClass:[Node class]]) {
 			[toolBar setItems:nodeButtons];
 		}
@@ -175,40 +162,32 @@ char* screenState = "start";
 		
 		[self addSubview:toolBar];
 	}
-	
-	[self renderText:text withXCoord:15.0 withYCoord:50.0 withContext:(CGContextRef)ctx];
-	[objectMap renderWithContext:ctx];
-
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	
-	UITouch *touch = [touches anyObject];
-	CGPoint	pos = [touch locationInView:self];
-
-	NSLog(@"TOUCH BEGAN WITH SCREEN STATE: %s", screenState);
-	
-	if(screenState == "main") {
-
-		[objectMap highlightClosestObjectToPoint:pos];
-	
-	}
-	else if(screenState == "confirm") {
+	else if([programState currentState] == ADD_NODE) {
+		NSObject *selectedObject = [objectMap currentlySelectedObject];
 		
-		// detect a user confirming a highlighted object
-		[objectMap selectClosestObjectToPoint:pos];
-		NSLog(@"SELECTED CLOSEST OBJECT");
-	}
-	else if(screenState == "firstNode" || screenState == "secondNode") {
-		NSLog(@"TOUCH BEGAN WITH SCREEN STATE: %s", screenState);
 		
-		// create a node and add it to the object map
-		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
-		[objectMap addNode:node];		
-		[node release]; //release temp node object
+		if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
+						
+			Node *firstNode = (Node *) selectedObject;
+			
+			Node *secondNode = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
+			[objectMap addNode:secondNode];		
+			
+			
+			Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
+			[objectMap addBond:bond];
+
+			[bond release];
+			[secondNode release]; //release temp node object
+			
+		}
+		
+		[objectMap clearSelectedNodes];
+		[programState setCurrentState:SELECT_OBJECT];
+		
 	}
-	
-	
+
+
 	
 	[self setNeedsDisplay]; // redraw entire screen
 	
@@ -231,6 +210,32 @@ char* screenState = "start";
     CGContextShowTextAtPoint(ctx, xCoord, yCoord, text, strlen(text));
 	
 	return;
+}
+
+- (void) setupToolbar {
+	// init toolbar buttons arrays
+	if([bondButtons count] == 0) {
+		
+		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+		[tempArray addObject:doubleBondButton];
+		
+		bondButtons = [[NSArray alloc] initWithArray:tempArray];
+		
+		[tempArray release];
+		
+	}
+	
+	if([nodeButtons count] == 0) {
+		
+		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+		[tempArray addObject:addNodeButton];
+		
+		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
+		
+		[tempArray release];
+		
+	}
+
 }
 
 

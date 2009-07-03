@@ -33,4 +33,6 @@
 - (IBAction)makeDoubleBond:(id)sender;
 - (IBAction)addNewNode:(id)sender;
 
+- (void) setupToolbar;
+
 @end

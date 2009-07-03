@@ -107,8 +107,6 @@ int LINE_DRAW_WIDTH = 2.0;
 	
 	float centerY = littleY + halfDistanceY;
 	
-	NSLog(@"CENTER EDGE X: %f", centerX);
-	NSLog(@"CENTER EDGE Y: %f", centerY);
 	
 	Node *node = [[Node alloc] initWithXCoord:centerX yCoord:centerY];
 
@@ -176,7 +174,7 @@ int LINE_DRAW_WIDTH = 2.0;
 	if([self isDouble]) {
 	
 		if(xDistance < yDistance) {
-			NSLog(@"DO DOUBLE LINE X");
+			//NSLog(@"DO DOUBLE LINE X");
 			CGPathMoveToPoint(path, NULL, nodeAPoint.x + 0, nodeAPoint.y + 5.0);
 			CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 0, nodeBPoint.y + 5.0);
 		
@@ -185,7 +183,7 @@ int LINE_DRAW_WIDTH = 2.0;
 		
 		}
 		else {
-			NSLog(@"DO DOUBLE LINE Y");
+			//NSLog(@"DO DOUBLE LINE Y");
 			CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 0);
 			CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 0);
 		
@@ -196,6 +194,7 @@ int LINE_DRAW_WIDTH = 2.0;
 	}
 	else
 	{
+		//NSLog(@"DO REGULAR LINE");
 		CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 5.0);
 		CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 5.0);
 	}
