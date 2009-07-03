@@ -91,11 +91,8 @@ char* screenState = "start";
 	}
 	
 	[self renderText:text withXCoord:15.0 withYCoord:50.0 withContext:(CGContextRef)ctx];
-
-	NSLog(@"RENDERED NODES");
-	[self renderNodes];
-	[self renderEdges];
-	NSLog(@"RENDERED EDGES");
+	[self renderNodesWithContext:ctx];
+	[self renderEdgesWithContext:ctx];
 
 }
 
@@ -150,27 +147,24 @@ char* screenState = "start";
 }
 
 // draw all nodes
-- (void) renderNodes {
+- (void) renderNodesWithContext:(CGContextRef)ctx {
 	for (Node *node in [objectMap nodeMap]) {
-		[self drawNode:node];
+		[self drawNode:node withContext:ctx];
 	}
 	
 	return;
 }
 
 
-- (void) renderEdges {
+- (void) renderEdgesWithContext:(CGContextRef)ctx {
 	for (Edge *edge in [objectMap edgeMap]) {
-		[self drawEdge:edge];
+		[self drawEdge:edge withContext:ctx];
 	}
 
 	return;
 }
 
-- (void) drawEdge:(Edge *)edge {
-	
-
-	CGContextRef ctx = UIGraphicsGetCurrentContext();
+- (void) drawEdge:(Edge *)edge withContext:(CGContextRef)ctx {
 	
 	CGMutablePathRef path = CGPathCreateMutable();
 
@@ -207,18 +201,7 @@ char* screenState = "start";
 	return;
 }
 
-- (void) drawNodePoint:(CGPoint)nodePoint {
-	CGContextRef ctx = UIGraphicsGetCurrentContext();
-
-	CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
-	
-    CGContextFillEllipseInRect(ctx, CGRectMake(nodePoint.x, nodePoint.y, NODE_WIDTH, NODE_HEIGHT));
-	
-}
-
-- (void) drawNode:(Node *)node {
-	CGContextRef ctx = UIGraphicsGetCurrentContext();
-	
+- (void) drawNode:(Node *)node withContext:(CGContextRef)ctx {	
 	if([node confirmedHighlight] == YES) {
 		CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
 	}
@@ -237,7 +220,6 @@ char* screenState = "start";
 
 - (void)dealloc {
 	[objectMap release];
-	//[nodes release];
     [super dealloc];
 }
 
