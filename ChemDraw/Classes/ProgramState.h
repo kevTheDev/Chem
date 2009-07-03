@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#define FIRST_NODE  0
-#define SECOND_NODE 1
-#define SELECT_OBJECT 2
-#define MANIPULATE_OBJECT 3
-#define ADD_NODE 4
-#define GESTURE_MODE 5
+#define SELECT_OBJECT 0
+#define MANIPULATE_OBJECT 1
+#define ADD_NODE 2
+#define GESTURE_MODE 3
+#define TOOLBAR_MODE 4
 
 @interface ProgramState : NSObject {
 	int currentState;

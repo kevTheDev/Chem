@@ -40,27 +40,20 @@
 	
 	
 	switch(currentState) {
-		case FIRST_NODE:
-			prompt = "Touch the screen again to form an bond...";
-			//prompt = "Touch the screen to create the first root node...";
-			break;
-		case SECOND_NODE:
-			prompt = "Touch the screen again to form an bond...";
-			//prompt = "Touch near an bond or node to manipulate it...";
-			break;
 		case SELECT_OBJECT:
 			prompt = "Touch near an bond or node to manipulate it...";
-//			prompt = "Touch again to confirm selection";
 			break;
 		case MANIPULATE_OBJECT:
 			prompt = "Touch again to confirm selection";
-//			prompt = "Choose your action from the toolbar";
 			break;
 		case ADD_NODE:
 			prompt = "Touch to add another node";
 			break;
 		case GESTURE_MODE:
 			prompt = "Draw a symbol";
+			break;
+		case TOOLBAR_MODE:
+			prompt = "Choose an action";
 			break;
 		default:
 			prompt = "Touch the screen to create the first root node...";

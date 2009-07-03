@@ -130,12 +130,6 @@
 	CGPoint	pos = [touch locationInView:self];
 	
 	switch([programState currentState]) {
-		case FIRST_NODE:
-			NSLog(@"TOUCH BEGAN, SCREEN STATE: FIRST_NODE");
-			break;
-		case SECOND_NODE:
-			NSLog(@"TOUCH BEGAN, SCREEN STATE: SECOND_NODE");
-			break;
 		case SELECT_OBJECT:
 			NSLog(@"TOUCH BEGAN, SCREEN STATE: SELECT_OBJECT");
 			break;
@@ -152,32 +146,8 @@
 			NSLog(@"TOUCH BEGAN, SCREEN STATE: NO STATE");
 			break;
 	}
-	
-	
-	
-	if([programState currentState] == FIRST_NODE) {
-		
-		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
-		[objectMap addNode:node];		
-		[node release]; //release temp node object
-		
-		[programState setCurrentState:SECOND_NODE];
-	}
-	else if([programState currentState] == SECOND_NODE) {
-		Node *node = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
-		[objectMap addNode:node];		
-		[node release]; //release temp node object
-		
-		Node *firstNode = [objectMap nodeAtIndex:0];
-		Node *secondNode = [objectMap nodeAtIndex:1];
-		
-		Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
-		[objectMap addBond:bond];
-		[bond release];
-		
-		[programState setCurrentState:SELECT_OBJECT];
-	}
-	else if([programState currentState] == SELECT_OBJECT) {
+
+	if([programState currentState] == SELECT_OBJECT) {
 
 		[objectMap highlightClosestObjectToPoint:pos];
 		[programState setCurrentState:MANIPULATE_OBJECT];
@@ -223,6 +193,7 @@
 		}
 		
 		[self addSubview:toolBar];
+		[programState setCurrentState:TOOLBAR_MODE];
 	}
 	else if([programState currentState] == ADD_NODE) {
 		NSObject *selectedObject = [objectMap currentlySelectedObject];
