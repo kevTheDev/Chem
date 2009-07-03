@@ -98,6 +98,13 @@ int DRAW_HEIGHT = 10;
 	}
 	
     CGContextFillEllipseInRect(ctx, CGRectMake(xCoord, yCoord, DRAW_WIDTH, DRAW_HEIGHT));
+	
+	
+	if(elementType == @"Oxygen") {
+		CGContextSetRGBStrokeColor(ctx, 0, 0, 255, 1);
+		CGContextStrokeEllipseInRect(ctx, CGRectMake(xCoord + 6, yCoord - 6, 5, 5));
+	}
+	
 	return;
 	
 }
