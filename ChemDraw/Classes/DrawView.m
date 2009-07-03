@@ -60,9 +60,7 @@ char* screenState = "start";
 
 		Node *firstNode = [objectMap nodeAtIndex:0];
 		Node *secondNode = [objectMap nodeAtIndex:1];
-		
-		NSLog(@"FIRST NODE X: %f", [firstNode xCoord]);
-		NSLog(@"SECOND NODE X: %f", [secondNode xCoord]);
+
 		
 		Edge *edge = [[Edge alloc] initWithNodeA:firstNode nodeB:secondNode];
 		[objectMap addEdge:edge];
@@ -72,21 +70,19 @@ char* screenState = "start";
 		
 	}
 	else if(screenState == "main") {
-		//if([objectMap highlightedNodesCount] > 0 && [objectMap highlightedEdgesCount] > 0) {
-//			text = "Confirm an edge or a node";
-//		}
-//		else if([objectMap highlightedEdgesCount] > 0) {
-//			text = "Confirm an edge";
-//		}
-//		else if([objectMap highlightedNodesCount] > 0) {
-//			text = "Confirm a node";
-//		}
-//		else {
-//			text = "No unconfirmed objects";
-//			NSLog(@"No unconfirmed objects");
-//		}
-//
-		
+		if([objectMap highlightedNodesCount] > 0 && [objectMap highlightedEdgesCount] > 0) {
+			text = "Confirm an edge or a node";
+		}
+		else if([objectMap highlightedEdgesCount] > 0) {
+			text = "Confirm an edge";
+		}
+		else if([objectMap highlightedNodesCount] > 0) {
+			text = "Confirm a node";
+		}
+		else {
+			text = "No unconfirmed objects";
+		}
+
 		screenState = "confirm";
 		
 	}
@@ -94,25 +90,8 @@ char* screenState = "start";
 		NSLog(@"SCREEN STATE CONFIRM");
 	}
 	
-    CGContextSelectFont(ctx, "Helvetica", 14.0, kCGEncodingMacRoman);
-    CGContextSetTextDrawingMode(ctx, kCGTextFill);
-    CGContextSetRGBFillColor(ctx, 0, 0, 0, 1);
-	
-    CGAffineTransform xform = CGAffineTransformMake(
-													1.0,  0.0,
-													0.0, -1.0,
-													0.0,  0.0);
-    CGContextSetTextMatrix(ctx, xform);
-	
-	NSLog(@"HELLO THERE");
-	
-    CGContextShowTextAtPoint(ctx, 15, 50, text, strlen(text));
-	NSLog(@"RENDERED TEXT");
-	
-//	if([objectMap edgesCount] == 0) {
-//		[self renderNodes];
-//	}
-//	
+	[self renderText:text withXCoord:15.0 withYCoord:50.0 withContext:(CGContextRef)ctx];
+
 	NSLog(@"RENDERED NODES");
 	[self renderNodes];
 	[self renderEdges];
@@ -152,6 +131,23 @@ char* screenState = "start";
 	return;
 }
 
+- (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx {
+	
+	CGContextSelectFont(ctx, "Helvetica", 14.0, kCGEncodingMacRoman);
+    CGContextSetTextDrawingMode(ctx, kCGTextFill);
+    CGContextSetRGBFillColor(ctx, 0, 0, 0, 1);
+	
+    CGAffineTransform xform = CGAffineTransformMake(
+													1.0,  0.0,
+													0.0, -1.0,
+													0.0,  0.0);
+    CGContextSetTextMatrix(ctx, xform);
+	
+	
+    CGContextShowTextAtPoint(ctx, xCoord, yCoord, text, strlen(text));
+	
+	return;
+}
 
 // draw all nodes
 - (void) renderNodes {

@@ -13,11 +13,6 @@
 
 @interface DrawView : UIView {	
 	ObjectMap *objectMap;
-	
-//	NSMutableArray *nodes;
-//	NSMutableArray *edges;
-//	NSMutableArray *unconfirmedHighlightedNodes;
-//	NSMutableArray *unconfirmedHighlightedEdges;
 }
 
 - (void) drawNode:(Node *)node;
@@ -26,25 +21,11 @@
 - (void) drawEdge:(Edge *)edge;
 - (void) renderEdges;
 
-//- (void) renderPlainNodes;
-//- (void) renderSelectedNodes;
-//- (void) renderHighlightedNodes;
-//
-//- (void) renderPlainEdges;
-//- (void) renderHighlightedEdges;
-//- (void) renderSelectedEdges;
+- (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx;
+
 
 - (void) drawNodePoint:(CGPoint)nodePoint;
 
-//- (Node *) detectNodesForPoint:(CGPoint)point;
-//- (void) detectClosestEdgesToPoint:(CGPoint)point withClosestNode:(Node *)closestNode;
-//
-//- (Node *) confirmNodeFromHighlightedNodes:(CGPoint)point;
-//- (Edge *) confirmEdgeFromHighlightedEdges:(CGPoint)point;
 
-//@property (nonatomic, retain) NSMutableArray *nodes;
-//@property (nonatomic, retain) NSMutableArray *edges;
-//@property (nonatomic, retain) NSMutableArray *unconfirmedHighlightedNodes;
-//@property (nonatomic, retain) NSMutableArray *unconfirmedHighlightedEdges;
 
 @end
