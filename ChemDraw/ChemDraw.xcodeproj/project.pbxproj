@@ -40,6 +40,10 @@
 		DE9464430FFE746C00F7AA88 /* ActionMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464410FFE746C00F7AA88 /* ActionMap.m */; };
 		DE9464460FFE749200F7AA88 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464450FFE749200F7AA88 /* Action.m */; };
 		DE9464470FFE749200F7AA88 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464450FFE749200F7AA88 /* Action.m */; };
+		DE9465720FFE84FF00F7AA88 /* HighlightAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465710FFE84FF00F7AA88 /* HighlightAction.m */; };
+		DE9465730FFE84FF00F7AA88 /* HighlightAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465710FFE84FF00F7AA88 /* HighlightAction.m */; };
+		DE9465760FFE850600F7AA88 /* SelectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465750FFE850600F7AA88 /* SelectAction.m */; };
+		DE9465770FFE850600F7AA88 /* SelectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465750FFE850600F7AA88 /* SelectAction.m */; };
 		DEB16F7D0FFE528B00F8BE1B /* PointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB16F7C0FFE528B00F8BE1B /* PointObject.m */; };
 		DEB16F7E0FFE528B00F8BE1B /* PointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB16F7C0FFE528B00F8BE1B /* PointObject.m */; };
 		DED6FCC00FFB2A93008CE1A7 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */; };
@@ -92,6 +96,10 @@
 		DE9464410FFE746C00F7AA88 /* ActionMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionMap.m; sourceTree = "<group>"; };
 		DE9464440FFE749200F7AA88 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
 		DE9464450FFE749200F7AA88 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
+		DE9465700FFE84FF00F7AA88 /* HighlightAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighlightAction.h; sourceTree = "<group>"; };
+		DE9465710FFE84FF00F7AA88 /* HighlightAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighlightAction.m; sourceTree = "<group>"; };
+		DE9465740FFE850600F7AA88 /* SelectAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAction.h; sourceTree = "<group>"; };
+		DE9465750FFE850600F7AA88 /* SelectAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAction.m; sourceTree = "<group>"; };
 		DEB16F7B0FFE528B00F8BE1B /* PointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointObject.h; sourceTree = "<group>"; };
 		DEB16F7C0FFE528B00F8BE1B /* PointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointObject.m; sourceTree = "<group>"; };
 		DED6FCBE0FFB2A93008CE1A7 /* Arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arithmetic.h; sourceTree = "<group>"; };
@@ -155,6 +163,10 @@
 				DE9464410FFE746C00F7AA88 /* ActionMap.m */,
 				DE9464440FFE749200F7AA88 /* Action.h */,
 				DE9464450FFE749200F7AA88 /* Action.m */,
+				DE9465700FFE84FF00F7AA88 /* HighlightAction.h */,
+				DE9465710FFE84FF00F7AA88 /* HighlightAction.m */,
+				DE9465740FFE850600F7AA88 /* SelectAction.h */,
+				DE9465750FFE850600F7AA88 /* SelectAction.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -337,6 +349,8 @@
 				DE94643F0FFE744A00F7AA88 /* AddBondAction.m in Sources */,
 				DE9464430FFE746C00F7AA88 /* ActionMap.m in Sources */,
 				DE9464470FFE749200F7AA88 /* Action.m in Sources */,
+				DE9465730FFE84FF00F7AA88 /* HighlightAction.m in Sources */,
+				DE9465770FFE850600F7AA88 /* SelectAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +376,8 @@
 				DE94643E0FFE744A00F7AA88 /* AddBondAction.m in Sources */,
 				DE9464420FFE746C00F7AA88 /* ActionMap.m in Sources */,
 				DE9464460FFE749200F7AA88 /* Action.m in Sources */,
+				DE9465720FFE84FF00F7AA88 /* HighlightAction.m in Sources */,
+				DE9465760FFE850600F7AA88 /* SelectAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -58,27 +58,14 @@
 	return [bondMap objectAtIndex:index];
 }
 
-- (void) selectBond:(Bond *)bond {
-	int bondMapIndex = [bondMap indexOfObject:bond];
-	[bondMap selectBondAtIndex:bondMapIndex];
-}
-
 - (NSUInteger)selectedBondsCount {
 	return [bondMap selectedBondsCount];
 }
 
-- (void) highlightBond:(Bond *)bond {
-	int bondMapIndex = [bondMap indexOfObject:bond];
-	[bondMap highlightBondAtIndex:bondMapIndex];
-}
+
 
 - (NSUInteger)highlightedBondsCount {
 	return [bondMap highlightedBondsCount];
-}
-
-- (void) selectNode:(Node *)node {
-	int nodeMapIndex = [nodeMap indexOfObject:node];
-	[nodeMap selectNodeAtIndex:nodeMapIndex];
 }
 
 - (void) clearSelectedNodes {
@@ -181,6 +168,10 @@
 		Bond *bond = (Bond *) closestObject;
 		[bondMap highlightBond:bond];
 	}
+	
+	Action *action = [[HighlightAction alloc] init];
+	[actionMap addAction:action];
+	
 
 }
 
@@ -196,6 +187,9 @@
 		Bond *bond = (Bond *) closestObject;
 		[bondMap selectBond:bond];		
 	}
+	
+	Action *action = [[SelectAction alloc] init];
+	[actionMap addAction:action];
 	
 }
 
@@ -251,10 +245,16 @@
 		NSLog(@"LAST ACTION WAS A NODE ACTION");		
 		[nodeMap removeLastNode];
 	}
-	else {
+	else if([lastAction isKindOfClass:[AddBondAction class]]) {
 		NSLog(@"LAST ACTION WAS A BOND ACTION");
 		[bondMap removeLastBond];
 		//[nodeMap removeLastNode];		
+	}
+	else if([lastAction isKindOfClass:[SelectAction class]]) {
+		[self clearSelectedObjects];
+	}
+	else if([lastAction isKindOfClass:[HighlightAction class]]) {
+		[self clearHighlightedObjects];
 	}
 	
 	[actionMap removeLastAction];

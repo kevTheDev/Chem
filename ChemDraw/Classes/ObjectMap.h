@@ -12,6 +12,9 @@
 #import "ActionMap.h"
 #import "AddNodeAction.h"
 #import "AddBondAction.h"
+#import "SelectAction.h"
+#import "HighlightAction.h"
+
 
 @interface ObjectMap : NSObject {
 	
@@ -32,16 +35,16 @@
 - (NSObject *) closestObjectToPoint:(CGPoint)point;
 
 // highlighting and selecting nodes
-- (void) highlightNode:(Node *)node;
+
 - (NSUInteger)highlightedNodesCount;
 
-- (void) selectNode:(Node *)node;
+
 - (NSUInteger)selectedNodesCount;
 
 // highlighting and selecting bonds
-- (void) highlightBond:(Bond *)bond;
+
 - (NSUInteger)highlightedBondsCount;
-- (void) selectBond:(Bond *)bond;
+
 - (NSUInteger)selectedBondsCount;
 
 - (void) highlightClosestObjectToPoint:(CGPoint)point;

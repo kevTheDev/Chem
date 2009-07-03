@@ -32,7 +32,7 @@
 - (IBAction)undoLastAction:(id)sender {
 	[objectMap undoLastAction];
 	[programState setCurrentState:SELECT_OBJECT];
-	
+	[toolBar setItems:standardButtons];
 	NSLog(@"UNDO LAST ACTION");
 	
 	[self setNeedsDisplay]; // redraw entire screen
@@ -296,6 +296,7 @@
 		
 		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 		[tempArray addObject:singleBondButton];
+		[tempArray addObject:undoButton];
 		
 		singleBondButtons = [[NSArray alloc] initWithArray:tempArray];
 		
@@ -307,6 +308,7 @@
 		
 		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 		[tempArray addObject:doubleBondButton];
+		[tempArray addObject:undoButton];
 		
 		doubleBondButtons = [[NSArray alloc] initWithArray:tempArray];
 		
@@ -319,6 +321,7 @@
 		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 		[tempArray addObject:addNodeButton];
 		[tempArray addObject:changeElementButton];
+		[tempArray addObject:undoButton];
 		
 		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
 		
