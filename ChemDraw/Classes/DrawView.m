@@ -41,11 +41,14 @@ char* screenState = "start";
 	[selectedBond setIsDouble:YES];
 	
 	NSLog(@"IS BOND DOUBLE?: %d", [selectedBond isDouble]);
+	[toolBar removeFromSuperview];
 	
 }
 
 
 - (void)drawRect:(CGRect)rect {
+	
+	[toolBar removeFromSuperview];
 	
 	if(programState == NULL) {
 		programState = [[ProgramState alloc] init];	
@@ -108,6 +111,7 @@ char* screenState = "start";
 	}
 	else {
 		NSLog(@"SCREEN STATE CONFIRM");
+		[self addSubview:toolBar];
 	}
 	
 	[self renderText:text withXCoord:15.0 withYCoord:50.0 withContext:(CGContextRef)ctx];

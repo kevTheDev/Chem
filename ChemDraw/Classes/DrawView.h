@@ -19,11 +19,10 @@
 	ObjectMap *objectMap;
 	
 	//UIBarButtonItem *doubleBondButton;
+	IBOutlet UIToolbar *toolBar;
 }
 
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx;
-
-//- (IBOutlet) UIBarButtonItem *doubleBondButton;
 
 - (IBAction)makeDoubleBond:(id)sender;
 
