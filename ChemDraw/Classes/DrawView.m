@@ -14,10 +14,6 @@
 
 @implementation DrawView
 
-
-int NODE_WIDTH = 10;
-int NODE_HEIGHT = 10;
-
 char* screenState = "start";
 
 - (id)initWithFrame:(CGRect)frame {

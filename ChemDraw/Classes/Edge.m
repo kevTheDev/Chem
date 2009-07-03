@@ -20,6 +20,8 @@
 @synthesize unconfirmedHighlight;
 @synthesize confirmedHighlight;
 
+int LINE_DRAW_WIDTH = 2.0;
+
 - (Edge *) initWithNodeA:(Node *)firstNode nodeB:(Node *)secondNode {
 	self = [super init];
 	
@@ -156,7 +158,7 @@
 		CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
 	}
 	
-	CGContextSetLineWidth(ctx, 2.0);
+	CGContextSetLineWidth(ctx, LINE_DRAW_WIDTH);
 	CGContextStrokePath(ctx);
 	
 	return;

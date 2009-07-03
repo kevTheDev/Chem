@@ -17,6 +17,9 @@
 @synthesize unconfirmedHighlight;
 @synthesize confirmedHighlight;
 
+int DRAW_WIDTH = 10;
+int DRAW_HEIGHT = 10;
+
 - (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y {
 	
 	self = [super init];
@@ -90,7 +93,7 @@
 		CGContextSetRGBFillColor(ctx, 255, 0, 0, 1.0);
 	}
 	
-    CGContextFillEllipseInRect(ctx, CGRectMake(xCoord, yCoord, 10.0, 10.0));
+    CGContextFillEllipseInRect(ctx, CGRectMake(xCoord, yCoord, DRAW_WIDTH, DRAW_HEIGHT));
 	return;
 	
 }
