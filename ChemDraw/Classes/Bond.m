@@ -139,40 +139,17 @@ int LINE_DRAW_WIDTH = 2.0;
 	return false;
 }
 
-//- (void) renderWithContext:(CGContextRef)ctx {
-//	CGMutablePathRef path = CGPathCreateMutable();
-//
-//	CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 5.0);
-//	CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 5.0);
-//	CGPathCloseSubpath(path);
-//	CGContextAddPath(ctx, path);
-//	
-//
-//	if([self isHighlighted]) {
-//		CGContextSetStrokeColorWithColor(ctx, [UIColor purpleColor].CGColor);
-//	}
-//	else if([self isSelected]) {
-//		CGContextSetStrokeColorWithColor(ctx, [UIColor orangeColor].CGColor);
-//	}
-//	else {
-//		CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
-//	}
-//	
-//	CGContextSetLineWidth(ctx, LINE_DRAW_WIDTH);
-//	CGContextStrokePath(ctx);
-//	
-//	return;
-//	
-//}
 
 - (void) renderWithContext:(CGContextRef)ctx {
 	CGMutablePathRef path = CGPathCreateMutable();
 	
-	float xDistance = abs(nodeAPoint.x - nodeBPoint.x);
-	float yDistance = abs(nodeAPoint.y - nodeBPoint.y);
+	
 	
 	if([self isDouble]) {
 	
+		float xDistance = abs(nodeAPoint.x - nodeBPoint.x);
+		float yDistance = abs(nodeAPoint.y - nodeBPoint.y);
+		
 		if(xDistance < yDistance) {
 			//NSLog(@"DO DOUBLE LINE X");
 			CGPathMoveToPoint(path, NULL, nodeAPoint.x + 0, nodeAPoint.y + 5.0);

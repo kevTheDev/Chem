@@ -14,7 +14,8 @@
 #import "AddBondAction.h"
 #import "SelectAction.h"
 #import "HighlightAction.h"
-
+#import "PotentialBondMap.h"
+#import "PotentialBond.h"
 
 @interface ObjectMap : NSObject {
 	
@@ -22,6 +23,8 @@
 	
 	NodeMap *nodeMap;
 	BondMap *bondMap;
+	
+	PotentialBondMap *potentialBondMap;
 }
 
 - (BOOL) isEmpty;
