@@ -59,6 +59,9 @@
 		case ADD_NODE:
 			prompt = "Touch to add another node";
 			break;
+		case GESTURE_MODE:
+			prompt = "Draw a symbol";
+			break;
 		default:
 			prompt = "Touch the screen to create the first root node...";
 			break;

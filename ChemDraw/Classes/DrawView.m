@@ -31,6 +31,9 @@
 
 - (IBAction)changeElement:(id)sender {
 	NSLog(@"Change element");
+	[programState setCurrentState:GESTURE_MODE];
+	[self setNeedsDisplay]; // redraw entire screen
+	
 }
 
 - (IBAction)makeDoubleBond:(id)sender {
@@ -84,17 +87,27 @@
 		[self setupToolbar];
 		[toolBar removeFromSuperview];
 	}
-	
-    // Drawing code
-	[[UIColor whiteColor] setFill]; 
-	UIRectFill(rect);
-	
+
 	// got the graphics context
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
+	if([programState currentState] == GESTURE_MODE) {
+		[[UIColor whiteColor] setFill]; 
+		UIRectFill(rect);
+	}
+	else {
+		// Drawing code
+		[[UIColor whiteColor] setFill]; 
+		UIRectFill(rect);
+		
+		
+		
+		
+		[objectMap renderWithContext:ctx];
+	}
+   
 	char *prompt = [programState currentPrompt];
 	[self renderText:prompt withXCoord:15.0 withYCoord:50.0 withContext:(CGContextRef)ctx];
-	[objectMap renderWithContext:ctx];
 
 }
 
@@ -118,6 +131,9 @@
 			break;
 		case ADD_NODE:
 			NSLog(@"TOUCH BEGAN, SCREEN STATE: ADD_NODE");
+			break;
+		case GESTURE_MODE:
+			NSLog(@"TOUCH BEGAN, SCREEN STATE: GESTURE_MODE");
 			break;
 		default:
 			NSLog(@"TOUCH BEGAN, SCREEN STATE: NO STATE");
@@ -218,6 +234,8 @@
 		[objectMap clearSelectedNodes];
 		[programState setCurrentState:SELECT_OBJECT];
 		
+	}
+	else if([programState currentState] == GESTURE_MODE) {
 	}
 
 

@@ -13,6 +13,7 @@
 #define SELECT_OBJECT 2
 #define MANIPULATE_OBJECT 3
 #define ADD_NODE 4
+#define GESTURE_MODE 5
 
 @interface ProgramState : NSObject {
 	int currentState;
