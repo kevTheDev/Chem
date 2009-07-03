@@ -21,6 +21,19 @@
     if ( self ) {
 		nodeMap = [[NodeMap alloc] init];
         bondMap = [[BondMap alloc] init];
+		
+		Node *firstNode = [[Node alloc] initWithXCoord:100 yCoord:200];
+		Node *secondNode = [[Node alloc] initWithXCoord:200 yCoord:200];
+		
+		Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
+		
+		[self addBond:bond];
+		[self addNode:firstNode];
+		[self addNode:secondNode];
+		
+		[firstNode release];
+		[secondNode release];
+		[bond release];
     }
 	
     return self;

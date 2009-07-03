@@ -17,7 +17,7 @@
 	self = [super init];
 	
     if ( self ) {
-		currentState = FIRST_NODE;
+		currentState = SELECT_OBJECT;
     }
 	
     return self;
