@@ -10,8 +10,9 @@
 
 #define START_STATE 0
 #define FIRST_NODE  1
-#define MAIN        2
-#define CONFIRM     3
+#define SECOND_NODE 2
+#define SELECT_OBJECT 3
+#define MANIPULATE_OBJECT 4
 
 @implementation ProgramState
 
@@ -42,32 +43,32 @@
 
 - (char *)currentPrompt {
 	
-	//char* prompt = "";
-//	
-//	NSLog(@"CURRENT PROMPT");
-//	
-//	switch(currentState) {
-//		case START_STATE:
-//			prompt = "Touch the screen to create the first root node...";
-//			break;
-//		case FIRST_NODE:
-//			prompt = "Touch the screen again to form an bond...";
-//			break;
-//		case SECOND_NODE:
-//			
-//		case MAIN:
-//			prompt = "Touch near an bond or node to manipulate it...";
-//			break:
-//		case CONFIRM:
-//			break;
-//		default:
-//			prompt = "No Prompt";
-//			break;
-//	}
-//	
-//	return prompt;
+	char* prompt = "";
 	
-	return "";
+	NSLog(@"CURRENT PROMPT");
+	
+	switch(currentState) {
+		case START_STATE:
+			prompt = "Touch the screen to create the first root node...";
+			break;
+		case FIRST_NODE:
+			prompt = "Touch the screen again to form an bond...";
+			break;
+		case SECOND_NODE:
+			prompt = "Touch near an bond or node to manipulate it...";
+			break;
+		case SELECT_OBJECT:
+			prompt = "Touch again to confirm selection";
+			break;
+		case MANIPULATE_OBJECT:
+			prompt = "Choose your action from the toolbar";
+			break;
+		default:
+			prompt = "No Prompt";
+			break;
+	}
+	
+	return prompt;
 }
 
 @end
