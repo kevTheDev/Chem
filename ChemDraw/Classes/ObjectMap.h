@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "NodeMap.h"
 #import "BondMap.h"
+#import "ActionMap.h"
 
 @interface ObjectMap : NSObject {
+	
+	ActionMap *actionMap;
+	
 	NodeMap *nodeMap;
 	BondMap *bondMap;
 }

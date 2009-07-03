@@ -32,6 +32,14 @@
 		DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */; };
 		DE874FF20FFA67F500B1E023 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874FF10FFA67F500B1E023 /* NodeTest.m */; };
 		DE8750160FFA690400B1E023 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
+		DE94643A0FFE743800F7AA88 /* AddNodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464390FFE743800F7AA88 /* AddNodeAction.m */; };
+		DE94643B0FFE743800F7AA88 /* AddNodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464390FFE743800F7AA88 /* AddNodeAction.m */; };
+		DE94643E0FFE744A00F7AA88 /* AddBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE94643D0FFE744A00F7AA88 /* AddBondAction.m */; };
+		DE94643F0FFE744A00F7AA88 /* AddBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE94643D0FFE744A00F7AA88 /* AddBondAction.m */; };
+		DE9464420FFE746C00F7AA88 /* ActionMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464410FFE746C00F7AA88 /* ActionMap.m */; };
+		DE9464430FFE746C00F7AA88 /* ActionMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464410FFE746C00F7AA88 /* ActionMap.m */; };
+		DE9464460FFE749200F7AA88 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464450FFE749200F7AA88 /* Action.m */; };
+		DE9464470FFE749200F7AA88 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464450FFE749200F7AA88 /* Action.m */; };
 		DEB16F7D0FFE528B00F8BE1B /* PointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB16F7C0FFE528B00F8BE1B /* PointObject.m */; };
 		DEB16F7E0FFE528B00F8BE1B /* PointObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DEB16F7C0FFE528B00F8BE1B /* PointObject.m */; };
 		DED6FCC00FFB2A93008CE1A7 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */; };
@@ -76,6 +84,14 @@
 		DE874F8B0FFA592000B1E023 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DE874FF10FFA67F500B1E023 /* NodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeTest.m; sourceTree = "<group>"; };
+		DE9464380FFE743800F7AA88 /* AddNodeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNodeAction.h; sourceTree = "<group>"; };
+		DE9464390FFE743800F7AA88 /* AddNodeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNodeAction.m; sourceTree = "<group>"; };
+		DE94643C0FFE744A00F7AA88 /* AddBondAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBondAction.h; sourceTree = "<group>"; };
+		DE94643D0FFE744A00F7AA88 /* AddBondAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBondAction.m; sourceTree = "<group>"; };
+		DE9464400FFE746C00F7AA88 /* ActionMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionMap.h; sourceTree = "<group>"; };
+		DE9464410FFE746C00F7AA88 /* ActionMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionMap.m; sourceTree = "<group>"; };
+		DE9464440FFE749200F7AA88 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
+		DE9464450FFE749200F7AA88 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
 		DEB16F7B0FFE528B00F8BE1B /* PointObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointObject.h; sourceTree = "<group>"; };
 		DEB16F7C0FFE528B00F8BE1B /* PointObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointObject.m; sourceTree = "<group>"; };
 		DED6FCBE0FFB2A93008CE1A7 /* Arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arithmetic.h; sourceTree = "<group>"; };
@@ -131,6 +147,14 @@
 				DE4F55EF0FFE070100DA8541 /* ProgramState.m */,
 				DEB16F7B0FFE528B00F8BE1B /* PointObject.h */,
 				DEB16F7C0FFE528B00F8BE1B /* PointObject.m */,
+				DE9464380FFE743800F7AA88 /* AddNodeAction.h */,
+				DE9464390FFE743800F7AA88 /* AddNodeAction.m */,
+				DE94643C0FFE744A00F7AA88 /* AddBondAction.h */,
+				DE94643D0FFE744A00F7AA88 /* AddBondAction.m */,
+				DE9464400FFE746C00F7AA88 /* ActionMap.h */,
+				DE9464410FFE746C00F7AA88 /* ActionMap.m */,
+				DE9464440FFE749200F7AA88 /* Action.h */,
+				DE9464450FFE749200F7AA88 /* Action.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -309,6 +333,10 @@
 				DE4F4DAE0FFCC6C500DA8541 /* ObjectMap.m in Sources */,
 				DE4F55F00FFE070100DA8541 /* ProgramState.m in Sources */,
 				DEB16F7E0FFE528B00F8BE1B /* PointObject.m in Sources */,
+				DE94643A0FFE743800F7AA88 /* AddNodeAction.m in Sources */,
+				DE94643F0FFE744A00F7AA88 /* AddBondAction.m in Sources */,
+				DE9464430FFE746C00F7AA88 /* ActionMap.m in Sources */,
+				DE9464470FFE749200F7AA88 /* Action.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +358,10 @@
 				DE4F4DAF0FFCC6C500DA8541 /* ObjectMap.m in Sources */,
 				DE4F55F10FFE070100DA8541 /* ProgramState.m in Sources */,
 				DEB16F7D0FFE528B00F8BE1B /* PointObject.m in Sources */,
+				DE94643B0FFE743800F7AA88 /* AddNodeAction.m in Sources */,
+				DE94643E0FFE744A00F7AA88 /* AddBondAction.m in Sources */,
+				DE9464420FFE746C00F7AA88 /* ActionMap.m in Sources */,
+				DE9464460FFE749200F7AA88 /* Action.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
