@@ -49,6 +49,8 @@
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
+- (Bond *) currentlySelectedBond;
+
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) BondMap *bondMap;
 

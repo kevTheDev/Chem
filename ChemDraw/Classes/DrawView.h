@@ -17,9 +17,14 @@
 	
 	ProgramState *programState;
 	ObjectMap *objectMap;
+	
+	//UIBarButtonItem *doubleBondButton;
 }
 
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx;
 
+//- (IBOutlet) UIBarButtonItem *doubleBondButton;
+
+- (IBAction)makeDoubleBond:(id)sender;
 
 @end

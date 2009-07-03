@@ -135,6 +135,16 @@
 	}
 }
 
+- (Bond *) currentlySelectedBond {
+	for(Bond *bond in bonds) {
+		if([bond isSelected]) {
+			return bond;
+		}
+	}
+	
+	return NULL;
+}
+
 - (void)dealloc {
 	[bonds release];
     [super dealloc];

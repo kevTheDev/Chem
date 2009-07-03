@@ -30,6 +30,20 @@ char* screenState = "start";
     return self;
 }
 
+- (IBAction)makeDoubleBond:(id)sender {
+	NSLog(@"DOUBLE BOND PRESSED");
+	
+	Bond *selectedBond = [objectMap currentlySelectedBond];
+	
+	NSLog(@"IS BOND DOUBLE?: %d", [selectedBond isDouble]);
+	
+	
+	[selectedBond setIsDouble:YES];
+	
+	NSLog(@"IS BOND DOUBLE?: %d", [selectedBond isDouble]);
+	
+}
+
 
 - (void)drawRect:(CGRect)rect {
 	

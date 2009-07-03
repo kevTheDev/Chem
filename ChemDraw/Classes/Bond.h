@@ -18,18 +18,20 @@
 	
 	BOOL unconfirmedHighlight;
 	BOOL confirmedHighlight;
+	
+	BOOL isDouble;
 }
 
 - (Bond *) initWithNodeA:(Node *)nodeA nodeB:(Node *)nodeB;
 
 - (Node *) centerPointNode;
-//- (Node *) centerNode;
 
 - (void) highlight;
 - (BOOL) isHighlighted;
 
 - (void) select;
 - (BOOL) isSelected;
+
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
@@ -42,5 +44,7 @@
 
 @property BOOL unconfirmedHighlight;
 @property BOOL confirmedHighlight;
+
+@property BOOL isDouble;
 
 @end

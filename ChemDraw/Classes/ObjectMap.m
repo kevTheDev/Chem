@@ -160,6 +160,10 @@
 	
 }
 
+- (Bond *) currentlySelectedBond {
+	return [bondMap currentlySelectedBond];
+}
+
 - (void) renderWithContext:(CGContextRef)ctx {
 	[nodeMap renderWithContext:ctx];
 	[bondMap renderWithContext:ctx];

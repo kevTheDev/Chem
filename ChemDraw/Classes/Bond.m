@@ -20,6 +20,8 @@
 @synthesize unconfirmedHighlight;
 @synthesize confirmedHighlight;
 
+@synthesize isDouble;
+
 int LINE_DRAW_WIDTH = 2.0;
 
 - (Bond *) initWithNodeA:(Node *)firstNode nodeB:(Node *)secondNode {

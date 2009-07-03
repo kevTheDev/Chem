@@ -36,4 +36,6 @@
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
+- (Bond *) currentlySelectedBond;
+
 @end
