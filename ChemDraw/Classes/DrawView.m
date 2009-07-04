@@ -215,21 +215,25 @@
 		
 	}
 	else if([programState currentState] == ADD_NODE) {
-		NSObject *selectedObject = [objectMap currentlySelectedObject];
+		//NSObject *selectedObject = [objectMap currentlySelectedObject];
+//		
+//		
+//		if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
+//						
+//			Node *firstNode = (Node *) selectedObject;
+//			
+//			Node *secondNode = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
+//			[objectMap addNode:secondNode];		
+//			
+//			
+//			Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
+//			[objectMap addBond:bond];
+//			
+//		}
 		
+		// new code design means that we need to choose from the potential bond map that should currently be on display
+		[objectMap highlightClosestPotentialBondToPoint:pos];
 		
-		if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
-						
-			Node *firstNode = (Node *) selectedObject;
-			
-			Node *secondNode = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
-			[objectMap addNode:secondNode];		
-			
-			
-			Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
-			[objectMap addBond:bond];
-			
-		}
 		
 		[objectMap clearSelectedNodes];
 		[programState setCurrentState:SELECT_OBJECT];

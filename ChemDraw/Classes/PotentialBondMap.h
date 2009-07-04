@@ -17,4 +17,7 @@
 
 - (void) addPotentialBond:(PotentialBond *)potentialBond;
 
+- (PotentialBond *) closestBondToPoint:(CGPoint)point;
+- (void) highlightClosestPotentialBondToPoint:(CGPoint)point;
+
 @end

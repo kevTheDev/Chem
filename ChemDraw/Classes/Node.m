@@ -106,6 +106,9 @@ int DRAW_HEIGHT = 10;
 	return false;
 }
 
+- (void) highlightClosestPotentialBondToPoint:(CGPoint)point {
+	[potentialBondMap highlightClosestPotentialBondToPoint:point];
+}
 
 - (void) renderWithContext:(CGContextRef)ctx {	
 	if([self isSelected]) {

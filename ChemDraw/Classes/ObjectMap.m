@@ -175,6 +175,19 @@
 
 }
 
+// potential bonds will all belong to the closest node
+
+- (void) highlightClosestPotentialBondToPoint:(CGPoint)point {
+	NSObject *currentlySelectedObject = [self currentlySelectedObject];
+	
+	if(![currentlySelectedObject isKindOfClass:[Node class]]) {
+		return;
+	}
+	
+	Node *currentlySelectedNode = (Node *) currentlySelectedObject;
+	[currentlySelectedNode highlightClosestPotentialBondToPoint:point];
+}
+
 - (void) selectClosestObjectToPoint:(CGPoint)point {
 	NSObject *closestObject = [self closestObjectToPoint:point];
 		

@@ -37,6 +37,9 @@
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
+
+- (void) highlightClosestPotentialBondToPoint:(CGPoint)point;
+
 @property CGFloat xCoord;
 @property CGFloat yCoord;
 

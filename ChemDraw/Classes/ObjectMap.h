@@ -79,6 +79,8 @@
 
 - (void) renderPotentialBondMap;
 
+- (void) highlightClosestPotentialBondToPoint:(CGPoint)point;
+
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) BondMap *bondMap;
 

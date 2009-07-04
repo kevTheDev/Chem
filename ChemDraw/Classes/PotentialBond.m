@@ -11,12 +11,16 @@
 
 @implementation PotentialBond
 
+@synthesize centerPoint;
+
 - (PotentialBond *)initWithStartPoint:(CGPoint)pointOne endPoint:(CGPoint)pointTwo {
 	self = [super init];
 	
 	if(self) {
 		startPoint = pointOne;
 		endPoint = pointTwo;
+		
+		[self setupCenterPoint];
 	}
 	
 	return self;
@@ -35,10 +39,17 @@
 	
 	CGPathCloseSubpath(path);
 	CGContextAddPath(ctx, path);
-	
-	
-	CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
 
+	
+	if([self isHighlighted]) {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor purpleColor].CGColor);
+	}
+	else if([self isSelected]) {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor orangeColor].CGColor);
+	}
+	else {
+		CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
+	}
 	
 	CGContextSetLineWidth(ctx, 1.0);
 	CGContextStrokePath(ctx);
@@ -46,6 +57,74 @@
 	return;
 	
 }
+
+- (void) select {
+	highlighted = NO;
+	selected = YES;
+}
+
+- (BOOL) isSelected {
+	return selected;
+}
+
+- (void) highlight {
+	highlighted = YES;	
+}
+
+- (BOOL) isHighlighted {
+	
+	return highlighted;
+}
+
+// only called once in init
+- (void) setupCenterPoint {
+	
+	float nodeAX = startPoint.x;
+	float nodeBX = endPoint.x;
+	
+	float bigX;
+	float littleX;
+	
+	if(nodeAX > nodeBX) {
+		bigX = nodeAX;
+		littleX = nodeBX;
+	}
+	else {
+		bigX = nodeBX;
+		littleX = nodeAX;
+	}
+	
+	float distanceX = bigX - littleX;
+	float halfDistanceX = distanceX / 2.0;
+	
+	float centerX = littleX + halfDistanceX;
+	
+	float nodeAY = startPoint.y;
+	float nodeBY = endPoint.y;
+	
+	float bigY;
+	float littleY;
+	
+	if(nodeAY > nodeBY) {
+		bigY = nodeAY;
+		littleY = nodeBY;
+	}
+	else {
+		bigY = nodeAY;
+		littleY = nodeBY;
+	}
+	
+	float distanceY = bigY - littleY;
+	float halfDistanceY = distanceY / 2.0;
+	
+	float centerY = littleY + halfDistanceY;
+	
+	
+	
+	[self setCenterPoint:CGPointMake(centerX, centerY)];
+	
+}
+
 
 @end
 

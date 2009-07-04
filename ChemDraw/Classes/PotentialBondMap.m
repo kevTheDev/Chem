@@ -34,4 +34,44 @@
 	}
 }
 
+- (void) highlightClosestPotentialBondToPoint:(CGPoint)point {
+	PotentialBond *closestBond = [self closestBondToPoint:point];
+	[closestBond highlight];
+}
+
+// returns the closest bond in the map to a point
+- (PotentialBond *) closestBondToPoint:(CGPoint)point {
+	
+	CGPoint bondCenterPoint;
+	
+	int closestNodeIndex = 0;
+	float currentShortestDistance = 0.0;
+	
+	for(int i=0; i<[bonds count]; i++) {		
+		bondCenterPoint = [[bonds objectAtIndex:i] centerPoint];
+		
+		float xDistance = abs(point.x - bondCenterPoint.x);
+		float yDistance = abs(point.y - bondCenterPoint.y);
+		
+		float newDistance = xDistance + yDistance;
+		
+		if(currentShortestDistance == 0) {
+			currentShortestDistance = newDistance;
+		}
+		else {
+			
+			if(newDistance < currentShortestDistance) {
+				currentShortestDistance = newDistance;
+				closestNodeIndex = i;
+			}
+			
+		}
+		
+	}
+	
+	
+	return [bonds objectAtIndex:closestNodeIndex];
+	
+}
+
 @end

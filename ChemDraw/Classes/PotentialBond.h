@@ -13,11 +13,24 @@
 
 	CGPoint startPoint;
 	CGPoint endPoint;
+	CGPoint centerPoint;
 	
+	BOOL highlighted;
+	BOOL selected;
 }
 
 - (PotentialBond *)initWithStartPoint:(CGPoint)pointOne endPoint:(CGPoint)pointTwo;
 
 - (void) renderWithContext:(CGContextRef)ctx;
+
+- (void) setupCenterPoint;
+
+- (void) highlight;
+- (BOOL) isHighlighted;
+
+- (void) select;
+- (BOOL) isSelected;
+
+@property CGPoint centerPoint;
 
 @end
