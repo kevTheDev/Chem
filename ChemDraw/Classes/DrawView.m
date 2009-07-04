@@ -215,27 +215,9 @@
 		
 	}
 	else if([programState currentState] == HIGHLIGHT_POTENTIAL_BOND) {
-		//NSObject *selectedObject = [objectMap currentlySelectedObject];
-//		
-//		
-//		if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
-//						
-//			Node *firstNode = (Node *) selectedObject;
-//			
-//			Node *secondNode = [[Node alloc] initWithXCoord:pos.x yCoord:pos.y];	
-//			[objectMap addNode:secondNode];		
-//			
-//			
-//			Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
-//			[objectMap addBond:bond];
-//			
-//		}
 		
 		// new code design means that we need to choose from the potential bond map that should currently be on display
 		[objectMap highlightClosestPotentialBondToPoint:pos];
-		
-		
-		//[objectMap clearSelectedNodes];
 		[programState setCurrentState:SELECT_POTENTIAL_BOND];
 		
 	}
@@ -243,8 +225,6 @@
 		
 		// here we confirm the potential bond
 		// this means that we have to make it into a real bond with real nodes
-		
-			
 		Node *currentlySelectedNode = (Node *) [objectMap currentlySelectedObject]; //the first node in the bond
 		
 		PotentialBond *selectedPotentialBond = [objectMap currentlyHighlightedPotentialBond];
