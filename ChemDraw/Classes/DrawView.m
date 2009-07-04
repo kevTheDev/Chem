@@ -81,8 +81,10 @@
 	
 }
 
+// find the selected node, and present the potentialBondMap
 - (IBAction)addNewNode:(id)sender {
-
+	
+	[objectMap renderPotentialBondMap];
 	[programState setCurrentState:ADD_NODE];
 	[toolBar setItems:standardButtons];
 	[self setNeedsDisplay]; // redraw entire screen

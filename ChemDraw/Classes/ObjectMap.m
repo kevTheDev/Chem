@@ -266,6 +266,19 @@
 		
 }
 
+- (void) renderPotentialBondMap {
+	NSObject *currentlySelectedObject = [self currentlySelectedObject];
+	
+	if(![currentlySelectedObject isKindOfClass:[Node class]]) {
+		return;
+	}
+	
+	Node *selectedNode = (Node *) currentlySelectedObject;
+	[selectedNode setDisplayPotentialBondMap:YES];
+	 
+	
+}
+
 - (void)dealloc {
 	[actionMap release];
 	[nodeMap release];

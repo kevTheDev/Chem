@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Arithmetic.h"
+#import "PotentialBondMap.h"
 
 @interface Node : NSObject {
 	CGFloat xCoord;
@@ -16,7 +17,11 @@
 	BOOL unconfirmedHighlight;
 	BOOL confirmedHighlight;
 	
+	BOOL displayPotentialBondMap;
+	
 	NSString *elementType;
+	
+	PotentialBondMap *potentialBondMap;
 }
 
 - (Node *) initWithXCoord:(CGFloat)x yCoord:(CGFloat)y;
@@ -37,6 +42,8 @@
 
 @property BOOL unconfirmedHighlight;
 @property BOOL confirmedHighlight;
+
+@property BOOL displayPotentialBondMap;
 
 @property (nonatomic, retain) NSString *elementType;
 

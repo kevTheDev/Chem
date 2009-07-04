@@ -17,7 +17,7 @@
 @synthesize unconfirmedHighlight;
 @synthesize confirmedHighlight;
 @synthesize elementType;
-
+@synthesize displayPotentialBondMap;
 
 int DRAW_WIDTH = 10;
 int DRAW_HEIGHT = 10;
@@ -27,10 +27,31 @@ int DRAW_HEIGHT = 10;
 	self = [super init];
 	
     if ( self ) {
-        [self setXCoord:x];
-		[self setYCoord:y];
+		xCoord = x;
+		yCoord = y;
 		
 		elementType = @"Carbon";
+		
+		displayPotentialBondMap = NO;
+		
+		// set up the potential bond map for when we do need to display it
+		potentialBondMap = [[PotentialBondMap alloc] init];
+		
+		
+		CGPoint startPoint = CGPointMake(xCoord, yCoord);
+		CGPoint bondOnePoint = CGPointMake(xCoord, yCoord + 50);
+		CGPoint bondTwoPoint = CGPointMake(xCoord + 50, yCoord);
+		CGPoint bondThreePoint = CGPointMake(xCoord, yCoord - 50);
+		
+		PotentialBond *bondOne = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondOnePoint];
+		PotentialBond *bondTwo = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondTwoPoint];
+		PotentialBond *bondThree = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondThreePoint];
+		
+		[potentialBondMap addPotentialBond:bondOne];
+		[potentialBondMap addPotentialBond:bondTwo];
+		[potentialBondMap addPotentialBond:bondThree];
+		
+		
     }
 	
     return self;
@@ -105,8 +126,21 @@ int DRAW_HEIGHT = 10;
 		CGContextStrokeEllipseInRect(ctx, CGRectMake(xCoord + 6, yCoord - 6, 5, 5));
 	}
 	
+	if(displayPotentialBondMap == YES) {
+		[potentialBondMap renderWithContext:ctx];
+	}
+	
 	return;
 	
 }
+
+- (void) dealloc {
+	
+	[potentialBondMap release];
+	[elementType release];
+	[super dealloc];
+	
+}
+
 
 @end

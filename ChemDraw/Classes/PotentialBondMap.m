@@ -21,7 +21,14 @@
 	return self;
 }
 
+- (void) addPotentialBond:(PotentialBond *)potentialBond {
+	[bonds addObject:potentialBond];
+}
+
 - (void) renderWithContext:(CGContextRef)ctx {
+	
+	NSLog(@"Render potential bond map");
+	
 	for (PotentialBond *bond in bonds) {
 		[bond renderWithContext:ctx];
 	}

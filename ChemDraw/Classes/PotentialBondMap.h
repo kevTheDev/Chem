@@ -15,5 +15,6 @@
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
+- (void) addPotentialBond:(PotentialBond *)potentialBond;
 
 @end

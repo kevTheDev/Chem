@@ -77,6 +77,8 @@
 
 - (void) undoLastAction;
 
+- (void) renderPotentialBondMap;
+
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) BondMap *bondMap;
 
