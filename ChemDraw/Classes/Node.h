@@ -33,12 +33,14 @@
 - (BOOL) isHighlighted;
 
 - (void) select;
+- (void) deSelect;
 - (BOOL) isSelected;
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
 
 - (void) highlightClosestPotentialBondToPoint:(CGPoint)point;
+- (PotentialBond *)currentlyHighlightedPotentialBond;
 
 @property CGFloat xCoord;
 @property CGFloat yCoord;

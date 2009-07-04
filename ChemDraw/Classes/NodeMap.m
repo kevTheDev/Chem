@@ -159,7 +159,8 @@
 
 - (void) clearSelectedNodes {
 	for(Node *node in nodes) {
-		[node setConfirmedHighlight:NO];
+		//[node setConfirmedHighlight:NO];
+		[node deSelect];
 	}	
 }
 

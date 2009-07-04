@@ -188,6 +188,12 @@
 	[currentlySelectedNode highlightClosestPotentialBondToPoint:point];
 }
 
+- (PotentialBond *)currentlyHighlightedPotentialBond {
+	Node *currentlySelectedNode = (Node *) [self currentlySelectedObject];
+	
+	return [currentlySelectedNode currentlyHighlightedPotentialBond];
+}
+
 - (void) selectClosestObjectToPoint:(CGPoint)point {
 	NSObject *closestObject = [self closestObjectToPoint:point];
 		

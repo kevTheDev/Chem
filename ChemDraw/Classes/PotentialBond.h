@@ -31,6 +31,7 @@
 - (void) select;
 - (BOOL) isSelected;
 
+@property CGPoint endPoint;
 @property CGPoint centerPoint;
 
 @end

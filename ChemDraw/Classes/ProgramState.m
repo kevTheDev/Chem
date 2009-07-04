@@ -46,7 +46,7 @@
 		case MANIPULATE_OBJECT:
 			prompt = "Touch again to confirm selection";
 			break;
-		case ADD_NODE:
+		case HIGHLIGHT_POTENTIAL_BOND:
 			prompt = "Touch to add another node";
 			break;
 		case GESTURE_MODE:

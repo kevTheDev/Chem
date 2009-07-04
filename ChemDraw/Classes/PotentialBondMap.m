@@ -39,6 +39,17 @@
 	[closestBond highlight];
 }
 
+- (PotentialBond *)currentlyHighlightedPotentialBond {
+	for(PotentialBond *bond in bonds) {
+		if([bond isHighlighted]) {
+			return bond;
+		}
+	}
+	
+	return NULL;
+	
+}
+
 // returns the closest bond in the map to a point
 - (PotentialBond *) closestBondToPoint:(CGPoint)point {
 	

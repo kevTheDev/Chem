@@ -11,6 +11,7 @@
 
 @implementation PotentialBond
 
+@synthesize endPoint;
 @synthesize centerPoint;
 
 - (PotentialBond *)initWithStartPoint:(CGPoint)pointOne endPoint:(CGPoint)pointTwo {

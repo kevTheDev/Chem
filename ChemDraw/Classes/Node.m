@@ -63,6 +63,11 @@ int DRAW_HEIGHT = 10;
 	[self setConfirmedHighlight:YES];
 }
 
+- (void) deSelect {
+	displayPotentialBondMap	= NO;
+	confirmedHighlight = NO; 
+}
+
 - (BOOL) isSelected {
 	return [self confirmedHighlight];
 }
@@ -108,6 +113,10 @@ int DRAW_HEIGHT = 10;
 
 - (void) highlightClosestPotentialBondToPoint:(CGPoint)point {
 	[potentialBondMap highlightClosestPotentialBondToPoint:point];
+}
+
+- (PotentialBond *)currentlyHighlightedPotentialBond {
+	return [potentialBondMap currentlyHighlightedPotentialBond];
 }
 
 - (void) renderWithContext:(CGContextRef)ctx {	

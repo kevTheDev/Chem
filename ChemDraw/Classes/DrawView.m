@@ -85,7 +85,7 @@
 - (IBAction)addNewNode:(id)sender {
 	
 	[objectMap renderPotentialBondMap];
-	[programState setCurrentState:ADD_NODE];
+	[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
 	[toolBar setItems:standardButtons];
 	[self setNeedsDisplay]; // redraw entire screen
 }
@@ -149,8 +149,8 @@
 		case MANIPULATE_OBJECT:
 			NSLog(@"TOUCH BEGAN, SCREEN STATE: MANIPULATE_OBJECT");
 			break;
-		case ADD_NODE:
-			NSLog(@"TOUCH BEGAN, SCREEN STATE: ADD_NODE");
+		case HIGHLIGHT_POTENTIAL_BOND:
+			NSLog(@"TOUCH BEGAN, SCREEN STATE: HIGHLIGHT_POTENTIAL_BOND");
 			break;
 		case GESTURE_MODE:
 			NSLog(@"TOUCH BEGAN, SCREEN STATE: GESTURE_MODE");
@@ -214,7 +214,7 @@
 		
 		
 	}
-	else if([programState currentState] == ADD_NODE) {
+	else if([programState currentState] == HIGHLIGHT_POTENTIAL_BOND) {
 		//NSObject *selectedObject = [objectMap currentlySelectedObject];
 //		
 //		
@@ -235,7 +235,29 @@
 		[objectMap highlightClosestPotentialBondToPoint:pos];
 		
 		
+		//[objectMap clearSelectedNodes];
+		[programState setCurrentState:SELECT_POTENTIAL_BOND];
+		
+	}
+	else if([programState currentState] == SELECT_POTENTIAL_BOND) {
+		
+		// here we confirm the potential bond
+		// this means that we have to make it into a real bond with real nodes
+		
+			
+		Node *currentlySelectedNode = (Node *) [objectMap currentlySelectedObject]; //the first node in the bond
+		
+		PotentialBond *selectedPotentialBond = [objectMap currentlyHighlightedPotentialBond];
+		CGPoint nodeEndPoint = [selectedPotentialBond endPoint];
+		
+		Node *secondNode = [[Node alloc] initWithXCoord:nodeEndPoint.x yCoord:nodeEndPoint.y];
+		[objectMap addNode:secondNode];
+		
+		Bond *bond = [[Bond alloc] initWithNodeA:currentlySelectedNode nodeB:secondNode];
+		[objectMap addBond:bond];
+		
 		[objectMap clearSelectedNodes];
+		
 		[programState setCurrentState:SELECT_OBJECT];
 		
 	}
@@ -366,7 +388,7 @@
 	
 	NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
 	
-	[programState setCurrentState:ADD_NODE];
+	[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
 	[symbolTimer invalidate];
 	
 	[self setNeedsDisplay]; // redraw entire screen 
