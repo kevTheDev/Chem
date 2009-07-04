@@ -7,12 +7,12 @@
 //
 
 #import "DrawView.h"
-
-@class ProgramState;
-@class ObjectMap;
-@class Node;
-@class Bond;
-@class PointObject;
+#import "ProgramState.h"
+#import "Node.h"
+#import "Bond.h"
+#import "ObjectMap.h"
+#import "PointObject.h"
+#import "PotentialBond.h"
 
 @implementation DrawView
 

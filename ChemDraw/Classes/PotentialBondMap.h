@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PotentialBond.h"
+
+@class PotentialBond;
 
 @interface PotentialBondMap : NSObject {
 	NSMutableArray *bonds;

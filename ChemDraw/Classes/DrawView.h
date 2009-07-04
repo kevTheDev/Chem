@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ProgramState.h"
-#import "Node.h"
-#import "Bond.h"
-#import "ObjectMap.h"
-#import "PointObject.h"
+@class ProgramState;
+@class Node;
+@class Bond;
+@class ObjectMap;
+@class PointObject;
+
 
 @interface DrawView : UIView {	
 	

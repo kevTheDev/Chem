@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Arithmetic.h"
-#import "PotentialBondMap.h"
+
+@class Arithmetic;
+@class PotentialBond;
+@class PotentialBondMap;
+
+@class Bond;
+@class BondMap;
 
 @interface Node : NSObject {
 	CGFloat xCoord;
@@ -21,6 +26,7 @@
 	
 	NSString *elementType;
 	
+	BondMap *connectingBonds;
 	PotentialBondMap *potentialBondMap;
 }
 
@@ -38,9 +44,10 @@
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
-
 - (void) highlightClosestPotentialBondToPoint:(CGPoint)point;
 - (PotentialBond *)currentlyHighlightedPotentialBond;
+
+- (void) addConnectingBond:(Bond *)bond;
 
 @property CGFloat xCoord;
 @property CGFloat yCoord;

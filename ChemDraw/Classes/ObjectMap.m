@@ -9,6 +9,20 @@
 #import "ObjectMap.h"
 
 
+
+#import "NodeMap.h"
+#import "BondMap.h"
+#import "ActionMap.h"
+#import "Node.h"
+#import "Bond.h"
+#import "PotentialBond.h"
+
+#import "Action.h"
+#import "AddNodeAction.h"
+#import "AddBondAction.h"
+#import "HighlightAction.h"
+#import "SelectAction.h"
+
 @implementation ObjectMap
 
 @synthesize nodeMap;

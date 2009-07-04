@@ -7,15 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NodeMap.h"
-#import "BondMap.h"
-#import "ActionMap.h"
-#import "AddNodeAction.h"
-#import "AddBondAction.h"
-#import "SelectAction.h"
-#import "HighlightAction.h"
-#import "PotentialBondMap.h"
-#import "PotentialBond.h"
+
+
+@class NodeMap;
+@class BondMap;
+@class ActionMap;
+@class Node;
+@class Bond;
+@class PotentialBond;
 
 @interface ObjectMap : NSObject {
 	
@@ -24,7 +23,6 @@
 	NodeMap *nodeMap;
 	BondMap *bondMap;
 	
-	PotentialBondMap *potentialBondMap;
 }
 
 - (BOOL) isEmpty;

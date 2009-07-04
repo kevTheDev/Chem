@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Node.h"
+
+@class Node;
 
 @interface Bond : NSObject {
 	Node *nodeA;

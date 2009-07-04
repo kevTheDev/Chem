@@ -7,8 +7,12 @@
 //
 
 #import "Node.h"
+#import "Arithmetic.h"
+#import "PotentialBond.h"
+#import "PotentialBondMap.h"
 
-
+#import "Bond.h"
+#import "BondMap.h"
 
 @implementation Node
 
@@ -33,6 +37,8 @@ int DRAW_HEIGHT = 10;
 		elementType = @"Carbon";
 		
 		displayPotentialBondMap = NO;
+		
+		connectingBonds = [[BondMap alloc] init];
 		
 		// set up the potential bond map for when we do need to display it
 		potentialBondMap = [[PotentialBondMap alloc] init];
@@ -144,6 +150,10 @@ int DRAW_HEIGHT = 10;
 	
 	return;
 	
+}
+
+- (void) addConnectingBond:(Bond *)bond {
+	[connectingBonds addBond:bond];
 }
 
 - (void) dealloc {

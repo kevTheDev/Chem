@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Action.h"
+
+@class Action;
 
 @interface ActionMap : NSObject {
 	NSMutableArray *actions;

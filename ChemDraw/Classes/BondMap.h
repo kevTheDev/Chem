@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Bond.h"
+
+@class Bond;
 
 @interface BondMap : NSObject {
 	NSMutableArray *bonds;

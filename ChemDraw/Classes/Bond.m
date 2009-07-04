@@ -40,6 +40,9 @@ int LINE_DRAW_WIDTH = 2.0;
 		// create these structs for optimal drawing - quicker than drawing nodes
 		nodeAPoint = CGPointMake(firstNode.xCoord, firstNode.yCoord);
 		nodeBPoint = CGPointMake(secondNode.xCoord, secondNode.yCoord);
+		
+		[nodeA addConnectingBond:self];
+		[nodeB addConnectingBond:self];
 
     }
 	

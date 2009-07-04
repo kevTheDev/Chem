@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Node.h"
+
+@class Node;
 
 @interface NodeMap : NSObject {
 	NSMutableArray *nodes;
-	//NSMutableArray *highlightedNodes;
-//	NSMutableArray *selectedNodes;
 }
 
 - (BOOL) isEmpty;

@@ -8,6 +8,7 @@
 
 #import "PotentialBondMap.h"
 
+#import "PotentialBond.h"
 
 @implementation PotentialBondMap
 

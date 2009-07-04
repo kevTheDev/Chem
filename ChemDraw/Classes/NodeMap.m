@@ -8,6 +8,7 @@
 
 #import "NodeMap.h"
 
+#import "Node.h"
 
 @implementation NodeMap
 

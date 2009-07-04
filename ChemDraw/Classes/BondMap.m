@@ -7,7 +7,8 @@
 //
 
 #import "BondMap.h"
-#import "NodeMap.h"
+
+#import "Bond.h"
 
 @implementation BondMap
 
