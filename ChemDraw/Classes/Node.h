@@ -49,6 +49,18 @@
 
 - (void) addConnectingBond:(Bond *)bond;
 
+- (BOOL) hasBondToTheNorth;
+- (BOOL) hasBondToTheEast;
+- (BOOL) hasBondToTheSouth;
+- (BOOL) hasBondToTheWest;
+
+- (BOOL) isNorthOf:(Node *)node;
+- (BOOL) isSouthOf:(Node *)node;
+- (BOOL) isEastOf:(Node *)node;
+- (BOOL) isWestOf:(Node *)node;
+
+- (void) renderPotentialBondMap:(CGContextRef)ctx;
+
 @property CGFloat xCoord;
 @property CGFloat yCoord;
 

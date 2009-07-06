@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 
 #import "Bond.h"
+#import "Node.h"
 
 @interface BondTest : SenTestCase {
 	

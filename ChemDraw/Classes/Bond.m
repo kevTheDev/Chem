@@ -201,6 +201,24 @@ int LINE_DRAW_WIDTH = 2.0;
 	
 }
 
+// the node passed in is one node of the bond
+// return true if the other node in this bond resides to the north
+- (BOOL) hasNodeToNorthOfNode:(Node *)node {
+	return [nodeA isNorthOf:node] || [nodeB isNorthOf:node];
+}
+
+- (BOOL) hasNodeToSouthOfNode:(Node *)node {
+	return [nodeA isSouthOf:node] || [nodeB isSouthOf:node];
+}
+
+- (BOOL) hasNodeToEastOfNode:(Node *)node {
+	return [nodeA isEastOf:node] || [nodeB isEastOf:node];
+}
+
+- (BOOL) hasNodeToWestOfNode:(Node *)node {
+	return [nodeA isWestOf:node] || [nodeB isWestOf:node];
+}
+
 - (void) dealloc {
 	
 	[nodeA release];

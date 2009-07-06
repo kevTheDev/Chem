@@ -38,30 +38,13 @@ int DRAW_HEIGHT = 10;
 		
 		displayPotentialBondMap = NO;
 		
-		connectingBonds = [[BondMap alloc] init];
-		
 		// set up the potential bond map for when we do need to display it
 		potentialBondMap = [[PotentialBondMap alloc] init];
+
 		
+		connectingBonds = [[BondMap alloc] init];
 		
-		CGPoint startPoint = CGPointMake(xCoord, yCoord);
-		CGPoint bondOnePoint = CGPointMake(xCoord, yCoord + 50);    // north of node
-		CGPoint bondTwoPoint = CGPointMake(xCoord + 50, yCoord);    // east of node
-		CGPoint bondThreePoint = CGPointMake(xCoord, yCoord - 50);  // south of node
-		CGPoint bondFourPoint = CGPointMake(xCoord - 50, yCoord);   // west of node
-		
-		// every node must be initialized with four potential bonds to start with
-		// as carbon nodes can have up to four bonds
-		PotentialBond *bondOne = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondOnePoint];
-		PotentialBond *bondTwo = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondTwoPoint];
-		PotentialBond *bondThree = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondThreePoint];
-		PotentialBond *bondFour = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondFourPoint];
-		
-		[potentialBondMap addPotentialBond:bondOne];
-		[potentialBondMap addPotentialBond:bondTwo];
-		[potentialBondMap addPotentialBond:bondThree];
-		[potentialBondMap addPotentialBond:bondFour];
-		
+				
 		
     }
 	
@@ -150,7 +133,8 @@ int DRAW_HEIGHT = 10;
 	}
 	
 	if(displayPotentialBondMap == YES) {
-		[potentialBondMap renderWithContext:ctx];
+		[self renderPotentialBondMap:ctx];
+		
 	}
 	
 	return;
@@ -160,6 +144,116 @@ int DRAW_HEIGHT = 10;
 - (void) addConnectingBond:(Bond *)bond {
 	[connectingBonds addBond:bond];
 }
+
+- (BOOL) hasBondToTheNorth {
+	for(Bond *bond in connectingBonds) {
+		if([bond hasNodeToNorthOfNode:self]) {
+			return true;
+		}
+	}
+			
+	return false;	
+}
+
+- (BOOL) hasBondToTheEast {
+	for(Bond *bond in connectingBonds) {
+		if([bond hasNodeToEastOfNode:self]) {
+			return true;
+		}
+	}
+			
+	return false;	
+}
+- (BOOL) hasBondToTheSouth {
+	for(Bond *bond in connectingBonds) {
+		if([bond hasNodeToSouthOfNode:self]) {
+			return true;
+		}
+	}
+			
+	return false;	
+}
+- (BOOL) hasBondToTheWest {
+	for(Bond *bond in connectingBonds) {
+		if([bond hasNodeToWestOfNode:self]) {
+			return true;
+		}
+	}
+			
+	return false;	
+}
+			
+- (BOOL) isNorthOf:(Node *)node {
+	if(yCoord > [node yCoord]) {
+		return true;
+	}
+			
+	return false;
+}
+
+- (BOOL) isSouthOf:(Node *)node {
+	if(yCoord < [node yCoord]) {
+		return true;
+	}
+			
+	return false;
+}
+
+- (BOOL) isEastOf:(Node *)node {
+	if(xCoord > [node xCoord]) {
+		return true;
+	}
+			
+	return false;
+}
+
+- (BOOL) isWestOf:(Node *)node {
+	if(xCoord < [node xCoord]) {
+		return true;
+	}
+
+	return false;
+}
+
+- (void) renderPotentialBondMap:(CGContextRef)ctx {
+				
+		
+		CGPoint startPoint = CGPointMake(xCoord, yCoord);
+		
+		// every node must be initialized with four potential bonds to start with
+		// as carbon nodes can have up to four bonds
+		
+		if(![self hasBondToTheNorth]) {
+			CGPoint bondOnePoint = CGPointMake(xCoord, yCoord + 50);    // north of node
+			PotentialBond *bondOne = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondOnePoint];
+			[potentialBondMap addPotentialBond:bondOne];
+		}
+		
+		if(![self hasBondToTheEast]) {
+			CGPoint bondTwoPoint = CGPointMake(xCoord + 50, yCoord);    // east of node
+			PotentialBond *bondTwo = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondTwoPoint];
+			[potentialBondMap addPotentialBond:bondTwo];
+		
+		}
+		
+		if(![self hasBondToTheSouth]) {
+			CGPoint bondThreePoint = CGPointMake(xCoord, yCoord - 50);  // south of node
+			PotentialBond *bondThree = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondThreePoint];
+			[potentialBondMap addPotentialBond:bondThree];
+		}
+		
+		if(![self hasBondToTheWest]) {
+			CGPoint bondFourPoint = CGPointMake(xCoord - 50, yCoord);   // west of node
+			PotentialBond *bondFour = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondFourPoint];
+			[potentialBondMap addPotentialBond:bondFour];
+		}
+		
+
+		
+		[potentialBondMap renderWithContext:ctx];
+
+}
+			
 
 - (void) dealloc {
 	

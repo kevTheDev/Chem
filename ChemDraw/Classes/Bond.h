@@ -36,6 +36,10 @@
 
 - (void) renderWithContext:(CGContextRef)ctx;
 
+- (BOOL) hasNodeToNorthOfNode:(Node *)node;
+- (BOOL) hasNodeToSouthOfNode:(Node *)node;
+- (BOOL) hasNodeToEastOfNode:(Node *)node;
+- (BOOL) hasNodeToWestOfNode:(Node *)node;
 
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;
