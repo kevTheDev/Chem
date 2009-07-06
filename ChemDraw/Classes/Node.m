@@ -45,17 +45,22 @@ int DRAW_HEIGHT = 10;
 		
 		
 		CGPoint startPoint = CGPointMake(xCoord, yCoord);
-		CGPoint bondOnePoint = CGPointMake(xCoord, yCoord + 50);
-		CGPoint bondTwoPoint = CGPointMake(xCoord + 50, yCoord);
-		CGPoint bondThreePoint = CGPointMake(xCoord, yCoord - 50);
+		CGPoint bondOnePoint = CGPointMake(xCoord, yCoord + 50);    // north of node
+		CGPoint bondTwoPoint = CGPointMake(xCoord + 50, yCoord);    // east of node
+		CGPoint bondThreePoint = CGPointMake(xCoord, yCoord - 50);  // south of node
+		CGPoint bondFourPoint = CGPointMake(xCoord - 50, yCoord);   // west of node
 		
+		// every node must be initialized with four potential bonds to start with
+		// as carbon nodes can have up to four bonds
 		PotentialBond *bondOne = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondOnePoint];
 		PotentialBond *bondTwo = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondTwoPoint];
 		PotentialBond *bondThree = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondThreePoint];
+		PotentialBond *bondFour = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondFourPoint];
 		
 		[potentialBondMap addPotentialBond:bondOne];
 		[potentialBondMap addPotentialBond:bondTwo];
 		[potentialBondMap addPotentialBond:bondThree];
+		[potentialBondMap addPotentialBond:bondFour];
 		
 		
     }
