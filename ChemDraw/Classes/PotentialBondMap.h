@@ -23,4 +23,6 @@
 
 - (PotentialBond *)currentlyHighlightedPotentialBond;
 
+- (void) reset;
+
 @end

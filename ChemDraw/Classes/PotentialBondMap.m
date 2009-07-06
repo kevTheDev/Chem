@@ -86,4 +86,9 @@
 	
 }
 
+// clears out the bonds array
+- (void) reset {
+	[bonds removeAllObjects];
+}
+
 @end

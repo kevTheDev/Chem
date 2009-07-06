@@ -59,7 +59,9 @@ int DRAW_HEIGHT = 10;
 
 - (void) deSelect {
 	displayPotentialBondMap	= NO;
-	confirmedHighlight = NO; 
+	confirmedHighlight = NO;
+	
+	[potentialBondMap reset];
 }
 
 - (BOOL) isSelected {
