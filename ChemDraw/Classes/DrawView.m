@@ -14,6 +14,7 @@
 #import "PointObject.h"
 #import "PotentialBond.h"
 #import "PointObjectMap.h"
+#import "Alphabet.h"
 
 @implementation DrawView
 
@@ -93,6 +94,8 @@
 
 
 - (void)drawRect:(CGRect)rect {
+
+	[Alphabet binConvert];
 
 	
 	if(programState == NULL) {

@@ -13,4 +13,6 @@
 
 }
 
++ (void) binConvert;
+
 @end
