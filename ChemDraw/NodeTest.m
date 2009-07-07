@@ -102,20 +102,58 @@
 	[equalNode release];
 }
 
-//- (void) testIsNorthOf {
-//	Node *southNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
-//	STAssertTrue([node isNorthOf:southNode], nil);
-//	
-//	[southNode release];
-//}
-//
-//- (void) testIsNotNorthOf {
-//	Node *northNode = [[Node alloc] initWithXCoord:10.0 yCoord:10.0];
-//	STAssertFalse([node isNorthOf:northNode], nil);
-//	
-//	[northNode release];
-//
-//}
+- (void) testIsNorthOf {
+
+	Node *northNode = [[Node alloc] initWithXCoord:10.0 yCoord:10.0];
+	Node *southNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
+	STAssertTrue([northNode isNorthOf:southNode], nil);
+}
+
+- (void) testIsNotNorthOf {
+	Node *northNode = [[Node alloc] initWithXCoord:10.0 yCoord:10.0];
+	Node *southNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
+	STAssertFalse([southNode isNorthOf:northNode], nil);
+}
+
+- (void) testIsSouthOf {
+	Node *northNode = [[Node alloc] initWithXCoord:10.0 yCoord:10.0];
+	Node *southNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
+	STAssertTrue([southNode isSouthOf:northNode], nil);
+}
+
+- (void) testIsNotSouthOf {
+	Node *northNode = [[Node alloc] initWithXCoord:10.0 yCoord:10.0];
+	Node *southNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
+	STAssertFalse([northNode isSouthOf:southNode], nil);
+}
+
+- (void) testIsEastOf {
+	Node *eastNode = [[Node alloc] initWithXCoord:20.0 yCoord:10.0];
+	Node *westNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
+	
+	STAssertTrue([eastNode isEastOf:westNode], nil);
+}
+
+- (void) testIsNotEastOf {
+	Node *eastNode = [[Node alloc] initWithXCoord:20.0 yCoord:10.0];
+	Node *westNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
+	
+	STAssertFalse([westNode isEastOf:eastNode], nil);
+}
+
+- (void) testIsWestOf {
+	Node *eastNode = [[Node alloc] initWithXCoord:20.0 yCoord:10.0];
+	Node *westNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
+	
+	STAssertTrue([westNode isWestOf:eastNode], nil);
+}
+
+- (void) testIsNotWestOf {
+	Node *eastNode = [[Node alloc] initWithXCoord:20.0 yCoord:10.0];
+	Node *westNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
+	
+	STAssertFalse([eastNode isWestOf:westNode], nil);
+}
 
 - (void) tearDown {
 	

@@ -186,7 +186,7 @@ int DRAW_HEIGHT = 10;
 }
 			
 - (BOOL) isNorthOf:(Node *)node {
-	if(yCoord > [node yCoord]) {
+	if(yCoord < [node yCoord]) {
 		return true;
 	}
 			
@@ -194,7 +194,7 @@ int DRAW_HEIGHT = 10;
 }
 
 - (BOOL) isSouthOf:(Node *)node {
-	if(yCoord < [node yCoord]) {
+	if(yCoord > [node yCoord]) {
 		return true;
 	}
 			
