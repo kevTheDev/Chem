@@ -28,6 +28,42 @@
 
 }
 
+- (CGPoint) topPoint {
+
+	CGPoint tempPoint;
+	
+	PointObject *tempPointObject = [pointObjects objectAtIndex:0];
+	CGPoint currentTopPoint = [tempPointObject originalPoint];
+	
+	for(PointObject *pointObject in pointObjects) {
+		tempPoint = [pointObject originalPoint];
+		
+		if(tempPoint.y > currentTopPoint.y) {
+			currentTopPoint = tempPoint;
+		}
+	}
+	
+	return currentTopPoint;
+}
+
+- (CGPoint) bottomPoint {
+	CGPoint tempPoint;
+	
+	PointObject *tempPointObject = [pointObjects objectAtIndex:0];
+	CGPoint currentBottomPoint = [tempPointObject originalPoint];
+	
+	for(PointObject *pointObject in pointObjects) {
+		tempPoint = [pointObject originalPoint];
+		
+		if(tempPoint.y < currentBottomPoint.y) {
+			currentBottomPoint = tempPoint;
+		}
+	}
+	
+	return currentBottomPoint;
+
+}
+
 - (void) renderWithContext:(CGContextRef)ctx {
 	CGPoint currentPoint;
 	CGPoint previousPoint;

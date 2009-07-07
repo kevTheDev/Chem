@@ -20,4 +20,7 @@
 
 - (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx;
 
+- (CGPoint) topPoint;
+- (CGPoint) bottomPoint;
+
 @end
