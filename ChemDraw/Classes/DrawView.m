@@ -112,6 +112,11 @@
 		[gesturePoints renderWithContext:ctx];
 
 	}
+	else if([programState currentState] == DEBUG_MODE) {
+		NSLog(@"RENDER COMPRESSED POINTS");
+		[gesturePoints compressPoints];
+		[gesturePoints renderCompressedPointsWithContext:ctx];
+	}
 	else {
 		// Drawing code
 		[[UIColor whiteColor] setFill]; 
@@ -351,19 +356,24 @@
 
 // Finished drawing chemical symbol
 -(void) onTimer {
-	NSLog(@"TIMER FIRED");
-	
-	Node *selectedNode = [objectMap currentlySelectedNode];
-	[selectedNode setElementType:@"Oxygen"];
-	
-	[objectMap clearSelectedNodes];
-	
-	NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
-	
-	[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
+	//NSLog(@"TIMER FIRED");
+//	
+//	Node *selectedNode = [objectMap currentlySelectedNode];
+//	[selectedNode setElementType:@"Oxygen"];
+//	
+//	[objectMap clearSelectedNodes];
+//	
+//	NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
+//	
+//	[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
+//	[symbolTimer invalidate];
+//	
+//	[self setNeedsDisplay]; // redraw entire screen 
+
+	[programState setCurrentState:DEBUG_MODE];
 	[symbolTimer invalidate];
-	
 	[self setNeedsDisplay]; // redraw entire screen 
+
 	
 }
 

@@ -112,13 +112,19 @@
 	CGPoint westPoint = [self westPoint];
 	CGPoint eastPoint = [self eastPoint];
 
-	float xDistance = eastPoint.y - westPoint.y;
+	//NSLog(@"WEST POINT: %f", westPoint);
+	//NSLog(@"EAST POINT: %f", eastPoint.);
+
+	float xDistance = eastPoint.x - westPoint.x;
 	return xDistance;
 }
 
 - (void) compressPoints {
 
 	CGPoint point;
+
+	NSLog(@"X DISTANCE: %f", [self xDistance]);
+	NSLog(@"Y DISTANCE: %f", [self yDistance]);
 
 
 	float pointX16 = [self xDistance] / 16;
@@ -130,8 +136,11 @@
 	for(PointObject *pointObject in pointObjects) {
 		point = [pointObject originalPoint];
 		
-		compressedX = point.x * pointX16;
-		compressedY = point.y * pointY16;
+		compressedX = point.x / pointX16;
+		compressedY = point.y / pointY16;
+		
+		NSLog(@"COMPRESSED X: %f", compressedX);
+		NSLog(@"COMPRESSED Y: %f", compressedY);
 		
 		PointObject *newPointObject = [[PointObject alloc] initWithPoint:CGPointMake(compressedX, compressedY)];
 		[compressedPointObjects addObject:newPointObject];
@@ -141,6 +150,27 @@
 	return;
 }
 
+- (void) renderCompressedPointsWithContext:(CGContextRef)ctx {
+	CGPoint currentPoint;
+	CGPoint previousPoint;
+		
+	PointObject *currentPointObject;
+	PointObject *previousPointObject;
+		
+		
+	
+	for(int i=0; i<[compressedPointObjects count]; i++) {
+		
+		if(i > 0) {
+			previousPointObject = [compressedPointObjects objectAtIndex:i - 1];
+			previousPoint = [previousPointObject originalPoint];
+				
+			currentPointObject = [compressedPointObjects objectAtIndex:i];
+			currentPoint = [currentPointObject originalPoint];
+			
+			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx];
+		}
+	}}
 
 - (void) renderWithContext:(CGContextRef)ctx {
 	CGPoint currentPoint;

@@ -14,6 +14,7 @@
 #define SELECT_POTENTIAL_BOND 3
 #define GESTURE_MODE 4
 #define TOOLBAR_MODE 5
+#define DEBUG_MODE 6
 
 
 @interface ProgramState : NSObject {

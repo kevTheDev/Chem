@@ -19,6 +19,7 @@
 - (void) addPoint:(PointObject *)pointObject;
 
 - (void) renderWithContext:(CGContextRef)ctx;
+- (void) renderCompressedPointsWithContext:(CGContextRef)ctx;
 
 - (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx;
 
