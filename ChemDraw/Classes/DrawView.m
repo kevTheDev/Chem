@@ -109,17 +109,28 @@
 		[[UIColor whiteColor] setFill]; 
 		UIRectFill(rect);
 		
-		CGPoint point;
+		CGPoint currentPoint;
+		CGPoint previousPoint;
 		
-		for(PointObject *pointObject in gesturePoints) {
+		PointObject *currentPointObject;
+		PointObject *previousPointObject;
+		
+		
+		
+		for(int i=0; i<[gesturePoints count]; i++) {
+		
+			if(i > 0) {
+				previousPointObject = [gesturePoints objectAtIndex:i - 1];
+				previousPoint = [previousPointObject originalPoint];
+			}
+		
+			currentPointObject = [gesturePoints objectAtIndex:i];
+			currentPoint = [currentPointObject originalPoint];
 			
-			NSLog(@"DRAW GESTURE POINT");
-			
-			point = [pointObject originalPoint];
-			[self renderPoint:point withContext:ctx];
-				
-
+			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx];
 		}
+		
+
 	}
 	else {
 		// Drawing code
@@ -264,8 +275,7 @@
 		[pointObject initWithPoint:pos];
 		[gesturePoints addObject:pointObject];
 		
-		CGRect rectToRedraw = CGRectMake(pos.x, pos.y, 10.0, 10.0);
-		[self setNeedsDisplayInRect:rectToRedraw];
+		[self setNeedsDisplay];
 	}
 	
 	
@@ -294,6 +304,24 @@
 	
 	
     CGContextShowTextAtPoint(ctx, xCoord, yCoord, text, strlen(text));
+	
+	return;
+}
+
+- (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx {
+	
+	CGMutablePathRef path = CGPathCreateMutable();
+	
+	CGPathMoveToPoint(path, NULL, startPoint.x, startPoint.y);
+	CGPathAddLineToPoint(path, NULL, endPoint.x, endPoint.y);
+	
+	CGPathCloseSubpath(path);
+	CGContextAddPath(ctx, path);
+	
+	CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
+	
+	CGContextSetLineWidth(ctx, 1.0);
+	CGContextStrokePath(ctx);
 	
 	return;
 }

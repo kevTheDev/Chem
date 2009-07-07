@@ -57,4 +57,6 @@
 
 -(void) onTimer;
 
+- (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx;
+
 @end
