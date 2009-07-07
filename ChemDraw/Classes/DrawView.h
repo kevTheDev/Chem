@@ -13,7 +13,7 @@
 @class Bond;
 @class ObjectMap;
 @class PointObject;
-
+@class PointObjectMap;
 
 @interface DrawView : UIView {	
 	
@@ -35,7 +35,7 @@
 	
 	IBOutlet UIBarButtonItem *undoButton;
 	
-	NSMutableArray *gesturePoints;
+	PointObjectMap *gesturePoints;
 	
 	NSTimer *symbolTimer;
 	
@@ -56,7 +56,4 @@
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 
 -(void) onTimer;
-
-- (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx;
-
 @end

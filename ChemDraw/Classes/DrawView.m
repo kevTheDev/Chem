@@ -13,6 +13,7 @@
 #import "ObjectMap.h"
 #import "PointObject.h"
 #import "PotentialBond.h"
+#import "PointObjectMap.h"
 
 @implementation DrawView
 
@@ -98,8 +99,7 @@
 		programState = [[ProgramState alloc] init];
 		objectMap = [[ObjectMap alloc] init];
 		[self setupToolbarButtonArrays];
-		//[toolBar removeFromSuperview];
-		gesturePoints = [[NSMutableArray alloc] init];
+		gesturePoints = [[PointObjectMap alloc] init];
 	}
 
 	// got the graphics context
@@ -109,31 +109,7 @@
 		[[UIColor whiteColor] setFill]; 
 		UIRectFill(rect);
 		
-		CGPoint currentPoint;
-		CGPoint previousPoint;
-		
-		PointObject *currentPointObject;
-		PointObject *previousPointObject;
-		
-		
-		
-		for(int i=0; i<[gesturePoints count]; i++) {
-		
-			if(i > 0) {
-				previousPointObject = [gesturePoints objectAtIndex:i - 1];
-				previousPoint = [previousPointObject originalPoint];
-				
-				currentPointObject = [gesturePoints objectAtIndex:i];
-				currentPoint = [currentPointObject originalPoint];
-				
-				[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx];
-			}
-		
-			
-			
-			
-		}
-		
+		[gesturePoints renderWithContext:ctx];
 
 	}
 	else {
@@ -259,7 +235,7 @@
 	else if([programState currentState] == GESTURE_MODE) {
 		PointObject *pointObject = [PointObject alloc];
 		[pointObject initWithPoint:pos];
-		[gesturePoints addObject:pointObject];
+		[gesturePoints addPoint:pointObject];
 	}
 
 
@@ -277,7 +253,7 @@
 	if([programState currentState] == GESTURE_MODE) {
 		PointObject *pointObject = [PointObject alloc];
 		[pointObject initWithPoint:pos];
-		[gesturePoints addObject:pointObject];
+		[gesturePoints addPoint:pointObject];
 		
 		[self setNeedsDisplay];
 	}
@@ -312,23 +288,7 @@
 	return;
 }
 
-- (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx {
-	
-	CGMutablePathRef path = CGPathCreateMutable();
-	
-	CGPathMoveToPoint(path, NULL, startPoint.x, startPoint.y);
-	CGPathAddLineToPoint(path, NULL, endPoint.x, endPoint.y);
-	
-	CGPathCloseSubpath(path);
-	CGContextAddPath(ctx, path);
-	
-	CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
-	
-	CGContextSetLineWidth(ctx, 5.0);
-	CGContextStrokePath(ctx);
-	
-	return;
-}
+
 
 - (void) setupToolbarButtonArrays {
 	// init toolbar buttons arrays
