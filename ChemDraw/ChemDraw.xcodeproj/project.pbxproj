@@ -202,7 +202,12 @@
 				DE9465DA0FFE8BD400F7AA88 /* PotentialBond.m */,
 				DEE8BD4C10035687004119FE /* Element.h */,
 				DEE8BD4D10035687004119FE /* Element.m */,
-				DEE8BD6A100356C5004119FE /* Elements */,
+				DEE8BD5E100356AE004119FE /* Oxygen.h */,
+				DEE8BD5F100356AE004119FE /* Oxygen.m */,
+				DEE8BD62100356B5004119FE /* Nitrogen.h */,
+				DEE8BD63100356B5004119FE /* Nitrogen.m */,
+				DEE8BD66100356BD004119FE /* Carbon.h */,
+				DEE8BD67100356BD004119FE /* Carbon.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -272,19 +277,6 @@
 				DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */,
 			);
 			name = Test;
-			sourceTree = "<group>";
-		};
-		DEE8BD6A100356C5004119FE /* Elements */ = {
-			isa = PBXGroup;
-			children = (
-				DEE8BD5E100356AE004119FE /* Oxygen.h */,
-				DEE8BD5F100356AE004119FE /* Oxygen.m */,
-				DEE8BD62100356B5004119FE /* Nitrogen.h */,
-				DEE8BD63100356B5004119FE /* Nitrogen.m */,
-				DEE8BD66100356BD004119FE /* Carbon.h */,
-				DEE8BD67100356BD004119FE /* Carbon.m */,
-			);
-			name = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

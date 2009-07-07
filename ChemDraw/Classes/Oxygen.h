@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Element.h"
 
+@class Element;
 
 @interface Oxygen : Element {
 

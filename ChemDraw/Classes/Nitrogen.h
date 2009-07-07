@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Element.h"
 
 @interface Nitrogen : Element {
 
