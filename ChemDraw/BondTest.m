@@ -110,6 +110,28 @@
 	
 }
 
+
+// test whether one of the nodes belonging to this bond reside to the north of the node passed in
+
+// where our bonds nodes have y values of 14.0 and 40.0
+// where our bonds nodes have x values of 10.0 and 50.0
+- (void) testHasNodeToNorthOfNode {
+	Node *northNode = [[Node alloc] initWithXCoord:10.0 yCoord:5.0];	
+	STAssertFalse([bond hasNodeToNorthOfNode:northNode], nil);
+	
+	Node *middleNode = [[Node alloc] initWithXCoord:10.0 yCoord:30.0];
+	STAssertTrue([bond hasNodeToNorthOfNode:middleNode], nil);
+}
+
+// test whether one of the nodes belonging to this bond reside to the north of the node passed in
+- (void) testHasNodeToSouthOfNode {
+	Node *southNode = [[Node alloc] initWithXCoord:10.0 yCoord:45.0];	
+	STAssertFalse([bond hasNodeToSouthOfNode:southNode], nil);
+	
+	Node *middleNode = [[Node alloc] initWithXCoord:10.0 yCoord:30.0];
+	STAssertTrue([bond hasNodeToSouthOfNode:middleNode], nil);
+}
+
 - (void) tearDown {
 	
 	[nodeB release];
