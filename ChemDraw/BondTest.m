@@ -132,6 +132,23 @@
 	STAssertTrue([bond hasNodeToSouthOfNode:middleNode], nil);
 }
 
+- (void) testHasNodeToEastOfNode {
+	Node *eastNode = [[Node alloc] initWithXCoord:60.0 yCoord:45.0];
+	STAssertFalse([bond hasNodeToEastOfNode:eastNode], nil);
+	
+	Node *middleNode = [[Node alloc] initWithXCoord:30.0 yCoord:10];
+	STAssertTrue([bond hasNodeToEastOfNode:middleNode], nil);
+}
+
+- (void) testHasNodeToWestOfNode {
+	Node *westNode = [[Node alloc] initWithXCoord:5.0 yCoord:10.0];
+	STAssertFalse([bond hasNodeToWestOfNode:westNode], nil);
+	
+	Node *middleNode = [[Node alloc] initWithXCoord:30.0 yCoord:10];
+	STAssertTrue([bond hasNodeToWestOfNode:middleNode], nil);
+
+}
+
 - (void) tearDown {
 	
 	[nodeB release];
