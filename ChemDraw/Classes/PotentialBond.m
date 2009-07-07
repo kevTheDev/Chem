@@ -7,7 +7,7 @@
 //
 
 #import "PotentialBond.h"
-
+#import <UIKit/UIKit.h>
 
 @implementation PotentialBond
 

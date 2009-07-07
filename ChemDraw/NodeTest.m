@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
+#import <ApplicationServices/ApplicationServices.h>
 
 #import "Node.h"
 

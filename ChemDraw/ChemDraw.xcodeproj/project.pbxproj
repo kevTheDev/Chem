@@ -21,7 +21,7 @@
 		DE4F4CD30FFCB05300DA8541 /* NodeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD20FFCB05300DA8541 /* NodeMap.m */; };
 		DE4F4CD40FFCB05300DA8541 /* NodeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD20FFCB05300DA8541 /* NodeMap.m */; };
 		DE4F4CDB0FFCB0A300DA8541 /* NodeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */; };
-		DE4F4D4D0FFCB8D500DA8541 /* EdgeMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4D4C0FFCB8D500DA8541 /* EdgeMapTest.m */; };
+		DE4F4D4D0FFCB8D500DA8541 /* BondMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4D4C0FFCB8D500DA8541 /* BondMapTest.m */; };
 		DE4F4D5A0FFCBA7300DA8541 /* BondMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* BondMap.m */; };
 		DE4F4DAA0FFCC68300DA8541 /* ObjectMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */; };
 		DE4F4DAE0FFCC6C500DA8541 /* ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */; };
@@ -53,8 +53,10 @@
 		DED6FCC00FFB2A93008CE1A7 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */; };
 		DED6FCC10FFB2A93008CE1A7 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */; };
 		DED6FCCE0FFB2B3B008CE1A7 /* ArithmeticTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */; };
-		DED6FD390FFB3237008CE1A7 /* EdgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FD380FFB3237008CE1A7 /* EdgeTest.m */; };
+		DED6FD390FFB3237008CE1A7 /* BondTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DED6FD380FFB3237008CE1A7 /* BondTest.m */; };
 		DED6FD8E0FFB37F5008CE1A7 /* Bond.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Bond.m */; };
+		DEE8BCD6100350C5004119FE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE8BCD5100350C5004119FE /* CoreFoundation.framework */; };
+		DEE8BCDC100350DF004119FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +82,7 @@
 		DE4F4CD10FFCB05300DA8541 /* NodeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeMap.h; sourceTree = "<group>"; };
 		DE4F4CD20FFCB05300DA8541 /* NodeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMap.m; sourceTree = "<group>"; };
 		DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeMapTest.m; sourceTree = "<group>"; };
-		DE4F4D4C0FFCB8D500DA8541 /* EdgeMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeMapTest.m; sourceTree = "<group>"; };
+		DE4F4D4C0FFCB8D500DA8541 /* BondMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BondMapTest.m; sourceTree = "<group>"; };
 		DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectMapTest.m; sourceTree = "<group>"; };
 		DE4F4DAC0FFCC6C500DA8541 /* ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectMap.h; sourceTree = "<group>"; };
 		DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectMap.m; sourceTree = "<group>"; };
@@ -113,7 +115,8 @@
 		DED6FCBE0FFB2A93008CE1A7 /* Arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arithmetic.h; sourceTree = "<group>"; };
 		DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arithmetic.m; sourceTree = "<group>"; };
 		DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArithmeticTest.m; sourceTree = "<group>"; };
-		DED6FD380FFB3237008CE1A7 /* EdgeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeTest.m; sourceTree = "<group>"; };
+		DED6FD380FFB3237008CE1A7 /* BondTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BondTest.m; sourceTree = "<group>"; };
+		DEE8BCD5100350C5004119FE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */,
+				DEE8BCD6100350C5004119FE /* CoreFoundation.framework in Frameworks */,
+				DEE8BCDC100350DF004119FE /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +207,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				DE874F8B0FFA592000B1E023 /* Test-Info.plist */,
+				DEE8BCD5100350C5004119FE /* CoreFoundation.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -241,9 +247,9 @@
 			children = (
 				DE874FF10FFA67F500B1E023 /* NodeTest.m */,
 				DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */,
-				DED6FD380FFB3237008CE1A7 /* EdgeTest.m */,
+				DED6FD380FFB3237008CE1A7 /* BondTest.m */,
 				DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */,
-				DE4F4D4C0FFCB8D500DA8541 /* EdgeMapTest.m */,
+				DE4F4D4C0FFCB8D500DA8541 /* BondMapTest.m */,
 				DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */,
 			);
 			name = Test;
@@ -376,11 +382,11 @@
 				DE8750160FFA690400B1E023 /* Node.m in Sources */,
 				DED6FCC10FFB2A93008CE1A7 /* Arithmetic.m in Sources */,
 				DED6FCCE0FFB2B3B008CE1A7 /* ArithmeticTest.m in Sources */,
-				DED6FD390FFB3237008CE1A7 /* EdgeTest.m in Sources */,
+				DED6FD390FFB3237008CE1A7 /* BondTest.m in Sources */,
 				DED6FD8E0FFB37F5008CE1A7 /* Bond.m in Sources */,
 				DE4F4CD30FFCB05300DA8541 /* NodeMap.m in Sources */,
 				DE4F4CDB0FFCB0A300DA8541 /* NodeMapTest.m in Sources */,
-				DE4F4D4D0FFCB8D500DA8541 /* EdgeMapTest.m in Sources */,
+				DE4F4D4D0FFCB8D500DA8541 /* BondMapTest.m in Sources */,
 				DE4F4D5A0FFCBA7300DA8541 /* BondMap.m in Sources */,
 				DE4F4DAA0FFCC68300DA8541 /* ObjectMapTest.m in Sources */,
 				DE4F4DAF0FFCC6C500DA8541 /* ObjectMap.m in Sources */,

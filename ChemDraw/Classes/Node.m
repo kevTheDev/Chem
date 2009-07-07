@@ -79,7 +79,7 @@ int DRAW_HEIGHT = 10;
 
 - (int) xCoordForHash {
 	
-	return [Arithmetic roundFloatDownToInteger:[self xCoord]];
+	return [Arithmetic roundFloatDownToInteger:xCoord];
 }
 
 - (int) yCoordForHash {

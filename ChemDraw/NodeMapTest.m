@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <SenTestingKit/SenTestingKit.h>
-
+#import <ApplicationServices/ApplicationServices.h>
 #import "NodeMap.h"
 #import "Node.h"
 

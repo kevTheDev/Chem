@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <ApplicationServices/ApplicationServices.h>
 
 @interface PotentialBond : NSObject {
 
