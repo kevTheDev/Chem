@@ -98,6 +98,25 @@
 	return currentEastPoint;
 }
 
+- (CGFloat) yDistance {
+	
+	CGPoint northPoint = [self northPoint];
+	CGPoint southPoint = [self southPoint];
+
+	float yDistance = southPoint.y - northPoint.y;
+	return yDistance;
+}
+
+- (CGFloat) xDistance {
+	CGPoint westPoint = [self westPoint];
+	CGPoint eastPoint = [self eastPoint];
+
+	float xDistance = eastPoint.y - westPoint.y;
+	return xDistance;
+}
+
+
+
 - (void) renderWithContext:(CGContextRef)ctx {
 	CGPoint currentPoint;
 	CGPoint previousPoint;

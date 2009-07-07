@@ -26,4 +26,7 @@
 - (CGPoint) westPoint;
 - (CGPoint) eastPoint;
 
+- (CGFloat) xDistance;
+- (CGFloat) yDistance;
+
 @end
