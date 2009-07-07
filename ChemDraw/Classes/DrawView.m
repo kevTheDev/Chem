@@ -122,12 +122,16 @@
 			if(i > 0) {
 				previousPointObject = [gesturePoints objectAtIndex:i - 1];
 				previousPoint = [previousPointObject originalPoint];
+				
+				currentPointObject = [gesturePoints objectAtIndex:i];
+				currentPoint = [currentPointObject originalPoint];
+				
+				[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx];
 			}
 		
-			currentPointObject = [gesturePoints objectAtIndex:i];
-			currentPoint = [currentPointObject originalPoint];
 			
-			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx];
+			
+			
 		}
 		
 
@@ -320,7 +324,7 @@
 	
 	CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
 	
-	CGContextSetLineWidth(ctx, 1.0);
+	CGContextSetLineWidth(ctx, 5.0);
 	CGContextStrokePath(ctx);
 	
 	return;
