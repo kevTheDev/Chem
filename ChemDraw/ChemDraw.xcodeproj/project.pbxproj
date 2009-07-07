@@ -57,6 +57,14 @@
 		DED6FD8E0FFB37F5008CE1A7 /* Bond.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Bond.m */; };
 		DEE8BCD6100350C5004119FE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE8BCD5100350C5004119FE /* CoreFoundation.framework */; };
 		DEE8BCDC100350DF004119FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		DEE8BD4E10035687004119FE /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BD4D10035687004119FE /* Element.m */; };
+		DEE8BD4F10035687004119FE /* Element.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BD4D10035687004119FE /* Element.m */; };
+		DEE8BD60100356AE004119FE /* Oxygen.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BD5F100356AE004119FE /* Oxygen.m */; };
+		DEE8BD61100356AE004119FE /* Oxygen.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BD5F100356AE004119FE /* Oxygen.m */; };
+		DEE8BD64100356B5004119FE /* Nitrogen.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BD63100356B5004119FE /* Nitrogen.m */; };
+		DEE8BD65100356B5004119FE /* Nitrogen.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BD63100356B5004119FE /* Nitrogen.m */; };
+		DEE8BD68100356BD004119FE /* Carbon.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BD67100356BD004119FE /* Carbon.m */; };
+		DEE8BD69100356BD004119FE /* Carbon.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BD67100356BD004119FE /* Carbon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +125,14 @@
 		DED6FCCD0FFB2B3B008CE1A7 /* ArithmeticTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArithmeticTest.m; sourceTree = "<group>"; };
 		DED6FD380FFB3237008CE1A7 /* BondTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BondTest.m; sourceTree = "<group>"; };
 		DEE8BCD5100350C5004119FE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		DEE8BD4C10035687004119FE /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		DEE8BD4D10035687004119FE /* Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Element.m; sourceTree = "<group>"; };
+		DEE8BD5E100356AE004119FE /* Oxygen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oxygen.h; sourceTree = "<group>"; };
+		DEE8BD5F100356AE004119FE /* Oxygen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Oxygen.m; sourceTree = "<group>"; };
+		DEE8BD62100356B5004119FE /* Nitrogen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nitrogen.h; sourceTree = "<group>"; };
+		DEE8BD63100356B5004119FE /* Nitrogen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nitrogen.m; sourceTree = "<group>"; };
+		DEE8BD66100356BD004119FE /* Carbon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carbon.h; sourceTree = "<group>"; };
+		DEE8BD67100356BD004119FE /* Carbon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carbon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +200,9 @@
 				DE9465D40FFE8ADE00F7AA88 /* PotentialBondMap.m */,
 				DE9465D90FFE8BD400F7AA88 /* PotentialBond.h */,
 				DE9465DA0FFE8BD400F7AA88 /* PotentialBond.m */,
+				DEE8BD4C10035687004119FE /* Element.h */,
+				DEE8BD4D10035687004119FE /* Element.m */,
+				DEE8BD6A100356C5004119FE /* Elements */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -253,6 +272,19 @@
 				DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */,
 			);
 			name = Test;
+			sourceTree = "<group>";
+		};
+		DEE8BD6A100356C5004119FE /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				DEE8BD5E100356AE004119FE /* Oxygen.h */,
+				DEE8BD5F100356AE004119FE /* Oxygen.m */,
+				DEE8BD62100356B5004119FE /* Nitrogen.h */,
+				DEE8BD63100356B5004119FE /* Nitrogen.m */,
+				DEE8BD66100356BD004119FE /* Carbon.h */,
+				DEE8BD67100356BD004119FE /* Carbon.m */,
+			);
+			name = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +403,10 @@
 				DE9465770FFE850600F7AA88 /* SelectAction.m in Sources */,
 				DE9465D60FFE8ADE00F7AA88 /* PotentialBondMap.m in Sources */,
 				DE9465DC0FFE8BD400F7AA88 /* PotentialBond.m in Sources */,
+				DEE8BD4E10035687004119FE /* Element.m in Sources */,
+				DEE8BD60100356AE004119FE /* Oxygen.m in Sources */,
+				DEE8BD64100356B5004119FE /* Nitrogen.m in Sources */,
+				DEE8BD68100356BD004119FE /* Carbon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +436,10 @@
 				DE9465760FFE850600F7AA88 /* SelectAction.m in Sources */,
 				DE9465D50FFE8ADE00F7AA88 /* PotentialBondMap.m in Sources */,
 				DE9465DB0FFE8BD400F7AA88 /* PotentialBond.m in Sources */,
+				DEE8BD4F10035687004119FE /* Element.m in Sources */,
+				DEE8BD61100356AE004119FE /* Oxygen.m in Sources */,
+				DEE8BD65100356B5004119FE /* Nitrogen.m in Sources */,
+				DEE8BD69100356BD004119FE /* Carbon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
