@@ -102,20 +102,20 @@
 	[equalNode release];
 }
 
-- (void) testIsNorthOf {
-	Node *southNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
-	STAssertTrue([node isNorthOf:southNode], nil);
-	
-	[southNode release];
-}
-
-- (void) testIsNotNorthOf {
-	Node *northNode = [[Node alloc] initWithXCoord:10.0 yCoord:10.0];
-	STAssertFalse([node isNorthOf:northNode], nil);
-	
-	[northNode release];
-
-}
+//- (void) testIsNorthOf {
+//	Node *southNode = [[Node alloc] initWithXCoord:10.0 yCoord:20.0];
+//	STAssertTrue([node isNorthOf:southNode], nil);
+//	
+//	[southNode release];
+//}
+//
+//- (void) testIsNotNorthOf {
+//	Node *northNode = [[Node alloc] initWithXCoord:10.0 yCoord:10.0];
+//	STAssertFalse([node isNorthOf:northNode], nil);
+//	
+//	[northNode release];
+//
+//}
 
 - (void) tearDown {
 	

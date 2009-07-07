@@ -50,8 +50,9 @@
 	point = CGPointMake(30.0, 100.0);
 }
 
+// on init of object map, we create an initial bond, therefore it should never be empty
 - (void) testInit {
-	STAssertTrue([objectMap isEmpty], nil);
+	STAssertFalse([objectMap isEmpty], nil);
 }
 
 - (void) testAddBond {
@@ -62,14 +63,6 @@
 - (void) testAddNode {
 	[objectMap addNode:nodeOneB];	
 	STAssertFalse([objectMap isEmpty], nil);
-}
-
-- (void) testCount {
-	[objectMap addBond:bondOne];
-	[objectMap addNode:nodeOneB];
-	
-	int newCount = [objectMap count];
-	STAssertEquals(newCount, 2, nil);
 }
 
 - (void) testClosestNodeToPoint {

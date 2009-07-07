@@ -112,10 +112,6 @@
 	return ([nodeMap count] == 0) && ([bondMap count] == 0);
 }
 
-- (NSUInteger) count {
-	return [bondMap count] + [nodeMap count];
-}
-
 - (void) addNode:(Node *)node {
 	[nodeMap addNode:node];
 	AddNodeAction *action = [[AddNodeAction alloc] init];

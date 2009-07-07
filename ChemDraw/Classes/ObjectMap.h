@@ -26,8 +26,6 @@
 }
 
 - (BOOL) isEmpty;
-- (NSUInteger) count;
-
 - (void) addNode:(Node *)node;
 - (void) addBond:(Bond *)bond;
 
