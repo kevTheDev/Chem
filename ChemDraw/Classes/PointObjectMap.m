@@ -28,7 +28,7 @@
 
 }
 
-- (CGPoint) topPoint {
+- (CGPoint) northPoint {
 
 	CGPoint tempPoint;
 	
@@ -38,7 +38,7 @@
 	for(PointObject *pointObject in pointObjects) {
 		tempPoint = [pointObject originalPoint];
 		
-		if(tempPoint.y > currentTopPoint.y) {
+		if(tempPoint.y < currentTopPoint.y) {
 			currentTopPoint = tempPoint;
 		}
 	}
@@ -46,7 +46,7 @@
 	return currentTopPoint;
 }
 
-- (CGPoint) bottomPoint {
+- (CGPoint)southPoint {
 	CGPoint tempPoint;
 	
 	PointObject *tempPointObject = [pointObjects objectAtIndex:0];
@@ -55,13 +55,47 @@
 	for(PointObject *pointObject in pointObjects) {
 		tempPoint = [pointObject originalPoint];
 		
-		if(tempPoint.y < currentBottomPoint.y) {
+		if(tempPoint.y > currentBottomPoint.y) {
 			currentBottomPoint = tempPoint;
 		}
 	}
 	
 	return currentBottomPoint;
 
+}
+
+- (CGPoint) westPoint {
+	CGPoint tempPoint;
+	
+	PointObject *tempPointObject = [pointObjects objectAtIndex:0];
+	CGPoint currentWestPoint = [tempPointObject originalPoint];
+	
+	for(PointObject *pointObject in pointObjects) {
+		tempPoint = [pointObject originalPoint];
+		
+		if(tempPoint.x < currentWestPoint.x) {
+			currentWestPoint = tempPoint;
+		}
+	}
+	
+	return currentWestPoint;
+}
+
+- (CGPoint) eastPoint {
+	CGPoint tempPoint;
+	
+	PointObject *tempPointObject = [pointObjects objectAtIndex:0];
+	CGPoint currentEastPoint = [tempPointObject originalPoint];
+	
+	for(PointObject *pointObject in pointObjects) {
+		tempPoint = [pointObject originalPoint];
+		
+		if(tempPoint.x > currentEastPoint.x) {
+			currentEastPoint = tempPoint;
+		}
+	}
+	
+	return currentEastPoint;
 }
 
 - (void) renderWithContext:(CGContextRef)ctx {
