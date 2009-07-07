@@ -95,7 +95,7 @@
 
 - (void)drawRect:(CGRect)rect {
 
-	[Alphabet binConvert];
+	//[Alphabet binConvert];
 
 	
 	if(programState == NULL) {
