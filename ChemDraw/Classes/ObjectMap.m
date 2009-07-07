@@ -108,12 +108,6 @@
 	return [nodeMap highlightedNodesCount];
 }
 
-- (void) highlightNode:(Node *)node {
-	int nodeMapIndex = [nodeMap indexOfObject:node];
-	
-	[nodeMap highlightNodeAtIndex:nodeMapIndex];
-}
-
 - (BOOL) isEmpty {
 	return ([nodeMap count] == 0) && ([bondMap count] == 0);
 }
