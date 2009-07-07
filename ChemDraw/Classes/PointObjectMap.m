@@ -17,6 +17,7 @@
 	
     if ( self ) {
         pointObjects = [[NSMutableArray alloc] initWithCapacity:5];
+		compressedPointObjects = [[NSMutableArray alloc] initWithCapacity:5];
     }
 	
     return self;
@@ -115,6 +116,30 @@
 	return xDistance;
 }
 
+- (void) compressPoints {
+
+	CGPoint point;
+
+
+	float pointX16 = [self xDistance] / 16;
+	float pointY16 = [self yDistance] / 16;
+
+	float compressedX;
+	float compressedY;
+
+	for(PointObject *pointObject in pointObjects) {
+		point = [pointObject originalPoint];
+		
+		compressedX = point.x * pointX16;
+		compressedY = point.y * pointY16;
+		
+		PointObject *newPointObject = [[PointObject alloc] initWithPoint:CGPointMake(compressedX, compressedY)];
+		[compressedPointObjects addObject:newPointObject];
+		
+	}
+
+	return;
+}
 
 
 - (void) renderWithContext:(CGContextRef)ctx {

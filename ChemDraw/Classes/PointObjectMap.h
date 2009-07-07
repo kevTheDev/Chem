@@ -12,6 +12,8 @@
 
 @interface PointObjectMap : NSObject {
 	NSMutableArray *pointObjects;
+	
+	NSMutableArray *compressedPointObjects;
 }
 
 - (void) addPoint:(PointObject *)pointObject;
@@ -28,5 +30,7 @@
 
 - (CGFloat) xDistance;
 - (CGFloat) yDistance;
+
+- (void) compressPoints;
 
 @end
