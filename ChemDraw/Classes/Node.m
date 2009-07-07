@@ -225,26 +225,26 @@ int DRAW_HEIGHT = 10;
 		// every node must be initialized with four potential bonds to start with
 		// as carbon nodes can have up to four bonds
 		
-		if(![self hasBondToTheNorth]) {
-			CGPoint bondOnePoint = CGPointMake(xCoord, yCoord + 50);    // north of node
+		if([self hasBondToTheNorth] == NO) {
+			CGPoint bondOnePoint = CGPointMake(xCoord, yCoord - 50);    // north of node
 			PotentialBond *bondOne = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondOnePoint];
 			[potentialBondMap addPotentialBond:bondOne];
 		}
 		
-		if(![self hasBondToTheEast]) {
+		if([self hasBondToTheEast] == NO) {
 			CGPoint bondTwoPoint = CGPointMake(xCoord + 50, yCoord);    // east of node
 			PotentialBond *bondTwo = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondTwoPoint];
 			[potentialBondMap addPotentialBond:bondTwo];
 		
 		}
 		
-		if(![self hasBondToTheSouth]) {
-			CGPoint bondThreePoint = CGPointMake(xCoord, yCoord - 50);  // south of node
+		if([self hasBondToTheSouth] == NO) {
+			CGPoint bondThreePoint = CGPointMake(xCoord, yCoord + 50);  // south of node
 			PotentialBond *bondThree = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondThreePoint];
 			[potentialBondMap addPotentialBond:bondThree];
 		}
 		
-		if(![self hasBondToTheWest]) {
+		if([self hasBondToTheWest] == NO) {
 			CGPoint bondFourPoint = CGPointMake(xCoord - 50, yCoord);   // west of node
 			PotentialBond *bondFour = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondFourPoint];
 			[potentialBondMap addPotentialBond:bondFour];
