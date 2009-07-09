@@ -9,6 +9,8 @@
 #import "PointObjectMap.h"
 #import "PointObject.h"
 
+#import <UIKit/UIKit.h>
+
 @implementation PointObjectMap
 
 - (PointObjectMap *) init {
@@ -139,8 +141,8 @@
 		compressedX = point.x / pointX16;
 		compressedY = point.y / pointY16;
 		
-		NSLog(@"COMPRESSED X: %f", compressedX);
-		NSLog(@"COMPRESSED Y: %f", compressedY);
+		//NSLog(@"COMPRESSED X: %f", compressedX);
+		//NSLog(@"COMPRESSED Y: %f", compressedY);
 		
 		PointObject *newPointObject = [[PointObject alloc] initWithPoint:CGPointMake(compressedX, compressedY)];
 		[compressedPointObjects addObject:newPointObject];
@@ -157,7 +159,7 @@
 	PointObject *currentPointObject;
 	PointObject *previousPointObject;
 		
-		
+	float lineWidth = 4.0;
 	
 	for(int i=0; i<[compressedPointObjects count]; i++) {
 		
@@ -168,9 +170,12 @@
 			currentPointObject = [compressedPointObjects objectAtIndex:i];
 			currentPoint = [currentPointObject originalPoint];
 			
-			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx];
+			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx lineWidth:lineWidth];
 		}
-	}}
+	}
+}
+
+
 
 - (void) renderWithContext:(CGContextRef)ctx {
 	CGPoint currentPoint;
@@ -179,7 +184,7 @@
 	PointObject *currentPointObject;
 	PointObject *previousPointObject;
 		
-		
+	float lineWidth = 5.0;	
 	
 	for(int i=0; i<[pointObjects count]; i++) {
 		
@@ -190,12 +195,14 @@
 			currentPointObject = [pointObjects objectAtIndex:i];
 			currentPoint = [currentPointObject originalPoint];
 			
-			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx];
+			
+			
+			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx lineWidth:lineWidth];
 		}
 	}
 }
 
-- (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx {
+- (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx lineWidth:(float)lineWidth {
 	
 	CGMutablePathRef path = CGPathCreateMutable();
 	
@@ -207,7 +214,7 @@
 	
 	CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
 	
-	CGContextSetLineWidth(ctx, 5.0);
+	CGContextSetLineWidth(ctx, lineWidth);
 	CGContextStrokePath(ctx);
 	
 	return;

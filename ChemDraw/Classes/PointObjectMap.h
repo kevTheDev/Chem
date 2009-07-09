@@ -21,7 +21,7 @@
 - (void) renderWithContext:(CGContextRef)ctx;
 - (void) renderCompressedPointsWithContext:(CGContextRef)ctx;
 
-- (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx;
+- (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx  lineWidth:(float)lineWidth;
 
 - (CGPoint) northPoint;
 - (CGPoint) southPoint;
