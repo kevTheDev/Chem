@@ -21,6 +21,7 @@
 	
     if ( self ) {
         pointObjects = [[NSMutableArray alloc] initWithCapacity:5];
+		completePointSet = [[NSMutableArray alloc] initWithCapacity:5];
 		compressedPointObjects = [[NSMutableArray alloc] initWithCapacity:5];
     }
 	
@@ -129,6 +130,8 @@
 // then we are ready for the symbolic binary field comparison
 - (void) compressPoints {
 
+	
+	
 	CGPoint point;
 
 	NSLog(@"X DISTANCE: %f", [self xDistance]);
@@ -154,6 +157,40 @@
 		[compressedPointObjects addObject:newPointObject];
 		
 	}
+	
+	NSLog(@"Original compressed count: %d", [compressedPointObjects count]);
+	
+	// fill in the missing points
+	//[self fillInMissingPoints];
+
+	// add some extra points (one either side) to simulate a thicker line
+	[self thickenLine];
+	NSLog(@"New compressed count: %d", [compressedPointObjects count]);
+
+	return;
+}
+
+- (void) thickenLine {
+	
+	int compressedPointObjectsCount = [compressedPointObjects count];
+	
+	for(int i=0; i<compressedPointObjectsCount; i++) {
+		
+		NSLog(@"Thicken line loop: %d", i);
+		
+		PointObject *currentPointObject = [compressedPointObjects objectAtIndex:i];
+		CGPoint currentPoint = [currentPointObject originalPoint];
+
+		CGPoint pointToLeft = CGPointMake(currentPoint.x - 1, currentPoint.y);
+		CGPoint pointToRight = CGPointMake(currentPoint.x + 1, currentPoint.y);
+			
+		PointObject *leftPoint = [[PointObject alloc] initWithPoint:pointToLeft];
+		PointObject *rightPoint = [[PointObject alloc] initWithPoint:pointToRight];
+		
+		[compressedPointObjects addObject:leftPoint];
+		[compressedPointObjects addObject:rightPoint];
+		
+	}
 
 	return;
 }
@@ -167,54 +204,60 @@
 	PointObject *previousPointObject;
 
 	NSArray *linePoints;
-	
-	NSMutableArray *completePointSet = [[NSMutableArray alloc] init];
-	
-	for(int i=0; i<[compressedPointObjects count]; i++) {
 		
-		if(i > 0) {
-			previousPointObject = [compressedPointObjects objectAtIndex:i - 1];
-			previousPoint = [previousPointObject originalPoint];
+	int compressedPointObjectsCount = [compressedPointObjects count];	
+		
+	for(int i=1; i<compressedPointObjectsCount; i++) {
+		
+		NSLog(@"Fill missing points loop: %d", i);
+		
+		previousPointObject = [compressedPointObjects objectAtIndex:i - 1];
+		previousPoint = [previousPointObject originalPoint];
 				
-			currentPointObject = [compressedPointObjects objectAtIndex:i];
-			currentPoint = [currentPointObject originalPoint];
+		currentPointObject = [compressedPointObjects objectAtIndex:i];
+		currentPoint = [currentPointObject originalPoint];
+
+		linePoints = [Arithmetic straightLineCoordsBetweenPointOne:previousPoint pointTwo:currentPoint];
 			
-			//[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx lineWidth:lineWidth];
+		[completePointSet addObjectsFromArray:linePoints];
 			
-			linePoints = [Arithmetic straightLineCoordsBetweenPointOne:previousPoint pointTwo:currentPoint];
-			
-			[completePointSet addObjectsFromArray:linePoints];
-			
-		}
 	}
 	
-	// now we should have a complete point set tracing the movement of the user's finger
+	// now we should have a complete point set tracing the movement of the user's finger	
+	return;
 	
 	
-
 }
 
 
 - (void) renderCompressedPointsWithContext:(CGContextRef)ctx {
 	CGPoint currentPoint;
-	CGPoint previousPoint;
 		
 	PointObject *currentPointObject;
-	PointObject *previousPointObject;
 		
-	float lineWidth = 4.0;
-	
+
+	//
+//	for(int i=0; i<[compressedPointObjects count]; i++) {
+//		
+//		if(i > 0) {
+//			previousPointObject = [compressedPointObjects objectAtIndex:i - 1];
+//			previousPoint = [previousPointObject originalPoint];
+//				
+//			currentPointObject = [compressedPointObjects objectAtIndex:i];
+//			currentPoint = [currentPointObject originalPoint];
+//			
+//			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx lineWidth:lineWidth];
+//		}
+//	}
+
+
 	for(int i=0; i<[compressedPointObjects count]; i++) {
 		
-		if(i > 0) {
-			previousPointObject = [compressedPointObjects objectAtIndex:i - 1];
-			previousPoint = [previousPointObject originalPoint];
-				
-			currentPointObject = [compressedPointObjects objectAtIndex:i];
-			currentPoint = [currentPointObject originalPoint];
 			
-			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx lineWidth:lineWidth];
-		}
+		currentPointObject = [compressedPointObjects objectAtIndex:i];
+		currentPoint = [currentPointObject originalPoint];
+			
+		[self renderPoint:currentPoint withContext:ctx];
 	}
 }
 
@@ -245,6 +288,13 @@
 	}
 }
 
+- (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx {	
+	
+	CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
+    CGContextFillEllipseInRect(ctx, CGRectMake(point.x, point.y, 4.0, 4.0));
+	
+}
+
 - (void) renderLineFromPoint:(CGPoint)startPoint toPoint:(CGPoint)endPoint withContext:(CGContextRef)ctx lineWidth:(float)lineWidth {
 	
 	CGMutablePathRef path = CGPathCreateMutable();
@@ -263,6 +313,14 @@
 	return;
 }
 
+- (void) dealloc {
+	[compressedPointObjects release];
+	[completePointSet release];
+	[pointObjects release];
+	
+	[super dealloc];
+
+}
 
 
 @end

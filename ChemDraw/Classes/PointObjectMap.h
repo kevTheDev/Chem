@@ -12,7 +12,7 @@
 
 @interface PointObjectMap : NSObject {
 	NSMutableArray *pointObjects;
-	
+	NSMutableArray *completePointSet;
 	NSMutableArray *compressedPointObjects;
 }
 
@@ -33,5 +33,9 @@
 - (CGFloat) yDistance;
 
 - (void) compressPoints;
+- (void) fillInMissingPoints;
+- (void) thickenLine;
+
+- (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 
 @end

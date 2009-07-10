@@ -32,6 +32,8 @@
 		DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */; };
 		DE874FF20FFA67F500B1E023 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874FF10FFA67F500B1E023 /* NodeTest.m */; };
 		DE8750160FFA690400B1E023 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
+		DE89D1CC1006212A000037D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE8C18B1003BAED004119FE /* QuartzCore.framework */; };
+		DE89D28E10070F9B000037D7 /* PointObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D28D10070F9B000037D7 /* PointObjectTest.m */; };
 		DE94643A0FFE743800F7AA88 /* AddNodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464390FFE743800F7AA88 /* AddNodeAction.m */; };
 		DE94643B0FFE743800F7AA88 /* AddNodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464390FFE743800F7AA88 /* AddNodeAction.m */; };
 		DE94643E0FFE744A00F7AA88 /* AddBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE94643D0FFE744A00F7AA88 /* AddBondAction.m */; };
@@ -69,6 +71,8 @@
 		DEE8BE191003623A004119FE /* Alphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BE171003623A004119FE /* Alphabet.m */; };
 		DEE8BE1F10036367004119FE /* PointObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BE1E10036367004119FE /* PointObjectMap.m */; };
 		DEE8BE2010036367004119FE /* PointObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE8BE1E10036367004119FE /* PointObjectMap.m */; };
+		DEE8BFD110038318004119FE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE8BFD010038318004119FE /* OpenGLES.framework */; };
+		DEE8C18C1003BAED004119FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE8C18B1003BAED004119FE /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +110,7 @@
 		DE874F8B0FFA592000B1E023 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DE874FF10FFA67F500B1E023 /* NodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeTest.m; sourceTree = "<group>"; };
+		DE89D28D10070F9B000037D7 /* PointObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointObjectTest.m; sourceTree = "<group>"; };
 		DE9464380FFE743800F7AA88 /* AddNodeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNodeAction.h; sourceTree = "<group>"; };
 		DE9464390FFE743800F7AA88 /* AddNodeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNodeAction.m; sourceTree = "<group>"; };
 		DE94643C0FFE744A00F7AA88 /* AddBondAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBondAction.h; sourceTree = "<group>"; };
@@ -141,6 +146,8 @@
 		DEE8BE171003623A004119FE /* Alphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alphabet.m; sourceTree = "<group>"; };
 		DEE8BE1D10036367004119FE /* PointObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointObjectMap.h; sourceTree = "<group>"; };
 		DEE8BE1E10036367004119FE /* PointObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointObjectMap.m; sourceTree = "<group>"; };
+		DEE8BFD010038318004119FE /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DEE8C18B1003BAED004119FE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +158,8 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				DEE8BFD110038318004119FE /* OpenGLES.framework in Frameworks */,
+				DEE8C18C1003BAED004119FE /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +170,7 @@
 				DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */,
 				DEE8BCD6100350C5004119FE /* CoreFoundation.framework in Frameworks */,
 				DEE8BCDC100350DF004119FE /* CoreGraphics.framework in Frameworks */,
+				DE89D1CC1006212A000037D7 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +254,8 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				DE874F8B0FFA592000B1E023 /* Test-Info.plist */,
 				DEE8BCD5100350C5004119FE /* CoreFoundation.framework */,
+				DEE8BFD010038318004119FE /* OpenGLES.framework */,
+				DEE8C18B1003BAED004119FE /* QuartzCore.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -287,6 +299,7 @@
 				DE4F4CD90FFCB0A300DA8541 /* NodeMapTest.m */,
 				DE4F4D4C0FFCB8D500DA8541 /* BondMapTest.m */,
 				DE4F4DA90FFCC68300DA8541 /* ObjectMapTest.m */,
+				DE89D28D10070F9B000037D7 /* PointObjectTest.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -448,6 +461,7 @@
 				DEE8BD69100356BD004119FE /* Carbon.m in Sources */,
 				DEE8BE181003623A004119FE /* Alphabet.m in Sources */,
 				DEE8BE1F10036367004119FE /* PointObjectMap.m in Sources */,
+				DE89D28E10070F9B000037D7 /* PointObjectTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

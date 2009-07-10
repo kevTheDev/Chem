@@ -16,6 +16,10 @@
 #import "PointObjectMap.h"
 #import "Alphabet.h"
 
+
+#import <QuartzCore/QuartzCore.h>
+
+
 @implementation DrawView
 
 
@@ -95,7 +99,6 @@
 
 - (void)drawRect:(CGRect)rect {
 
-	//[Alphabet binConvert];
 
 	
 	if(programState == NULL) {
@@ -116,9 +119,10 @@
 
 	}
 	else if([programState currentState] == DEBUG_MODE) {
-		NSLog(@"RENDER COMPRESSED POINTS");
-		[gesturePoints compressPoints];
+	
+
 		[gesturePoints renderCompressedPointsWithContext:ctx];
+		
 	}
 	else {
 		// Drawing code
@@ -133,8 +137,12 @@
    
 	char *prompt = [programState currentPrompt];
 	[self renderText:prompt withXCoord:15.0 withYCoord:50.0 withContext:(CGContextRef)ctx];
+	
+	if([programState currentState] == DEBUG_MODE) {
+	}
 
 }
+
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	
@@ -274,6 +282,7 @@
 	if([programState currentState] == GESTURE_MODE) {
 		symbolTimer = [NSTimer scheduledTimerWithTimeInterval:0.50 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
 	}
+
 	
 	return;
 }
@@ -373,12 +382,16 @@
 //	
 //	[self setNeedsDisplay]; // redraw entire screen 
 
+	NSLog(@"RENDER COMPRESSED POINTS");
+	[gesturePoints compressPoints];
+
 	[programState setCurrentState:DEBUG_MODE];
 	[symbolTimer invalidate];
 	[self setNeedsDisplay]; // redraw entire screen 
 
 	
 }
+
 
 - (void)dealloc {
 	[programState release];

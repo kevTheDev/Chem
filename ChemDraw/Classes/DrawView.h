@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <OpenGLES/EAGLDrawable.h>
+
+#import <OpenGLES/EAGL.h>
+#import <OpenGLES/ES1/gl.h>
+#import <OpenGLES/ES1/glext.h>
 
 @class ProgramState;
 @class Node;
@@ -56,4 +61,7 @@
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 
 -(void) onTimer;
+
+
+
 @end
