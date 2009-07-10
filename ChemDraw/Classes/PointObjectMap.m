@@ -234,6 +234,25 @@
 			
 		PointObject *leftPoint3 = [[PointObject alloc] initWithPoint:pointToLeft3];
 		PointObject *rightPoint3 = [[PointObject alloc] initWithPoint:pointToRight3];
+		
+		CGPoint pointToNorth = CGPointMake(currentPoint.x, currentPoint.y - 1);
+		CGPoint pointToSouth = CGPointMake(currentPoint.x, currentPoint.y + 1);
+			
+		PointObject *northPoint = [[PointObject alloc] initWithPoint:pointToNorth];
+		PointObject *southPoint = [[PointObject alloc] initWithPoint:pointToSouth];
+		
+		CGPoint pointToNorth2 = CGPointMake(currentPoint.x, currentPoint.y - 3);
+		CGPoint pointToSouth2 = CGPointMake(currentPoint.x, currentPoint.y + 3);
+			
+		PointObject *northPoint2 = [[PointObject alloc] initWithPoint:pointToNorth2];
+		PointObject *southPoint2 = [[PointObject alloc] initWithPoint:pointToSouth2];
+		
+		CGPoint pointToNorth3 = CGPointMake(currentPoint.x, currentPoint.y - 3);
+		CGPoint pointToSouth3 = CGPointMake(currentPoint.x, currentPoint.y + 3);
+			
+		PointObject *northPoint3 = [[PointObject alloc] initWithPoint:pointToNorth3];
+		PointObject *southPoint3 = [[PointObject alloc] initWithPoint:pointToSouth3];
+
 
 		
 		[completePointSet addObject:leftPoint];
@@ -242,6 +261,13 @@
 		[completePointSet addObject:rightPoint2];
 		[completePointSet addObject:leftPoint3];
 		[completePointSet addObject:rightPoint3];
+		
+		[completePointSet addObject:northPoint];
+		[completePointSet addObject:southPoint];
+		[completePointSet addObject:northPoint2];
+		[completePointSet addObject:southPoint2];
+		[completePointSet addObject:northPoint3];
+		[completePointSet addObject:southPoint3];
 		
 		
 		
