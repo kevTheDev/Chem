@@ -229,10 +229,19 @@
 		PointObject *leftPoint2 = [[PointObject alloc] initWithPoint:pointToLeft2];
 		PointObject *rightPoint2 = [[PointObject alloc] initWithPoint:pointToRight2];
 		
+		CGPoint pointToLeft3 = CGPointMake(currentPoint.x - 3, currentPoint.y);
+		CGPoint pointToRight3 = CGPointMake(currentPoint.x + 3, currentPoint.y);
+			
+		PointObject *leftPoint3 = [[PointObject alloc] initWithPoint:pointToLeft3];
+		PointObject *rightPoint3 = [[PointObject alloc] initWithPoint:pointToRight3];
+
+		
 		[compressedPointObjects addObject:leftPoint];
 		[compressedPointObjects addObject:rightPoint];
 		[compressedPointObjects addObject:leftPoint2];
 		[compressedPointObjects addObject:rightPoint2];
+		[compressedPointObjects addObject:leftPoint3];
+		[compressedPointObjects addObject:rightPoint3];
 		
 		
 		
@@ -411,11 +420,31 @@
 	int xCount = 0;
 	int yCount = 0;
 	int zCount = 0;
+	int aPixelCheck;
 	int oPixelCheck;
 	
-	//int my_array[] = {1,23,17,4,-5,100};
-	//int *my_array = [alphabet o];
-	int my_array[256] =
+	
+	int a[256] = {
+
+		0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
+		0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
+		0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,
+		0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,
+		0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
+		0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
+		0,0,1,1,1,1,1,0,0,1,1,1,1,1,0,0,
+		0,0,1,1,1,1,1,0,0,1,1,1,1,1,0,0,
+		0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+		0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+		1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,
+		1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
+		1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1
+	};
+	
+	int o[256] =
 
 {
 0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
@@ -435,41 +464,23 @@
 0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
 0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0
 };
-//	int *ptr;
-//
-//	
-//	int *o = [alphabet o];
-//	
-//	int i;
-//    ptr = &my_array[0];     /* point our pointer to the first
-//                                      element of the array */
-//    printf("\n\n");
-//    for (i = 0; i < 16; i++)
-//    {
-//      printf("my_array[%d] = %d   ",i,my_array[i]);   /*<-- A */
-//      printf("ptr + %d = %d\n",i, *(ptr + i));        /*<-- B */
-//    }
-//  
 
 	
-	//int *o = [alphabet o];
-//	
-//	for(int i=0; i<256; i++) {
-//		NSLog(@"O AT i: %d, %d", o[i], i);
-//	}
+	int *aPtr;
+	int *oPtr;
 	
-	int *ptr;
 	
 	for(int x=0; x<16; x++) {
 		for(int y=0; y<16; y++) {
 		
 		int letterArrayIndex = (x*16) + y;
-		ptr = &my_array[letterArrayIndex];
+		aPtr = &a[letterArrayIndex];
+		oPtr = &o[letterArrayIndex];
 		
-		oPixelCheck = my_array[letterArrayIndex];
-		NSLog(@"oPixelCheck %d", oPixelCheck);
+		aPixelCheck = a[letterArrayIndex];
+		oPixelCheck = o[letterArrayIndex];
+		//NSLog(@"oPixelCheck %d", oPixelCheck);
 		
-		//NSLog(@"(%d,%d,%d)", x, y, letterArrayIndex);
 		for(PointObject *pointObject in compressedPointObjects) {
 			CGPoint point = [pointObject originalPoint];
 			int pointX = point.x;
@@ -478,20 +489,22 @@
 			//NSLog(@"%d, %d, %d %d", pointX, pointY, x, y);
 			
 			if( (pointX == x) && (pointY == y) ) { //we have an on pixel at this coord
-				
-				
-				NSLog(@"WE GOT A MATCH");
+	
+				if(aPixelCheck == 1)
+					aCount++;
 
-				if(oPixelCheck == 1) {
-					NSLog(@"WE GOT A MATCH");
+				if(oPixelCheck == 1)
 					oCount++;
-				}
-				else {
-					NSLog(@"WE DONT GOT A MATCH %d", oPixelCheck);
-				}
+				
+			
 				
 			}
 			else { // we have an off pixel at this coord
+				if(aPixelCheck == 0)
+					aCount++;
+
+				if(oPixelCheck == 0)
+					oCount++;
 			}
 			
 		}
@@ -500,7 +513,7 @@
 		
 	}
 	
-
+	NSLog(@"Final A COUNT: %d", aCount);
 	NSLog(@"Final O COUNT: %d", oCount);
 
 
