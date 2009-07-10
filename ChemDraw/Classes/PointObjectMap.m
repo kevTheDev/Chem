@@ -187,8 +187,18 @@
 		PointObject *leftPoint = [[PointObject alloc] initWithPoint:pointToLeft];
 		PointObject *rightPoint = [[PointObject alloc] initWithPoint:pointToRight];
 		
+		CGPoint pointToLeft2 = CGPointMake(currentPoint.x - 2, currentPoint.y);
+		CGPoint pointToRight2 = CGPointMake(currentPoint.x + 2, currentPoint.y);
+			
+		PointObject *leftPoint2 = [[PointObject alloc] initWithPoint:pointToLeft2];
+		PointObject *rightPoint2 = [[PointObject alloc] initWithPoint:pointToRight2];
+		
 		[compressedPointObjects addObject:leftPoint];
 		[compressedPointObjects addObject:rightPoint];
+		[compressedPointObjects addObject:leftPoint2];
+		[compressedPointObjects addObject:rightPoint2];
+		
+		
 		
 	}
 
@@ -291,7 +301,7 @@
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx {	
 	
 	CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
-    CGContextFillEllipseInRect(ctx, CGRectMake(point.x, point.y, 4.0, 4.0));
+    CGContextFillEllipseInRect(ctx, CGRectMake(point.x, point.y, 1.0, 1.0));
 	
 }
 
