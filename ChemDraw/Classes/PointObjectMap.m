@@ -12,8 +12,12 @@
 #import <UIKit/UIKit.h>
 
 #import "Arithmetic.h"
+#import "Alphabet.h"
 
 @implementation PointObjectMap
+
+
+
 
 - (PointObjectMap *) init {
 	
@@ -141,31 +145,64 @@
 	float pointX16 = [self xDistance] / 16;
 	float pointY16 = [self yDistance] / 16;
 
+	NSLog(@"X16: %f", pointX16);
+	NSLog(@"Y16: %f", pointY16);
+
 	float compressedX;
 	float compressedY;
+	
+	int compressedXInt;
+	int compressedYInt;
 
 	for(PointObject *pointObject in pointObjects) {
 		point = [pointObject originalPoint];
 		
-		compressedX = point.x / pointX16;
-		compressedY = point.y / pointY16;
+		//NSLog(@"ORIGINAL X: %f", point.x);
+		//NSLog(@"ORIGINAL Y: %f", point.y);
 		
-		//NSLog(@"COMPRESSED X: %f", compressedX);
-		//NSLog(@"COMPRESSED Y: %f", compressedY);
+		//if(pointX16 < 1) {
+//			compressedX = point.x * pointX16;
+//		}
+//		else {
+//			compressedX = point.x / pointX16;
+//		}
+//		
+//		if(pointY16 < 1) {
+//			compressedY = point.y * pointY16;
+//		}
+//		else {
+//			compressedY = point.y / pointY16;
+//		}
+
+		compressedX = point.x / 20;
+		compressedY = point.y / 30;
 		
-		PointObject *newPointObject = [[PointObject alloc] initWithPoint:CGPointMake(compressedX, compressedY)];
+		compressedXInt =  [Arithmetic roundFloatDownToInteger:compressedX];
+		compressedYInt =  [Arithmetic roundFloatDownToInteger:compressedY];
+		
+		//NSLog(@"COMPRESSED X: %d", compressedXInt);
+		//NSLog(@"COMPRESSED Y: %d", compressedYInt);
+		
+		PointObject *newPointObject = [[PointObject alloc] initWithPoint:CGPointMake(compressedXInt, compressedYInt)];
 		[compressedPointObjects addObject:newPointObject];
 		
 	}
 	
-	NSLog(@"Original compressed count: %d", [compressedPointObjects count]);
+	//NSLog(@"Original compressed count: %d", [compressedPointObjects count]);
 	
 	// fill in the missing points
 	//[self fillInMissingPoints];
 
 	// add some extra points (one either side) to simulate a thicker line
 	[self thickenLine];
-	NSLog(@"New compressed count: %d", [compressedPointObjects count]);
+	//NSLog(@"New compressed count: %d", [compressedPointObjects count]);
+	
+	[self buildComparisonArray];
+
+	//for(PointObject *pointObject in compressedPointObjects) {
+//		NSLog(@"COMPRESSED X: %f", [pointObject x]);
+//		NSLog(@"COMPRESSED Y: %f", [pointObject y]);
+//	}
 
 	return;
 }
@@ -176,7 +213,6 @@
 	
 	for(int i=0; i<compressedPointObjectsCount; i++) {
 		
-		NSLog(@"Thicken line loop: %d", i);
 		
 		PointObject *currentPointObject = [compressedPointObjects objectAtIndex:i];
 		CGPoint currentPoint = [currentPointObject originalPoint];
@@ -322,6 +358,157 @@
 	
 	return;
 }
+
+- (void) buildComparisonArray {
+//	float a[256] = {
+//
+//0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
+//0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
+//0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,
+//0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,
+//0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
+//0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
+//0,0,1,1,1,1,1,0,0,1,1,1,1,1,0,0,
+//0,0,1,1,1,1,1,0,0,1,1,1,1,1,0,0,
+//0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+//0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+//1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,
+//1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
+//1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1
+//};
+
+	//int map[256]; = {};
+	
+	Alphabet *alphabet = [[Alphabet alloc] init];
+	
+	
+	int aCount = 0;
+	int bCount = 0;
+	int cCount = 0;
+	int dCount = 0;
+	int eCount = 0;
+	int fCount = 0;
+	int gCount = 0;
+	int hCount = 0;
+	int iCount = 0;
+	int jCount = 0;
+	int kCount = 0;
+	int lCount = 0;
+	int mCount = 0;
+	int nCount = 0;
+	int oCount = 0;
+	int pCount = 0;
+	int qCount = 0;
+	int rCount = 0;
+	int sCount = 0;
+	int tCount = 0;
+	int uCount = 0;
+	int vCount = 0;
+	int wCount = 0;
+	int xCount = 0;
+	int yCount = 0;
+	int zCount = 0;
+	int oPixelCheck;
+	
+	//int my_array[] = {1,23,17,4,-5,100};
+	//int *my_array = [alphabet o];
+	int my_array[256] =
+
+{
+0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
+0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
+0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
+0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,
+1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,
+1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,
+1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
+0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
+0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0
+};
+//	int *ptr;
+//
+//	
+//	int *o = [alphabet o];
+//	
+//	int i;
+//    ptr = &my_array[0];     /* point our pointer to the first
+//                                      element of the array */
+//    printf("\n\n");
+//    for (i = 0; i < 16; i++)
+//    {
+//      printf("my_array[%d] = %d   ",i,my_array[i]);   /*<-- A */
+//      printf("ptr + %d = %d\n",i, *(ptr + i));        /*<-- B */
+//    }
+//  
+
+	
+	//int *o = [alphabet o];
+//	
+//	for(int i=0; i<256; i++) {
+//		NSLog(@"O AT i: %d, %d", o[i], i);
+//	}
+	
+	int *ptr;
+	
+	for(int x=0; x<16; x++) {
+		for(int y=0; y<16; y++) {
+		
+		int letterArrayIndex = (x*16) + y;
+		ptr = &my_array[letterArrayIndex];
+		
+		oPixelCheck = my_array[letterArrayIndex];
+		NSLog(@"oPixelCheck %d", oPixelCheck);
+		
+		//NSLog(@"(%d,%d,%d)", x, y, letterArrayIndex);
+		for(PointObject *pointObject in compressedPointObjects) {
+			CGPoint point = [pointObject originalPoint];
+			int pointX = point.x;
+			int pointY = point.y;
+			
+			//NSLog(@"%d, %d, %d %d", pointX, pointY, x, y);
+			
+			if( (pointX == x) && (pointY == y) ) { //we have an on pixel at this coord
+				
+				
+				NSLog(@"WE GOT A MATCH");
+
+				if(oPixelCheck == 1) {
+					NSLog(@"WE GOT A MATCH");
+					oCount++;
+				}
+				else {
+					NSLog(@"WE DONT GOT A MATCH %d", oPixelCheck);
+				}
+				
+			}
+			else { // we have an off pixel at this coord
+			}
+			
+		}
+		}
+		
+		
+	}
+	
+
+	NSLog(@"Final O COUNT: %d", oCount);
+
+
+
+
+}
+
+
 
 - (void) dealloc {
 	[compressedPointObjects release];

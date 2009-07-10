@@ -119,7 +119,8 @@
 
 	}
 	else if([programState currentState] == DEBUG_MODE) {
-	
+		[[UIColor whiteColor] setFill]; 
+		UIRectFill(rect);
 
 		[gesturePoints renderCompressedPointsWithContext:ctx];
 		

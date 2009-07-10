@@ -35,6 +35,7 @@
 - (void) compressPoints;
 - (void) fillInMissingPoints;
 - (void) thickenLine;
+- (void) buildComparisonArray;
 
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 
