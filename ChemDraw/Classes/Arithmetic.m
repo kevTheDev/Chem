@@ -78,7 +78,7 @@
 		previousDistance = distance;
 		distance = xDistance + yDistance;
 		
-		NSLog(@"In the distance loop %f", distance);
+		//NSLog(@"In the distance loop %f", distance);
 	}
 	
 	PointObject *lastPointObject = [[PointObject alloc] initWithPoint:pointTwo];
