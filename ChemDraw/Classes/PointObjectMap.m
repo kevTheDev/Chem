@@ -313,22 +313,6 @@
 	CGPoint currentPoint;
 		
 	PointObject *currentPointObject;
-		
-
-	//
-//	for(int i=0; i<[compressedPointObjects count]; i++) {
-//		
-//		if(i > 0) {
-//			previousPointObject = [compressedPointObjects objectAtIndex:i - 1];
-//			previousPoint = [previousPointObject originalPoint];
-//				
-//			currentPointObject = [compressedPointObjects objectAtIndex:i];
-//			currentPoint = [currentPointObject originalPoint];
-//			
-//			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx lineWidth:lineWidth];
-//		}
-//	}
-
 
 	for(int i=0; i<[completePointSet count]; i++) {
 		
@@ -351,9 +335,8 @@
 		
 	float lineWidth = 5.0;	
 	
-	for(int i=0; i<[pointObjects count]; i++) {
+	for(int i=1; i<[pointObjects count]; i++) {
 		
-		if(i > 0) {
 			previousPointObject = [pointObjects objectAtIndex:i - 1];
 			previousPoint = [previousPointObject originalPoint];
 				
@@ -364,7 +347,6 @@
 			
 			[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx lineWidth:lineWidth];
 		}
-	}
 }
 
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx {	
