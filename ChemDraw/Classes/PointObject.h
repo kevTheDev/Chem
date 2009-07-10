@@ -18,4 +18,7 @@
 
 - (CGPoint) originalPoint;
 
+- (CGFloat) x;
+- (CGFloat) y;
+
 @end

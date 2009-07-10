@@ -57,6 +57,17 @@
 	STAssertTrue([pointObject isEqualTo:identicalPointObject], nil);
 }
 
+- (void) testHash {
+	NSString *expectedHash = @"42";
+	NSUInteger actualHash = [pointObject hash];
+	
+	int expectedHashInt = [expectedHash intValue];
+	int actualHashInt   = (int) actualHash;
+	
+	STAssertEquals(actualHashInt, expectedHashInt, nil);
+
+}
+
 - (void) tearDown {
 	[pointObject release];	
 }

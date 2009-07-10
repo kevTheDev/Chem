@@ -8,6 +8,7 @@
 
 #import "PointObject.h"
 
+#import "Arithmetic.h"
 
 @implementation PointObject
 
@@ -24,9 +25,25 @@
 	
 }
 
+- (CGFloat) x {
+	return [self originalPoint].x;
+}
+
+- (CGFloat) y {
+	return [self originalPoint].y;
+}
 
 - (CGPoint) originalPoint {
 	return originalPoint;
+}
+
+- (NSUInteger)hash {
+	
+	int x = [Arithmetic roundFloatDownToInteger:[self originalPoint].x];
+	int y = [Arithmetic roundFloatDownToInteger:[self originalPoint].y];
+	
+	NSString *hashString = [NSString stringWithFormat:@"%d%d", x, y];	
+	return [hashString intValue];
 }
 
 - (BOOL)isEqual:(id)anObject {
