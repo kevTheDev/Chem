@@ -64,7 +64,9 @@
 	PointObject *firstPointObject = [[PointObject alloc] initWithPoint:movingPoint];
 	[lineCoords addObject:firstPointObject];
 	
-	while(distance > 1.0) {
+	float previousDistance = distance - 1;
+	
+	while(distance > previousDistance) {
 		movingPoint = [Arithmetic onePointCloserFromPointOne:movingPoint pointTwo:pointTwo];
 		
 		PointObject *pointObject = [[PointObject alloc] initWithPoint:movingPoint];
@@ -72,8 +74,11 @@
 		
 		xDistance = abs(movingPoint.x - pointTwo.x);
 		yDistance = abs(movingPoint.y - pointTwo.y);
-	
-		distance = xDistance + yDistance;		
+		
+		previousDistance = distance;
+		distance = xDistance + yDistance;
+		
+		NSLog(@"In the distance loop %f", distance);
 	}
 	
 	PointObject *lastPointObject = [[PointObject alloc] initWithPoint:pointTwo];
@@ -117,10 +122,10 @@
 	
 	if(pointOneX != pointTwoX) {
 		if(pointOneX < pointTwoX) {
-			newPointX = pointOneX + 1.0; 
+			newPointX = pointOneX + 0.1; 
 		}
 		else {
-			newPointX = pointTwoX + 1.0;
+			newPointX = pointTwoX + 0.1;
 		}	
 	}
 	
@@ -131,10 +136,10 @@
 	
 	if(pointOneY != pointTwoY) {
 		if(pointOneY < pointTwoY) {
-			newPointY = pointOneY + 1.0; 
+			newPointY = pointOneY + 0.1; 
 		}
 		else {
-			newPointY = pointTwoY + 1.0;
+			newPointY = pointTwoY + 0.1;
 		}	
 	}
 

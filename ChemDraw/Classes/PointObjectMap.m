@@ -164,18 +164,18 @@
 //			compressedX = point.x * pointX16;
 //		}
 //		else {
-//			compressedX = point.x / pointX16;
+			compressedX = point.x / pointX16;
 //		}
 //		
 //		if(pointY16 < 1) {
 //			compressedY = point.y * pointY16;
 //		}
 //		else {
-//			compressedY = point.y / pointY16;
+			compressedY = point.y / pointY16;
 //		}
 
-		compressedX = point.x / 20;
-		compressedY = point.y / 30;
+		//compressedX = point.x / 20;
+		//compressedY = point.y / 30;
 		
 		compressedXInt =  [Arithmetic roundFloatDownToInteger:compressedX];
 		compressedYInt =  [Arithmetic roundFloatDownToInteger:compressedY];
@@ -191,7 +191,7 @@
 	//NSLog(@"Original compressed count: %d", [compressedPointObjects count]);
 	
 	// fill in the missing points
-	//[self fillInMissingPoints];
+	[self fillInMissingPoints];
 
 	// add some extra points (one either side) to simulate a thicker line
 	[self thickenLine];
@@ -209,12 +209,12 @@
 
 - (void) thickenLine {
 	
-	int compressedPointObjectsCount = [compressedPointObjects count];
+	int compressedPointObjectsCount = [completePointSet count];
 	
 	for(int i=0; i<compressedPointObjectsCount; i++) {
 		
 		
-		PointObject *currentPointObject = [compressedPointObjects objectAtIndex:i];
+		PointObject *currentPointObject = [completePointSet objectAtIndex:i];
 		CGPoint currentPoint = [currentPointObject originalPoint];
 
 		CGPoint pointToLeft = CGPointMake(currentPoint.x - 1, currentPoint.y);
@@ -236,12 +236,12 @@
 		PointObject *rightPoint3 = [[PointObject alloc] initWithPoint:pointToRight3];
 
 		
-		[compressedPointObjects addObject:leftPoint];
-		[compressedPointObjects addObject:rightPoint];
-		[compressedPointObjects addObject:leftPoint2];
-		[compressedPointObjects addObject:rightPoint2];
-		[compressedPointObjects addObject:leftPoint3];
-		[compressedPointObjects addObject:rightPoint3];
+		[completePointSet addObject:leftPoint];
+		[completePointSet addObject:rightPoint];
+		[completePointSet addObject:leftPoint2];
+		[completePointSet addObject:rightPoint2];
+		[completePointSet addObject:leftPoint3];
+		[completePointSet addObject:rightPoint3];
 		
 		
 		
@@ -306,10 +306,10 @@
 //	}
 
 
-	for(int i=0; i<[compressedPointObjects count]; i++) {
+	for(int i=0; i<[completePointSet count]; i++) {
 		
 			
-		currentPointObject = [compressedPointObjects objectAtIndex:i];
+		currentPointObject = [completePointSet objectAtIndex:i];
 		currentPoint = [currentPointObject originalPoint];
 			
 		[self renderPoint:currentPoint withContext:ctx];
@@ -481,7 +481,7 @@
 		oPixelCheck = o[letterArrayIndex];
 		//NSLog(@"oPixelCheck %d", oPixelCheck);
 		
-		for(PointObject *pointObject in compressedPointObjects) {
+		for(PointObject *pointObject in completePointSet) {
 			CGPoint point = [pointObject originalPoint];
 			int pointX = point.x;
 			int pointY = point.y;
@@ -507,7 +507,7 @@
 					oCount++;
 			}
 			
-		}
+			}
 		}
 		
 		
