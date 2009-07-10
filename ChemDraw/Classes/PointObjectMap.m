@@ -11,6 +11,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Arithmetic.h"
+
 @implementation PointObjectMap
 
 - (PointObjectMap *) init {
@@ -121,6 +123,10 @@
 	return xDistance;
 }
 
+// takes original points and adds in missing points by calculating points on straight lines
+// then compresses those points
+// removes any points that are identical
+// then we are ready for the symbolic binary field comparison
 - (void) compressPoints {
 
 	CGPoint point;
@@ -151,6 +157,43 @@
 
 	return;
 }
+
+- (void) fillInMissingPoints {
+	
+	CGPoint currentPoint;
+	CGPoint previousPoint;
+		
+	PointObject *currentPointObject;
+	PointObject *previousPointObject;
+
+	NSArray *linePoints;
+	
+	NSMutableArray *completePointSet = [[NSMutableArray alloc] init];
+	
+	for(int i=0; i<[compressedPointObjects count]; i++) {
+		
+		if(i > 0) {
+			previousPointObject = [compressedPointObjects objectAtIndex:i - 1];
+			previousPoint = [previousPointObject originalPoint];
+				
+			currentPointObject = [compressedPointObjects objectAtIndex:i];
+			currentPoint = [currentPointObject originalPoint];
+			
+			//[self renderLineFromPoint:previousPoint toPoint:currentPoint withContext:ctx lineWidth:lineWidth];
+			
+			linePoints = [Arithmetic straightLineCoordsBetweenPointOne:previousPoint pointTwo:currentPoint];
+			
+			[completePointSet addObjectsFromArray:linePoints];
+			
+		}
+	}
+	
+	// now we should have a complete point set tracing the movement of the user's finger
+	
+	
+
+}
+
 
 - (void) renderCompressedPointsWithContext:(CGContextRef)ctx {
 	CGPoint currentPoint;

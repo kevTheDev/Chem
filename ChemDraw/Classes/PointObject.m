@@ -29,6 +29,21 @@
 	return originalPoint;
 }
 
+- (BOOL)isEqual:(id)anObject {
+	
+	if([anObject class] != [self class]) {
+		return false;
+	}
+	
+	CGPoint point = [self originalPoint];
+	CGPoint testPoint = [anObject originalPoint];
+	
+	if( (point.x == testPoint.x) && (point.y == testPoint.y) )
+		return true;
+		
+	return false;
+}
+
 
 
 @end
