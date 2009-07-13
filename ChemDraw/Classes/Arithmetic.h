@@ -21,6 +21,7 @@
 
 + (float) yInterceptForPointOne:(CGPoint)pointOne pointTwo:(CGPoint)pointTwo;
 + (float) gradientBetweenPointOne:(CGPoint)pointOne pointTwo:(CGPoint)pointTwo;
++ (float) distanceBetweenPointOne:(CGPoint)pointOne pointTwo:(CGPoint)pointTwo;
 + (int) sampleRateForPointOne:(CGPoint)pointOne pointTwo:(CGPoint)pointTwo;
 
 + (CGPoint) onePointCloserFromPointOne:(CGPoint)pointOne pointTwo:(CGPoint)pointTwo;

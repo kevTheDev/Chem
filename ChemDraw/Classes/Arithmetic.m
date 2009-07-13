@@ -112,6 +112,13 @@
 
 }
 
++ (float) distanceBetweenPointOne:(CGPoint)pointOne pointTwo:(CGPoint)pointTwo {
+	float xDistance = abs(pointOne.x - pointTwo.x);
+	float yDistance = abs(pointOne.y - pointTwo.y);
+	
+	return (xDistance + yDistance);
+}
+
 // moves one point closer to point two from point one
 + (CGPoint) onePointCloserFromPointOne:(CGPoint)pointOne pointTwo:(CGPoint)pointTwo {
 

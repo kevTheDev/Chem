@@ -164,21 +164,21 @@
 //			compressedX = point.x * pointX16;
 //		}
 //		else {
-			compressedX = point.x / pointX16;
+//			compressedX = point.x / pointX16;
 //		}
 //		
 //		if(pointY16 < 1) {
 //			compressedY = point.y * pointY16;
 //		}
 //		else {
-			compressedY = point.y / pointY16;
+//			compressedY = point.y / pointY16;
 //		}
-
-		//compressedX = point.x / 20;
-		//compressedY = point.y / 30;
 		
-		compressedXInt =  [Arithmetic roundFloatDownToInteger:compressedX];
-		compressedYInt =  [Arithmetic roundFloatDownToInteger:compressedY];
+		compressedX = point.x / 10;
+		compressedY = point.y / 15;
+		
+		compressedXInt =  (int) [Arithmetic roundFloatDownToInteger:compressedX];
+		compressedYInt =  (int) [Arithmetic roundFloatDownToInteger:compressedY];
 		
 		//NSLog(@"COMPRESSED X: %d", compressedXInt);
 		//NSLog(@"COMPRESSED Y: %d", compressedYInt);
@@ -195,14 +195,9 @@
 
 	// add some extra points (one either side) to simulate a thicker line
 	[self thickenLine];
-	//NSLog(@"New compressed count: %d", [compressedPointObjects count]);
 	
 	[self buildComparisonArray];
 
-	//for(PointObject *pointObject in compressedPointObjects) {
-//		NSLog(@"COMPRESSED X: %f", [pointObject x]);
-//		NSLog(@"COMPRESSED Y: %f", [pointObject y]);
-//	}
 
 	return;
 }
@@ -257,17 +252,17 @@
 		
 		[completePointSet addObject:leftPoint];
 		[completePointSet addObject:rightPoint];
-		[completePointSet addObject:leftPoint2];
-		[completePointSet addObject:rightPoint2];
-		[completePointSet addObject:leftPoint3];
-		[completePointSet addObject:rightPoint3];
+		//[completePointSet addObject:leftPoint2];
+//		[completePointSet addObject:rightPoint2];
+//		[completePointSet addObject:leftPoint3];
+//		[completePointSet addObject:rightPoint3];
 		
-		[completePointSet addObject:northPoint];
-		[completePointSet addObject:southPoint];
-		[completePointSet addObject:northPoint2];
-		[completePointSet addObject:southPoint2];
-		[completePointSet addObject:northPoint3];
-		[completePointSet addObject:southPoint3];
+		//[completePointSet addObject:northPoint];
+//		[completePointSet addObject:southPoint];
+//		[completePointSet addObject:northPoint2];
+//		[completePointSet addObject:southPoint2];
+//		[completePointSet addObject:northPoint3];
+//		[completePointSet addObject:southPoint3];
 		
 		
 		
@@ -379,40 +374,15 @@
 - (void) buildComparisonArray {
 
 	
-	Alphabet *alphabet = [[Alphabet alloc] init];
 	
 	
 	int aCount = 0;
-	int bCount = 0;
-	int cCount = 0;
-	int dCount = 0;
-	int eCount = 0;
-	int fCount = 0;
-	int gCount = 0;
-	int hCount = 0;
-	int iCount = 0;
-	int jCount = 0;
-	int kCount = 0;
-	int lCount = 0;
-	int mCount = 0;
-	int nCount = 0;
 	int oCount = 0;
-	int pCount = 0;
-	int qCount = 0;
-	int rCount = 0;
-	int sCount = 0;
-	int tCount = 0;
-	int uCount = 0;
-	int vCount = 0;
-	int wCount = 0;
-	int xCount = 0;
-	int yCount = 0;
-	int zCount = 0;
 	int aPixelCheck;
 	int oPixelCheck;
 	
 	
-	int a[256] = {
+	int a[1024] = {
 
 		//0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
 //		0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
@@ -431,24 +401,24 @@
 //		0,1,1,1,1,0,0,0,0,0,0,1,1,1,1,0,
 //		1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1
 		
-		
-		0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
-		0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
-		0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
-		0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,
-		0,0,0,0,1,1,1,0,0,1,1,1,0,0,0,0,
-		0,0,0,0,1,1,1,0,0,1,1,1,0,0,0,0,
-		0,0,0,1,1,1,0,0,0,0,1,1,1,0,0,0,
-		0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
-		0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
-		0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
-		0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
-		0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
-		1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-		1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1		
-		
+//		
+//		0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,
+//		0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,
+//		0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
+//		0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
+//		0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
+//		0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,
+//		0,0,0,0,1,1,1,0,0,1,1,1,0,0,0,0,
+//		0,0,0,0,1,1,1,0,0,1,1,1,0,0,0,0,
+//		0,0,0,1,1,1,0,0,0,0,1,1,1,0,0,0,
+//		0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
+//		0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+//		0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+//		0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
+//		0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
+//		1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
+//		1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1		
+//		
 		
 		
 		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -482,29 +452,29 @@
 		0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,
 		0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,
 		1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,
-		1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,
+		1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1
 				
 	};
 	
-	int o[256] =
+	int o[1024] =
 
 {
-0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
-0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
-0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
-0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,
-0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,
-0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
-1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
-0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,
-0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,
-0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
-0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
-0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0
+//0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
+//0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
+//0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+//0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,
+//0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,
+//0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
+//1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
+//1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
+//1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
+//1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
+//0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
+//0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,
+//0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,
+//0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+//0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
+//0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0
 
 
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -538,7 +508,7 @@
 0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
 };
 
@@ -546,57 +516,104 @@
 	int *aPtr;
 	int *oPtr;
 	
+	float aLineCount = 0;
+	float aLinePercentage = 0;
 	
-	for(int x=0; x<16; x++) {
-		for(int y=0; y<16; y++) {
-		
-		int letterArrayIndex = (x*16) + y;
-		
-		aPtr = &a[letterArrayIndex];
-		oPtr = &o[letterArrayIndex];
-		
-		aPixelCheck = a[letterArrayIndex];
-		oPixelCheck = o[letterArrayIndex];
-		//NSLog(@"oPixelCheck %d", oPixelCheck);
-		
-		for(PointObject *pointObject in completePointSet) {
-			CGPoint point = [pointObject originalPoint];
-			int pointX = point.x;
-			int pointY = point.y;
-			
-			//NSLog(@"%d, %d, %d %d", pointX, pointY, x, y);
-			
-			if( (pointX == x) && (pointY == y) ) { //we have an on pixel at this coord
+	float oLineCount = 0;
+	float oLinePercentage = 0;
+
+	for(PointObject *pointObject in completePointSet) {
+		NSLog(@"COMPLETE POINT SET: (%f, %f)", [pointObject x], [pointObject y]);
 	
-				if(aPixelCheck == 1)
-					aCount += 1;
-
-				if(oPixelCheck == 1)
-					oCount += 1;
-				
-			
-				
-			}
-			else { // we have an off pixel at this coord
-				if(aPixelCheck == 0)
-					aCount += 2;
-
-				if(oPixelCheck == 0)
-					oCount += 2;
-			}
-			
-			}
-		}
-		
-		
 	}
+
+			
+	for(int y=0; y<32; y++) {
+		for(int x=0; x<32; x++) { //within this loop we are checking on horizontal line at a time
+					
+			int letterArrayIndex = (y*32) + x;
+		
+			aPtr = &a[letterArrayIndex];
+			oPtr = &o[letterArrayIndex];
+		
+			aPixelCheck = a[letterArrayIndex];
+			oPixelCheck = o[letterArrayIndex];
+					
+			CGPoint point = CGPointMake(x, y);
+			PointObject *pointObject = [[PointObject alloc] initWithPoint:point];
+					
+					
+					
+			if( [completePointSet containsObject:pointObject] == YES ) {
+			
+				//NSLog(@"POINT SET CONTAINS POINT (%d, %d)", x, y);
+				//NSLog(@"LETTER ARRAY INDEX: %d", letterArrayIndex);
+			
+				// the compressed point image has an ON PIXEL HERE
+				if(aPixelCheck == 1) { // the a character has an ON pixel at this point
+					aLineCount++;
+				}
+				
+				if(oPixelCheck == 1) {
+					oLineCount++;
+				}
+			}
+			else { // the compressed point image has an OFF PIXEL HERE
+				
+				//NSLog(@"POINT SET DOES NOT CONTAIN POINT (%d, %d)", x, y);
+				
+				if(aPixelCheck == 0) { // the a character has an OFF pixel at this point
+					aLineCount++;
+				}
+				
+				if(oPixelCheck == 0) {
+					oLineCount++;
+				}
+			}
+			
+			[pointObject release];
+					
+			
+	
+		} // end of row loop
+				
+		aLinePercentage = (aLineCount / 32) * 100;
+		if(aLinePercentage >= 80) {
+			aCount++;
+		}
+		//else if(aLinePercentage < 50) {
+//			aCount--;
+//		}
+		NSLog(@"A LINE PERCENTAGE FOR LINE %d: %f", y, aLinePercentage);
+		
+		oLinePercentage = (oLineCount / 32) * 100;
+		if(oLinePercentage >= 80) {
+			oCount++;
+		}
+		//else if(oLinePercentage < 50) {
+//			oCount--;
+//		}
+		NSLog(@"O LINE PERCENTAGE: %f", oLinePercentage);
+		
+		aLinePercentage = 0;
+		aLineCount = 0;
+		
+		oLinePercentage = 0;
+		oLineCount = 0;
+		
+	} // end of column loop
+		
 	
 	NSLog(@"Final A COUNT: %d", aCount);
 	NSLog(@"Final O COUNT: %d", oCount);
 
 
+	float finalAPercentage = ((float) aCount / 32) * 100;
+	float finalOPercentage = ((float) oCount / 32) * 100;
 
 
+	NSLog(@"Final A: %f%", finalAPercentage);
+	NSLog(@"Final O: %f%", finalOPercentage);
 }
 
 
