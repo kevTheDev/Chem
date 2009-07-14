@@ -129,10 +129,10 @@
 	
 	if(pointOneX != pointTwoX) {
 		if(pointOneX < pointTwoX) {
-			newPointX = pointOneX + 0.1; 
+			newPointX = pointOneX + 0.01; 
 		}
 		else {
-			newPointX = pointTwoX + 0.1;
+			newPointX = pointTwoX + 0.01;
 		}	
 	}
 	
