@@ -37,40 +37,45 @@
 # define Y 44
 # define Z 45
 
+@class CharacterMatch;
 
 
 @interface Character : NSObject {
 	
 }
 
-+ (CGFloat) compareToPointObjects:(NSArray *)pointObjects withCharacter:(int)characterRef;
++ (NSArray *) characterMatchResultsForPoints:(NSArray *)pointObjects;
 
-+ (CGFloat) matchForA:(NSArray *)pointObjects;
-+ (CGFloat) matchForB:(NSArray *)pointObjects;
-+ (CGFloat) matchForC:(NSArray *)pointObjects;
-+ (CGFloat) matchForD:(NSArray *)pointObjects;
-+ (CGFloat) matchForE:(NSArray *)pointObjects;
-+ (CGFloat) matchForF:(NSArray *)pointObjects;
-+ (CGFloat) matchForG:(NSArray *)pointObjects;
-+ (CGFloat) matchForH:(NSArray *)pointObjects;
-+ (CGFloat) matchForI:(NSArray *)pointObjects;
-+ (CGFloat) matchForJ:(NSArray *)pointObjects;
-+ (CGFloat) matchForK:(NSArray *)pointObjects;
-+ (CGFloat) matchForL:(NSArray *)pointObjects;
-+ (CGFloat) matchForM:(NSArray *)pointObjects;
-+ (CGFloat) matchForN:(NSArray *)pointObjects;
-+ (CGFloat) matchForO:(NSArray *)pointObjects;
-+ (CGFloat) matchForP:(NSArray *)pointObjects;
-+ (CGFloat) matchForQ:(NSArray *)pointObjects;
-+ (CGFloat) matchForR:(NSArray *)pointObjects;
-+ (CGFloat) matchForS:(NSArray *)pointObjects;
-+ (CGFloat) matchForT:(NSArray *)pointObjects;
-+ (CGFloat) matchForU:(NSArray *)pointObjects;
-+ (CGFloat) matchForV:(NSArray *)pointObjects;
-+ (CGFloat) matchForW:(NSArray *)pointObjects;
-+ (CGFloat) matchForX:(NSArray *)pointObjects;
-+ (CGFloat) matchForY:(NSArray *)pointObjects;
-+ (CGFloat) matchForZ:(NSArray *)pointObjects;
+
+
++ (CharacterMatch *) compareToPointObjects:(NSArray *)pointObjects withCharacter:(int)characterRef;
+
++ (CharacterMatch *) matchForA:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForB:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForC:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForD:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForE:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForF:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForG:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForH:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForI:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForJ:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForK:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForL:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForM:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForN:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForO:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForP:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForQ:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForR:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForS:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForT:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForU:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForV:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForW:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForX:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForY:(NSArray *)pointObjects;
++ (CharacterMatch *) matchForZ:(NSArray *)pointObjects;
 
 
 @end

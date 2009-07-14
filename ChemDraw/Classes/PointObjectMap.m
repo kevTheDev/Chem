@@ -15,6 +15,7 @@
 
 
 #import "Character.h"
+#import "CharacterMatch.h"
 
 @implementation PointObjectMap
 
@@ -335,60 +336,17 @@
 
 - (void) buildComparisonArray {
 	
-	CGFloat aMatch = [Character matchForA:completePointSet];
-	CGFloat bMatch = [Character matchForB:completePointSet];
-	CGFloat cMatch = [Character matchForC:completePointSet];
-	CGFloat dMatch = [Character matchForD:completePointSet];
-	CGFloat eMatch = [Character matchForE:completePointSet];
-	CGFloat fMatch = [Character matchForF:completePointSet];
-	CGFloat gMatch = [Character matchForG:completePointSet];
-	CGFloat hMatch = [Character matchForH:completePointSet];
-	CGFloat iMatch = [Character matchForI:completePointSet];
-	CGFloat jMatch = [Character matchForJ:completePointSet];
-	CGFloat kMatch = [Character matchForK:completePointSet];
-	CGFloat lMatch = [Character matchForL:completePointSet];
-	CGFloat mMatch = [Character matchForM:completePointSet];
-	CGFloat nMatch = [Character matchForN:completePointSet];
-	CGFloat oMatch = [Character matchForO:completePointSet];
-	CGFloat pMatch = [Character matchForP:completePointSet];
-	CGFloat qMatch = [Character matchForQ:completePointSet];
-	CGFloat rMatch = [Character matchForR:completePointSet];
-	CGFloat sMatch = [Character matchForS:completePointSet];
-	CGFloat tMatch = [Character matchForT:completePointSet];
-	CGFloat uMatch = [Character matchForU:completePointSet];
-	CGFloat vMatch = [Character matchForV:completePointSet];
-	CGFloat wMatch = [Character matchForW:completePointSet];
-	CGFloat xMatch = [Character matchForX:completePointSet];
-	CGFloat yMatch = [Character matchForY:completePointSet];
-	CGFloat zMatch = [Character matchForZ:completePointSet];
 	
-	NSLog(@"Final A: %f%", aMatch);
-	NSLog(@"Final B: %f%", bMatch);
-	NSLog(@"Final C: %f%", cMatch);
-	NSLog(@"Final D: %f%", dMatch);
-	NSLog(@"Final E: %f%", eMatch);
-	NSLog(@"Final F: %f%", fMatch);
-	NSLog(@"Final G: %f%", gMatch);
-	NSLog(@"Final H: %f%", hMatch);
-	NSLog(@"Final I: %f%", iMatch);
-	NSLog(@"Final J: %f%", jMatch);
-	NSLog(@"Final K: %f%", kMatch);
-	NSLog(@"Final L: %f%", lMatch);
-	NSLog(@"Final M: %f%", mMatch);
-	NSLog(@"Final N: %f%", nMatch);
-	NSLog(@"Final O: %f%", oMatch);
-	NSLog(@"Final P: %f%", pMatch);
-	NSLog(@"Final Q: %f%", qMatch);
-	NSLog(@"Final R: %f%", rMatch);
-	NSLog(@"Final S: %f%", sMatch);
-	NSLog(@"Final T: %f%", tMatch);
-	NSLog(@"Final U: %f%", uMatch);
-	NSLog(@"Final V: %f%", vMatch);
-	NSLog(@"Final W: %f%", wMatch);
-	NSLog(@"Final X: %f%", xMatch);
-	NSLog(@"Final Y: %f%", yMatch);
-	NSLog(@"Final Z: %f%", zMatch);
-
+	
+	NSArray *characterMatchResults = [Character characterMatchResultsForPoints:completePointSet];
+	
+	for(CharacterMatch *match in characterMatchResults) {
+		NSLog(@"MATCH FOR %d: %f%", [match characterRef], [match percentageMatch]);
+	}
+	
+	//[characterMatchResults release];
+	return;
+	
 }
 
 

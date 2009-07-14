@@ -7,8 +7,8 @@
 //
 
 #import "Character.h"
-
 #import "PointObject.h"
+#import "CharacterMatch.h"
 
 @implementation Character
 
@@ -591,113 +591,174 @@ int z[256] =
 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 };
 
++ (NSArray *) characterMatchResultsForPoints:(NSArray *)pointObjects {
+	CharacterMatch *aMatch = [Character matchForA:pointObjects];
+	CharacterMatch *bMatch = [Character matchForB:pointObjects];
+	CharacterMatch *cMatch = [Character matchForC:pointObjects];
+	CharacterMatch *dMatch = [Character matchForD:pointObjects];
+	CharacterMatch *eMatch = [Character matchForE:pointObjects];
+	CharacterMatch *fMatch = [Character matchForF:pointObjects];
+	CharacterMatch *gMatch = [Character matchForG:pointObjects];
+	CharacterMatch *hMatch = [Character matchForH:pointObjects];
+	CharacterMatch *iMatch = [Character matchForI:pointObjects];
+	CharacterMatch *jMatch = [Character matchForJ:pointObjects];
+	CharacterMatch *kMatch = [Character matchForK:pointObjects];
+	CharacterMatch *lMatch = [Character matchForL:pointObjects];
+	CharacterMatch *mMatch = [Character matchForM:pointObjects];
+	CharacterMatch *nMatch = [Character matchForN:pointObjects];
+	CharacterMatch *oMatch = [Character matchForO:pointObjects];
+	CharacterMatch *pMatch = [Character matchForP:pointObjects];
+	CharacterMatch *qMatch = [Character matchForQ:pointObjects];
+	CharacterMatch *rMatch = [Character matchForR:pointObjects];
+	CharacterMatch *sMatch = [Character matchForS:pointObjects];
+	CharacterMatch *tMatch = [Character matchForT:pointObjects];
+	CharacterMatch *uMatch = [Character matchForU:pointObjects];
+	CharacterMatch *vMatch = [Character matchForV:pointObjects];
+	CharacterMatch *wMatch = [Character matchForW:pointObjects];
+	CharacterMatch *xMatch = [Character matchForX:pointObjects];
+	CharacterMatch *yMatch = [Character matchForY:pointObjects];
+	CharacterMatch *zMatch = [Character matchForZ:pointObjects];
 	
+	NSLog(@"A MATCH: %f", [aMatch percentageMatch]);
 
-+ (CGFloat) matchForA:(NSArray *)pointObjects {
+	
+	NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:26];
+	[results addObject:aMatch];
+	[results addObject:bMatch];
+	[results addObject:cMatch];
+	[results addObject:dMatch];
+	[results addObject:eMatch];
+	[results addObject:fMatch];
+	[results addObject:gMatch];
+	[results addObject:hMatch];
+	[results addObject:iMatch];
+	[results addObject:jMatch];
+	[results addObject:kMatch];
+	[results addObject:lMatch];
+	[results addObject:mMatch];
+	[results addObject:nMatch];
+	[results addObject:oMatch];
+	[results addObject:pMatch];
+	[results addObject:qMatch];
+	[results addObject:rMatch];
+	[results addObject:sMatch];
+	[results addObject:tMatch];
+	[results addObject:uMatch];
+	[results addObject:vMatch];
+	[results addObject:wMatch];
+	[results addObject:xMatch];
+	[results addObject:yMatch];
+	[results addObject:zMatch];
+	return results;
+	
+	
+}
+
++ (CharacterMatch *) matchForA:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:A];
 }
 
-+ (CGFloat) matchForB:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForB:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:B];
 }
 
-+ (CGFloat) matchForC:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForC:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:C];
 }
 
-+ (CGFloat) matchForD:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForD:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:D];
 }
 
-+ (CGFloat) matchForE:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForE:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:E];
 }
 
-+ (CGFloat) matchForF:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForF:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:F];
 }
 
-+ (CGFloat) matchForG:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForG:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:G];
 }
 
-+ (CGFloat) matchForH:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForH:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:H];
 }
 
-+ (CGFloat) matchForI:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForI:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:I];
 }
 
-+ (CGFloat) matchForJ:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForJ:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:J];
 }
 
-+ (CGFloat) matchForK:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForK:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:K];
 }
 
-+ (CGFloat) matchForL:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForL:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:L];
 }
 
-+ (CGFloat) matchForM:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForM:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:M];
 }
 
-+ (CGFloat) matchForN:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForN:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:N];
 }
 
-+ (CGFloat) matchForO:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForO:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:O];
 }
 
-+ (CGFloat) matchForP:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForP:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:P];
 }
 
-+ (CGFloat) matchForQ:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForQ:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:Q];
 }
 
-+ (CGFloat) matchForR:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForR:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:R];
 }
 
-+ (CGFloat) matchForS:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForS:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:S];
 }
 
-+ (CGFloat) matchForT:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForT:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:T];
 }
 
-+ (CGFloat) matchForU:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForU:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:U];
 }
 
-+ (CGFloat) matchForV:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForV:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:V];
 }
 
-+ (CGFloat) matchForW:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForW:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:W];
 }
 
-+ (CGFloat) matchForX:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForX:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:X];
 }
 
-+ (CGFloat) matchForY:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForY:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:Y];
 }
 
-+ (CGFloat) matchForZ:(NSArray *)pointObjects {
++ (CharacterMatch *) matchForZ:(NSArray *)pointObjects {
 	return [Character compareToPointObjects:pointObjects withCharacter:Z];
 }
 
-+ (CGFloat) compareToPointObjects:(NSArray *)pointObjects withCharacter:(int)characterRef {
++ (CharacterMatch *) compareToPointObjects:(NSArray *)pointObjects withCharacter:(int)characterRef {
 
 	int pixelCheck;
 	
@@ -708,12 +769,12 @@ int z[256] =
 
 	float totalPercentage = 0;
 	
-	NSMutableString *debugString = [[NSMutableString alloc] init];
-	NSString *ON = @"1 ";
-	NSString *OFF = @"0 ";
-	NSString *newLine = @"\n";
+	//NSMutableString *debugString = [[NSMutableString alloc] init];
+	//NSString *ON = @"1 ";
+	//NSString *OFF = @"0 ";
+	//NSString *newLine = @"\n";
 							
-	[debugString appendString:newLine];												
+	//[debugString appendString:newLine];												
 																									
 	for(int y=0; y<RESOLUTION; y++) {
 		for(int x=0; x<RESOLUTION; x++) { //within this loop we are checking on horizontal line at a time
@@ -865,7 +926,7 @@ int z[256] =
 					
 			if( [pointObjects containsObject:pointObject] == YES ) {
 			
-				[debugString appendString:ON];
+				//[debugString appendString:ON];
 
 				// the compressed point image has an ON PIXEL HERE
 				if(pixelCheck == 1) { // the a character has an ON pixel at this point
@@ -875,7 +936,7 @@ int z[256] =
 			}
 			else { // the compressed point image has an OFF PIXEL HERE
 				
-				[debugString appendString:OFF];
+				//[debugString appendString:OFF];
 				
 				
 				if(pixelCheck == 0) { // the a character has an OFF pixel at this point
@@ -890,7 +951,7 @@ int z[256] =
 	
 		} // end of row loop
 		
-		[debugString appendString:newLine];
+		//[debugString appendString:newLine];
 				
 		linePercentage = (lineCount / RESOLUTION) * 100;
 		totalPercentage += linePercentage;
@@ -905,9 +966,12 @@ int z[256] =
 
 	totalPercentage = totalPercentage / RESOLUTION;	
 
-	//NSLog(@"%@", debugString);
+	//NSLog(@"%d", characterRef);
+	//[debugString release];
 	
-	return totalPercentage;
+	CharacterMatch *match = [[CharacterMatch alloc] initWithCharacterRef:characterRef percentageMatch:totalPercentage];
+	//[match autorelease];
+	return match;
 
 }
 
