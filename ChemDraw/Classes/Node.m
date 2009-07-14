@@ -34,7 +34,7 @@ int DRAW_HEIGHT = 10;
 		xCoord = x;
 		yCoord = y;
 		
-		elementType = @"Carbon";
+		elementType = @"C";
 		
 		displayPotentialBondMap = NO;
 		
@@ -129,9 +129,27 @@ int DRAW_HEIGHT = 10;
     CGContextFillEllipseInRect(ctx, CGRectMake(xCoord, yCoord, DRAW_WIDTH, DRAW_HEIGHT));
 	
 	
-	if(elementType == @"Oxygen") {
-		CGContextSetRGBStrokeColor(ctx, 0, 0, 255, 1);
-		CGContextStrokeEllipseInRect(ctx, CGRectMake(xCoord + 6, yCoord - 6, 5, 5));
+	if(elementType != NULL) {
+		CGContextSelectFont(ctx, "Helvetica", 14.0, kCGEncodingMacRoman);
+		CGContextSetTextDrawingMode(ctx, kCGTextFill);
+		CGContextSetRGBFillColor(ctx, 0, 0, 0, 1);
+	
+		CGAffineTransform xform = CGAffineTransformMake(
+													1.0,  0.0,
+													0.0, -1.0,
+													0.0,  0.0);
+		CGContextSetTextMatrix(ctx, xform);
+	
+		//NSString* nString = @"Test";
+		char cString[10];
+ 
+		//Convert from NSString to char*
+		[elementType getCString:cString maxLength:(sizeof cString) encoding:NSUTF8StringEncoding];
+
+	
+	
+		CGContextShowTextAtPoint(ctx, xCoord + 6, yCoord - 6, cString, strlen(cString));
+	
 	}
 	
 	if(displayPotentialBondMap == YES) {

@@ -27,7 +27,7 @@
 }
 
 // TODO - should just have a static hash here
-- (NSString *)symbol {
+- (NSString *)characterSymbol {
 	switch(characterRef) {
 				case A: 
 					return @"A";

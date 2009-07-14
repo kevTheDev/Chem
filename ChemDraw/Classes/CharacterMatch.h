@@ -15,7 +15,7 @@
 }
 
 - (CharacterMatch *) initWithCharacterRef:(NSInteger)ref percentageMatch:(CGFloat)percentage;
-- (NSString *)symbol;
+- (NSString *)characterSymbol;
 
 @property NSInteger characterRef;
 @property CGFloat percentageMatch;

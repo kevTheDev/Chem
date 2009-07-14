@@ -14,7 +14,7 @@
 #import "PointObject.h"
 #import "PotentialBond.h"
 #import "PointObjectMap.h"
-
+#import "CharacterMatch.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -374,7 +374,8 @@
 	CharacterMatch *topMatch = [gesturePoints compressPoints];
 
 	Node *selectedNode = [objectMap currentlySelectedNode];
-	[selectedNode setElementType:[topMatch symbol]];
+	NSString *characterSymbol = [topMatch characterSymbol];
+	[selectedNode setElementType:characterSymbol];
 	[objectMap clearSelectedNodes];
 	NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
 
