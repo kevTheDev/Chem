@@ -34,6 +34,10 @@
 		DE8750160FFA690400B1E023 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
 		DE89D1CC1006212A000037D7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEE8C18B1003BAED004119FE /* QuartzCore.framework */; };
 		DE89D28E10070F9B000037D7 /* PointObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D28D10070F9B000037D7 /* PointObjectTest.m */; };
+		DE89D728100CA8F3000037D7 /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D727100CA8F3000037D7 /* A.m */; };
+		DE89D729100CA8F3000037D7 /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D727100CA8F3000037D7 /* A.m */; };
+		DE89D72F100CAA12000037D7 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D72E100CAA12000037D7 /* Character.m */; };
+		DE89D730100CAA12000037D7 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D72E100CAA12000037D7 /* Character.m */; };
 		DE94643A0FFE743800F7AA88 /* AddNodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464390FFE743800F7AA88 /* AddNodeAction.m */; };
 		DE94643B0FFE743800F7AA88 /* AddNodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464390FFE743800F7AA88 /* AddNodeAction.m */; };
 		DE94643E0FFE744A00F7AA88 /* AddBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE94643D0FFE744A00F7AA88 /* AddBondAction.m */; };
@@ -111,6 +115,10 @@
 		DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DE874FF10FFA67F500B1E023 /* NodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeTest.m; sourceTree = "<group>"; };
 		DE89D28D10070F9B000037D7 /* PointObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointObjectTest.m; sourceTree = "<group>"; };
+		DE89D726100CA8F3000037D7 /* A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A.h; sourceTree = "<group>"; };
+		DE89D727100CA8F3000037D7 /* A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A.m; sourceTree = "<group>"; };
+		DE89D72D100CAA12000037D7 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		DE89D72E100CAA12000037D7 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		DE9464380FFE743800F7AA88 /* AddNodeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNodeAction.h; sourceTree = "<group>"; };
 		DE9464390FFE743800F7AA88 /* AddNodeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNodeAction.m; sourceTree = "<group>"; };
 		DE94643C0FFE744A00F7AA88 /* AddBondAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBondAction.h; sourceTree = "<group>"; };
@@ -230,6 +238,10 @@
 				DEE8BE171003623A004119FE /* Alphabet.m */,
 				DEE8BE1D10036367004119FE /* PointObjectMap.h */,
 				DEE8BE1E10036367004119FE /* PointObjectMap.m */,
+				DE89D726100CA8F3000037D7 /* A.h */,
+				DE89D727100CA8F3000037D7 /* A.m */,
+				DE89D72D100CAA12000037D7 /* Character.h */,
+				DE89D72E100CAA12000037D7 /* Character.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -426,6 +438,8 @@
 				DEE8BD68100356BD004119FE /* Carbon.m in Sources */,
 				DEE8BE191003623A004119FE /* Alphabet.m in Sources */,
 				DEE8BE2010036367004119FE /* PointObjectMap.m in Sources */,
+				DE89D729100CA8F3000037D7 /* A.m in Sources */,
+				DE89D730100CAA12000037D7 /* Character.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +476,8 @@
 				DEE8BE181003623A004119FE /* Alphabet.m in Sources */,
 				DEE8BE1F10036367004119FE /* PointObjectMap.m in Sources */,
 				DE89D28E10070F9B000037D7 /* PointObjectTest.m in Sources */,
+				DE89D728100CA8F3000037D7 /* A.m in Sources */,
+				DE89D72F100CAA12000037D7 /* Character.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

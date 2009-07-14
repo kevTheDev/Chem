@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+# define RESOLUTION 16
+
 @class PointObject;
 
 @interface PointObjectMap : NSObject {
