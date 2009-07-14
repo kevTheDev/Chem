@@ -46,7 +46,7 @@
 	float lineCount = 0;
 	float linePercentage = 0;
 
-	float totalAPercentage = 0;
+	float totalPercentage = 0;
 	
 	NSMutableString *debugString = [[NSMutableString alloc] init];
 	NSString *ON = @"1 ";
@@ -65,15 +65,12 @@
 					
 			CGPoint point = CGPointMake(x, y);
 			PointObject *pointObject = [[PointObject alloc] initWithPoint:point];
-					
-					
+			
 					
 			if( [pointObjects containsObject:pointObject] == YES ) {
 			
 				[debugString appendString:ON];
-			
-				NSLog(@"POINT SET CONTAINS POINT (%d, %d)", x, y);
-			
+
 				// the compressed point image has an ON PIXEL HERE
 				if(pixelCheck == 1) { // the a character has an ON pixel at this point
 					lineCount++;
@@ -100,9 +97,9 @@
 		[debugString appendString:newLine];
 				
 		linePercentage = (lineCount / RESOLUTION) * 100;
-		totalAPercentage += linePercentage;
+		totalPercentage += linePercentage;
 
-		NSLog(@"A LINE PERCENTAGE FOR LINE %d: %f", y, linePercentage);
+		NSLog(@"LINE PERCENTAGE FOR LINE %d: %f", y, linePercentage);
 		
 		linePercentage = 0;
 		lineCount = 0;
@@ -110,15 +107,15 @@
 	} // end of column loop
 		
 
-	totalAPercentage = totalAPercentage / RESOLUTION;	
+	totalPercentage = totalPercentage / RESOLUTION;	
 
 
 
-	NSLog(@"Final A: %f%", totalAPercentage);
+	NSLog(@"Final A: %f%", totalPercentage);
 	
 	NSLog(@"%@", debugString);
 	
-	return totalAPercentage;
+	return totalPercentage;
 
 }
 
