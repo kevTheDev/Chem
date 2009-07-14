@@ -592,63 +592,68 @@ int z[256] =
 };
 
 + (NSArray *) characterMatchResultsForPoints:(NSArray *)pointObjects {
-	CharacterMatch *aMatch = [Character matchForA:pointObjects];
-	CharacterMatch *bMatch = [Character matchForB:pointObjects];
-	CharacterMatch *cMatch = [Character matchForC:pointObjects];
-	CharacterMatch *dMatch = [Character matchForD:pointObjects];
-	CharacterMatch *eMatch = [Character matchForE:pointObjects];
-	CharacterMatch *fMatch = [Character matchForF:pointObjects];
-	CharacterMatch *gMatch = [Character matchForG:pointObjects];
-	CharacterMatch *hMatch = [Character matchForH:pointObjects];
-	CharacterMatch *iMatch = [Character matchForI:pointObjects];
-	CharacterMatch *jMatch = [Character matchForJ:pointObjects];
-	CharacterMatch *kMatch = [Character matchForK:pointObjects];
-	CharacterMatch *lMatch = [Character matchForL:pointObjects];
-	CharacterMatch *mMatch = [Character matchForM:pointObjects];
+//	CharacterMatch *aMatch = [Character matchForA:pointObjects];
+//	CharacterMatch *bMatch = [Character matchForB:pointObjects];
+//	CharacterMatch *cMatch = [Character matchForC:pointObjects];
+//	CharacterMatch *dMatch = [Character matchForD:pointObjects];
+//	CharacterMatch *eMatch = [Character matchForE:pointObjects];
+//	CharacterMatch *fMatch = [Character matchForF:pointObjects];
+//	CharacterMatch *gMatch = [Character matchForG:pointObjects];
+//	CharacterMatch *hMatch = [Character matchForH:pointObjects];
+//	CharacterMatch *iMatch = [Character matchForI:pointObjects];
+//	CharacterMatch *jMatch = [Character matchForJ:pointObjects];
+//	CharacterMatch *kMatch = [Character matchForK:pointObjects];
+//	CharacterMatch *lMatch = [Character matchForL:pointObjects];
+//	CharacterMatch *mMatch = [Character matchForM:pointObjects];
+	
 	CharacterMatch *nMatch = [Character matchForN:pointObjects];
 	CharacterMatch *oMatch = [Character matchForO:pointObjects];
 	CharacterMatch *pMatch = [Character matchForP:pointObjects];
-	CharacterMatch *qMatch = [Character matchForQ:pointObjects];
-	CharacterMatch *rMatch = [Character matchForR:pointObjects];
-	CharacterMatch *sMatch = [Character matchForS:pointObjects];
-	CharacterMatch *tMatch = [Character matchForT:pointObjects];
-	CharacterMatch *uMatch = [Character matchForU:pointObjects];
-	CharacterMatch *vMatch = [Character matchForV:pointObjects];
-	CharacterMatch *wMatch = [Character matchForW:pointObjects];
-	CharacterMatch *xMatch = [Character matchForX:pointObjects];
-	CharacterMatch *yMatch = [Character matchForY:pointObjects];
-	CharacterMatch *zMatch = [Character matchForZ:pointObjects];
 	
-	NSLog(@"A MATCH: %f", [aMatch percentageMatch]);
-
+	//CharacterMatch *qMatch = [Character matchForQ:pointObjects];
+//	CharacterMatch *rMatch = [Character matchForR:pointObjects];
+	
+	CharacterMatch *sMatch = [Character matchForS:pointObjects];
+	
+	//CharacterMatch *tMatch = [Character matchForT:pointObjects];
+//	CharacterMatch *uMatch = [Character matchForU:pointObjects];
+//	CharacterMatch *vMatch = [Character matchForV:pointObjects];
+//	CharacterMatch *wMatch = [Character matchForW:pointObjects];
+//	CharacterMatch *xMatch = [Character matchForX:pointObjects];
+//	CharacterMatch *yMatch = [Character matchForY:pointObjects];
+//	CharacterMatch *zMatch = [Character matchForZ:pointObjects];
 	
 	NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:26];
-	[results addObject:aMatch];
-	[results addObject:bMatch];
-	[results addObject:cMatch];
-	[results addObject:dMatch];
-	[results addObject:eMatch];
-	[results addObject:fMatch];
-	[results addObject:gMatch];
-	[results addObject:hMatch];
-	[results addObject:iMatch];
-	[results addObject:jMatch];
-	[results addObject:kMatch];
-	[results addObject:lMatch];
-	[results addObject:mMatch];
-	[results addObject:nMatch];
+//	[results addObject:aMatch];
+//	[results addObject:bMatch];
+//	[results addObject:cMatch];
+//	[results addObject:dMatch];
+//	[results addObject:eMatch];
+//	[results addObject:fMatch];
+//	[results addObject:gMatch];
+//	[results addObject:hMatch];
+//	[results addObject:iMatch];
+//	[results addObject:jMatch];
+//	[results addObject:kMatch];
+//	[results addObject:lMatch];
+//	[results addObject:mMatch];
+	
+	[results addObject:nMatch];	
 	[results addObject:oMatch];
 	[results addObject:pMatch];
-	[results addObject:qMatch];
-	[results addObject:rMatch];
+	
+//	[results addObject:qMatch];
+//	[results addObject:rMatch];
+	
 	[results addObject:sMatch];
-	[results addObject:tMatch];
-	[results addObject:uMatch];
-	[results addObject:vMatch];
-	[results addObject:wMatch];
-	[results addObject:xMatch];
-	[results addObject:yMatch];
-	[results addObject:zMatch];
+	
+//	[results addObject:tMatch];	
+//	[results addObject:uMatch];
+//	[results addObject:vMatch];
+//	[results addObject:wMatch];
+//	[results addObject:xMatch];
+//	[results addObject:yMatch];
+//	[results addObject:zMatch];
 	return results;
 	
 	
