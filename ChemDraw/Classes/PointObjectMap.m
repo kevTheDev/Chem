@@ -167,18 +167,12 @@
 		
 		compressedXInt =  (int) [Arithmetic roundFloatDownToInteger:compressedX];
 		compressedYInt =  (int) [Arithmetic roundFloatDownToInteger:compressedY];
-		
-		//NSLog(@"COMPRESSED X: %d", compressedXInt);
-		//NSLog(@"COMPRESSED Y: %d", compressedYInt);
-		
-		
+
 		PointObject *newPointObject = [[PointObject alloc] initWithPoint:CGPointMake(compressedXInt, compressedYInt)];
 		[compressedPointObjects addObject:newPointObject];
 				
 	}
-	
-	//NSLog(@"Original compressed count: %d", [compressedPointObjects count]);
-	
+		
 	// fill in the missing points
 	[self fillInMissingPoints];
 

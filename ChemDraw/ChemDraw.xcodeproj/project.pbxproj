@@ -40,6 +40,10 @@
 		DE89D8A0100CD787000037D7 /* Sulphur.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D89E100CD787000037D7 /* Sulphur.m */; };
 		DE89D8A3100CD794000037D7 /* Phosphorous.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D8A2100CD794000037D7 /* Phosphorous.m */; };
 		DE89D8A4100CD794000037D7 /* Phosphorous.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D8A2100CD794000037D7 /* Phosphorous.m */; };
+		DE89D8AC100CDF02000037D7 /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D8AB100CDF02000037D7 /* A.m */; };
+		DE89D8AD100CDF02000037D7 /* A.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D8AB100CDF02000037D7 /* A.m */; };
+		DE89D8B2100CDF87000037D7 /* CharacterMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D8B1100CDF87000037D7 /* CharacterMatch.m */; };
+		DE89D8B3100CDF87000037D7 /* CharacterMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = DE89D8B1100CDF87000037D7 /* CharacterMatch.m */; };
 		DE94643A0FFE743800F7AA88 /* AddNodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464390FFE743800F7AA88 /* AddNodeAction.m */; };
 		DE94643B0FFE743800F7AA88 /* AddNodeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464390FFE743800F7AA88 /* AddNodeAction.m */; };
 		DE94643E0FFE744A00F7AA88 /* AddBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE94643D0FFE744A00F7AA88 /* AddBondAction.m */; };
@@ -121,6 +125,10 @@
 		DE89D89E100CD787000037D7 /* Sulphur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sulphur.m; sourceTree = "<group>"; };
 		DE89D8A1100CD794000037D7 /* Phosphorous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phosphorous.h; sourceTree = "<group>"; };
 		DE89D8A2100CD794000037D7 /* Phosphorous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Phosphorous.m; sourceTree = "<group>"; };
+		DE89D8AA100CDF02000037D7 /* A.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A.h; sourceTree = "<group>"; };
+		DE89D8AB100CDF02000037D7 /* A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A.m; sourceTree = "<group>"; };
+		DE89D8B0100CDF87000037D7 /* CharacterMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterMatch.h; sourceTree = "<group>"; };
+		DE89D8B1100CDF87000037D7 /* CharacterMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterMatch.m; sourceTree = "<group>"; };
 		DE9464380FFE743800F7AA88 /* AddNodeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNodeAction.h; sourceTree = "<group>"; };
 		DE9464390FFE743800F7AA88 /* AddNodeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNodeAction.m; sourceTree = "<group>"; };
 		DE94643C0FFE744A00F7AA88 /* AddBondAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBondAction.h; sourceTree = "<group>"; };
@@ -285,6 +293,7 @@
 		DE89D850100CD5E3000037D7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DE89D8A9100CDEF8000037D7 /* Letters */,
 				DE89D87B100CD697000037D7 /* Maps */,
 				DEB16F7B0FFE528B00F8BE1B /* PointObject.h */,
 				DEB16F7C0FFE528B00F8BE1B /* PointObject.m */,
@@ -295,6 +304,8 @@
 				DE2091FE0FF4F578001FECDA /* Node.m */,
 				DE2093460FF50B67001FECDA /* Bond.h */,
 				DE2093470FF50B67001FECDA /* Bond.m */,
+				DE89D8B0100CDF87000037D7 /* CharacterMatch.h */,
+				DE89D8B1100CDF87000037D7 /* CharacterMatch.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -362,6 +373,15 @@
 				DE2091430FF4E840001FECDA /* DrawView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		DE89D8A9100CDEF8000037D7 /* Letters */ = {
+			isa = PBXGroup;
+			children = (
+				DE89D8AA100CDF02000037D7 /* A.h */,
+				DE89D8AB100CDF02000037D7 /* A.m */,
+			);
+			name = Letters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,6 +508,8 @@
 				DE89D730100CAA12000037D7 /* Character.m in Sources */,
 				DE89D8A0100CD787000037D7 /* Sulphur.m in Sources */,
 				DE89D8A4100CD794000037D7 /* Phosphorous.m in Sources */,
+				DE89D8AD100CDF02000037D7 /* A.m in Sources */,
+				DE89D8B3100CDF87000037D7 /* CharacterMatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +548,8 @@
 				DE89D72F100CAA12000037D7 /* Character.m in Sources */,
 				DE89D89F100CD787000037D7 /* Sulphur.m in Sources */,
 				DE89D8A3100CD794000037D7 /* Phosphorous.m in Sources */,
+				DE89D8AC100CDF02000037D7 /* A.m in Sources */,
+				DE89D8B2100CDF87000037D7 /* CharacterMatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

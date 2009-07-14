@@ -370,19 +370,6 @@
 
 // Finished drawing chemical symbol
 -(void) onTimer {
-	//NSLog(@"TIMER FIRED");
-//	
-//	Node *selectedNode = [objectMap currentlySelectedNode];
-//	[selectedNode setElementType:@"Oxygen"];
-//	
-//	[objectMap clearSelectedNodes];
-//	
-//	NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
-//	
-//	[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
-//	[symbolTimer invalidate];
-//	
-//	[self setNeedsDisplay]; // redraw entire screen 
 
 	NSLog(@"RENDER COMPRESSED POINTS");
 	[gesturePoints compressPoints];
