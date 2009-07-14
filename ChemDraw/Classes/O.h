@@ -1,5 +1,5 @@
 //
-//  A.h
+//  O.h
 //  ChemDraw
 //
 //  Created by Kevin Edwards on 14/07/2009.
@@ -10,7 +10,7 @@
 
 #import "Character.h"
 
-@interface A : Character {
+@interface O : Character {
 
 }
 

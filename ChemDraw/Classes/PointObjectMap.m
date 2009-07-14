@@ -14,6 +14,9 @@
 #import "Arithmetic.h"
 #import "Alphabet.h"
 
+#import "A.h"
+#import "O.h"
+
 @implementation PointObjectMap
 
 
@@ -205,17 +208,11 @@
 		PointObject *leftPoint = [[PointObject alloc] initWithPoint:pointToLeft];
 		PointObject *rightPoint = [[PointObject alloc] initWithPoint:pointToRight];
 		
-		CGPoint pointToLeft2 = CGPointMake(currentPoint.x - 2, currentPoint.y);
-		CGPoint pointToRight2 = CGPointMake(currentPoint.x + 2, currentPoint.y);
+
+
+
 			
-		PointObject *leftPoint2 = [[PointObject alloc] initWithPoint:pointToLeft2];
-		PointObject *rightPoint2 = [[PointObject alloc] initWithPoint:pointToRight2];
-		
-		CGPoint pointToLeft3 = CGPointMake(currentPoint.x - 3, currentPoint.y);
-		CGPoint pointToRight3 = CGPointMake(currentPoint.x + 3, currentPoint.y);
-			
-		PointObject *leftPoint3 = [[PointObject alloc] initWithPoint:pointToLeft3];
-		PointObject *rightPoint3 = [[PointObject alloc] initWithPoint:pointToRight3];
+
 		
 		CGPoint pointToNorth = CGPointMake(currentPoint.x, currentPoint.y - 1);
 		CGPoint pointToSouth = CGPointMake(currentPoint.x, currentPoint.y + 1);
@@ -223,33 +220,18 @@
 		PointObject *northPoint = [[PointObject alloc] initWithPoint:pointToNorth];
 		PointObject *southPoint = [[PointObject alloc] initWithPoint:pointToSouth];
 		
-		CGPoint pointToNorth2 = CGPointMake(currentPoint.x, currentPoint.y - 3);
-		CGPoint pointToSouth2 = CGPointMake(currentPoint.x, currentPoint.y + 3);
-			
-		PointObject *northPoint2 = [[PointObject alloc] initWithPoint:pointToNorth2];
-		PointObject *southPoint2 = [[PointObject alloc] initWithPoint:pointToSouth2];
-		
-		CGPoint pointToNorth3 = CGPointMake(currentPoint.x, currentPoint.y - 3);
-		CGPoint pointToSouth3 = CGPointMake(currentPoint.x, currentPoint.y + 3);
-			
-		PointObject *northPoint3 = [[PointObject alloc] initWithPoint:pointToNorth3];
-		PointObject *southPoint3 = [[PointObject alloc] initWithPoint:pointToSouth3];
+
+
 
 
 		
 		[completePointSet addObject:leftPoint];
 		[completePointSet addObject:rightPoint];
-		//[completePointSet addObject:leftPoint2];
-		//[completePointSet addObject:rightPoint2];
-//		[completePointSet addObject:leftPoint3];
-//		[completePointSet addObject:rightPoint3];
+
 		
 		[completePointSet addObject:northPoint];
 		[completePointSet addObject:southPoint];
-		//[completePointSet addObject:northPoint2];
-		//[completePointSet addObject:southPoint2];
-//		[completePointSet addObject:northPoint3];
-//		[completePointSet addObject:southPoint3];
+
 		
 		
 		
@@ -359,167 +341,12 @@
 }
 
 - (void) buildComparisonArray {
+	CGFloat aMatch = [A compareToPointObjects:completePointSet];
+	CGFloat oMatch = [O compareToPointObjects:completePointSet];
+	
+	NSLog(@"Final A: %f%", aMatch);
+	NSLog(@"Final O: %f%", oMatch);
 
-	
-	
-	
-	int aCount = 0;
-	int oCount = 0;
-	int aPixelCheck;
-	int oPixelCheck;
-	
-	
-	int a[256] = {
-	
-		0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
-		0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
-		0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
-		0,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,
-		0,0,0,0,1,1,1,0,0,1,1,1,0,0,0,0,
-		0,0,0,0,1,1,1,0,0,1,1,1,0,0,0,0,
-		0,0,0,1,1,1,0,0,0,0,1,1,1,0,0,0,
-		0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,
-		0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
-		0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
-		0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
-		0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
-		1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-		1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1		
-
-				
-	};
-	
-	int o[256] =
-
-{
-0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,
-0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
-0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
-0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,
-0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,
-0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
-1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,
-0,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,
-0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,
-0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,
-0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
-0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,
-0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0
-
-
-};
-
-	
-	int *aPtr;
-	int *oPtr;
-	
-	float aLineCount = 0;
-	float aLinePercentage = 0;
-	
-	float oLineCount = 0;
-	float oLinePercentage = 0;
-
-	float totalAPercentage = 0;
-	float totalOPercentage = 0;
-	
-	NSMutableString *debugString = [[NSMutableString alloc] init];
-	NSString *ON = @"1 ";
-	NSString *OFF = @"0 ";
-	NSString *newLine = @"\n";
-							
-	[debugString appendString:newLine];												
-																									
-	for(int y=0; y<RESOLUTION; y++) {
-		for(int x=0; x<RESOLUTION; x++) { //within this loop we are checking on horizontal line at a time
-					
-			int letterArrayIndex = (y*RESOLUTION) + x;
-		
-			aPtr = &a[letterArrayIndex];
-			oPtr = &o[letterArrayIndex];
-		
-			aPixelCheck = a[letterArrayIndex];
-			oPixelCheck = o[letterArrayIndex];
-					
-			CGPoint point = CGPointMake(x, y);
-			PointObject *pointObject = [[PointObject alloc] initWithPoint:point];
-					
-					
-					
-			if( [completePointSet containsObject:pointObject] == YES ) {
-			
-				[debugString appendString:ON];
-			
-				NSLog(@"POINT SET CONTAINS POINT (%d, %d)", x, y);
-				//NSLog(@"LETTER ARRAY INDEX: %d", letterArrayIndex);
-			
-				// the compressed point image has an ON PIXEL HERE
-				if(aPixelCheck == 1) { // the a character has an ON pixel at this point
-					aLineCount++;
-				}
-				
-				if(oPixelCheck == 1) {
-					oLineCount++;
-				}
-			}
-			else { // the compressed point image has an OFF PIXEL HERE
-				
-				[debugString appendString:OFF];
-				
-				//NSLog(@"POINT SET DOES NOT CONTAIN POINT (%d, %d)", x, y);
-				
-				if(aPixelCheck == 0) { // the a character has an OFF pixel at this point
-					aLineCount++;
-				}
-				
-				if(oPixelCheck == 0) {
-					oLineCount++;
-				}
-			}
-			
-			[pointObject release];
-					
-			
-	
-		} // end of row loop
-		
-		[debugString appendString:newLine];
-				
-		aLinePercentage = (aLineCount / RESOLUTION) * 100;
-		totalAPercentage += aLinePercentage;
-
-		NSLog(@"A LINE PERCENTAGE FOR LINE %d: %f", y, aLinePercentage);
-		
-		oLinePercentage = (oLineCount / RESOLUTION) * 100;
-		totalOPercentage += oLinePercentage;
-
-		NSLog(@"O LINE PERCENTAGE: %f", oLinePercentage);
-		
-		aLinePercentage = 0;
-		aLineCount = 0;
-		
-		oLinePercentage = 0;
-		oLineCount = 0;
-		
-	} // end of column loop
-		
-	
-	NSLog(@"Final A COUNT: %d", aCount);
-	NSLog(@"Final O COUNT: %d", oCount);
-
-	totalAPercentage = totalAPercentage / RESOLUTION;	
-	totalOPercentage = totalOPercentage / RESOLUTION;
-
-
-
-	NSLog(@"Final A: %f%", totalAPercentage);
-	NSLog(@"Final O: %f%", totalOPercentage);
-	
-	NSLog(@"%@", debugString);
 }
 
 
