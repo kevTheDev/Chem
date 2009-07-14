@@ -14,6 +14,6 @@
 
 }
 
-+ (CGFloat) compareToPointObjects:(NSArray *)pointObjects;
+//+ (CGFloat) compareToPointObjects:(NSArray *)pointObjects;
 
 @end
