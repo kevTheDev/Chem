@@ -182,26 +182,12 @@
 			children = (
 				1D3623240D0F684500981E51 /* ChemDrawAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ChemDrawAppDelegate.m */,
-				28D7ACF60DDB3853001CB0EB /* ChemDrawViewController.h */,
-				28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */,
-				DE2091420FF4E840001FECDA /* DrawView.h */,
-				DE2091430FF4E840001FECDA /* DrawView.m */,
-				DE2091FD0FF4F578001FECDA /* Node.h */,
-				DE2091FE0FF4F578001FECDA /* Node.m */,
-				DE2093460FF50B67001FECDA /* Bond.h */,
-				DE2093470FF50B67001FECDA /* Bond.m */,
-				DE874F6E0FFA512400B1E023 /* BondMap.h */,
-				DE874F6F0FFA512400B1E023 /* BondMap.m */,
-				DED6FCBE0FFB2A93008CE1A7 /* Arithmetic.h */,
-				DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */,
-				DE4F4CD10FFCB05300DA8541 /* NodeMap.h */,
-				DE4F4CD20FFCB05300DA8541 /* NodeMap.m */,
-				DE4F4DAC0FFCC6C500DA8541 /* ObjectMap.h */,
-				DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */,
+				DE89D87F100CD6CB000037D7 /* Controllers */,
+				DE89D880100CD6D1000037D7 /* Views */,
+				DE89D850100CD5E3000037D7 /* Models */,
+				DE89D87A100CD66A000037D7 /* Helpers */,
 				DE4F55EE0FFE070100DA8541 /* ProgramState.h */,
 				DE4F55EF0FFE070100DA8541 /* ProgramState.m */,
-				DEB16F7B0FFE528B00F8BE1B /* PointObject.h */,
-				DEB16F7C0FFE528B00F8BE1B /* PointObject.m */,
 				DE9464380FFE743800F7AA88 /* AddNodeAction.h */,
 				DE9464390FFE743800F7AA88 /* AddNodeAction.m */,
 				DE94643C0FFE744A00F7AA88 /* AddBondAction.h */,
@@ -214,22 +200,6 @@
 				DE9465710FFE84FF00F7AA88 /* HighlightAction.m */,
 				DE9465740FFE850600F7AA88 /* SelectAction.h */,
 				DE9465750FFE850600F7AA88 /* SelectAction.m */,
-				DE9465D30FFE8ADE00F7AA88 /* PotentialBondMap.h */,
-				DE9465D40FFE8ADE00F7AA88 /* PotentialBondMap.m */,
-				DE9465D90FFE8BD400F7AA88 /* PotentialBond.h */,
-				DE9465DA0FFE8BD400F7AA88 /* PotentialBond.m */,
-				DEE8BD4C10035687004119FE /* Element.h */,
-				DEE8BD4D10035687004119FE /* Element.m */,
-				DEE8BD5E100356AE004119FE /* Oxygen.h */,
-				DEE8BD5F100356AE004119FE /* Oxygen.m */,
-				DEE8BD62100356B5004119FE /* Nitrogen.h */,
-				DEE8BD63100356B5004119FE /* Nitrogen.m */,
-				DEE8BD66100356BD004119FE /* Carbon.h */,
-				DEE8BD67100356BD004119FE /* Carbon.m */,
-				DEE8BE1D10036367004119FE /* PointObjectMap.h */,
-				DEE8BE1E10036367004119FE /* PointObjectMap.m */,
-				DE89D72D100CAA12000037D7 /* Character.h */,
-				DE89D72E100CAA12000037D7 /* Character.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -302,6 +272,84 @@
 				DE89D28D10070F9B000037D7 /* PointObjectTest.m */,
 			);
 			name = Test;
+			sourceTree = "<group>";
+		};
+		DE89D850100CD5E3000037D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE89D87B100CD697000037D7 /* Maps */,
+				DEB16F7B0FFE528B00F8BE1B /* PointObject.h */,
+				DEB16F7C0FFE528B00F8BE1B /* PointObject.m */,
+				DE9465D90FFE8BD400F7AA88 /* PotentialBond.h */,
+				DE9465DA0FFE8BD400F7AA88 /* PotentialBond.m */,
+				DE89D87C100CD6AC000037D7 /* Elements */,
+				DE2091FD0FF4F578001FECDA /* Node.h */,
+				DE2091FE0FF4F578001FECDA /* Node.m */,
+				DE2093460FF50B67001FECDA /* Bond.h */,
+				DE2093470FF50B67001FECDA /* Bond.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DE89D87A100CD66A000037D7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DE89D72D100CAA12000037D7 /* Character.h */,
+				DE89D72E100CAA12000037D7 /* Character.m */,
+				DED6FCBE0FFB2A93008CE1A7 /* Arithmetic.h */,
+				DED6FCBF0FFB2A93008CE1A7 /* Arithmetic.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		DE89D87B100CD697000037D7 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				DE4F4CD10FFCB05300DA8541 /* NodeMap.h */,
+				DE4F4CD20FFCB05300DA8541 /* NodeMap.m */,
+				DEE8BE1D10036367004119FE /* PointObjectMap.h */,
+				DEE8BE1E10036367004119FE /* PointObjectMap.m */,
+				DE874F6E0FFA512400B1E023 /* BondMap.h */,
+				DE874F6F0FFA512400B1E023 /* BondMap.m */,
+				DE9465D30FFE8ADE00F7AA88 /* PotentialBondMap.h */,
+				DE9465D40FFE8ADE00F7AA88 /* PotentialBondMap.m */,
+				DE4F4DAC0FFCC6C500DA8541 /* ObjectMap.h */,
+				DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		DE89D87C100CD6AC000037D7 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				DEE8BD4C10035687004119FE /* Element.h */,
+				DEE8BD4D10035687004119FE /* Element.m */,
+				DEE8BD5E100356AE004119FE /* Oxygen.h */,
+				DEE8BD5F100356AE004119FE /* Oxygen.m */,
+				DEE8BD62100356B5004119FE /* Nitrogen.h */,
+				DEE8BD63100356B5004119FE /* Nitrogen.m */,
+				DEE8BD66100356BD004119FE /* Carbon.h */,
+				DEE8BD67100356BD004119FE /* Carbon.m */,
+			);
+			name = Elements;
+			sourceTree = "<group>";
+		};
+		DE89D87F100CD6CB000037D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28D7ACF60DDB3853001CB0EB /* ChemDrawViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DE89D880100CD6D1000037D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE2091420FF4E840001FECDA /* DrawView.h */,
+				DE2091430FF4E840001FECDA /* DrawView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

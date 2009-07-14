@@ -12,10 +12,7 @@
 #import <UIKit/UIKit.h>
 
 #import "Arithmetic.h"
-#import "Alphabet.h"
 
-#import "A.h"
-#import "O.h"
 
 #import "Character.h"
 
