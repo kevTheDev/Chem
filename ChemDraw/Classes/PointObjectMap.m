@@ -132,7 +132,7 @@
 // then compresses those points
 // removes any points that are identical
 // then we are ready for the symbolic binary field comparison
-- (void) compressPoints {
+- (CharacterMatch *) compressPoints {
 
 	float shiftFromXOrigin = [self westPoint].x;
 	float shiftFromYOrigin = [self northPoint].y;
@@ -180,10 +180,10 @@
 	// add some extra points (one either side) to simulate a thicker line
 	[self thickenLine];
 	
-	[self buildComparisonArray];
+	CharacterMatch *topMatch = [self buildComparisonArray];
 
 
-	return;
+	return topMatch;
 }
 
 - (void) thickenLine {
@@ -334,18 +334,30 @@
 	return;
 }
 
-- (void) buildComparisonArray {
+- (CharacterMatch *) buildComparisonArray {
 	
 	
 	
 	NSArray *characterMatchResults = [Character characterMatchResultsForPoints:completePointSet];
 	
+	CharacterMatch *topMatch = [CharacterMatch alloc];
+	
 	for(CharacterMatch *match in characterMatchResults) {
+		if(topMatch == NULL) {
+			topMatch = match;
+		}
+		else if([match percentageMatch] > [topMatch percentageMatch]) {
+			topMatch = match;
+		}
+		
+	
 		NSLog(@"MATCH FOR %d: %f%", [match characterRef], [match percentageMatch]);
 	}
 	
-	//[characterMatchResults release];
-	return;
+	
+	
+	[characterMatchResults release];
+	return topMatch;
 	
 }
 

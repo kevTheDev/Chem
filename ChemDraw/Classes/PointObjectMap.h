@@ -11,6 +11,7 @@
 # define RESOLUTION 16
 
 @class PointObject;
+@class CharacterMatch;
 
 @interface PointObjectMap : NSObject {
 	NSMutableArray *pointObjects;
@@ -34,10 +35,10 @@
 - (CGFloat) xDistance;
 - (CGFloat) yDistance;
 
-- (void) compressPoints;
+- (CharacterMatch *) compressPoints;
 - (void) fillInMissingPoints;
 - (void) thickenLine;
-- (void) buildComparisonArray;
+- (CharacterMatch *) buildComparisonArray;
 
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 

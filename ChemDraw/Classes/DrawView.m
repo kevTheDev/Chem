@@ -371,12 +371,24 @@
 // Finished drawing chemical symbol
 -(void) onTimer {
 
-	NSLog(@"RENDER COMPRESSED POINTS");
-	[gesturePoints compressPoints];
+	CharacterMatch *topMatch = [gesturePoints compressPoints];
 
-	[programState setCurrentState:DEBUG_MODE];
+	Node *selectedNode = [objectMap currentlySelectedNode];
+	[selectedNode setElementType:[topMatch symbol]];
+	[objectMap clearSelectedNodes];
+	NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
+
+
+
+	
+
+//	[programState setCurrentState:DEBUG_MODE];
+	[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
 	[symbolTimer invalidate];
-	[self setNeedsDisplay]; // redraw entire screen 
+	[self setNeedsDisplay]; // redraw entire screen
+	
+	
+	
 
 	
 }
