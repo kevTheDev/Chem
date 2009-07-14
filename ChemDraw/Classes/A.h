@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "Character.h"
+///#import "Character.h"
 
-@interface A : Character {
+@interface A : NSObject {
 
 }
 

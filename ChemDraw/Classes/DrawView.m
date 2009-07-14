@@ -281,7 +281,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	
 	if([programState currentState] == GESTURE_MODE) {
-		symbolTimer = [NSTimer scheduledTimerWithTimeInterval:0.80 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
+		symbolTimer = [NSTimer scheduledTimerWithTimeInterval:2.50 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
 	}
 
 	
