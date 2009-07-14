@@ -384,7 +384,7 @@
 	
 
 //	[programState setCurrentState:DEBUG_MODE];
-	[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
+	[programState setCurrentState:SELECT_OBJECT];
 	[symbolTimer invalidate];
 	[self setNeedsDisplay]; // redraw entire screen
 	
