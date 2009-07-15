@@ -62,6 +62,9 @@
 
 -(void) onTimer;
 
+@property (nonatomic, retain) NSTimer *symbolTimer;
 
 
 @end
+
+

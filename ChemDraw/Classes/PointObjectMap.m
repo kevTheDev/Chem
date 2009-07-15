@@ -36,9 +36,14 @@
 	
 }
 
+- (void) clearPoints {
+	[pointObjects removeAllObjects];
+	[completePointSet removeAllObjects];
+	[compressedPointObjects removeAllObjects];
+}
+
 - (void) addPoint:(PointObject *)pointObject {
 	[pointObjects addObject:pointObject];
-
 }
 
 - (CGPoint) northPoint {
@@ -133,7 +138,7 @@
 // removes any points that are identical
 // then we are ready for the symbolic binary field comparison
 - (CharacterMatch *) compressPoints {
-
+		
 	float shiftFromXOrigin = [self westPoint].x;
 	float shiftFromYOrigin = [self northPoint].y;
 	

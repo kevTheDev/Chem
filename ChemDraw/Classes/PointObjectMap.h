@@ -19,6 +19,7 @@
 	NSMutableArray *compressedPointObjects;
 }
 
+- (void) clearPoints;
 - (void) addPoint:(PointObject *)pointObject;
 
 - (void) renderWithContext:(CGContextRef)ctx;

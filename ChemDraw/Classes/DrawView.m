@@ -21,6 +21,7 @@
 
 @implementation DrawView
 
+@synthesize symbolTimer;
 
 // this init method never seems to really get called
 - (id)initWithFrame:(CGRect)frame {
@@ -280,9 +281,8 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	
 	if([programState currentState] == GESTURE_MODE) {
-		if([symbolTimer isValid] == NO) {
-			symbolTimer = [NSTimer scheduledTimerWithTimeInterval:0.80 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
-		}
+		NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.80 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
+		[self setSymbolTimer:timer];
 	}
 
 	
@@ -361,6 +361,7 @@
 
 }
 
+
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx {	
 	
 	CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
@@ -386,6 +387,9 @@
 //	[programState setCurrentState:DEBUG_MODE];
 	[programState setCurrentState:SELECT_OBJECT];
 	[symbolTimer invalidate];
+	[self setSymbolTimer:NULL];
+	
+	[gesturePoints clearPoints];
 	[self setNeedsDisplay]; // redraw entire screen
 	
 	
