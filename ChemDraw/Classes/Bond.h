@@ -44,13 +44,13 @@
 
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;
-@property CGPoint centerPoint;
-@property CGPoint nodeAPoint;
-@property CGPoint nodeBPoint;
+@property (nonatomic) CGPoint centerPoint;
+@property (nonatomic) CGPoint nodeAPoint;
+@property (nonatomic) CGPoint nodeBPoint;
 
-@property BOOL unconfirmedHighlight;
-@property BOOL confirmedHighlight;
+@property (nonatomic) BOOL unconfirmedHighlight;
+@property (nonatomic) BOOL confirmedHighlight;
 
-@property BOOL isDouble;
+@property (nonatomic) BOOL isDouble;
 
 @end

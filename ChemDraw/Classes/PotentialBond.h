@@ -31,7 +31,7 @@
 - (void) select;
 - (BOOL) isSelected;
 
-@property CGPoint endPoint;
-@property CGPoint centerPoint;
+@property (nonatomic) CGPoint endPoint;
+@property (nonatomic) CGPoint centerPoint;
 
 @end

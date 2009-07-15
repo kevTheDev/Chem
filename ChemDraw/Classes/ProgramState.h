@@ -26,6 +26,6 @@
 
 - (char *)currentPrompt;
 
-@property int currentState;
+@property (nonatomic) int currentState;
 
 @end

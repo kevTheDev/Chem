@@ -787,71 +787,71 @@ int z[256] =
 			int letterArrayIndex = (y*RESOLUTION) + x;
 		
 			switch(characterRef) {
-				case A: {
-					ptr = &a[letterArrayIndex];
-					pixelCheck = a[letterArrayIndex];
-				}
-				break;
-				case B: {
-					ptr = &b[letterArrayIndex];
-					pixelCheck = b[letterArrayIndex];
-				}
-				break;
-				case C: {
-					ptr = &c[letterArrayIndex];
-					pixelCheck = c[letterArrayIndex];
-				}
-				break;
-				case D: {
-					ptr = &d[letterArrayIndex];
-					pixelCheck = d[letterArrayIndex];
-				}
-				break;
-				case E: {
-					ptr = &e[letterArrayIndex];
-					pixelCheck = e[letterArrayIndex];
-				}
-				break;
-				case F: {
-					ptr = &f[letterArrayIndex];
-					pixelCheck = f[letterArrayIndex];
-				}
-				break;
-				case G: {
-					ptr = &g[letterArrayIndex];
-					pixelCheck = g[letterArrayIndex];
-				}
-				break;
-				case H: {
-					ptr = &h[letterArrayIndex];
-					pixelCheck = h[letterArrayIndex];
-				}
-				break;
-				case I: {
-					ptr = &i[letterArrayIndex];
-					pixelCheck = i[letterArrayIndex];
-				}
-				break;
-				case J: {
-					ptr = &j[letterArrayIndex];
-					pixelCheck = j[letterArrayIndex];
-				}
-				break;
-				case K: {
-					ptr = &k[letterArrayIndex];
-					pixelCheck = k[letterArrayIndex];
-				}
-				break;
-				case L: {
-					ptr = &l[letterArrayIndex];
-					pixelCheck = l[letterArrayIndex];
-				}
-				break;
-				case M: {
-					ptr = &m[letterArrayIndex];
-					pixelCheck = m[letterArrayIndex];
-				}
-				break;
+				//case A: {
+//					ptr = &a[letterArrayIndex];
+//					pixelCheck = a[letterArrayIndex];
+//				}
+//				break;
+//				case B: {
+//					ptr = &b[letterArrayIndex];
+//					pixelCheck = b[letterArrayIndex];
+//				}
+//				break;
+//				case C: {
+//					ptr = &c[letterArrayIndex];
+//					pixelCheck = c[letterArrayIndex];
+//				}
+//				break;
+//				case D: {
+//					ptr = &d[letterArrayIndex];
+//					pixelCheck = d[letterArrayIndex];
+//				}
+//				break;
+//				case E: {
+//					ptr = &e[letterArrayIndex];
+//					pixelCheck = e[letterArrayIndex];
+//				}
+//				break;
+//				case F: {
+//					ptr = &f[letterArrayIndex];
+//					pixelCheck = f[letterArrayIndex];
+//				}
+//				break;
+//				case G: {
+//					ptr = &g[letterArrayIndex];
+//					pixelCheck = g[letterArrayIndex];
+//				}
+//				break;
+//				case H: {
+//					ptr = &h[letterArrayIndex];
+//					pixelCheck = h[letterArrayIndex];
+//				}
+//				break;
+//				case I: {
+//					ptr = &i[letterArrayIndex];
+//					pixelCheck = i[letterArrayIndex];
+//				}
+//				break;
+//				case J: {
+//					ptr = &j[letterArrayIndex];
+//					pixelCheck = j[letterArrayIndex];
+//				}
+//				break;
+//				case K: {
+//					ptr = &k[letterArrayIndex];
+//					pixelCheck = k[letterArrayIndex];
+//				}
+//				break;
+//				case L: {
+//					ptr = &l[letterArrayIndex];
+//					pixelCheck = l[letterArrayIndex];
+//				}
+//				break;
+//				case M: {
+//					ptr = &m[letterArrayIndex];
+//					pixelCheck = m[letterArrayIndex];
+//				}
+//				break;
 				case N: {
 					ptr = &n[letterArrayIndex];
 					pixelCheck = n[letterArrayIndex];
@@ -867,56 +867,56 @@ int z[256] =
 					pixelCheck = p[letterArrayIndex];
 				}
 				break;
-				case Q: {
-					ptr = &q[letterArrayIndex];
-					pixelCheck = q[letterArrayIndex];
-				}
-				break;
-				case R: {
-					ptr = &r[letterArrayIndex];
-					pixelCheck = r[letterArrayIndex];
-				}
-				break;
+				//case Q: {
+//					ptr = &q[letterArrayIndex];
+//					pixelCheck = q[letterArrayIndex];
+//				}
+//				break;
+//				case R: {
+//					ptr = &r[letterArrayIndex];
+//					pixelCheck = r[letterArrayIndex];
+//				}
+//				break;
 				case S: {
 					ptr = &s[letterArrayIndex];
 					pixelCheck = s[letterArrayIndex];
 				}
 				break;
-				case T: {
-					ptr = &t[letterArrayIndex];
-					pixelCheck = t[letterArrayIndex];
-				}
-				break;
-				case U: {
-					ptr = &u[letterArrayIndex];
-					pixelCheck = u[letterArrayIndex];
-				}
-				break;
-				case V: {
-					ptr = &v[letterArrayIndex];
-					pixelCheck = v[letterArrayIndex];
-				}
-				break;
-				case W: {
-					ptr = &w[letterArrayIndex];
-					pixelCheck = w[letterArrayIndex];
-				}
-				break;
-				case X: {
-					ptr = &letterX[letterArrayIndex];
-					pixelCheck = letterX[letterArrayIndex];
-				}
-				break;
-				case Y: {
-					ptr = &letterY[letterArrayIndex];
-					pixelCheck = letterY[letterArrayIndex];
-				}
-				break;
-				case Z: {
-					ptr = &z[letterArrayIndex];
-					pixelCheck = z[letterArrayIndex];
-				}
-				break;
+				//case T: {
+//					ptr = &t[letterArrayIndex];
+//					pixelCheck = t[letterArrayIndex];
+//				}
+//				break;
+//				case U: {
+//					ptr = &u[letterArrayIndex];
+//					pixelCheck = u[letterArrayIndex];
+//				}
+//				break;
+//				case V: {
+//					ptr = &v[letterArrayIndex];
+//					pixelCheck = v[letterArrayIndex];
+//				}
+//				break;
+//				case W: {
+//					ptr = &w[letterArrayIndex];
+//					pixelCheck = w[letterArrayIndex];
+//				}
+//				break;
+//				case X: {
+//					ptr = &letterX[letterArrayIndex];
+//					pixelCheck = letterX[letterArrayIndex];
+//				}
+//				break;
+//				case Y: {
+//					ptr = &letterY[letterArrayIndex];
+//					pixelCheck = letterY[letterArrayIndex];
+//				}
+//				break;
+//				case Z: {
+//					ptr = &z[letterArrayIndex];
+//					pixelCheck = z[letterArrayIndex];
+//				}
+//				break;
 				default:
 				break;
 			

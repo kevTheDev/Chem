@@ -62,13 +62,13 @@
 
 - (void) renderPotentialBondMap:(CGContextRef)ctx;
 
-@property CGFloat xCoord;
-@property CGFloat yCoord;
+@property (nonatomic) CGFloat xCoord;
+@property (nonatomic) CGFloat yCoord;
 
-@property BOOL unconfirmedHighlight;
-@property BOOL confirmedHighlight;
+@property (nonatomic) BOOL unconfirmedHighlight;
+@property (nonatomic) BOOL confirmedHighlight;
 
-@property BOOL displayPotentialBondMap;
+@property (nonatomic) BOOL displayPotentialBondMap;
 
 @property (nonatomic, retain) NSString *elementType;
 
