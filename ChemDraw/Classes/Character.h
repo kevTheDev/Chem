@@ -44,6 +44,8 @@
 	
 }
 
++ (CharacterMatch *) getBestMatch:(NSArray *)pointObjects;
+
 + (NSArray *) characterMatchResultsForPoints:(NSArray *)pointObjects;
 
 

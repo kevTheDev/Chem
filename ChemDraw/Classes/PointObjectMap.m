@@ -338,26 +338,28 @@
 	
 	
 	
-	NSArray *characterMatchResults = [Character characterMatchResultsForPoints:completePointSet];
-	
-	CharacterMatch *topMatch = [CharacterMatch alloc];
-	
-	for(CharacterMatch *match in characterMatchResults) {
-		if(topMatch == NULL) {
-			topMatch = match;
-		}
-		else if([match percentageMatch] > [topMatch percentageMatch]) {
-			topMatch = match;
-		}
-		
-	
-		NSLog(@"MATCH FOR %d: %f%", [match characterRef], [match percentageMatch]);
-	}
-	
-	
-	
-	[characterMatchResults release];
-	return topMatch;
+	//NSArray *characterMatchResults = [Character characterMatchResultsForPoints:completePointSet];
+//	
+//	CharacterMatch *topMatch = [CharacterMatch alloc];
+//	
+//	for(CharacterMatch *match in characterMatchResults) {
+//		if(topMatch == NULL) {
+//			topMatch = match;
+//		}
+//		else if([match percentageMatch] > [topMatch percentageMatch]) {
+//			topMatch = match;
+//		}
+//		
+//	
+//		NSLog(@"MATCH FOR %d: %f%", [match characterRef], [match percentageMatch]);
+//	}
+//	
+//	
+//	
+//	[characterMatchResults release];
+
+	return [Character getBestMatch:completePointSet];
+
 	
 }
 

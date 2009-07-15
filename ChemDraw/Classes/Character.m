@@ -980,6 +980,149 @@ int z[256] =
 
 }
 
++ (CharacterMatch *) getBestMatch:(NSArray *)pointObjects {
 
+	int nPixelCheck, oPixelCheck, pPixelCheck, sPixelCheck;
+	
+	int *nPtr, *oPtr, *pPtr, *sPtr;
+	
+	float nLineCount, oLineCount, pLineCount, sLineCount;
+	float nLinePercentage, oLinePercentage, pLinePercentage, sLinePercentage;
+
+	float nTotalPercentage, oTotalPercentage, pTotalPercentage, sTotalPercentage;
+	
+	int letterArrayIndex;										
+																									
+	for(int y=0; y<RESOLUTION; y++) {
+		for(int x=0; x<RESOLUTION; x++) { //within this loop we are checking on horizontal line at a time
+					
+			letterArrayIndex = (y*RESOLUTION) + x;
+		
+			
+			nPtr = &n[letterArrayIndex];
+			nPixelCheck = n[letterArrayIndex];
+			
+			oPtr = &o[letterArrayIndex];
+			oPixelCheck = o[letterArrayIndex];
+			
+			pPtr = &p[letterArrayIndex];
+			pPixelCheck = p[letterArrayIndex];
+			
+			sPtr = &s[letterArrayIndex];
+			sPixelCheck = s[letterArrayIndex];
+	
+					
+			CGPoint point = CGPointMake(x, y);
+			PointObject *pointObject = [[PointObject alloc] initWithPoint:point];
+			
+					
+			if( [pointObjects containsObject:pointObject] == YES ) {
+			
+				//[debugString appendString:ON];
+
+				// the compressed point image has an ON PIXEL HERE
+				if(nPixelCheck == 1) { // the n character has an ON pixel at this point
+					nLineCount++;
+				}
+				
+				if(oPixelCheck == 1) { // the n character has an ON pixel at this point
+					oLineCount++;
+				}
+				
+				if(pPixelCheck == 1) { // the n character has an ON pixel at this point
+					pLineCount++;
+				}
+				
+				if(sPixelCheck == 1) { // the n character has an ON pixel at this point
+					sLineCount++;
+				}
+
+			}
+			else { // the compressed point image has an OFF PIXEL HERE
+				
+				//[debugString appendString:OFF];
+				
+				if(nPixelCheck == 0) { // the n character has an OFF pixel at this point
+					nLineCount++;
+				}
+				
+				if(oPixelCheck == 0) { // the n character has an OFF pixel at this point
+					oLineCount++;
+				}
+				
+				if(pPixelCheck == 0) { // the n character has an OFF pixel at this point
+					pLineCount++;
+				}
+				
+				if(sPixelCheck == 0) { // the n character has an OFF pixel at this point
+					sLineCount++;
+				}
+		
+			}
+			
+			[pointObject release];
+					
+			
+	
+		} // end of row loop
+		
+		//[debugString appendString:newLine];
+				
+		nLinePercentage = (nLineCount / RESOLUTION) * 100;
+		nTotalPercentage += nLinePercentage;
+
+		nLinePercentage = 0;
+		nLineCount = 0;
+		
+		oLinePercentage = (oLineCount / RESOLUTION) * 100;
+		oTotalPercentage += oLinePercentage;
+
+		oLinePercentage = 0;
+		oLineCount = 0;
+		
+		pLinePercentage = (pLineCount / RESOLUTION) * 100;
+		pTotalPercentage += pLinePercentage;
+
+		pLinePercentage = 0;
+		pLineCount = 0;
+		
+		sLinePercentage = (sLineCount / RESOLUTION) * 100;
+		sTotalPercentage += sLinePercentage;
+
+		sLinePercentage = 0;
+		sLineCount = 0;
+		
+	} // end of column loop
+		
+
+	nTotalPercentage = nTotalPercentage / RESOLUTION;
+	oTotalPercentage = oTotalPercentage / RESOLUTION;
+	pTotalPercentage = pTotalPercentage / RESOLUTION;
+	sTotalPercentage = sTotalPercentage / RESOLUTION;
+
+	float bestMatch = nTotalPercentage;
+	int matchRef = N;
+	CharacterMatch *match = [CharacterMatch alloc];
+
+	if(oTotalPercentage > bestMatch) {
+		bestMatch = oTotalPercentage;
+		matchRef = O;
+	}
+		
+	if(pTotalPercentage > bestMatch) {
+		bestMatch = pTotalPercentage;
+		matchRef = P;
+	}
+		
+	if(sTotalPercentage > bestMatch) {
+		bestMatch = sTotalPercentage;
+		matchRef = S;
+	}
+	
+	[match initWithCharacterRef:matchRef percentageMatch:bestMatch];
+	//[match autorelease];
+	return match;
+
+}
 
 @end

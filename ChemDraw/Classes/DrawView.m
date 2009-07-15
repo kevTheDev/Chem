@@ -281,7 +281,7 @@
 	
 	if([programState currentState] == GESTURE_MODE) {
 		if([symbolTimer isValid] == NO) {
-			symbolTimer = [NSTimer scheduledTimerWithTimeInterval:2.50 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
+			symbolTimer = [NSTimer scheduledTimerWithTimeInterval:0.80 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
 		}
 	}
 
