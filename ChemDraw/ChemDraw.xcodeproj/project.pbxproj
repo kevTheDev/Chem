@@ -28,6 +28,12 @@
 		DE4F4DAF0FFCC6C500DA8541 /* ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */; };
 		DE4F55F00FFE070100DA8541 /* ProgramState.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F55EF0FFE070100DA8541 /* ProgramState.m */; };
 		DE4F55F10FFE070100DA8541 /* ProgramState.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4F55EF0FFE070100DA8541 /* ProgramState.m */; };
+		DE536536100F706D00A098FF /* DoubleBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE536535100F706D00A098FF /* DoubleBondAction.m */; };
+		DE536537100F706D00A098FF /* DoubleBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE536535100F706D00A098FF /* DoubleBondAction.m */; };
+		DE53653A100F707500A098FF /* TripleBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE536539100F707500A098FF /* TripleBondAction.m */; };
+		DE53653B100F707500A098FF /* TripleBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE536539100F707500A098FF /* TripleBondAction.m */; };
+		DE53653E100F707F00A098FF /* SingleBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE53653D100F707F00A098FF /* SingleBondAction.m */; };
+		DE53653F100F707F00A098FF /* SingleBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE53653D100F707F00A098FF /* SingleBondAction.m */; };
 		DE874F700FFA512400B1E023 /* BondMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* BondMap.m */; };
 		DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */; };
 		DE874FF20FFA67F500B1E023 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874FF10FFA67F500B1E023 /* NodeTest.m */; };
@@ -108,6 +114,12 @@
 		DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectMap.m; sourceTree = "<group>"; };
 		DE4F55EE0FFE070100DA8541 /* ProgramState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramState.h; sourceTree = "<group>"; };
 		DE4F55EF0FFE070100DA8541 /* ProgramState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramState.m; sourceTree = "<group>"; };
+		DE536534100F706D00A098FF /* DoubleBondAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleBondAction.h; sourceTree = "<group>"; };
+		DE536535100F706D00A098FF /* DoubleBondAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleBondAction.m; sourceTree = "<group>"; };
+		DE536538100F707500A098FF /* TripleBondAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleBondAction.h; sourceTree = "<group>"; };
+		DE536539100F707500A098FF /* TripleBondAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleBondAction.m; sourceTree = "<group>"; };
+		DE53653C100F707F00A098FF /* SingleBondAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleBondAction.h; sourceTree = "<group>"; };
+		DE53653D100F707F00A098FF /* SingleBondAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleBondAction.m; sourceTree = "<group>"; };
 		DE874F6E0FFA512400B1E023 /* BondMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BondMap.h; sourceTree = "<group>"; };
 		DE874F6F0FFA512400B1E023 /* BondMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BondMap.m; sourceTree = "<group>"; };
 		DE874F8A0FFA592000B1E023 /* Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,14 +208,7 @@
 				DE89D87A100CD66A000037D7 /* Helpers */,
 				DE4F55EE0FFE070100DA8541 /* ProgramState.h */,
 				DE4F55EF0FFE070100DA8541 /* ProgramState.m */,
-				DE9464380FFE743800F7AA88 /* AddNodeAction.h */,
-				DE9464390FFE743800F7AA88 /* AddNodeAction.m */,
-				DE94643C0FFE744A00F7AA88 /* AddBondAction.h */,
-				DE94643D0FFE744A00F7AA88 /* AddBondAction.m */,
-				DE9464400FFE746C00F7AA88 /* ActionMap.h */,
-				DE9464410FFE746C00F7AA88 /* ActionMap.m */,
-				DE9464440FFE749200F7AA88 /* Action.h */,
-				DE9464450FFE749200F7AA88 /* Action.m */,
+				DE536533100F705C00A098FF /* Actions */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -262,6 +267,27 @@
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE536533100F705C00A098FF /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				DE9464380FFE743800F7AA88 /* AddNodeAction.h */,
+				DE9464390FFE743800F7AA88 /* AddNodeAction.m */,
+				DE94643C0FFE744A00F7AA88 /* AddBondAction.h */,
+				DE94643D0FFE744A00F7AA88 /* AddBondAction.m */,
+				DE9464400FFE746C00F7AA88 /* ActionMap.h */,
+				DE9464410FFE746C00F7AA88 /* ActionMap.m */,
+				DE9464440FFE749200F7AA88 /* Action.h */,
+				DE9464450FFE749200F7AA88 /* Action.m */,
+				DE536534100F706D00A098FF /* DoubleBondAction.h */,
+				DE536535100F706D00A098FF /* DoubleBondAction.m */,
+				DE536538100F707500A098FF /* TripleBondAction.h */,
+				DE536539100F707500A098FF /* TripleBondAction.m */,
+				DE53653C100F707F00A098FF /* SingleBondAction.h */,
+				DE53653D100F707F00A098FF /* SingleBondAction.m */,
+			);
+			name = Actions;
 			sourceTree = "<group>";
 		};
 		DE874FBF0FFA597200B1E023 /* Test */ = {
@@ -496,6 +522,9 @@
 				DE89D8A4100CD794000037D7 /* Phosphorous.m in Sources */,
 				DE89D8AD100CDF02000037D7 /* A.m in Sources */,
 				DE89D8B3100CDF87000037D7 /* CharacterMatch.m in Sources */,
+				DE536536100F706D00A098FF /* DoubleBondAction.m in Sources */,
+				DE53653A100F707500A098FF /* TripleBondAction.m in Sources */,
+				DE53653E100F707F00A098FF /* SingleBondAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +563,9 @@
 				DE89D8A3100CD794000037D7 /* Phosphorous.m in Sources */,
 				DE89D8AC100CDF02000037D7 /* A.m in Sources */,
 				DE89D8B2100CDF87000037D7 /* CharacterMatch.m in Sources */,
+				DE536537100F706D00A098FF /* DoubleBondAction.m in Sources */,
+				DE53653B100F707500A098FF /* TripleBondAction.m in Sources */,
+				DE53653F100F707F00A098FF /* SingleBondAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

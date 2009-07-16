@@ -20,6 +20,9 @@
 #import "Action.h"
 #import "AddNodeAction.h"
 #import "AddBondAction.h"
+#import "SingleBondAction.h"
+#import "DoubleBondAction.h"
+#import "TripleBondAction.h"
 
 @implementation ObjectMap
 
@@ -63,12 +66,21 @@
 
 - (void) manipulateBond:(Bond *)bond {
 
-	if([bond isSingle])
+	if([bond isSingle]) {
 		[bond makeDouble];
-	else if([bond isDouble])
+		Action *action = [[DoubleBondAction alloc] initWithBond:bond];
+		[actionMap addAction:action];
+	}
+	else if([bond isDouble]) {
 		[bond makeTriple];
-	else
+		Action *action = [[TripleBondAction alloc] initWithBond:bond];
+		[actionMap addAction:action];
+	}
+	else {
 		[bond makeSingle];
+		SingleBondAction *action = [[SingleBondAction alloc] initWithBond:bond];
+		[actionMap addAction:action];
+	}
 		
 	[self clearSelectedBonds];
 }
@@ -291,6 +303,16 @@
 			NSLog(@"LAST ACTION WAS A BOND ACTION");
 			[bondMap removeLastBond];
 		}
+		else if([lastAction isKindOfClass:[SingleBondAction class]]) {
+			[(SingleBondAction *) lastAction undo];
+		}
+		else if([lastAction isKindOfClass:[DoubleBondAction class]]) {
+			[(DoubleBondAction *) lastAction undo];
+		}
+		else if([lastAction isKindOfClass:[TripleBondAction class]]) {
+			[(TripleBondAction *) lastAction undo];
+		}
+		
 	
 		[actionMap removeLastAction];
 	}
