@@ -52,10 +52,6 @@
 		DE9464430FFE746C00F7AA88 /* ActionMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464410FFE746C00F7AA88 /* ActionMap.m */; };
 		DE9464460FFE749200F7AA88 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464450FFE749200F7AA88 /* Action.m */; };
 		DE9464470FFE749200F7AA88 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9464450FFE749200F7AA88 /* Action.m */; };
-		DE9465720FFE84FF00F7AA88 /* HighlightAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465710FFE84FF00F7AA88 /* HighlightAction.m */; };
-		DE9465730FFE84FF00F7AA88 /* HighlightAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465710FFE84FF00F7AA88 /* HighlightAction.m */; };
-		DE9465760FFE850600F7AA88 /* SelectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465750FFE850600F7AA88 /* SelectAction.m */; };
-		DE9465770FFE850600F7AA88 /* SelectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465750FFE850600F7AA88 /* SelectAction.m */; };
 		DE9465D50FFE8ADE00F7AA88 /* PotentialBondMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465D40FFE8ADE00F7AA88 /* PotentialBondMap.m */; };
 		DE9465D60FFE8ADE00F7AA88 /* PotentialBondMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465D40FFE8ADE00F7AA88 /* PotentialBondMap.m */; };
 		DE9465DB0FFE8BD400F7AA88 /* PotentialBond.m in Sources */ = {isa = PBXBuildFile; fileRef = DE9465DA0FFE8BD400F7AA88 /* PotentialBond.m */; };
@@ -137,10 +133,6 @@
 		DE9464410FFE746C00F7AA88 /* ActionMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionMap.m; sourceTree = "<group>"; };
 		DE9464440FFE749200F7AA88 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
 		DE9464450FFE749200F7AA88 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
-		DE9465700FFE84FF00F7AA88 /* HighlightAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighlightAction.h; sourceTree = "<group>"; };
-		DE9465710FFE84FF00F7AA88 /* HighlightAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighlightAction.m; sourceTree = "<group>"; };
-		DE9465740FFE850600F7AA88 /* SelectAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAction.h; sourceTree = "<group>"; };
-		DE9465750FFE850600F7AA88 /* SelectAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAction.m; sourceTree = "<group>"; };
 		DE9465D30FFE8ADE00F7AA88 /* PotentialBondMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PotentialBondMap.h; sourceTree = "<group>"; };
 		DE9465D40FFE8ADE00F7AA88 /* PotentialBondMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PotentialBondMap.m; sourceTree = "<group>"; };
 		DE9465D90FFE8BD400F7AA88 /* PotentialBond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PotentialBond.h; sourceTree = "<group>"; };
@@ -212,10 +204,6 @@
 				DE9464410FFE746C00F7AA88 /* ActionMap.m */,
 				DE9464440FFE749200F7AA88 /* Action.h */,
 				DE9464450FFE749200F7AA88 /* Action.m */,
-				DE9465700FFE84FF00F7AA88 /* HighlightAction.h */,
-				DE9465710FFE84FF00F7AA88 /* HighlightAction.m */,
-				DE9465740FFE850600F7AA88 /* SelectAction.h */,
-				DE9465750FFE850600F7AA88 /* SelectAction.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -496,8 +484,6 @@
 				DE94643F0FFE744A00F7AA88 /* AddBondAction.m in Sources */,
 				DE9464430FFE746C00F7AA88 /* ActionMap.m in Sources */,
 				DE9464470FFE749200F7AA88 /* Action.m in Sources */,
-				DE9465730FFE84FF00F7AA88 /* HighlightAction.m in Sources */,
-				DE9465770FFE850600F7AA88 /* SelectAction.m in Sources */,
 				DE9465D60FFE8ADE00F7AA88 /* PotentialBondMap.m in Sources */,
 				DE9465DC0FFE8BD400F7AA88 /* PotentialBond.m in Sources */,
 				DEE8BD4E10035687004119FE /* Element.m in Sources */,
@@ -535,8 +521,6 @@
 				DE94643E0FFE744A00F7AA88 /* AddBondAction.m in Sources */,
 				DE9464420FFE746C00F7AA88 /* ActionMap.m in Sources */,
 				DE9464460FFE749200F7AA88 /* Action.m in Sources */,
-				DE9465720FFE84FF00F7AA88 /* HighlightAction.m in Sources */,
-				DE9465760FFE850600F7AA88 /* SelectAction.m in Sources */,
 				DE9465D50FFE8ADE00F7AA88 /* PotentialBondMap.m in Sources */,
 				DE9465DB0FFE8BD400F7AA88 /* PotentialBond.m in Sources */,
 				DEE8BD4F10035687004119FE /* Element.m in Sources */,

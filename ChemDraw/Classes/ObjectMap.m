@@ -20,8 +20,6 @@
 #import "Action.h"
 #import "AddNodeAction.h"
 #import "AddBondAction.h"
-#import "HighlightAction.h"
-#import "SelectAction.h"
 
 @implementation ObjectMap
 
@@ -188,9 +186,6 @@
 		[bondMap highlightBond:bond];
 	}
 	
-	Action *action = [[HighlightAction alloc] init];
-	[actionMap addAction:action];
-	
 
 }
 
@@ -225,9 +220,6 @@
 		Bond *bond = (Bond *) closestObject;
 		[bondMap selectBond:bond];		
 	}
-	
-	Action *action = [[SelectAction alloc] init];
-	[actionMap addAction:action];
 	
 }
 
@@ -280,26 +272,19 @@
 	// dont let the user remove the first bond
 	if([actionMap count] > 3) {
 	
-	Action *lastAction = [actionMap lastAction];
+		Action *lastAction = [actionMap lastAction];
 	
-	if([lastAction isKindOfClass:[AddNodeAction class]]) {
+		if([lastAction isKindOfClass:[AddNodeAction class]]) {
 		
-		NSLog(@"LAST ACTION WAS A NODE ACTION");		
-		[nodeMap removeLastNode];
-	}
-	else if([lastAction isKindOfClass:[AddBondAction class]]) {
-		NSLog(@"LAST ACTION WAS A BOND ACTION");
-		[bondMap removeLastBond];
-		//[nodeMap removeLastNode];		
-	}
-	else if([lastAction isKindOfClass:[SelectAction class]]) {
-		[self clearSelectedObjects];
-	}
-	else if([lastAction isKindOfClass:[HighlightAction class]]) {
-		[self clearHighlightedObjects];
-	}
+			NSLog(@"LAST ACTION WAS A NODE ACTION");		
+			[nodeMap removeLastNode];
+		}
+		else if([lastAction isKindOfClass:[AddBondAction class]]) {
+			NSLog(@"LAST ACTION WAS A BOND ACTION");
+			[bondMap removeLastBond];
+		}
 	
-	[actionMap removeLastAction];
+		[actionMap removeLastAction];
 	}
 		
 }
