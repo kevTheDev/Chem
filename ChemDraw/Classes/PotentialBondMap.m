@@ -22,6 +22,11 @@
 	return self;
 }
 
+- (void) dealloc {
+	[bonds release];
+	[super dealloc];
+}
+
 - (void) addNewPotentialBond:(PotentialBond *)potentialBond {
 	[potentialBond retain];
 	[bonds addObject:potentialBond];

@@ -12,16 +12,19 @@
 
 @implementation NodeMap
 
-- (NodeMap *) init {
-	
+- (NodeMap *) init {	
 	self = [super init];
 	
     if ( self ) {
         nodes = [[NSMutableArray alloc] initWithCapacity:5];
-    }
-	
-    return self;
-	
+    }	
+    return self;	
+}
+
+
+- (void) dealloc {
+	[nodes release];
+	[super dealloc];	
 }
 
 - (void) selectNodeAtIndex:(NSUInteger)index {
@@ -175,9 +178,5 @@
 	[nodes removeLastObject];
 }
 
-- (void) dealloc {
-	[nodes release];
-	[super dealloc];	
-}
 
 @end

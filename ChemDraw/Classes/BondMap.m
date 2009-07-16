@@ -12,16 +12,19 @@
 
 @implementation BondMap
 
-- (BondMap *) init {
-	
+- (BondMap *) init {	
 	self = [super init];
-	
+		
     if ( self ) {
         bonds = [[NSMutableArray alloc] initWithCapacity:5];
-    }
-	
-    return self;
-	
+    }	
+    return self;	
+}
+
+
+- (void)dealloc {
+	[bonds release];
+    [super dealloc];
 }
 
 - (NSUInteger)selectedBondsCount {
@@ -175,9 +178,5 @@
 //	return bond;
 }
 
-- (void)dealloc {
-	[bonds release];
-    [super dealloc];
-}
 
 @end

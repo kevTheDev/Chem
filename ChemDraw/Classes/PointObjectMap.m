@@ -19,9 +19,6 @@
 
 @implementation PointObjectMap
 
-
-
-
 - (PointObjectMap *) init {
 	
 	self = [super init];
@@ -30,11 +27,17 @@
         pointObjects = [[NSMutableArray alloc] initWithCapacity:5];
 		completePointSet = [[NSMutableArray alloc] initWithCapacity:5];
 		compressedPointObjects = [[NSMutableArray alloc] initWithCapacity:5];
-    }
-	
-    return self;
-	
+    }	
+    return self;	
 }
+
+- (void) dealloc {
+	[compressedPointObjects release];
+	[completePointSet release];
+	[pointObjects release];	
+	[super dealloc];
+}
+
 
 - (void) clearPoints {
 	[pointObjects removeAllObjects];
@@ -370,14 +373,6 @@
 
 
 
-- (void) dealloc {
-	[compressedPointObjects release];
-	[completePointSet release];
-	[pointObjects release];
-	
-	[super dealloc];
-
-}
 
 
 @end

@@ -34,21 +34,25 @@ int DRAW_HEIGHT = 10;
 		xCoord = x;
 		yCoord = y;
 		
-		elementType = @"C";
-		
+		elementType = @"C";		
 		displayPotentialBondMap = NO;
 		
 		// set up the potential bond map for when we do need to display it
 		potentialBondMap = [[PotentialBondMap alloc] init];
-
-		
 		connectingBonds = [[BondMap alloc] init];
-		
-				
-		
     }
 	
     return self;
+	
+}
+
+- (void) dealloc {
+	
+	[elementType release];
+	[connectingBonds release];
+	[potentialBondMap release];
+	[elementType release];
+	[super dealloc];
 	
 }
 
@@ -381,13 +385,7 @@ int DRAW_HEIGHT = 10;
 	[potentialBondMap reset];
 }
 
-- (void) dealloc {
-	
-	[potentialBondMap release];
-	[elementType release];
-	[super dealloc];
-	
-}
+
 
 
 @end

@@ -53,6 +53,14 @@
 	
 }
 
+- (void)dealloc {
+	[actionMap release];
+	[nodeMap release];
+	[bondMap release];
+    [super dealloc];
+}
+
+
 - (void) manipulateBond:(Bond *)bond {
 
 	if([bond isSingle])
@@ -302,12 +310,6 @@
 	
 }
 
-- (void)dealloc {
-	[actionMap release];
-	[nodeMap release];
-	[bondMap release];
-    [super dealloc];
-}
 
 
 @end

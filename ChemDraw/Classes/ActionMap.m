@@ -17,10 +17,13 @@
 	
 	if(self) {
 		actions = [[NSMutableArray alloc] init];
-	}
-	
-	return self;
-	
+	}	
+	return self;	
+}
+
+- (void) dealloc {
+	[actions release];
+	[super dealloc];
 }
 
 - (void) addAction:(Action *)action {
