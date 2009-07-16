@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="22"/>
+			<integer value="8"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -39,17 +39,12 @@
 					<object class="IBUIToolbar" id="44421683">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{0, 416}, {320, 44}}</string>
+						<string key="NSFrame">{{0, 256}, {480, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIBarButtonItem" id="611408427">
-								<string key="IBUITitle">Make Double Bond</string>
-								<int key="IBUIStyle">1</int>
-								<reference key="IBUIToolbar" ref="44421683"/>
-							</object>
 							<object class="IBUIBarButtonItem" id="190725965">
 								<string key="IBUITitle">Undo</string>
 								<int key="IBUIStyle">1</int>
@@ -65,15 +60,10 @@
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="44421683"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="723861585">
-								<string key="IBUITitle">Make Single Bond</string>
-								<int key="IBUIStyle">1</int>
-								<reference key="IBUIToolbar" ref="44421683"/>
-							</object>
 						</object>
 					</object>
 				</object>
-				<string key="NSFrameSize">{320, 460}</string>
+				<string key="NSFrameSize">{480, 300}</string>
 				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -98,28 +88,12 @@
 					<int key="connectionID">7</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">makeDoubleBond:</string>
-						<reference key="source" ref="611408427"/>
-						<reference key="destination" ref="774585933"/>
-					</object>
-					<int key="connectionID">10</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">toolBar</string>
 						<reference key="source" ref="774585933"/>
 						<reference key="destination" ref="44421683"/>
 					</object>
 					<int key="connectionID">11</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">doubleBondButton</string>
-						<reference key="source" ref="774585933"/>
-						<reference key="destination" ref="611408427"/>
-					</object>
-					<int key="connectionID">12</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -136,22 +110,6 @@
 						<reference key="destination" ref="774585933"/>
 					</object>
 					<int key="connectionID">15</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">makeSingleBond:</string>
-						<reference key="source" ref="723861585"/>
-						<reference key="destination" ref="774585933"/>
-					</object>
-					<int key="connectionID">17</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">singleBondButton</string>
-						<reference key="source" ref="774585933"/>
-						<reference key="destination" ref="723861585"/>
-					</object>
-					<int key="connectionID">18</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -222,27 +180,15 @@
 						<reference key="object" ref="44421683"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="611408427"/>
 							<reference ref="1055463820"/>
-							<reference ref="723861585"/>
 							<reference ref="1035624878"/>
 							<reference ref="190725965"/>
 						</object>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">9</int>
-						<reference key="object" ref="611408427"/>
-						<reference key="parent" ref="44421683"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">13</int>
 						<reference key="object" ref="1055463820"/>
-						<reference key="parent" ref="44421683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">16</int>
-						<reference key="object" ref="723861585"/>
 						<reference key="parent" ref="44421683"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -264,14 +210,12 @@
 					<string>-1.CustomClassName</string>
 					<string>-2.CustomClassName</string>
 					<string>13.IBPluginDependency</string>
-					<string>16.IBPluginDependency</string>
 					<string>19.IBPluginDependency</string>
 					<string>22.IBPluginDependency</string>
 					<string>6.CustomClassName</string>
 					<string>6.IBEditorWindowLastContentRect</string>
 					<string>6.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
-					<string>9.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -280,10 +224,8 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>DrawView</string>
-					<string>{{886, 270}, {320, 480}}</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{437, 372}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
@@ -330,14 +272,10 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>addNewNode:</string>
 							<string>changeElement:</string>
-							<string>makeDoubleBond:</string>
-							<string>makeSingleBond:</string>
 							<string>undoLastAction:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>

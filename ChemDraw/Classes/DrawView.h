@@ -31,10 +31,6 @@
 	NSArray *standardButtons;
 	
 	IBOutlet UIToolbar *toolBar;
-	
-	IBOutlet UIBarButtonItem *singleBondButton;
-	IBOutlet UIBarButtonItem *doubleBondButton;
-	
 	IBOutlet UIBarButtonItem *addNodeButton;
 	IBOutlet UIBarButtonItem *changeElementButton;
 	
@@ -47,9 +43,6 @@
 }
 
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx;
-
-- (IBAction)makeDoubleBond:(id)sender;
-- (IBAction)makeSingleBond:(id)sender;
 
 - (IBAction)addNewNode:(id)sender;
 - (IBAction)changeElement:(id)sender;

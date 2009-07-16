@@ -52,40 +52,6 @@
 	
 }
 
-- (IBAction)makeDoubleBond:(id)sender {
-	
-	Bond *selectedBond = [objectMap currentlySelectedBond];
-
-	[selectedBond setIsDouble:YES];
-	
-	//[toolBar removeFromSuperview];	
-	[objectMap clearSelectedBonds];
-	
-	[programState setCurrentState:SELECT_OBJECT];
-	
-	[toolBar setItems:standardButtons];
-	[self setNeedsDisplay]; // redraw entire screen
-	
-	
-	
-}
-
-- (IBAction)makeSingleBond:(id)sender {
-	
-	Bond *selectedBond = [objectMap currentlySelectedBond];
-	
-	[selectedBond setIsDouble:NO];
-	
-	//[toolBar removeFromSuperview];	
-	[objectMap clearSelectedBonds];
-	
-	[programState setCurrentState:SELECT_OBJECT];
-	[toolBar setItems:standardButtons];
-	[self setNeedsDisplay]; // redraw entire screen
-	
-	
-	
-}
 
 // find the selected node, and present the potentialBondMap
 - (IBAction)addNewNode:(id)sender {
@@ -205,18 +171,9 @@
 		}
 		else {
 			Bond *bond = (Bond *) selectedObject;
-			
-			NSLog(@"GOT SELECTED BOND");
-			
-			if([bond isDouble]) {
-				NSLog(@"BOND IS DOUBLE");
-				[toolBar setItems:singleBondButtons animated:YES];
-			}
-			else {
-				NSLog(@"BOND IS SINGLE");
-				[toolBar setItems:doubleBondButtons animated:YES];
-			}
-			[programState setCurrentState:TOOLBAR_MODE];
+			[objectMap manipulateBond:bond];
+
+			[programState setCurrentState:SELECT_OBJECT];
 			
 		}
 		
@@ -314,7 +271,6 @@
 	if([singleBondButtons count] == 0) {
 		
 		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:singleBondButton];
 		[tempArray addObject:undoButton];
 		
 		singleBondButtons = [[NSArray alloc] initWithArray:tempArray];
@@ -326,7 +282,6 @@
 	if([doubleBondButtons count] == 0) {
 		
 		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:doubleBondButton];
 		[tempArray addObject:undoButton];
 		
 		doubleBondButtons = [[NSArray alloc] initWithArray:tempArray];

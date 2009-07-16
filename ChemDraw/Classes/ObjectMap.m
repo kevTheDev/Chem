@@ -55,6 +55,15 @@
 	
 }
 
+- (void) manipulateBond:(Bond *)bond {
+	if([bond isDouble])
+		[bond setIsDouble:NO];
+	else
+		[bond setIsDouble:YES];
+		
+	[self clearSelectedBonds];
+}
+
 - (NSUInteger)nodesCount {
 	return [nodeMap count];
 }

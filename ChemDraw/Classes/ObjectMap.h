@@ -25,6 +25,8 @@
 	
 }
 
+- (void) manipulateBond:(Bond *)bond;
+
 - (BOOL) isEmpty;
 - (void) addNode:(Node *)node;
 - (void) addBond:(Bond *)bond;
