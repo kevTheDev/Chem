@@ -29,14 +29,18 @@
     
 	
 	//scrollView.contentSize = CGSizeMake([[[viewController view] frame] width], 960);
-	CGRect frameRect = viewController.view.frame;
-	scrollView.contentSize = frameRect.size;
+	CGSize frameRect = CGSizeMake(640, 960);
+	scrollView.contentSize = frameRect;
 	scrollView.maximumZoomScale = 4.0;
 	scrollView.minimumZoomScale = 0.75;
 	scrollView.clipsToBounds = YES;
 	scrollView.delegate = self;
+	scrollView.bounces = YES;
 	//[scrollView addSubview:drawView];
 	[scrollView addSubview:viewController.view];
+	
+	CGRect centerRect = CGRectMake(320, 480, 320, 480);
+	[scrollView zoomToRect:centerRect animated:YES];
 	
 	[window makeKeyAndVisible];
 	

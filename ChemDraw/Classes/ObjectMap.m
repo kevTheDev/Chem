@@ -42,8 +42,8 @@
 		nodeMap = [[NodeMap alloc] init];
         bondMap = [[BondMap alloc] init];
 		
-		Node *firstNode = [[Node alloc] initWithXCoord:100 yCoord:200];
-		Node *secondNode = [[Node alloc] initWithXCoord:200 yCoord:200];
+		Node *firstNode = [[Node alloc] initWithXCoord:320 yCoord:480];
+		Node *secondNode = [[Node alloc] initWithXCoord:420 yCoord:480];
 		
 		Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
 		
