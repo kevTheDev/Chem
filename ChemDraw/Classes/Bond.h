@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 //#import <ApplicationServices/ApplicationServices.h>
 
+# define SINGLE_BOND 1
+# define DOUBLE_BOND 2
+# define TRIPLE_BOND 3
+
+
 @class Node;
 
 @interface Bond : NSObject {
@@ -21,7 +26,7 @@
 	BOOL unconfirmedHighlight;
 	BOOL confirmedHighlight;
 	
-	BOOL isDouble;
+	int numberOfParts;
 }
 
 - (Bond *) initWithNodeA:(Node *)nodeA nodeB:(Node *)nodeB;
@@ -47,6 +52,14 @@
 - (BOOL) hasNodeToSouthEastOfNode:(Node *)node;
 - (BOOL) hasNodeToSouthWestOfNode:(Node *)node;
 
+- (BOOL) isSingle;
+- (BOOL) isDouble;
+- (BOOL) isTriple;
+
+- (void) makeSingle;
+- (void) makeDouble;
+- (void) makeTriple;
+
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;
 @property (nonatomic) CGPoint centerPoint;
@@ -55,7 +68,5 @@
 
 @property (nonatomic) BOOL unconfirmedHighlight;
 @property (nonatomic) BOOL confirmedHighlight;
-
-@property (nonatomic) BOOL isDouble;
 
 @end

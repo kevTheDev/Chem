@@ -56,10 +56,13 @@
 }
 
 - (void) manipulateBond:(Bond *)bond {
-	if([bond isDouble])
-		[bond setIsDouble:NO];
+
+	if([bond isSingle])
+		[bond makeDouble];
+	else if([bond isDouble])
+		[bond makeTriple];
 	else
-		[bond setIsDouble:YES];
+		[bond makeSingle];
 		
 	[self clearSelectedBonds];
 }

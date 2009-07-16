@@ -21,14 +21,14 @@
 @synthesize unconfirmedHighlight;
 @synthesize confirmedHighlight;
 
-@synthesize isDouble;
-
 int LINE_DRAW_WIDTH = 2.0;
 
 - (Bond *) initWithNodeA:(Node *)firstNode nodeB:(Node *)secondNode {
 	self = [super init];
 	
 	if ( self ) {
+	
+		numberOfParts = SINGLE_BOND;
 		
 		nodeA = firstNode;
 		nodeB = secondNode;
@@ -173,6 +173,35 @@ int LINE_DRAW_WIDTH = 2.0;
 		
 		}
 	}
+	else if([self isTriple]) {
+		float xDistance = abs(nodeAPoint.x - nodeBPoint.x);
+		float yDistance = abs(nodeAPoint.y - nodeBPoint.y);
+		
+		if(xDistance < yDistance) {
+			//NSLog(@"DO DOUBLE LINE X");
+			CGPathMoveToPoint(path, NULL, nodeAPoint.x + 0, nodeAPoint.y + 5.0);
+			CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 0, nodeBPoint.y + 5.0);
+			
+			CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5, nodeAPoint.y + 5.0);
+			CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5, nodeBPoint.y + 5.0);
+			
+			CGPathMoveToPoint(path, NULL, nodeAPoint.x + 10.0, nodeAPoint.y + 5.0);
+			CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 10.0, nodeBPoint.y + 5.0);
+		
+		}
+		else {
+			//NSLog(@"DO DOUBLE LINE Y");
+			CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 0);
+			CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 0);
+		
+			CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 5.0);
+			CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 5.0);
+			
+			CGPathMoveToPoint(path, NULL, nodeAPoint.x + 5.0, nodeAPoint.y + 10.0);
+			CGPathAddLineToPoint(path, NULL, nodeBPoint.x + 5.0, nodeBPoint.y + 10.0);
+		
+		}
+	}
 	else
 	{
 		//NSLog(@"DO REGULAR LINE");
@@ -235,6 +264,31 @@ int LINE_DRAW_WIDTH = 2.0;
 - (BOOL) hasNodeToSouthWestOfNode:(Node *)node {
 	return [nodeA isSouthWestOf:node] || [nodeB isSouthWestOf:node];
 }
+
+- (BOOL) isSingle {
+	return numberOfParts == SINGLE_BOND;
+}
+
+- (BOOL) isDouble {
+	return numberOfParts == DOUBLE_BOND;
+}
+
+- (BOOL) isTriple {
+	return numberOfParts == TRIPLE_BOND;
+}
+
+- (void) makeSingle {
+	numberOfParts = SINGLE_BOND;
+}
+
+- (void) makeDouble  {
+	numberOfParts = DOUBLE_BOND;
+}
+
+- (void) makeTriple  {
+	numberOfParts = TRIPLE_BOND;
+}
+
 
 - (void) dealloc {
 	
