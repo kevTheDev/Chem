@@ -56,6 +56,19 @@
     // Release anything that's not essential, such as cached data
 }
 
+- (IBAction)undoLastAction:(id)sender {
+	[[self view] undoLastAction];
+}
+
+- (IBAction)changeElement:(id)sender {
+	[[self view] changeElement:sender];
+	
+}
+
+- (IBAction) cancel {
+	[[self view] cancel];
+}
+
 
 - (void)dealloc {
     [super dealloc];

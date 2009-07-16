@@ -35,12 +35,12 @@
 		gesturePoints = [[PointObjectMap alloc] init];
 		NSLog(@"DRAW VIEW INIT 4");
 		
-		toolBar = [[UIToolbar alloc] init];
+		//toolBar = [[UIToolbar alloc] init];
 		
-		changeElementButton = [[UIBarButtonItem alloc] init];
+		//changeElementButton = [[UIBarButtonItem alloc] init];
 	
-		undoButton = [[UIBarButtonItem alloc] init];
-		cancelButton = [[UIBarButtonItem alloc] init];
+		//undoButton = [[UIBarButtonItem alloc] init];
+		//cancelButton = [[UIBarButtonItem alloc] init];
 
 		
 		

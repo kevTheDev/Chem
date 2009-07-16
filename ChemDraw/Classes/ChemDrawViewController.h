@@ -8,13 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-//@class DrawView;
 
 @interface ChemDrawViewController : UIViewController {
-//	IBOutlet DrawView *drawView;
+	IBOutlet UIToolbar *toolBar;
+	IBOutlet UIBarButtonItem *changeElementButton;
+	
+	IBOutlet UIBarButtonItem *undoButton;
+	IBOutlet UIBarButtonItem *cancelButton;
 }
 
-//@property (nonatomic, retain) IBOutlet DrawView *drawView;
+- (IBAction)changeElement:(id)sender;
+
+- (IBAction)undoLastAction:(id)sender;
+
+- (IBAction) cancel;
+
 
 @end
 
