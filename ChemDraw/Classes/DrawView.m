@@ -35,13 +35,33 @@
     return self;
 }
 
+
+// whenever an action is completed we do the following
+//
+// clear all highlighted objects
+// clear all selected objects
+// reset any potential bond maps
+// reset the toolbar to the standard buttons
+// refresh the screen
+-(void) actionCompleted {
+
+	if([objectMap selectedNodesCount] > 0) {
+		Node *selectedNode = [objectMap currentlySelectedNode];
+		[selectedNode clearPotentialBondMap];
+	}	
+
+	[objectMap clearSelectedObjects];
+	[objectMap clearHighlightedObjects];
+	
+	[toolBar setItems:standardButtons];	
+	[programState setCurrentState:SELECT_OBJECT];
+	
+	[self setNeedsDisplay]; 
+}
+
 - (IBAction)undoLastAction:(id)sender {
 	[objectMap undoLastAction];
-	[programState setCurrentState:SELECT_OBJECT];
-	[toolBar setItems:standardButtons];
-	NSLog(@"UNDO LAST ACTION");
-	
-	[self setNeedsDisplay]; // redraw entire screen
+	[self actionCompleted];
 }
 
 - (IBAction)changeElement:(id)sender {
@@ -52,22 +72,8 @@
 	
 }
 
-
-// find the selected node, and present the potentialBondMap
-- (IBAction)addNewNode:(id)sender {
-	
-	[objectMap renderPotentialBondMap];
-	[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
-	[toolBar setItems:standardButtons];
-	[self setNeedsDisplay]; // redraw entire screen
-}
-
 - (IBAction) cancel {
-	[objectMap clearHighlightedObjects];
-	[objectMap clearSelectedObjects];
-	[programState setCurrentState:SELECT_OBJECT];
-	[toolBar setItems:standardButtons];
-	[self setNeedsDisplay];
+	[self actionCompleted];
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -144,6 +150,7 @@
 	if([programState currentState] == SELECT_OBJECT) {
 
 		[objectMap highlightClosestObjectToPoint:pos];
+		[toolBar setItems:highlightButtons];
 		[programState setCurrentState:MANIPULATE_OBJECT];
 			
 	}
@@ -165,23 +172,20 @@
 				Bond *bond = [[Bond alloc] initWithNodeA:(Node *)selectedObject nodeB:(Node *)highlightedObject];
 				[objectMap addBond:bond];
 				
-				[programState setCurrentState:SELECT_OBJECT];
-				[objectMap clearSelectedObjects];
-				[objectMap clearHighlightedObjects];
-				[(Node *)selectedObject clearPotentialBondMap];
+				[self actionCompleted];
 				
 			}
 			else {
 				[toolBar setItems:nodeButtons animated:YES];
-				
-				[programState setCurrentState:TOOLBAR_MODE];
+				[objectMap renderPotentialBondMap];
+				[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
 			}
 		}
 		else {
 			Bond *bond = (Bond *) selectedObject;
 			[objectMap manipulateBond:bond];
 
-			[programState setCurrentState:SELECT_OBJECT];
+			[self actionCompleted];
 			
 		}
 		
@@ -209,11 +213,7 @@
 		Bond *bond = [[Bond alloc] initWithNodeA:currentlySelectedNode nodeB:secondNode];
 		[objectMap addBond:bond];
 		
-		[objectMap clearSelectedNodes];
-		[currentlySelectedNode clearPotentialBondMap];
-		
-		[programState setCurrentState:SELECT_OBJECT];
-		
+		[self actionCompleted];
 	}
 	else if([programState currentState] == GESTURE_MODE) {
 		PointObject *pointObject = [PointObject alloc];
@@ -276,35 +276,12 @@
 
 
 - (void) setupToolbarButtonArrays {
-	// init toolbar buttons arrays
-	if([singleBondButtons count] == 0) {
 		
-		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:undoButton];
-		
-		singleBondButtons = [[NSArray alloc] initWithArray:tempArray];
-		
-		[tempArray release];
-		
-	}
-	
-	if([doubleBondButtons count] == 0) {
-		
-		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:undoButton];
-		
-		doubleBondButtons = [[NSArray alloc] initWithArray:tempArray];
-		
-		[tempArray release];
-		
-	}
 	
 	if([nodeButtons count] == 0) {
 		
 		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:addNodeButton];
 		[tempArray addObject:changeElementButton];
-		[tempArray addObject:undoButton];
 		[tempArray addObject:cancelButton];
 		
 		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
@@ -316,9 +293,17 @@
 	if([standardButtons count] == 0) {
 		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 		[tempArray addObject:undoButton];
-		[tempArray addObject:cancelButton];
 		
 		standardButtons = [[NSArray alloc] initWithArray:tempArray];
+		
+		[tempArray release];
+	}
+	
+	if([highlightButtons count] == 0) {
+		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+		[tempArray addObject:cancelButton];
+		
+		highlightButtons = [[NSArray alloc] initWithArray:tempArray];
 		
 		[tempArray release];
 	}

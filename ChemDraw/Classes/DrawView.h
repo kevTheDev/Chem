@@ -25,13 +25,11 @@
 	ProgramState *programState;
 	ObjectMap *objectMap;
 	
-	NSArray *singleBondButtons;
-	NSArray *doubleBondButtons;
+	NSArray *highlightButtons;
 	NSArray *nodeButtons;
 	NSArray *standardButtons;
 	
 	IBOutlet UIToolbar *toolBar;
-	IBOutlet UIBarButtonItem *addNodeButton;
 	IBOutlet UIBarButtonItem *changeElementButton;
 	
 	IBOutlet UIBarButtonItem *undoButton;
@@ -43,9 +41,10 @@
 	
 }
 
+-(void) actionCompleted;
+
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx;
 
-- (IBAction)addNewNode:(id)sender;
 - (IBAction)changeElement:(id)sender;
 
 - (IBAction)undoLastAction:(id)sender;
