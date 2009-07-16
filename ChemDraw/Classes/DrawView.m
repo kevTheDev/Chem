@@ -62,6 +62,13 @@
 	[self setNeedsDisplay]; // redraw entire screen
 }
 
+- (IBAction) cancel {
+	[objectMap clearHighlightedObjects];
+	[objectMap clearSelectedObjects];
+	[programState setCurrentState:SELECT_OBJECT];
+	[toolBar setItems:standardButtons];
+	[self setNeedsDisplay];
+}
 
 - (void)drawRect:(CGRect)rect {
 
@@ -296,6 +303,7 @@
 		[tempArray addObject:addNodeButton];
 		[tempArray addObject:changeElementButton];
 		[tempArray addObject:undoButton];
+		[tempArray addObject:cancelButton];
 		
 		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
 		
@@ -306,6 +314,7 @@
 	if([standardButtons count] == 0) {
 		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
 		[tempArray addObject:undoButton];
+		[tempArray addObject:cancelButton];
 		
 		standardButtons = [[NSArray alloc] initWithArray:tempArray];
 		

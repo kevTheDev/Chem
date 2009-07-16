@@ -35,6 +35,7 @@
 	IBOutlet UIBarButtonItem *changeElementButton;
 	
 	IBOutlet UIBarButtonItem *undoButton;
+	IBOutlet UIBarButtonItem *cancelButton;
 	
 	PointObjectMap *gesturePoints;
 	
@@ -48,6 +49,8 @@
 - (IBAction)changeElement:(id)sender;
 
 - (IBAction)undoLastAction:(id)sender;
+
+- (IBAction) cancel;
 
 - (void) setupToolbarButtonArrays;
 
