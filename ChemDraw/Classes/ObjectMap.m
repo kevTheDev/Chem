@@ -28,6 +28,9 @@
 @synthesize nodeMap;
 @synthesize bondMap;
 
+# define BOND_LENGTH 100
+ 
+
 - (ObjectMap *) init {
 	
 	self = [super init];
@@ -39,7 +42,7 @@
         bondMap = [[BondMap alloc] init];
 		
 		Node *firstNode = [[Node alloc] initWithXCoord:100 yCoord:200];
-		Node *secondNode = [[Node alloc] initWithXCoord:150 yCoord:200];
+		Node *secondNode = [[Node alloc] initWithXCoord:200 yCoord:200];
 		
 		Bond *bond = [[Bond alloc] initWithNodeA:firstNode nodeB:secondNode];
 		

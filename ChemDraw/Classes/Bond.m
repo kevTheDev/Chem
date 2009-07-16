@@ -220,6 +220,22 @@ int LINE_DRAW_WIDTH = 2.0;
 	return [nodeA isWestOf:node] || [nodeB isWestOf:node];
 }
 
+- (BOOL) hasNodeToNorthEastOfNode:(Node *)node {
+	return [nodeA isNorthEastOf:node] || [nodeB isNorthEastOf:node];
+}
+
+- (BOOL) hasNodeToNorthWestOfNode:(Node *)node {
+	return [nodeA isNorthWestOf:node] || [nodeB isNorthWestOf:node];
+}
+
+- (BOOL) hasNodeToSouthEastOfNode:(Node *)node {
+	return [nodeA isSouthEastOf:node] || [nodeB isSouthEastOf:node];
+}
+
+- (BOOL) hasNodeToSouthWestOfNode:(Node *)node {
+	return [nodeA isSouthWestOf:node] || [nodeB isSouthWestOf:node];
+}
+
 - (void) dealloc {
 	
 	[nodeA release];

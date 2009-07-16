@@ -55,10 +55,20 @@
 - (BOOL) hasBondToTheSouth;
 - (BOOL) hasBondToTheWest;
 
+- (BOOL) hasBondToNorthEast;
+- (BOOL) hasBondToNorthWest;
+- (BOOL) hasBondToSouthEast;
+- (BOOL) hasBondToSouthWest;
+
 - (BOOL) isNorthOf:(Node *)node;
 - (BOOL) isSouthOf:(Node *)node;
 - (BOOL) isEastOf:(Node *)node;
 - (BOOL) isWestOf:(Node *)node;
+
+- (BOOL) isNorthEastOf:(Node *)node;
+- (BOOL) isSouthEastOf:(Node *)node;
+- (BOOL) isNorthWestOf:(Node *)node;
+- (BOOL) isSouthWestOf:(Node *)node;
 
 - (void) renderPotentialBondMap:(CGContextRef)ctx;
 

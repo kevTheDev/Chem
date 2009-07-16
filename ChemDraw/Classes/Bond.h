@@ -42,6 +42,11 @@
 - (BOOL) hasNodeToEastOfNode:(Node *)node;
 - (BOOL) hasNodeToWestOfNode:(Node *)node;
 
+- (BOOL) hasNodeToNorthEastOfNode:(Node *)node;
+- (BOOL) hasNodeToNorthWestOfNode:(Node *)node;
+- (BOOL) hasNodeToSouthEastOfNode:(Node *)node;
+- (BOOL) hasNodeToSouthWestOfNode:(Node *)node;
+
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;
 @property (nonatomic) CGPoint centerPoint;

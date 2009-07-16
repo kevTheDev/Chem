@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+# define NEW_BOND_Y_DIFFERENCE 86.6
+# define NEW_BOND_X_DIFFERENCE 50
+
 @class PotentialBond;
 
 @interface PotentialBondMap : NSObject {
