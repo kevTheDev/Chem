@@ -325,8 +325,7 @@ int DRAW_HEIGHT = 10;
 			[potentialBondMap addNewPotentialBond:southEastBond];
 		}
 		
-		if([self hasBondToNorthEast]) {
-			
+		if([self hasBondToNorthEast]) {			
 			[potentialBondMap addNewPotentialBond:westBond];			
 			[potentialBondMap addNewPotentialBond:southBond];
 		}
@@ -378,6 +377,9 @@ int DRAW_HEIGHT = 10;
 
 }
 			
+- (void) clearPotentialBondMap {
+	[potentialBondMap reset];
+}
 
 - (void) dealloc {
 	

@@ -168,6 +168,7 @@
 				[programState setCurrentState:SELECT_OBJECT];
 				[objectMap clearSelectedObjects];
 				[objectMap clearHighlightedObjects];
+				[(Node *)selectedObject clearPotentialBondMap];
 				
 			}
 			else {
@@ -209,6 +210,7 @@
 		[objectMap addBond:bond];
 		
 		[objectMap clearSelectedNodes];
+		[currentlySelectedNode clearPotentialBondMap];
 		
 		[programState setCurrentState:SELECT_OBJECT];
 		

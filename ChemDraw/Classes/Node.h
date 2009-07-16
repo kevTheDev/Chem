@@ -99,6 +99,7 @@
 - (BOOL) isSouthWestOf:(Node *)node;
 
 - (void) renderPotentialBondMap:(CGContextRef)ctx;
+- (void) clearPotentialBondMap;
 
 @property (nonatomic) CGFloat xCoord;
 @property (nonatomic) CGFloat yCoord;
