@@ -10,7 +10,7 @@
 
 @implementation ChemDrawViewController
 
-
+//@synthesize drawView;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -29,12 +29,17 @@
 */
 
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	NSLog(@"VIEW DID LOAD");
     [super viewDidLoad];
+	CGRect frame = CGRectMake(0, 0, 640, 960);
+	[[self view] initWithFrame:frame];
+//	[view initWithFrame:frame];
+	[[self view] setNeedsDisplay];
 }
-*/
+
 
 
 /*

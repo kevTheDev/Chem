@@ -25,10 +25,30 @@
 
 // this init method never seems to really get called
 - (id)initWithFrame:(CGRect)frame {
-		
+		NSLog(@"DRAW VIEW INIT 1");
     if (self = [super initWithFrame:frame]) {
         // Initialization code
+		NSLog(@"DRAW VIEW INIT 2");
+		programState = [[ProgramState alloc] init];
+		objectMap = [[ObjectMap alloc] init];
+		NSLog(@"DRAW VIEW INIT 3");
+		gesturePoints = [[PointObjectMap alloc] init];
+		NSLog(@"DRAW VIEW INIT 4");
 		
+		toolBar = [[UIToolbar alloc] init];
+		
+		changeElementButton = [[UIBarButtonItem alloc] init];
+	
+		undoButton = [[UIBarButtonItem alloc] init];
+		cancelButton = [[UIBarButtonItem alloc] init];
+
+		
+		
+		NSLog(@"DRAW VIEW INIT 5");
+		[self setupToolbarButtonArrays];
+		NSLog(@"DRAW VIEW INIT 6");
+		
+		//[self setNeedsDisplay];
     }
 	
 		
@@ -78,14 +98,14 @@
 
 - (void)drawRect:(CGRect)rect {
 
-
+	NSLog(@"DRAW VIEW drawRect");
 	
-	if(programState == NULL) {
-		programState = [[ProgramState alloc] init];
-		objectMap = [[ObjectMap alloc] init];
-		[self setupToolbarButtonArrays];
-		gesturePoints = [[PointObjectMap alloc] init];
-	}
+	//if(programState == NULL) {
+//		programState = [[ProgramState alloc] init];
+//		objectMap = [[ObjectMap alloc] init];
+//		[self setupToolbarButtonArrays];
+//		gesturePoints = [[PointObjectMap alloc] init];
+//	}
 
 	// got the graphics context
 	CGContextRef ctx = UIGraphicsGetCurrentContext();

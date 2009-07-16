@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChemDrawViewController : UIViewController {
+//@class DrawView;
 
+@interface ChemDrawViewController : UIViewController {
+//	IBOutlet DrawView *drawView;
 }
+
+//@property (nonatomic, retain) IBOutlet DrawView *drawView;
 
 @end
 

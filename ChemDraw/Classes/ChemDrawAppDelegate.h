@@ -9,14 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @class ChemDrawViewController;
+//@class DrawView;
 
-@interface ChemDrawAppDelegate : NSObject <UIApplicationDelegate> {
+@interface ChemDrawAppDelegate : NSObject <UIApplicationDelegate, UIScrollViewDelegate> {
     UIWindow *window;
-    ChemDrawViewController *viewController;
+    IBOutlet ChemDrawViewController *viewController;
+	IBOutlet UIScrollView *scrollView;
+	//DrawView *drawView;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet ChemDrawViewController *viewController;
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+//@property (nonatomic, retain) IBOutlet DrawView *drawView;
 
 @end
 
