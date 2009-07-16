@@ -294,35 +294,85 @@ int DRAW_HEIGHT = 10;
 		
 		CGPoint startPoint = CGPointMake(xCoord, yCoord);
 		
+		CGPoint southWestPoint = CGPointMake(xCoord + SOUTH_WEST_X, yCoord + SOUTH_WEST_Y);
+		PotentialBond *southWestBond = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:southWestPoint];
+		
+		CGPoint southEastPoint = CGPointMake(xCoord + SOUTH_EAST_X, yCoord + SOUTH_EAST_Y);   
+		PotentialBond *southEastBond = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:southEastPoint];
+		
+		CGPoint westPoint = CGPointMake(xCoord + WEST_X, yCoord + WEST_Y);    
+		PotentialBond *westBond = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:westPoint];
+
+		CGPoint southPoint = CGPointMake(xCoord + SOUTH_X, yCoord + SOUTH_Y); 
+		PotentialBond *southBond = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:southPoint];
+		
+		CGPoint northWestPoint = CGPointMake(xCoord + NORTH_WEST_X, yCoord + NORTH_WEST_Y);
+		PotentialBond *northWestBond = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:northWestPoint];
+
+		CGPoint northPoint = CGPointMake(xCoord + NORTH_X, yCoord + NORTH_Y); 
+		PotentialBond *northBond = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:northPoint];
+		
+		CGPoint northEastPoint = CGPointMake(xCoord + NORTH_EAST_X, yCoord + NORTH_EAST_Y); 
+		PotentialBond *northEastBond = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:northEastPoint];
+		
+		CGPoint eastPoint = CGPointMake(xCoord + EAST_X, yCoord + EAST_Y);    // north of node
+		PotentialBond *eastBond = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:eastPoint];
+		
 		// every node must be initialized with four potential bonds to start with
 		// as carbon nodes can have up to four bonds
-		
-		if([self hasBondToNorthEast] == NO) {
-			CGPoint bondOnePoint = CGPointMake(xCoord + NEW_BOND_X_DIFFERENCE, yCoord - NEW_BOND_Y_DIFFERENCE);    // north of node
-			PotentialBond *bondOne = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondOnePoint];
-			[potentialBondMap addPotentialBond:bondOne];
+		if([self hasBondToTheNorth]) {			
+			[potentialBondMap addNewPotentialBond:southWestBond];			
+			[potentialBondMap addNewPotentialBond:southEastBond];
 		}
 		
-		if([self hasBondToNorthWest] == NO) {
-			CGPoint bondTwoPoint = CGPointMake(xCoord - NEW_BOND_X_DIFFERENCE, yCoord - NEW_BOND_Y_DIFFERENCE);    // east of node
-			PotentialBond *bondTwo = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondTwoPoint];
-			[potentialBondMap addPotentialBond:bondTwo];
-		
+		if([self hasBondToNorthEast]) {
+			
+			[potentialBondMap addNewPotentialBond:westBond];			
+			[potentialBondMap addNewPotentialBond:southBond];
 		}
-		
-		if([self hasBondToSouthEast] == NO) {
-			CGPoint bondThreePoint = CGPointMake(xCoord + NEW_BOND_X_DIFFERENCE, yCoord + NEW_BOND_Y_DIFFERENCE);  // south of node
-			PotentialBond *bondThree = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondThreePoint];
-			[potentialBondMap addPotentialBond:bondThree];
-		}
-		
-		if([self hasBondToSouthWest] == NO) {
-			CGPoint bondFourPoint = CGPointMake(xCoord - NEW_BOND_X_DIFFERENCE, yCoord + NEW_BOND_Y_DIFFERENCE);   // west of node
-			PotentialBond *bondFour = [[PotentialBond alloc] initWithStartPoint:startPoint endPoint:bondFourPoint];
-			[potentialBondMap addPotentialBond:bondFour];
-		}
-		
 
+		
+		if([self hasBondToTheEast]) {
+			[potentialBondMap addNewPotentialBond:southWestBond];
+			[potentialBondMap addNewPotentialBond:northWestBond];
+		}
+		
+		if([self hasBondToSouthEast]) {
+			[potentialBondMap addNewPotentialBond:westBond];
+			[potentialBondMap addNewPotentialBond:northBond];
+		}
+		
+		if([self hasBondToTheSouth]) {
+			
+			[potentialBondMap addNewPotentialBond:northEastBond];
+			[potentialBondMap addNewPotentialBond:northWestBond];
+		}
+		
+		if([self hasBondToSouthWest]) {
+			[potentialBondMap addNewPotentialBond:northBond];			
+			[potentialBondMap addNewPotentialBond:eastBond];
+		}		
+		
+		if([self hasBondToTheWest]) { // if bond to the west then draw to NE and SE
+			[potentialBondMap addNewPotentialBond:northEastBond];			
+			[potentialBondMap addNewPotentialBond:southEastBond];
+
+		}		
+		
+		if([self hasBondToNorthWest]) {
+			[potentialBondMap addNewPotentialBond:southBond];			
+			[potentialBondMap addNewPotentialBond:eastBond];		
+		}
+		
+		[northBond release];
+		[eastBond release];
+		[southBond release];
+		[westBond release];
+		
+		[northEastBond release];
+		[northWestBond release];
+		[southEastBond release];
+		[southWestBond release];
 		
 		[potentialBondMap renderWithContext:ctx];
 

@@ -16,6 +16,34 @@
 @class Bond;
 @class BondMap;
 
+
+# define NEW_BOND_Y_DIFFERENCE 86.6
+# define NEW_BOND_X_DIFFERENCE 50
+
+# define NORTH_X 0
+# define NORTH_Y -100
+
+# define NORTH_EAST_X 50
+# define NORTH_EAST_Y -86.6
+
+# define EAST_X 100
+# define EAST_Y 0
+
+# define SOUTH_EAST_X 50
+# define SOUTH_EAST_Y 86.6
+
+# define SOUTH_X 0
+# define SOUTH_Y 100
+
+# define SOUTH_WEST_X -50
+# define SOUTH_WEST_Y 86.6
+
+# define WEST_X -100
+# define WEST_Y 0
+
+# define NORTH_WEST_X -50
+# define NORTH_WEST_Y -86.6
+
 @interface Node : NSObject {
 	CGFloat xCoord;
 	CGFloat yCoord;

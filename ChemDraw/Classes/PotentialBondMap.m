@@ -22,7 +22,8 @@
 	return self;
 }
 
-- (void) addPotentialBond:(PotentialBond *)potentialBond {
+- (void) addNewPotentialBond:(PotentialBond *)potentialBond {
+	[potentialBond retain];
 	[bonds addObject:potentialBond];
 }
 
