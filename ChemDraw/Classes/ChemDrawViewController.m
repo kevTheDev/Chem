@@ -11,8 +11,8 @@
 
 @implementation ChemDrawViewController
 
-//@synthesize drawView;
-//@synthesize scrollView;
+@synthesize drawView;
+//@synthesize view;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -36,12 +36,40 @@
 - (void)viewDidLoad {
 	NSLog(@"VIEW DID LOAD");
     [super viewDidLoad];
-	[[self view] initWithFrame:CGRectMake(0, 0, 320, 480)];
+	//drawView = [drawView initWithFrame:CGRectMake(0, 0, 640, 960)];
+	drawView = [[DrawView alloc] initWithFrame:CGRectMake(0, 0, 640, 960)];
 	
-	[[self view] setNeedsDisplay];
+	UIScrollView *scrollView = (UIScrollView *) [self view];
+	
+	CGSize frameRect = CGSizeMake(640, 960);
+	//[[self view] setContentSize:frameRect];
+	scrollView.contentSize = frameRect;
+	
+	scrollView.maximumZoomScale = 4.0;
+	scrollView.minimumZoomScale = 0.75;
+	scrollView.clipsToBounds = YES;
+	scrollView.delegate = self;
+	scrollView.bounces = YES;
+	[scrollView addSubview:drawView];
+ 
+	//CGRect centerRect = CGRectMake(320, 480, 320, 480);
+	//[scrollView zoomToRect:centerRect animated:YES];
+	
+	//[drawView setNeedsDisplay];
+	
+//	[[self view] initWithFrame:CGRectMake(0, 0, 320, 480)];
+	
+//	[[self view] setNeedsDisplay];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	[drawView touchesBegan:touches withEvent:event];
+}
 
+ - (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView {
+  return drawView;
+  //return drawView;
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.

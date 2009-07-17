@@ -10,15 +10,15 @@
 
 @class DrawView;
 
-@interface ChemDrawViewController : UIViewController {
+@interface ChemDrawViewController : UIViewController <UIScrollViewDelegate> {
 	IBOutlet UIToolbar *toolBar;
 	IBOutlet UIBarButtonItem *changeElementButton;
 	
 	IBOutlet UIBarButtonItem *undoButton;
 	IBOutlet UIBarButtonItem *cancelButton;
 	
-//	IBOutlet UIScrollView *scrollView;
-	IBOutlet DrawView *view;
+//	IBOutlet UIScrollView *view;
+	IBOutlet DrawView *drawView;
 }
 
 //- (IBAction)changeElement:(id)sender;
@@ -27,8 +27,8 @@
 
 //- (IBAction) cancel;
 
-//@property (nonatomic, retain) IBOutlet DrawView *drawView;
-//@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet DrawView *drawView;
+//@property (nonatomic, retain) IBOutlet UIScrollView *view;
 
 @end
 
