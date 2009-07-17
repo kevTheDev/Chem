@@ -22,6 +22,7 @@
 
 - (IBAction)changeElement:(id)sender;
 - (void) setupToolBar;
+- (void) updateToolBar;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet ChemDrawViewController *drawViewController;

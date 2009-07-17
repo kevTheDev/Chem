@@ -56,29 +56,32 @@
 		
 		[self setToolbarItems:standardButtons animated:YES];
 		
-		//[drawView addObserver:self forKeyPath:@"programState" options:0 context:nil];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(objectHighlighted:) name:@"highlightObjectNotification" object:nil];
-
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionCompleted:) name:@"actionCompleted" object:nil];
 
 	}
     return self;
 }
 
+- (void)actionCompleted:(NSNotification *)notification {
+	NSLog(@"actionCompleted");
+	[self setToolbarItems:standardButtons animated:YES];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"toolBarItemsChangedNotification" object:self userInfo:nil];
+}
+
 - (void)objectHighlighted:(NSNotification *)notification {
 	NSLog(@"highlightObjectNotification");
+	[self setToolbarItems:highlightButtons animated:YES];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"toolBarItemsChangedNotification" object:self userInfo:nil];
 }
-//
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-//{
-//	NSLog(@"PROGRAM STATE CHANGED");
-//}
 
-- (void) cancel_clicked {
+
+- (void) cancel_clicked:(id)sender {
 	NSLog(@"cancel_clicked");
 	[drawView cancel];
 }
 
-- (void) change_element_clicked {
+- (void) change_element_clicked:(id)sender {
 	NSLog(@"change_element_clicked");
 }
 

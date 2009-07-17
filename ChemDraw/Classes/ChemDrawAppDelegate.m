@@ -33,10 +33,16 @@
 	
 	[window makeKeyAndVisible];
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateToolBar:) name:@"toolBarItemsChangedNotification" object:nil];
+	
 	NSLog(@"END OF APP LAUNCH");
 	
 }
 
+- (void) updateToolBar:(NSNotification *)notification {
+	NSLog(@"updateToolBar");
+	[toolBar setItems:[drawViewController toolbarItems]];
+}
 
 - (IBAction)changeElement:(id)sender {
 	NSLog(@"CHANGE ELEMENT CLICKED");	

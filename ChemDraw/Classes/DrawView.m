@@ -63,7 +63,7 @@
 	
 	//[toolBar setItems:standardButtons];	
 	[programState setCurrentState:SELECT_OBJECT];
-	
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"actionCompleted" object:self userInfo:nil];
 	[self setNeedsDisplay]; 
 }
 
@@ -128,9 +128,7 @@
 
 - (void) highlightTouchedObject:(CGPoint)pos {
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"highlightObjectNotification" object:self userInfo:nil];
-
 	[objectMap highlightClosestObjectToPoint:pos];
-	//[toolBar setItems:highlightButtons];
 	[programState setCurrentState:MANIPULATE_OBJECT];
 }
 
