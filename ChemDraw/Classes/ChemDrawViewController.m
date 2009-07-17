@@ -37,6 +37,8 @@
 	NSLog(@"VIEW DID LOAD");
     [super viewDidLoad];
 	//drawView = [drawView initWithFrame:CGRectMake(0, 0, 640, 960)];
+	
+	// ALL THIS STUFF SHOULD BE IN THE INIT METHOD
 	drawView = [[DrawView alloc] initWithFrame:CGRectMake(0, 0, 640, 960)];
 	
 	UIScrollView *scrollView = (UIScrollView *) [self view];
@@ -52,8 +54,8 @@
 	scrollView.bounces = YES;
 	[scrollView addSubview:drawView];
  
-	//CGRect centerRect = CGRectMake(320, 480, 320, 480);
-	//[scrollView zoomToRect:centerRect animated:YES];
+	CGRect centerRect = CGRectMake(220, 280, 320, 480);
+	[scrollView zoomToRect:centerRect animated:YES];
 	
 	//[drawView setNeedsDisplay];
 	
