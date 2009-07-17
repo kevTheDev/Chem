@@ -23,6 +23,7 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 
+	gestureViewController = [[GestureViewController alloc] initWithNibName:@"GestureViewController" bundle:nil];
 	drawViewController = [[ChemDrawViewController alloc] initWithNibName:@"ChemDrawViewController" bundle:nil];
 	navigationController = [[UINavigationController alloc] initWithRootViewController:drawViewController];
 	[self setupToolBar];
@@ -34,6 +35,7 @@
 	[window makeKeyAndVisible];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateToolBar:) name:@"toolBarItemsChangedNotification" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeElementClicked:) name:@"changeElementClickedNotification" object:nil];
 	
 	NSLog(@"END OF APP LAUNCH");
 	
@@ -44,9 +46,12 @@
 	[toolBar setItems:[drawViewController toolbarItems]];
 }
 
-- (IBAction)changeElement:(id)sender {
-	NSLog(@"CHANGE ELEMENT CLICKED");	
+- (void) changeElementClicked:(NSNotification *)notification {
+	NSLog(@"CHANGE ELEMENT CLICKED");
+	[navigationController pushViewController:gestureViewController animated:YES];
+	[window addSubview:[navigationController view]];
 }
+
 
 
 

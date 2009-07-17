@@ -91,6 +91,7 @@
 
 - (void) change_element_clicked:(id)sender {
 	NSLog(@"change_element_clicked");
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"changeElementClickedNotification" object:self userInfo:nil];
 }
 
 - (void) undo_clicked:(id)sender {

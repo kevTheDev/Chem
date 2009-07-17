@@ -20,7 +20,6 @@
 	UIToolbar *toolBar;
 }
 
-- (IBAction)changeElement:(id)sender;
 - (void) setupToolBar;
 - (void) updateToolBar;
 

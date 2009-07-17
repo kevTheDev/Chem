@@ -24,8 +24,8 @@
 	NSArray *nodeButtons;
 }
 
-- (void) cancel_clicked;
-- (void) change_element_clicked;
+- (void) cancel_clicked:(id)sender;
+- (void) change_element_clicked:(id)sender;
 - (void) undo_clicked:(id)sender;
 
 @property (nonatomic, retain) IBOutlet DrawView *drawView;

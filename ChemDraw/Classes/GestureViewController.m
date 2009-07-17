@@ -7,20 +7,21 @@
 //
 
 #import "GestureViewController.h"
-
+#import "GestureView.h"
 
 @implementation GestureViewController
 
 
-/*
+
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
+		self.view = [[GestureView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     }
     return self;
 }
-*/
+
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -32,12 +33,10 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	//NSLog(@"VIEW DID LOAD");
-//    [super viewDidLoad];
-//	CGRect frame = CGRectMake(0, 0, 640, 960);
-//	[[self view] initWithFrame:frame];
-////	[view initWithFrame:frame];
-//	[[self view] setNeedsDisplay];
+	NSLog(@"GESTURE VIEW DID LOAD");
+    [super viewDidLoad];
+	
+	[[self view] setNeedsDisplay];
 }
 
 

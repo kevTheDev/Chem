@@ -33,12 +33,16 @@
 
 
 - (void)drawRect:(CGRect)rect {
+	NSLog(@"GESTURE DRAW RECT");
+
     // Drawing code
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
 	[[UIColor whiteColor] setFill]; 
 	UIRectFill(rect);
-		
+	
+//	NSLog(@"gesture points)
+	
 	[gesturePoints renderWithContext:ctx];
 }
 
@@ -48,8 +52,7 @@
 	CGPoint	pos = [touch locationInView:self];
 	
 
-	PointObject *pointObject = [PointObject alloc];
-	[pointObject initWithPoint:pos];
+	PointObject *pointObject = [[PointObject alloc] initWithPoint:pos];
 	[gesturePoints addPoint:pointObject];
 	
 	[self setNeedsDisplay]; // redraw entire screen
@@ -60,8 +63,7 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint	pos = [touch locationInView:self];
 	
-	PointObject *pointObject = [PointObject alloc];
-	[pointObject initWithPoint:pos];
+	PointObject *pointObject = [[PointObject alloc] initWithPoint:pos];
 	[gesturePoints addPoint:pointObject];
 		
 	[self setNeedsDisplay];	

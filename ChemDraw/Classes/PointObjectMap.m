@@ -294,6 +294,8 @@
 
 
 - (void) renderWithContext:(CGContextRef)ctx {
+	NSLog(@"GESTURE POINTS RENDER WITH CONTEXT");
+
 	CGPoint currentPoint;
 	CGPoint previousPoint;
 		
@@ -321,6 +323,7 @@
 	
 	CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
     CGContextFillEllipseInRect(ctx, CGRectMake(point.x, point.y, 1.0, 1.0));
+	NSLog(@"RENDERED POINT At: %f,%f", point.x, point.y);
 	
 }
 
