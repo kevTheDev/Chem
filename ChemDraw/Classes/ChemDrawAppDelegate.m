@@ -55,6 +55,7 @@
 	NSLog(@"CHANGE ELEMENT CLICKED");
 	[navigationController pushViewController:gestureViewController animated:YES];
 	[window addSubview:[navigationController view]];
+	[toolBar setItems:nil animated:YES];
 }
 
 
