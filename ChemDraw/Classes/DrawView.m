@@ -23,6 +23,9 @@
 
 @synthesize symbolTimer;
 @synthesize toolBarItems;
+@synthesize programState;
+@synthesize testInt;
+
 
 // this init method never seems to really get called
 - (id)initWithFrame:(CGRect)frame {
@@ -32,11 +35,8 @@
 		programState = [[ProgramState alloc] init];
 		objectMap = [[ObjectMap alloc] init];
 		gesturePoints = [[PointObjectMap alloc] init];
-		NSLog(@"ALL MEM ALLOC");
-		[self setupToolbarButtonArrays];
-		NSLog(@"SET UP BUTTON ARRRAYS");
-		[self setToolBarItems:standardButtons];
-		NSLog(@"SET TB ITEMS");
+		//[self setToolBarItems:standardButtons];
+		testInt = 5;
     }
 	
 		
@@ -84,9 +84,11 @@
 	[self actionCompleted];
 }
 
+
 - (void)drawRect:(CGRect)rect {
 
 	NSLog(@"DRAW VIEW drawRect");
+	testInt = 5*testInt;
 
 	// got the graphics context
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -124,6 +126,13 @@
 
 }
 
+- (void) highlightTouchedObject:(CGPoint)pos {
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"highlightObjectNotification" object:self userInfo:nil];
+
+	[objectMap highlightClosestObjectToPoint:pos];
+	//[toolBar setItems:highlightButtons];
+	[programState setCurrentState:MANIPULATE_OBJECT];
+}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	
@@ -149,10 +158,8 @@
 	}
 
 	if([programState currentState] == SELECT_OBJECT) {
-
-		[objectMap highlightClosestObjectToPoint:pos];
-		[toolBar setItems:highlightButtons];
-		[programState setCurrentState:MANIPULATE_OBJECT];
+		[self highlightTouchedObject:pos];
+		
 			
 	}
 	else if([programState currentState] == MANIPULATE_OBJECT) {
@@ -216,45 +223,13 @@
 		
 		[self actionCompleted];
 	}
-	else if([programState currentState] == GESTURE_MODE) {
-		PointObject *pointObject = [PointObject alloc];
-		[pointObject initWithPoint:pos];
-		[gesturePoints addPoint:pointObject];
-	}
-
-
+	
 	
 	[self setNeedsDisplay]; // redraw entire screen
 	
 	return;
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	
-	UITouch *touch = [touches anyObject];
-	CGPoint	pos = [touch locationInView:self];
-	
-	if([programState currentState] == GESTURE_MODE) {
-		PointObject *pointObject = [PointObject alloc];
-		[pointObject initWithPoint:pos];
-		[gesturePoints addPoint:pointObject];
-		
-		[self setNeedsDisplay];
-	}
-	
-	
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	
-	if([programState currentState] == GESTURE_MODE) {
-		NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.80 target:self selector:@selector(onTimer) userInfo:nil repeats:YES];
-		[self setSymbolTimer:timer];
-	}
-
-	
-	return;
-}
 
 - (void) renderText:(char *)text withXCoord:(CGFloat)xCoord withYCoord:(CGFloat)yCoord withContext:(CGContextRef)ctx {
 	
@@ -276,76 +251,10 @@
 
 
 
-- (void) setupToolbarButtonArrays {
-		
-	NSLog(@"setupToolbarButtonArrays");
-	//if([nodeButtons count] == 0) {
-//		NSLog(@"setupToolbarButtonArrays1");
-//		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-//		[tempArray addObject:changeElementButton];
-//		[tempArray addObject:cancelButton];
-//		NSLog(@"setupToolbarButtonArrays2");
-//		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
-//		
-//		[tempArray release];
-//		
-//	}
-//	NSLog(@"setupToolbarButtonArrays 3");
-//	if([standardButtons count] == 0) {
-//		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-//		[tempArray addObject:undoButton];
-//		
-//		standardButtons = [[NSArray alloc] initWithArray:tempArray];
-//		
-//		[tempArray release];
-//	}
-//	
-//	if([highlightButtons count] == 0) {
-//		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-//		[tempArray addObject:cancelButton];
-//		
-//		highlightButtons = [[NSArray alloc] initWithArray:tempArray];
-//		
-//		[tempArray release];
-//	}
-
-
-}
-
-
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx {	
 	
 	CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
     CGContextFillEllipseInRect(ctx, CGRectMake(point.x, point.y, 10.0, 10.0));
-	
-}
-
-// Finished drawing chemical symbol
--(void) onTimer {
-
-	CharacterMatch *topMatch = [gesturePoints compressPoints];
-
-	Node *selectedNode = [objectMap currentlySelectedNode];
-	NSString *characterSymbol = [topMatch characterSymbol];
-	[selectedNode setElementType:characterSymbol];
-	[objectMap clearSelectedNodes];
-	NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
-
-
-
-	
-
-//	[programState setCurrentState:DEBUG_MODE];
-	[programState setCurrentState:SELECT_OBJECT];
-	[symbolTimer invalidate];
-	[self setSymbolTimer:NULL];
-	
-	[gesturePoints clearPoints];
-	[self setNeedsDisplay]; // redraw entire screen
-	
-	
-	
-
 	
 }
 

@@ -39,6 +39,9 @@
 	
 	NSTimer *symbolTimer;
 	NSArray *toolBarItems;
+	
+	int testInt;
+	
 }
 
 -(void) actionCompleted;
@@ -51,15 +54,14 @@
 
 - (IBAction) cancel;
 
-- (void) setupToolbarButtonArrays;
 
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
-
--(void) onTimer;
+- (void) highlightTouchedObject:(CGPoint)pos;
 
 @property (nonatomic, retain) NSTimer *symbolTimer;
 @property (nonatomic, retain) NSArray *toolBarItems;
-
+@property (nonatomic, retain) ProgramState *programState;
+@property (nonatomic) int testInt;
 
 @end
 

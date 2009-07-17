@@ -20,14 +20,12 @@
 	IBOutlet DrawView *drawView;
 	
 	NSArray *standardButtons;
+	NSArray *highlightButtons;
+	NSArray *nodeButtons;
 }
 
-//- (IBAction)changeElement:(id)sender;
-
-//- (IBAction)undoLastAction:(id)sender;
-
-//- (IBAction) cancel;
-
+- (void) cancel_clicked;
+- (void) change_element_clicked;
 - (void) undo_clicked:(id)sender;
 
 @property (nonatomic, retain) IBOutlet DrawView *drawView;

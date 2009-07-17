@@ -22,13 +22,11 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
-		// ALL THIS STUFF SHOULD BE IN THE INIT METHOD
 		drawView = [[DrawView alloc] initWithFrame:CGRectMake(0, 0, 640, 960)];
 	
 		UIScrollView *scrollView = (UIScrollView *) [self view];
 	
 		CGSize frameRect = CGSizeMake(640, 960);
-		//[[self view] setContentSize:frameRect];
 		scrollView.contentSize = frameRect;
 	
 		scrollView.maximumZoomScale = 4.0;
@@ -42,7 +40,7 @@
 		[scrollView zoomToRect:centerRect animated:YES];
 	
 	
-		//Create a button
+		//Create buttons
 		changeElementButton = [[UIBarButtonItem alloc]
 		initWithTitle:@"Change Element" style:UIBarButtonItemStyleBordered target:self action:@selector(change_element_clicked:)];
 	
@@ -53,10 +51,35 @@
 		initWithTitle:@"Undo" style:UIBarButtonItemStyleBordered target:self action:@selector(undo_clicked:)];
 
 		standardButtons = [[NSArray alloc] initWithObjects:undoButton, nil];
+		highlightButtons = [[NSArray alloc] initWithObjects:cancelButton, nil];
+		nodeButtons = [[NSArray alloc] initWithObjects:cancelButton, changeElementButton, nil];
+		
 		[self setToolbarItems:standardButtons animated:YES];
+		
+		//[drawView addObserver:self forKeyPath:@"programState" options:0 context:nil];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(objectHighlighted:) name:@"highlightObjectNotification" object:nil];
+
 
 	}
     return self;
+}
+
+- (void)objectHighlighted:(NSNotification *)notification {
+	NSLog(@"highlightObjectNotification");
+}
+//
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+//{
+//	NSLog(@"PROGRAM STATE CHANGED");
+//}
+
+- (void) cancel_clicked {
+	NSLog(@"cancel_clicked");
+	[drawView cancel];
+}
+
+- (void) change_element_clicked {
+	NSLog(@"change_element_clicked");
 }
 
 - (void) undo_clicked:(id)sender {
@@ -72,13 +95,8 @@
 		
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	[drawView touchesBegan:touches withEvent:event];
-}
-
  - (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView {
   return drawView;
-  //return drawView;
 }
 
 /*
