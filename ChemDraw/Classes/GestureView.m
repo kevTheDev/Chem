@@ -77,7 +77,7 @@
 -(void) onTimer {
 
 	CharacterMatch *topMatch = [gesturePoints compressPoints];
-//	[gesturePoints clearPoints];
+	[gesturePoints clearPoints];
 	[symbolTimer invalidate];
 
 	NSArray *keys = [NSArray arrayWithObjects:@"topMatch", nil];
@@ -86,7 +86,7 @@
 
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"characterMatchedNotification" object:self userInfo:dictionary];
 	
-	
+	[self setNeedsDisplay];
 	
 
 	

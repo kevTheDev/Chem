@@ -68,9 +68,7 @@
 }
 
 - (void)characterMatched:(NSNotification *)notification {
-	NSDictionary *userInfo = [notification userInfo];
-	CharacterMatch *topMatch = [userInfo valueForKey:@"topMatch"];
-	
+	CharacterMatch *topMatch = [[notification userInfo] valueForKey:@"topMatch"];	
 	[drawView updateSelectedElementWithCharacterMatch:topMatch];
 }
 
