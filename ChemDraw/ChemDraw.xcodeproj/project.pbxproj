@@ -15,6 +15,12 @@
 		2899E5220DE3E06400AC0155 /* ChemDrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* ChemDrawViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* ChemDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */; };
+		DE15A73710107CF10080291E /* GestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE15A73610107CF10080291E /* GestureView.m */; };
+		DE15A73810107CF10080291E /* GestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE15A73610107CF10080291E /* GestureView.m */; };
+		DE15A73D1010829A0080291E /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE15A73C1010829A0080291E /* GestureViewController.m */; };
+		DE15A73E1010829A0080291E /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE15A73C1010829A0080291E /* GestureViewController.m */; };
+		DE15A7401010835B0080291E /* GestureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE15A73F1010835B0080291E /* GestureViewController.xib */; };
+		DE15A7411010835B0080291E /* GestureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE15A73F1010835B0080291E /* GestureViewController.xib */; };
 		DE2091440FF4E840001FECDA /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091430FF4E840001FECDA /* DrawView.m */; };
 		DE2091FF0FF4F578001FECDA /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2091FE0FF4F578001FECDA /* Node.m */; };
 		DE2093480FF50B67001FECDA /* Bond.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2093470FF50B67001FECDA /* Bond.m */; };
@@ -99,6 +105,11 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ChemDraw_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChemDraw_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE15A73510107CF10080291E /* GestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureView.h; sourceTree = "<group>"; };
+		DE15A73610107CF10080291E /* GestureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureView.m; sourceTree = "<group>"; };
+		DE15A73B1010829A0080291E /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
+		DE15A73C1010829A0080291E /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
+		DE15A73F1010835B0080291E /* GestureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GestureViewController.xib; sourceTree = "<group>"; };
 		DE2091420FF4E840001FECDA /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		DE2091430FF4E840001FECDA /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		DE2091FD0FF4F578001FECDA /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
@@ -254,6 +265,7 @@
 				2899E5210DE3E06400AC0155 /* ChemDrawViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				DE15A73F1010835B0080291E /* GestureViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -376,6 +388,8 @@
 			children = (
 				28D7ACF60DDB3853001CB0EB /* ChemDrawViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* ChemDrawViewController.m */,
+				DE15A73B1010829A0080291E /* GestureViewController.h */,
+				DE15A73C1010829A0080291E /* GestureViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -385,6 +399,8 @@
 			children = (
 				DE2091420FF4E840001FECDA /* DrawView.h */,
 				DE2091430FF4E840001FECDA /* DrawView.m */,
+				DE15A73510107CF10080291E /* GestureView.h */,
+				DE15A73610107CF10080291E /* GestureView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -461,6 +477,7 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* ChemDrawViewController.xib in Resources */,
+				DE15A7401010835B0080291E /* GestureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +485,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE15A7411010835B0080291E /* GestureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +543,8 @@
 				DE536536100F706D00A098FF /* DoubleBondAction.m in Sources */,
 				DE53653A100F707500A098FF /* TripleBondAction.m in Sources */,
 				DE53653E100F707F00A098FF /* SingleBondAction.m in Sources */,
+				DE15A73710107CF10080291E /* GestureView.m in Sources */,
+				DE15A73D1010829A0080291E /* GestureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +586,8 @@
 				DE536537100F706D00A098FF /* DoubleBondAction.m in Sources */,
 				DE53653B100F707500A098FF /* TripleBondAction.m in Sources */,
 				DE53653F100F707F00A098FF /* SingleBondAction.m in Sources */,
+				DE15A73810107CF10080291E /* GestureView.m in Sources */,
+				DE15A73E1010829A0080291E /* GestureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

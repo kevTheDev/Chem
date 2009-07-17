@@ -45,7 +45,7 @@
 		
 		
 		NSLog(@"DRAW VIEW INIT 5");
-		[self setupToolbarButtonArrays];
+//		[self setupToolbarButtonArrays];
 		NSLog(@"DRAW VIEW INIT 6");
 		
 		//[self setNeedsDisplay];

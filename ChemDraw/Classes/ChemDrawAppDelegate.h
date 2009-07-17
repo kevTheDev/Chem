@@ -9,19 +9,23 @@
 #import <UIKit/UIKit.h>
 
 @class ChemDrawViewController;
-//@class DrawView;
+@class GestureViewController;
 
-@interface ChemDrawAppDelegate : NSObject <UIApplicationDelegate, UIScrollViewDelegate> {
+@interface ChemDrawAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    IBOutlet ChemDrawViewController *viewController;
-	IBOutlet UIScrollView *scrollView;
-	//DrawView *drawView;
+	IBOutlet UINavigationController *navigationController;
+    IBOutlet ChemDrawViewController *drawViewController;
+	IBOutlet GestureViewController *gestureViewController;
 }
 
+- (IBAction)changeElement:(id)sender;
+
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet ChemDrawViewController *viewController;
-@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
-//@property (nonatomic, retain) IBOutlet DrawView *drawView;
+@property (nonatomic, retain) IBOutlet ChemDrawViewController *drawViewController;
+@property (nonatomic, retain) IBOutlet GestureViewController *gestureViewController;
+@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+
+
 
 @end
 

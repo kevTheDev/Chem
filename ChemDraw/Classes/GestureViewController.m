@@ -1,18 +1,16 @@
 //
-//  ChemDrawViewController.m
+//  GestureViewController.m
 //  ChemDraw
 //
-//  Created by Kevin Edwards on 26/06/2009.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
+//  Created by Kevin Edwards on 17/07/2009.
+//  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "ChemDrawViewController.h"
-#import "DrawView.h"
+#import "GestureViewController.h"
 
-@implementation ChemDrawViewController
 
-//@synthesize drawView;
-//@synthesize scrollView;
+@implementation GestureViewController
+
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -34,11 +32,12 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	NSLog(@"VIEW DID LOAD");
-    [super viewDidLoad];
-	[[self view] initWithFrame:CGRectMake(0, 0, 320, 480)];
-	
-	[[self view] setNeedsDisplay];
+	//NSLog(@"VIEW DID LOAD");
+//    [super viewDidLoad];
+//	CGRect frame = CGRectMake(0, 0, 640, 960);
+//	[[self view] initWithFrame:frame];
+////	[view initWithFrame:frame];
+//	[[self view] setNeedsDisplay];
 }
 
 
@@ -51,27 +50,16 @@
 }
 */
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
     // Release anything that's not essential, such as cached data
 }
 
-- (IBAction)undoLastAction:(id)sender {
-//	[[self view] undoLastAction];
-}
-
-- (IBAction)changeElement:(id)sender {
-//	[[self view] changeElement:sender];
-	
-}
-
-- (IBAction) cancel {
-//	[[self view] cancel];
-}
-
-
 - (void)dealloc {
     [super dealloc];
 }
+
+
 
 @end
