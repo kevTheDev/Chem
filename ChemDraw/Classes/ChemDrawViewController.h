@@ -17,8 +17,9 @@
 	IBOutlet UIBarButtonItem *undoButton;
 	IBOutlet UIBarButtonItem *cancelButton;
 	
-//	IBOutlet UIScrollView *view;
 	IBOutlet DrawView *drawView;
+	
+	NSArray *standardButtons;
 }
 
 //- (IBAction)changeElement:(id)sender;
@@ -28,7 +29,6 @@
 //- (IBAction) cancel;
 
 @property (nonatomic, retain) IBOutlet DrawView *drawView;
-//@property (nonatomic, retain) IBOutlet UIScrollView *view;
 
 @end
 

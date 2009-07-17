@@ -38,7 +38,7 @@
 	PointObjectMap *gesturePoints;
 	
 	NSTimer *symbolTimer;
-	
+	NSArray *toolBarItems;
 }
 
 -(void) actionCompleted;
@@ -58,6 +58,7 @@
 -(void) onTimer;
 
 @property (nonatomic, retain) NSTimer *symbolTimer;
+@property (nonatomic, retain) NSArray *toolBarItems;
 
 
 @end

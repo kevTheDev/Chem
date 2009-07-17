@@ -22,33 +22,21 @@
 @implementation DrawView
 
 @synthesize symbolTimer;
+@synthesize toolBarItems;
 
 // this init method never seems to really get called
 - (id)initWithFrame:(CGRect)frame {
-		NSLog(@"DRAW VIEW INIT 1");
-    if (self = [super initWithFrame:frame]) {
+	
+	if (self = [super initWithFrame:frame]) {
         // Initialization code
-		NSLog(@"DRAW VIEW INIT 2");
 		programState = [[ProgramState alloc] init];
 		objectMap = [[ObjectMap alloc] init];
-		NSLog(@"DRAW VIEW INIT 3");
 		gesturePoints = [[PointObjectMap alloc] init];
-		NSLog(@"DRAW VIEW INIT 4");
-		
-		//toolBar = [[UIToolbar alloc] init];
-		
-		//changeElementButton = [[UIBarButtonItem alloc] init];
-	
-		//undoButton = [[UIBarButtonItem alloc] init];
-		//cancelButton = [[UIBarButtonItem alloc] init];
-
-		
-		
-		NSLog(@"DRAW VIEW INIT 5");
-//		[self setupToolbarButtonArrays];
-		NSLog(@"DRAW VIEW INIT 6");
-		
-		//[self setNeedsDisplay];
+		NSLog(@"ALL MEM ALLOC");
+		[self setupToolbarButtonArrays];
+		NSLog(@"SET UP BUTTON ARRRAYS");
+		[self setToolBarItems:standardButtons];
+		NSLog(@"SET TB ITEMS");
     }
 	
 		
@@ -73,7 +61,7 @@
 	[objectMap clearSelectedObjects];
 	[objectMap clearHighlightedObjects];
 	
-	[toolBar setItems:standardButtons];	
+	//[toolBar setItems:standardButtons];	
 	[programState setCurrentState:SELECT_OBJECT];
 	
 	[self setNeedsDisplay]; 
@@ -87,7 +75,7 @@
 - (IBAction)changeElement:(id)sender {
 	NSLog(@"Change element");
 	[programState setCurrentState:GESTURE_MODE];
-	[toolBar setItems:standardButtons];
+	//[toolBar setItems:standardButtons];
 	[self setNeedsDisplay]; // redraw entire screen
 	
 }
@@ -99,13 +87,6 @@
 - (void)drawRect:(CGRect)rect {
 
 	NSLog(@"DRAW VIEW drawRect");
-	
-	//if(programState == NULL) {
-//		programState = [[ProgramState alloc] init];
-//		objectMap = [[ObjectMap alloc] init];
-//		[self setupToolbarButtonArrays];
-//		gesturePoints = [[PointObjectMap alloc] init];
-//	}
 
 	// got the graphics context
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
@@ -297,38 +278,37 @@
 
 - (void) setupToolbarButtonArrays {
 		
-	
-	if([nodeButtons count] == 0) {
-		
-		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:changeElementButton];
-		[tempArray addObject:cancelButton];
-		
-		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
-		
-		[tempArray release];
-		
-	}
-	
-	if([standardButtons count] == 0) {
-		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:undoButton];
-		
-		standardButtons = [[NSArray alloc] initWithArray:tempArray];
-		
-		[tempArray release];
-	}
-	
-	if([highlightButtons count] == 0) {
-		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-		[tempArray addObject:cancelButton];
-		
-		highlightButtons = [[NSArray alloc] initWithArray:tempArray];
-		
-		[tempArray release];
-	}
-	
-	[toolBar setItems:standardButtons];
+	NSLog(@"setupToolbarButtonArrays");
+	//if([nodeButtons count] == 0) {
+//		NSLog(@"setupToolbarButtonArrays1");
+//		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+//		[tempArray addObject:changeElementButton];
+//		[tempArray addObject:cancelButton];
+//		NSLog(@"setupToolbarButtonArrays2");
+//		nodeButtons = [[NSArray alloc] initWithArray:tempArray];
+//		
+//		[tempArray release];
+//		
+//	}
+//	NSLog(@"setupToolbarButtonArrays 3");
+//	if([standardButtons count] == 0) {
+//		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+//		[tempArray addObject:undoButton];
+//		
+//		standardButtons = [[NSArray alloc] initWithArray:tempArray];
+//		
+//		[tempArray release];
+//	}
+//	
+//	if([highlightButtons count] == 0) {
+//		NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+//		[tempArray addObject:cancelButton];
+//		
+//		highlightButtons = [[NSArray alloc] initWithArray:tempArray];
+//		
+//		[tempArray release];
+//	}
+
 
 }
 

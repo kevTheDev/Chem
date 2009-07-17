@@ -12,23 +12,52 @@
 @implementation ChemDrawViewController
 
 @synthesize drawView;
-//@synthesize view;
 
-/*
+- (void)dealloc {
+    [super dealloc];
+}
+
+
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
-    }
+		// ALL THIS STUFF SHOULD BE IN THE INIT METHOD
+		drawView = [[DrawView alloc] initWithFrame:CGRectMake(0, 0, 640, 960)];
+	
+		UIScrollView *scrollView = (UIScrollView *) [self view];
+	
+		CGSize frameRect = CGSizeMake(640, 960);
+		//[[self view] setContentSize:frameRect];
+		scrollView.contentSize = frameRect;
+	
+		scrollView.maximumZoomScale = 4.0;
+		scrollView.minimumZoomScale = 0.75;
+		scrollView.clipsToBounds = YES;
+		scrollView.delegate = self;
+		scrollView.bounces = YES;
+		[scrollView addSubview:drawView];
+ 
+		CGRect centerRect = CGRectMake(220, 280, 320, 480);
+		[scrollView zoomToRect:centerRect animated:YES];
+	
+	
+		//Create a button
+		changeElementButton = [[UIBarButtonItem alloc]
+		initWithTitle:@"Change Element" style:UIBarButtonItemStyleBordered target:self action:@selector(change_element_clicked:)];
+	
+		cancelButton = [[UIBarButtonItem alloc]
+		initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(change_element_clicked:)];
+	
+		undoButton = [[UIBarButtonItem alloc]
+		initWithTitle:@"Undo" style:UIBarButtonItemStyleBordered target:self action:@selector(change_element_clicked:)];
+
+		standardButtons = [[NSArray alloc] initWithObjects:undoButton, nil];
+		[self setToolbarItems:standardButtons animated:YES];
+
+	}
     return self;
 }
-*/
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-}
-*/
 
 
 
@@ -36,32 +65,8 @@
 - (void)viewDidLoad {
 	NSLog(@"VIEW DID LOAD");
     [super viewDidLoad];
-	//drawView = [drawView initWithFrame:CGRectMake(0, 0, 640, 960)];
 	
-	// ALL THIS STUFF SHOULD BE IN THE INIT METHOD
-	drawView = [[DrawView alloc] initWithFrame:CGRectMake(0, 0, 640, 960)];
-	
-	UIScrollView *scrollView = (UIScrollView *) [self view];
-	
-	CGSize frameRect = CGSizeMake(640, 960);
-	//[[self view] setContentSize:frameRect];
-	scrollView.contentSize = frameRect;
-	
-	scrollView.maximumZoomScale = 4.0;
-	scrollView.minimumZoomScale = 0.75;
-	scrollView.clipsToBounds = YES;
-	scrollView.delegate = self;
-	scrollView.bounces = YES;
-	[scrollView addSubview:drawView];
- 
-	CGRect centerRect = CGRectMake(220, 280, 320, 480);
-	[scrollView zoomToRect:centerRect animated:YES];
-	
-	//[drawView setNeedsDisplay];
-	
-//	[[self view] initWithFrame:CGRectMake(0, 0, 320, 480)];
-	
-//	[[self view] setNeedsDisplay];
+		
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -100,8 +105,6 @@
 }
 
 
-- (void)dealloc {
-    [super dealloc];
-}
+
 
 @end

@@ -16,9 +16,12 @@
 	IBOutlet UINavigationController *navigationController;
     IBOutlet ChemDrawViewController *drawViewController;
 	IBOutlet GestureViewController *gestureViewController;
+	
+	UIToolbar *toolBar;
 }
 
 - (IBAction)changeElement:(id)sender;
+- (void) setupToolBar;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet ChemDrawViewController *drawViewController;
