@@ -28,6 +28,8 @@
 
 //- (IBAction) cancel;
 
+- (void) undo_clicked:(id)sender;
+
 @property (nonatomic, retain) IBOutlet DrawView *drawView;
 
 @end

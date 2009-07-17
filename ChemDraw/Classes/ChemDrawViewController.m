@@ -47,10 +47,10 @@
 		initWithTitle:@"Change Element" style:UIBarButtonItemStyleBordered target:self action:@selector(change_element_clicked:)];
 	
 		cancelButton = [[UIBarButtonItem alloc]
-		initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(change_element_clicked:)];
+		initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancel_clicked:)];
 	
 		undoButton = [[UIBarButtonItem alloc]
-		initWithTitle:@"Undo" style:UIBarButtonItemStyleBordered target:self action:@selector(change_element_clicked:)];
+		initWithTitle:@"Undo" style:UIBarButtonItemStyleBordered target:self action:@selector(undo_clicked:)];
 
 		standardButtons = [[NSArray alloc] initWithObjects:undoButton, nil];
 		[self setToolbarItems:standardButtons animated:YES];
@@ -59,7 +59,10 @@
     return self;
 }
 
-
+- (void) undo_clicked:(id)sender {
+	NSLog(@"undo_clicked");
+	[drawView undoLastAction:sender];
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
