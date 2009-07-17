@@ -72,6 +72,15 @@
 	[self actionCompleted];
 }
 
+- (void) updateSelectedElementWithCharacterMatch:(CharacterMatch *)topMatch {
+	Node *selectedNode = [objectMap currentlySelectedNode];
+	NSString *characterSymbol = [topMatch characterSymbol];
+	[selectedNode setElementType:characterSymbol];
+	[objectMap clearSelectedNodes];
+	[self actionCompleted];
+
+}
+
 - (IBAction)changeElement:(id)sender {
 	NSLog(@"Change element");
 	[programState setCurrentState:GESTURE_MODE];

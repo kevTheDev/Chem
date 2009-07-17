@@ -294,8 +294,6 @@
 
 
 - (void) renderWithContext:(CGContextRef)ctx {
-	NSLog(@"GESTURE POINTS RENDER WITH CONTEXT");
-
 	CGPoint currentPoint;
 	CGPoint previousPoint;
 		
@@ -323,7 +321,6 @@
 	
 	CGContextSetRGBFillColor(ctx, 0, 255, 0, 1.0);
     CGContextFillEllipseInRect(ctx, CGRectMake(point.x, point.y, 1.0, 1.0));
-	NSLog(@"RENDERED POINT At: %f,%f", point.x, point.y);
 	
 }
 
@@ -347,28 +344,6 @@
 
 - (CharacterMatch *) buildComparisonArray {
 	
-	
-	
-	//NSArray *characterMatchResults = [Character characterMatchResultsForPoints:completePointSet];
-//	
-//	CharacterMatch *topMatch = [CharacterMatch alloc];
-//	
-//	for(CharacterMatch *match in characterMatchResults) {
-//		if(topMatch == NULL) {
-//			topMatch = match;
-//		}
-//		else if([match percentageMatch] > [topMatch percentageMatch]) {
-//			topMatch = match;
-//		}
-//		
-//	
-//		NSLog(@"MATCH FOR %d: %f%", [match characterRef], [match percentageMatch]);
-//	}
-//	
-//	
-//	
-//	[characterMatchResults release];
-
 	return [Character getBestMatch:completePointSet];
 
 	

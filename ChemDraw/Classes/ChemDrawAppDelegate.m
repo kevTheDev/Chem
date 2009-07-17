@@ -36,9 +36,14 @@
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateToolBar:) name:@"toolBarItemsChangedNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeElementClicked:) name:@"changeElementClickedNotification" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(characterMatched:) name:@"characterMatchedNotification" object:nil];
 	
 	NSLog(@"END OF APP LAUNCH");
 	
+}
+
+- (void)characterMatched:(NSNotification *)notification {
+	[navigationController popViewControllerAnimated:YES];
 }
 
 - (void) updateToolBar:(NSNotification *)notification {

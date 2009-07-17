@@ -33,15 +33,12 @@
 
 
 - (void)drawRect:(CGRect)rect {
-	NSLog(@"GESTURE DRAW RECT");
 
     // Drawing code
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	
 	[[UIColor whiteColor] setFill]; 
 	UIRectFill(rect);
-	
-//	NSLog(@"gesture points)
 	
 	[gesturePoints renderWithContext:ctx];
 }
@@ -79,18 +76,15 @@
 // Finished drawing chemical symbol
 -(void) onTimer {
 
-	//CharacterMatch *topMatch = [gesturePoints compressPoints];
-
-	//Node *selectedNode = [objectMap currentlySelectedNode];
-	//NSString *characterSymbol = [topMatch characterSymbol];
-	//[selectedNode setElementType:characterSymbol];
-	//[objectMap clearSelectedNodes];
-	
-	//NSLog(@"NEW ELEMENT TYPE IS: %@", [selectedNode elementType]);
-
+	CharacterMatch *topMatch = [gesturePoints compressPoints];
+//	[gesturePoints clearPoints];
 	[symbolTimer invalidate];
 
-	[self setNeedsDisplay]; // redraw entire screen
+	NSArray *keys = [NSArray arrayWithObjects:@"topMatch", nil];
+	NSArray *objects = [NSArray arrayWithObjects:topMatch, nil];
+	NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"characterMatchedNotification" object:self userInfo:dictionary];
 	
 	
 	

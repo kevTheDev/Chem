@@ -21,7 +21,7 @@
 }
 
 - (void) setupToolBar;
-- (void) updateToolBar;
+- (void) updateToolBar:(NSNotification *)notification;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet ChemDrawViewController *drawViewController;

@@ -18,9 +18,14 @@
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Custom initialization
 		self.view = [[GestureView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+		
+		
+		
+		
     }
     return self;
 }
+
 
 
 /*

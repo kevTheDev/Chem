@@ -60,10 +60,18 @@
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nodeSelected:) name:@"selectedNodeNotification" object:nil];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionCompleted:) name:@"actionCompleted" object:nil];
 		
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(characterMatched:) name:@"characterMatchedNotification" object:nil];
 		
 
 	}
     return self;
+}
+
+- (void)characterMatched:(NSNotification *)notification {
+	NSDictionary *userInfo = [notification userInfo];
+	CharacterMatch *topMatch = [userInfo valueForKey:@"topMatch"];
+	
+	[drawView updateSelectedElementWithCharacterMatch:topMatch];
 }
 
 - (void)nodeSelected:(NSNotification *)notification {

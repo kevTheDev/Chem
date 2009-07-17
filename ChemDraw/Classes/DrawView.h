@@ -19,6 +19,7 @@
 @class ObjectMap;
 @class PointObject;
 @class PointObjectMap;
+@class CharacterMatch;
 
 @interface DrawView : UIView {	
 	
@@ -58,6 +59,7 @@
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 - (void) highlightTouchedObject:(CGPoint)pos;
 - (void) selectTouchedObject:(CGPoint)pos;
+- (void) updateSelectedElementWithCharacterMatch:(CharacterMatch *)topMatch;
 
 @property (nonatomic, retain) NSTimer *symbolTimer;
 @property (nonatomic, retain) NSArray *toolBarItems;
