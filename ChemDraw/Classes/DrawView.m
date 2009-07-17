@@ -132,6 +132,42 @@
 	[programState setCurrentState:MANIPULATE_OBJECT];
 }
 
+- (void) selectTouchedObject:(CGPoint)pos {
+	// detect a user confirming a highlighted object
+	[objectMap selectClosestObjectToPoint:pos];
+		
+	NSObject *selectedObject = [objectMap currentlySelectedObject];
+		
+	// if we have selected a node then show the node buttons
+	if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
+			
+		// special case - if we highlight one node and click on another - create a bond to join them
+			
+		NSObject *highlightedObject = [objectMap currentlyHighlightedObject];
+		if([highlightedObject isKindOfClass:[Node class]] && ![highlightedObject isEqual:selectedObject]) {
+			NSLog(@"JOIN TWO NODES TOGETHER");
+			Bond *bond = [[Bond alloc] initWithNodeA:(Node *)selectedObject nodeB:(Node *)highlightedObject];
+			[objectMap addBond:bond];
+				
+			[self actionCompleted];
+				
+		}
+		else {
+			//[toolBar setItems:nodeButtons animated:YES];
+			[objectMap renderPotentialBondMap];
+			[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"selectedNodeNotification" object:self userInfo:nil];
+		}
+	}
+	else {
+		Bond *bond = (Bond *) selectedObject;
+		[objectMap manipulateBond:bond];
+
+		[self actionCompleted];
+			
+	}
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	
 	UITouch *touch = [touches anyObject];
@@ -157,43 +193,10 @@
 
 	if([programState currentState] == SELECT_OBJECT) {
 		[self highlightTouchedObject:pos];
-		
-			
 	}
 	else if([programState currentState] == MANIPULATE_OBJECT) {
+		[self selectTouchedObject:pos];
 		
-		// detect a user confirming a highlighted object
-		[objectMap selectClosestObjectToPoint:pos];
-		
-		NSObject *selectedObject = [objectMap currentlySelectedObject];
-		
-		// if we have selected a node then show the node buttons
-		if((selectedObject != NULL) && [selectedObject isKindOfClass:[Node class]]) {
-			
-			// special case - if we highlight one node and click on another - create a bond to join them
-			
-			NSObject *highlightedObject = [objectMap currentlyHighlightedObject];
-			if([highlightedObject isKindOfClass:[Node class]] && ![highlightedObject isEqual:selectedObject]) {
-				NSLog(@"JOIN TWO NODES TOGETHER");
-				Bond *bond = [[Bond alloc] initWithNodeA:(Node *)selectedObject nodeB:(Node *)highlightedObject];
-				[objectMap addBond:bond];
-				
-				[self actionCompleted];
-				
-			}
-			else {
-				[toolBar setItems:nodeButtons animated:YES];
-				[objectMap renderPotentialBondMap];
-				[programState setCurrentState:HIGHLIGHT_POTENTIAL_BOND];
-			}
-		}
-		else {
-			Bond *bond = (Bond *) selectedObject;
-			[objectMap manipulateBond:bond];
-
-			[self actionCompleted];
-			
-		}
 		
 		
 	}

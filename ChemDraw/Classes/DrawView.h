@@ -57,6 +57,7 @@
 
 - (void) renderPoint:(CGPoint)point withContext:(CGContextRef)ctx;
 - (void) highlightTouchedObject:(CGPoint)pos;
+- (void) selectTouchedObject:(CGPoint)pos;
 
 @property (nonatomic, retain) NSTimer *symbolTimer;
 @property (nonatomic, retain) NSArray *toolBarItems;

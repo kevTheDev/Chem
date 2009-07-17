@@ -57,10 +57,18 @@
 		[self setToolbarItems:standardButtons animated:YES];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(objectHighlighted:) name:@"highlightObjectNotification" object:nil];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nodeSelected:) name:@"selectedNodeNotification" object:nil];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionCompleted:) name:@"actionCompleted" object:nil];
+		
+		
 
 	}
     return self;
+}
+
+- (void)nodeSelected:(NSNotification *)notification {
+	[self setToolbarItems:nodeButtons animated:YES];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"toolBarItemsChangedNotification" object:self userInfo:nil];
 }
 
 - (void)actionCompleted:(NSNotification *)notification {
