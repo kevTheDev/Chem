@@ -12,6 +12,8 @@
 
 #import "GestureViewController.h"
 #import "GestureView.h"
+#import "SelectRingSizeViewController.h"
+#import "SelectRingSizeView.h"
 
 @implementation ChemDrawAppDelegate
 
@@ -20,11 +22,21 @@
 @synthesize gestureViewController;
 @synthesize navigationController;
 
+- (void)dealloc {
+	
+	[navigationController release];
+	[gestureViewController release];
+    [drawViewController release];
+	[selectRingSizeViewController release];
+    [window release];
+    [super dealloc];
+}
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 
 	gestureViewController = [[GestureViewController alloc] initWithNibName:@"GestureViewController" bundle:nil];
 	drawViewController = [[ChemDrawViewController alloc] initWithNibName:@"ChemDrawViewController" bundle:nil];
+	selectRingSizeViewController = [[SelectRingSizeViewController alloc] initWithNibName:@"SelectRingSizeViewController" bundle:nil];
 	navigationController = [[UINavigationController alloc] initWithRootViewController:drawViewController];
 	[self setupToolBar];
 	
@@ -61,17 +73,13 @@
 
 - (void) ringClicked:(NSNotification *)notification {
 	NSLog(@"Detected the ring button clicked");
+	[navigationController pushViewController:selectRingSizeViewController animated:YES];
+	[window addSubview:[navigationController view]];
+	[toolBar setItems:nil animated:YES];
 }
 
 
-- (void)dealloc {
-	
-	[navigationController release];
-	[gestureViewController release];
-    [drawViewController release];
-    [window release];
-    [super dealloc];
-}
+
 
 - (void) setupToolBar {
 	//Initialize the toolbar

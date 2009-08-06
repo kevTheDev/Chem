@@ -10,12 +10,14 @@
 
 @class ChemDrawViewController;
 @class GestureViewController;
+@class SelectRingSizeViewController;
 
 @interface ChemDrawAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
 	IBOutlet UINavigationController *navigationController;
     IBOutlet ChemDrawViewController *drawViewController;
 	IBOutlet GestureViewController *gestureViewController;
+	IBOutlet SelectRingSizeViewController *selectRingSizeViewController;
 	
 	UIToolbar *toolBar;
 }
