@@ -59,6 +59,10 @@
 
 - (void)ringSizeSet:(NSNotification *)notification {
 	[navigationController popViewControllerAnimated:YES];
+	
+	NSString *ringSize = [[notification userInfo] objectForKey:@"ringSize"];
+	NSLog(@"RING SIZE SET AT: %@", ringSize);
+	
 }
 
 - (void)characterMatched:(NSNotification *)notification {

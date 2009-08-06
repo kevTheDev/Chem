@@ -34,7 +34,14 @@
 - (void) textChanged:(NSNotification *)notification {
 	NSLog(@"textChanged");
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"ringSizeSetNotification" object:self userInfo:nil];
+	NSString *ringSize = [ringSizeTextField text];
+	
+	NSArray *keys = [NSArray arrayWithObjects:@"ringSize", nil];
+	NSArray *objects = [NSArray arrayWithObjects:ringSize, nil];
+	NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"ringSizeSetNotification" object:self userInfo:dictionary];
 
 
 }
