@@ -51,9 +51,14 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeElementClicked:) name:@"changeElementClickedNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(characterMatched:) name:@"characterMatchedNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ringClicked:) name:@"ringClickedNotification" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ringSizeSet:) name:@"ringSizeSetNotification" object:nil];
 	
 	NSLog(@"END OF APP LAUNCH");
 	
+}
+
+- (void)ringSizeSet:(NSNotification *)notification {
+	[navigationController popViewControllerAnimated:YES];
 }
 
 - (void)characterMatched:(NSNotification *)notification {

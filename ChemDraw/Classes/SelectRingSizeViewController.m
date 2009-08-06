@@ -13,6 +13,13 @@
 
 @synthesize ringSizeTextField;
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+	NSLog(@"BEGUN EDIT");
+
+}
+
+//UITextFieldTextDidChangeNotification
+
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -23,10 +30,19 @@
 }
 */
 
+// the user has pressed a button - therefore we have our ring size and can dismiss this screen
+- (void) textChanged:(NSNotification *)notification {
+	NSLog(@"textChanged");
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"ringSizeSetNotification" object:self userInfo:nil];
+
+
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) name:@"UITextFieldTextDidChangeNotification" object:nil];
 	[ringSizeTextField becomeFirstResponder];
 }
 

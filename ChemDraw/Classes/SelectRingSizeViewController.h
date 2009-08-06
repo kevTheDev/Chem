@@ -15,4 +15,6 @@
 
 @property (nonatomic, retain) UITextField *ringSizeTextField;
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField;
+- (void) textChanged:(NSNotification *)notification;
 @end
