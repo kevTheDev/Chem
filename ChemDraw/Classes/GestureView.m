@@ -85,6 +85,8 @@
 	NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
 
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"characterMatchedNotification" object:self userInfo:dictionary];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"popViewNotification" object:self userInfo:dictionary];
+
 	
 	[self setNeedsDisplay];
 	

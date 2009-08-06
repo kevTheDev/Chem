@@ -69,10 +69,20 @@
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionCompleted:) name:@"actionCompleted" object:nil];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(characterMatched:) name:@"characterMatchedNotification" object:nil];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ringSizeSet:) name:@"ringSizeSetNotification" object:nil];
 		
 
 	}
     return self;
+}
+
+- (void)ringSizeSet:(NSNotification *)notification {
+	
+	NSString *ringSize = [[notification userInfo] objectForKey:@"ringSize"];
+	NSLog(@"RING SIZE SET AT: %@", ringSize);
+	
+	NSInteger realRingSize = [ringSize intValue];
+	
 }
 
 - (void)characterMatched:(NSNotification *)notification {

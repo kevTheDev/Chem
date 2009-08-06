@@ -42,7 +42,7 @@
 
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"ringSizeSetNotification" object:self userInfo:dictionary];
-
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"popViewNotification" object:self userInfo:dictionary];
 
 }
 

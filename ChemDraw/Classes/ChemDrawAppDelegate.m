@@ -49,23 +49,14 @@
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateToolBar:) name:@"toolBarItemsChangedNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeElementClicked:) name:@"changeElementClickedNotification" object:nil];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(characterMatched:) name:@"characterMatchedNotification" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(popView:) name:@"popViewNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ringClicked:) name:@"ringClickedNotification" object:nil];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ringSizeSet:) name:@"ringSizeSetNotification" object:nil];
 	
-	NSLog(@"END OF APP LAUNCH");
 	
 }
 
-- (void)ringSizeSet:(NSNotification *)notification {
-	[navigationController popViewControllerAnimated:YES];
-	
-	NSString *ringSize = [[notification userInfo] objectForKey:@"ringSize"];
-	NSLog(@"RING SIZE SET AT: %@", ringSize);
-	
-}
 
-- (void)characterMatched:(NSNotification *)notification {
+- (void)popView:(NSNotification *)notification {
 	[navigationController popViewControllerAnimated:YES];
 }
 
