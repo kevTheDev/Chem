@@ -14,6 +14,11 @@
 @synthesize drawView;
 
 - (void)dealloc {
+	[drawView release];
+	[changeElementButton release];
+	[ringButton release];
+	[cancelButton release];
+	[undoButton release];
     [super dealloc];
 }
 
@@ -50,9 +55,12 @@
 		undoButton = [[UIBarButtonItem alloc]
 		initWithTitle:@"Undo" style:UIBarButtonItemStyleBordered target:self action:@selector(undo_clicked:)];
 
+		ringButton = [[UIBarButtonItem alloc]
+		initWithTitle:@"Ring" style:UIBarButtonItemStyleBordered target:self action:@selector(ring_clicked:)];
+
 		standardButtons = [[NSArray alloc] initWithObjects:undoButton, nil];
 		highlightButtons = [[NSArray alloc] initWithObjects:cancelButton, nil];
-		nodeButtons = [[NSArray alloc] initWithObjects:cancelButton, changeElementButton, nil];
+		nodeButtons = [[NSArray alloc] initWithObjects:cancelButton, changeElementButton, ringButton, nil];
 		
 		[self setToolbarItems:standardButtons animated:YES];
 		
@@ -103,6 +111,11 @@
 - (void) undo_clicked:(id)sender {
 	NSLog(@"undo_clicked");
 	[drawView undoLastAction:sender];
+}
+
+- (void) ring_clicked:(id)sender {
+	NSLog(@"RING CLICKED");
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"ringClickedNotification" object:self userInfo:nil];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

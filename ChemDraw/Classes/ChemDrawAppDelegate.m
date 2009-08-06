@@ -37,6 +37,7 @@
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateToolBar:) name:@"toolBarItemsChangedNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeElementClicked:) name:@"changeElementClickedNotification" object:nil];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(characterMatched:) name:@"characterMatchedNotification" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ringClicked:) name:@"ringClickedNotification" object:nil];
 	
 	NSLog(@"END OF APP LAUNCH");
 	
@@ -58,7 +59,9 @@
 	[toolBar setItems:nil animated:YES];
 }
 
-
+- (void) ringClicked:(NSNotification *)notification {
+	NSLog(@"Detected the ring button clicked");
+}
 
 
 - (void)dealloc {

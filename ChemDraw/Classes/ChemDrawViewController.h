@@ -16,6 +16,7 @@
 	
 	IBOutlet UIBarButtonItem *undoButton;
 	IBOutlet UIBarButtonItem *cancelButton;
+	IBOutlet UIBarButtonItem *ringButton;
 	
 	IBOutlet DrawView *drawView;
 	
@@ -27,6 +28,7 @@
 - (void) cancel_clicked:(id)sender;
 - (void) change_element_clicked:(id)sender;
 - (void) undo_clicked:(id)sender;
+- (void) ring_clicked:(id)sender;
 
 @property (nonatomic, retain) IBOutlet DrawView *drawView;
 
