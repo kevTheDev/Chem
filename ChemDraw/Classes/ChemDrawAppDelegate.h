@@ -28,6 +28,7 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet ChemDrawViewController *drawViewController;
 @property (nonatomic, retain) IBOutlet GestureViewController *gestureViewController;
+@property (nonatomic, retain) IBOutlet SelectRingSizeViewController *selectRingSizeViewController;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
 

@@ -21,6 +21,7 @@
 @synthesize drawViewController;
 @synthesize gestureViewController;
 @synthesize navigationController;
+@synthesize selectRingSizeViewController;
 
 - (void)dealloc {
 	
