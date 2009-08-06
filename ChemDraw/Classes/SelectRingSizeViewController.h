@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SelectRingSizeViewController : UIViewController {
-
+@interface SelectRingSizeViewController : UIViewController <UITextFieldDelegate> {
+	IBOutlet UITextField *ringSizeTextField;
 }
+
+@property (nonatomic, retain) UITextField *ringSizeTextField;
 
 @end

@@ -102,10 +102,10 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">ringSizeTextField</string>
-						<reference key="source" ref="191373211"/>
+						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="188037250"/>
 					</object>
-					<int key="connectionID">7</int>
+					<int key="connectionID">9</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -169,7 +169,7 @@
 					<string>SelectRingSizeViewController</string>
 					<string>UIResponder</string>
 					<string>SelectRingSizeView</string>
-					<string>{{827, 270}, {320, 480}}</string>
+					<string>{{653, 270}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -195,7 +195,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">8</int>
+			<int key="maxID">9</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -203,10 +203,6 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">SelectRingSizeView</string>
 					<string key="superclassName">UIView</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">ringSizeTextField</string>
-						<string key="NS.object.0">UITextField</string>
-					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/SelectRingSizeView.h</string>
@@ -215,6 +211,10 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">SelectRingSizeViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">ringSizeTextField</string>
+						<string key="NS.object.0">UITextField</string>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/SelectRingSizeViewController.h</string>

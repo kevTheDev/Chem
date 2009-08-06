@@ -10,7 +10,6 @@
 
 
 @interface SelectRingSizeView : UIView {
-	IBOutlet UITextField *ringSizeTextField;
 }
 
 @end
