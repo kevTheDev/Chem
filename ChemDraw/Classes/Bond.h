@@ -15,6 +15,7 @@
 
 
 @class Node;
+@class PotentialRingMap;
 
 @interface Bond : NSObject {
 	Node *nodeA;
@@ -27,6 +28,8 @@
 	BOOL confirmedHighlight;
 	
 	int numberOfParts;
+	
+	PotentialRingMap *potentialRingMap;
 }
 
 - (Bond *) initWithNodeA:(Node *)nodeA nodeB:(Node *)nodeB;
@@ -63,6 +66,9 @@
 - (BOOL) isHorizontal;
 - (BOOL) isVertical;
 
+- (void) initPotentialRingMapWithSize:(NSInteger)ringSize;
+- (void) renderPotentialRingMap:(CGContextRef)ctx;
+//- (void) clearPotentialBondMap;
 
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;

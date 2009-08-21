@@ -9,11 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @class Bond;
+@class Node;
 
 @interface PotentialRingMap : NSObject {
 	NSInteger ringSize;
+	Bond *baseBond;
+	
+	Node *nodeA;
+	Node *nodeB;
 }
-
+- (PotentialRingMap *) initWithRingSize:(NSInteger)ringNumber andBaseBond:(Bond *)bond;
 - (void) renderWithContext:(CGContextRef)ctx;
 
 @property (nonatomic) NSInteger ringSize;

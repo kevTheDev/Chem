@@ -270,7 +270,7 @@
 
 - (void) drawPotentialRings:(NSInteger)ringSize {
 	[objectMap drawPotentialRings:ringSize];
-
+	[self setNeedsDisplay];
 }
 
 

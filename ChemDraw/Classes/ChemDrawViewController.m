@@ -88,7 +88,7 @@
 	NSInteger realRingSize = 3;
 	
 	//Bond *highlightedBond = 
-	[drawView drawPotentialRings:3];
+	[drawView drawPotentialRings:realRingSize];
 	
 }
 

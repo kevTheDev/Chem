@@ -9,6 +9,7 @@
 #import "Bond.h"
 #import "Node.h"
 #import <UIKit/UIKit.h>
+#import "PotentialRingMap.h"
 
 @implementation Bond
 
@@ -22,6 +23,14 @@
 @synthesize confirmedHighlight;
 
 int LINE_DRAW_WIDTH = 2.0;
+
+- (void) dealloc {
+	
+	[nodeA release];
+	[nodeB release];
+	[super dealloc];
+	
+}
 
 - (Bond *) initWithNodeA:(Node *)firstNode nodeB:(Node *)secondNode {
 	self = [super init];
@@ -227,6 +236,8 @@ int LINE_DRAW_WIDTH = 2.0;
 	CGContextSetLineWidth(ctx, LINE_DRAW_WIDTH);
 	CGContextStrokePath(ctx);
 	
+	[self renderPotentialRingMap:ctx];
+	
 	return;
 	
 }
@@ -290,19 +301,23 @@ int LINE_DRAW_WIDTH = 2.0;
 }
 
 - (BOOL) isHorizontal {
-	return (nodeA.xCoord == nodeB.xCoord);
-}
-
-- (BOOL) isVertical {
 	return (nodeA.yCoord == nodeB.yCoord);
 }
 
-- (void) dealloc {
-	
-	[nodeA release];
-	[nodeB release];
-	[super dealloc];
-	
+- (BOOL) isVertical {
+	return (nodeA.xCoord == nodeB.xCoord);
 }
+
+- (void) initPotentialRingMapWithSize:(NSInteger)ringSize {
+	potentialRingMap = [[PotentialRingMap alloc] initWithRingSize:ringSize andBaseBond:self];
+	NSLog(@"INIT P RING MAP");
+}
+
+- (void) renderPotentialRingMap:(CGContextRef)ctx {
+	[potentialRingMap renderWithContext:ctx];
+
+}
+
+
 
 @end

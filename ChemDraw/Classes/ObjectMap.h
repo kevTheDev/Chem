@@ -15,6 +15,7 @@
 @class Node;
 @class Bond;
 @class PotentialBond;
+@class PotentialRingMap;
 
 @interface ObjectMap : NSObject {
 	

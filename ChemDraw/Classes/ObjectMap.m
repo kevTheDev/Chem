@@ -16,6 +16,7 @@
 #import "Node.h"
 #import "Bond.h"
 #import "PotentialBond.h"
+#import "PotentialRingMap.h"
 
 #import "Action.h"
 #import "AddNodeAction.h"
@@ -333,6 +334,10 @@
 }
 
 - (void) drawPotentialRings:(NSInteger)ringSize {
+	//Bond *baseBond = [self currentlySelectedBond];
+	Bond *baseBond = (Bond *) [self currentlyHighlightedObject];
+	NSLog(@"OBJECT MAP draw potential ring map BASE BOND isSingle: %b", [baseBond isSingle]);
+	[baseBond initPotentialRingMapWithSize:ringSize];
 	
 
 }
