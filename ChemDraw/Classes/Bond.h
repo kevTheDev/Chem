@@ -60,6 +60,10 @@
 - (void) makeDouble;
 - (void) makeTriple;
 
+- (BOOL) isHorizontal;
+- (BOOL) isVertical;
+
+
 @property (nonatomic, retain) Node *nodeA;
 @property (nonatomic, retain) Node *nodeB;
 @property (nonatomic) CGPoint centerPoint;

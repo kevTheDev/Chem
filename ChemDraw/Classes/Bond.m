@@ -289,6 +289,13 @@ int LINE_DRAW_WIDTH = 2.0;
 	numberOfParts = TRIPLE_BOND;
 }
 
+- (BOOL) isHorizontal {
+	return (nodeA.xCoord == nodeB.xCoord);
+}
+
+- (BOOL) isVertical {
+	return (nodeA.yCoord == nodeB.yCoord);
+}
 
 - (void) dealloc {
 	
