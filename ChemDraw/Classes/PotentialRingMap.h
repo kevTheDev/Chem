@@ -17,6 +17,11 @@
 	
 	Node *nodeA;
 	Node *nodeB;
+	
+	Bond *tempBondA;
+	Bond *tempBondB;
+	Bond *tempBondC;
+	Bond *tempBondD;
 }
 - (PotentialRingMap *) initWithRingSize:(NSInteger)ringNumber andBaseBond:(Bond *)bond;
 - (void) renderWithContext:(CGContextRef)ctx;

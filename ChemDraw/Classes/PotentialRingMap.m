@@ -32,7 +32,12 @@
 			nodeA = [[Node alloc] initWithXCoord:newPoint.x yCoord:newPoint.y + 100];
 			
 			nodeB = [[Node alloc] initWithXCoord:newPoint.x yCoord:newPoint.y - 100];
-		
+			
+			tempBondA = [[Bond alloc] initWithNodeA:nodeA nodeB:[baseBond nodeA]];
+			tempBondB = [[Bond alloc] initWithNodeA:nodeA nodeB:[baseBond nodeB]];
+			tempBondC = [[Bond alloc] initWithNodeA:nodeB nodeB:[baseBond nodeA]];
+			tempBondD = [[Bond alloc] initWithNodeA:nodeB nodeB:[baseBond nodeB]];	
+				
 	
 		}
 		else if([[self baseBond] isVertical]) {
@@ -56,7 +61,11 @@
 	NSLog(@"POTENTIAL MAP RENDER CALLED");
 	[nodeA renderWithContext:ctx];
 	[nodeB renderWithContext:ctx];
-	 
+	
+	[tempBondA renderWithContext:ctx];
+	[tempBondB renderWithContext:ctx];
+	[tempBondC renderWithContext:ctx];
+	[tempBondD renderWithContext:ctx];
 	
 }
 
