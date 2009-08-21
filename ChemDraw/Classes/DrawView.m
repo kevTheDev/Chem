@@ -268,6 +268,11 @@
 	
 }
 
+- (void) drawPotentialRings:(NSInteger)ringSize {
+	[objectMap drawPotentialRings:ringSize];
+
+}
+
 
 - (void)dealloc {
 	[programState release];

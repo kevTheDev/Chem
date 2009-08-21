@@ -332,6 +332,11 @@
 	
 }
 
+- (void) drawPotentialRings:(NSInteger)ringSize {
+	
+
+}
+
 
 
 @end

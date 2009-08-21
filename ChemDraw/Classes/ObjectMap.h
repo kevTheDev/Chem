@@ -81,6 +81,9 @@
 
 - (PotentialBond *)currentlyHighlightedPotentialBond;
 
+- (void) drawPotentialRings:(NSInteger)ringSize;
+
+
 @property (nonatomic, retain) NodeMap *nodeMap;
 @property (nonatomic, retain) BondMap *bondMap;
 

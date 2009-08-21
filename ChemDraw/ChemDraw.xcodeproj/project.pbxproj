@@ -46,6 +46,8 @@
 		DE53653B100F707500A098FF /* TripleBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE536539100F707500A098FF /* TripleBondAction.m */; };
 		DE53653E100F707F00A098FF /* SingleBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE53653D100F707F00A098FF /* SingleBondAction.m */; };
 		DE53653F100F707F00A098FF /* SingleBondAction.m in Sources */ = {isa = PBXBuildFile; fileRef = DE53653D100F707F00A098FF /* SingleBondAction.m */; };
+		DE5AA071103EE7A6007FC93C /* PotentialRingMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5AA070103EE7A6007FC93C /* PotentialRingMap.m */; };
+		DE5AA072103EE7A6007FC93C /* PotentialRingMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5AA070103EE7A6007FC93C /* PotentialRingMap.m */; };
 		DE874F700FFA512400B1E023 /* BondMap.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874F6F0FFA512400B1E023 /* BondMap.m */; };
 		DE874FBB0FFA596100B1E023 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE874FBA0FFA596000B1E023 /* SenTestingKit.framework */; };
 		DE874FF20FFA67F500B1E023 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DE874FF10FFA67F500B1E023 /* NodeTest.m */; };
@@ -142,6 +144,8 @@
 		DE536539100F707500A098FF /* TripleBondAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleBondAction.m; sourceTree = "<group>"; };
 		DE53653C100F707F00A098FF /* SingleBondAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleBondAction.h; sourceTree = "<group>"; };
 		DE53653D100F707F00A098FF /* SingleBondAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleBondAction.m; sourceTree = "<group>"; };
+		DE5AA06F103EE7A6007FC93C /* PotentialRingMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PotentialRingMap.h; sourceTree = "<group>"; };
+		DE5AA070103EE7A6007FC93C /* PotentialRingMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PotentialRingMap.m; sourceTree = "<group>"; };
 		DE874F6E0FFA512400B1E023 /* BondMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BondMap.h; sourceTree = "<group>"; };
 		DE874F6F0FFA512400B1E023 /* BondMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BondMap.m; sourceTree = "<group>"; };
 		DE874F8A0FFA592000B1E023 /* Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,6 +376,8 @@
 				DE9465D40FFE8ADE00F7AA88 /* PotentialBondMap.m */,
 				DE4F4DAC0FFCC6C500DA8541 /* ObjectMap.h */,
 				DE4F4DAD0FFCC6C500DA8541 /* ObjectMap.m */,
+				DE5AA06F103EE7A6007FC93C /* PotentialRingMap.h */,
+				DE5AA070103EE7A6007FC93C /* PotentialRingMap.m */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -565,6 +571,7 @@
 				DE15A73D1010829A0080291E /* GestureViewController.m in Sources */,
 				DE2A4EB8102AE21E003072D9 /* SelectRingSizeView.m in Sources */,
 				DE2A4EBD102AE246003072D9 /* SelectRingSizeViewController.m in Sources */,
+				DE5AA071103EE7A6007FC93C /* PotentialRingMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +617,7 @@
 				DE15A73E1010829A0080291E /* GestureViewController.m in Sources */,
 				DE2A4EB9102AE21E003072D9 /* SelectRingSizeView.m in Sources */,
 				DE2A4EBF102AE246003072D9 /* SelectRingSizeViewController.m in Sources */,
+				DE5AA072103EE7A6007FC93C /* PotentialRingMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

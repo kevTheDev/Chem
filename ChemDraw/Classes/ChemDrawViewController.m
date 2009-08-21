@@ -61,7 +61,6 @@
 		highlightButtons = [[NSArray alloc] initWithObjects:cancelButton, nil];
 		nodeButtons = [[NSArray alloc] initWithObjects:cancelButton, changeElementButton, ringButton, nil];
 		
-//		[toolBar setItems:standardButtons animated:YES];
 		[self setToolbarItems:standardButtons animated:YES];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(objectHighlighted:) name:@"highlightObjectNotification" object:nil];
@@ -76,12 +75,20 @@
     return self;
 }
 
+
+// At the moment we are hardcoding the ring size to be three
+// until we have done a whole lot more stuff
 - (void)ringSizeSet:(NSNotification *)notification {
 	
 	NSString *ringSize = [[notification userInfo] objectForKey:@"ringSize"];
 	NSLog(@"RING SIZE SET AT: %@", ringSize);
 	
 	//NSInteger realRingSize = [ringSize intValue];
+	
+	NSInteger realRingSize = 3;
+	
+	//Bond *highlightedBond = 
+	[drawView drawPotentialRings:3];
 	
 }
 
@@ -92,21 +99,18 @@
 
 - (void)nodeSelected:(NSNotification *)notification {
 	[self setToolbarItems:nodeButtons animated:YES];
-//	[toolBar setItems:nodeButtons animated:YES];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"toolBarItemsChangedNotification" object:self userInfo:nil];
 }
 
 - (void)actionCompleted:(NSNotification *)notification {
 	NSLog(@"actionCompleted");
 	[self setToolbarItems:standardButtons animated:YES];
-//	[toolBar setItems:standardButtons animated:YES];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"toolBarItemsChangedNotification" object:self userInfo:nil];
 }
 
 - (void)objectHighlighted:(NSNotification *)notification {
 	NSLog(@"highlightObjectNotification");
 	[self setToolbarItems:highlightButtons animated:YES];
-	//[toolBar setItems:highlightButtons animated:YES];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"toolBarItemsChangedNotification" object:self userInfo:nil];
 }
 

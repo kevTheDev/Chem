@@ -61,6 +61,8 @@
 - (void) selectTouchedObject:(CGPoint)pos;
 - (void) updateSelectedElementWithCharacterMatch:(CharacterMatch *)topMatch;
 
+- (void) drawPotentialRings:(NSInteger)ringSize;
+
 @property (nonatomic, retain) NSTimer *symbolTimer;
 @property (nonatomic, retain) NSArray *toolBarItems;
 @property (nonatomic, retain) ProgramState *programState;
