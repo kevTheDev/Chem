@@ -22,7 +22,6 @@
     [super dealloc];
 }
 
-
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -62,6 +61,7 @@
 		highlightButtons = [[NSArray alloc] initWithObjects:cancelButton, nil];
 		nodeButtons = [[NSArray alloc] initWithObjects:cancelButton, changeElementButton, ringButton, nil];
 		
+//		[toolBar setItems:standardButtons animated:YES];
 		[self setToolbarItems:standardButtons animated:YES];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(objectHighlighted:) name:@"highlightObjectNotification" object:nil];
@@ -81,7 +81,7 @@
 	NSString *ringSize = [[notification userInfo] objectForKey:@"ringSize"];
 	NSLog(@"RING SIZE SET AT: %@", ringSize);
 	
-	NSInteger realRingSize = [ringSize intValue];
+	//NSInteger realRingSize = [ringSize intValue];
 	
 }
 
@@ -92,18 +92,21 @@
 
 - (void)nodeSelected:(NSNotification *)notification {
 	[self setToolbarItems:nodeButtons animated:YES];
+//	[toolBar setItems:nodeButtons animated:YES];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"toolBarItemsChangedNotification" object:self userInfo:nil];
 }
 
 - (void)actionCompleted:(NSNotification *)notification {
 	NSLog(@"actionCompleted");
 	[self setToolbarItems:standardButtons animated:YES];
+//	[toolBar setItems:standardButtons animated:YES];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"toolBarItemsChangedNotification" object:self userInfo:nil];
 }
 
 - (void)objectHighlighted:(NSNotification *)notification {
 	NSLog(@"highlightObjectNotification");
 	[self setToolbarItems:highlightButtons animated:YES];
+	//[toolBar setItems:highlightButtons animated:YES];
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"toolBarItemsChangedNotification" object:self userInfo:nil];
 }
 
@@ -153,19 +156,26 @@
     // Release anything that's not essential, such as cached data
 }
 
-- (IBAction)undoLastAction:(id)sender {
-//	[[self view] undoLastAction];
-}
-
-- (IBAction)changeElement:(id)sender {
-//	[[self view] changeElement:sender];
-	
-}
+//- (IBAction)undoLastAction:(id)sender {
+////	[[self view] undoLastAction];
+//}
+//
+//- (IBAction)changeElement:(id)sender {
+////	[[self view] changeElement:sender];
+//	
+//}
 
 - (IBAction) cancel {
 //	[[self view] cancel];
 }
 
+- (NSArray *) toolbarItems {
+	return [toolBar items];
+}
+
+- (void) setToolbarItems:(NSArray *)items {
+	[toolBar setItems:items animated:YES];
+}
 
 
 

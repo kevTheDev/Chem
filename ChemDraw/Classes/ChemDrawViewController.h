@@ -30,6 +30,9 @@
 - (void) undo_clicked:(id)sender;
 - (void) ring_clicked:(id)sender;
 
+- (NSArray *) toolbarItems;
+- (void) setToolbarItems:(NSArray *)items;
+
 @property (nonatomic, retain) IBOutlet DrawView *drawView;
 
 @end

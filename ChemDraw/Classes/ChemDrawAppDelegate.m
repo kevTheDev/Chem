@@ -41,7 +41,7 @@
 	navigationController = [[UINavigationController alloc] initWithRootViewController:drawViewController];
 	[self setupToolBar];
 	
-	[toolBar setItems:[drawViewController toolbarItems]];	
+	//[toolBar setItems:[drawViewController toolbarItems]];	
 	[window addSubview:[navigationController view]];
 	
 	
